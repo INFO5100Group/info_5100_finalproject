@@ -1,6 +1,5 @@
 package Business.Account;
 
-import org.graalvm.compiler.phases.graph.PostOrderNodeIterator;
 
 import Business.SerializiedObject;
 import Business.Person.Person;
@@ -24,11 +23,16 @@ public class Account extends SerializiedObject{
         this.setPerson(p);
     }
 
+    public Account(String un, String pw, Person p, Role r) throws Exception {
+        this(un, pw, p);
+        this.role = r;
+    }
+
     public String getAccountName() {
         return this.accountName;
     }
 
-    public void setAccountName(String accountName) {
+    public void setAccountName(String accountName) throws Exception {
         // TODO: check account name validation
         if(true){
             this.accountName = accountName;
@@ -55,7 +59,7 @@ public class Account extends SerializiedObject{
         return this.person;
     }
 
-    public void setPerson(Person person) {
+    public void setPerson(Person person) throws Exception {
         // TODO: check password validation
         if(true){
             this.person = person;
