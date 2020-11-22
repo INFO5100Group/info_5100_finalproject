@@ -33,12 +33,7 @@ public class Account extends SerializiedObject{
     }
 
     public void setAccountName(String accountName) throws Exception {
-        // TODO: check account name validation
-        if(true){
             this.accountName = accountName;
-        }else{
-            throw new Exception("new account is not valid");
-        }
     }
 
     public String getPassword() {
@@ -46,13 +41,7 @@ public class Account extends SerializiedObject{
     }
 
     public void setPassword(String password) throws Exception {
-        // TODO: check password validation
-        if(true){
-            this.password = password;
-        }else{
-            throw new Exception("new password is not valid");
-        }
-        
+        this.password = password;    
     }
 
     public Person getPerson() {
@@ -60,12 +49,7 @@ public class Account extends SerializiedObject{
     }
 
     public void setPerson(Person person) throws Exception {
-        // TODO: check password validation
-        if(true){
             this.person = person;
-        }else{
-            throw new Exception("new person is not valid");
-        }
     }
 
     public Role getRole() {
