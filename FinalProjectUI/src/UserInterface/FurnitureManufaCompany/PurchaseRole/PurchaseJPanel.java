@@ -31,13 +31,13 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         Hello = new javax.swing.JLabel();
         barginPrice = new javax.swing.JTextField();
         RoleName = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        BargainJTable = new javax.swing.JTable();
         btnBargain = new javax.swing.JButton();
         EnterpriseName = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         OrderJTable = new javax.swing.JTable();
         btnComplete = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BargainJTable = new javax.swing.JTable();
 
         Accept.setText("Accept");
 
@@ -50,27 +50,6 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         });
 
         RoleName.setText("<value>");
-
-        BargainJTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "EnterpriseName", "ProductName", "Quantity", "Offer", "AveragePrice", "AcceptPrice", "Status"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(BargainJTable);
 
         btnBargain.setText("Bargain");
 
@@ -99,6 +78,27 @@ public class PurchaseJPanel extends javax.swing.JPanel {
 
         btnComplete.setText("Complete");
 
+        BargainJTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "BuyerName", "SalerName", "ProductName", "Quantity", "BuyerOffer", "SalerOffer", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(BargainJTable);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,7 +125,7 @@ public class PurchaseJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(522, 522, 522)
+                        .addGap(512, 512, 512)
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(331, Short.MAX_VALUE))
         );
@@ -137,18 +137,18 @@ public class PurchaseJPanel extends javax.swing.JPanel {
                     .addComponent(RoleName, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EnterpriseName, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Hello, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
+                .addGap(49, 49, 49)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
+                .addGap(81, 81, 81)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Accept, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(barginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
+                .addGap(87, 87, 87)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addGap(120, 120, 120))
         );
     }// </editor-fold>//GEN-END:initComponents
 
