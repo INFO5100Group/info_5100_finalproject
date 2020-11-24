@@ -26,13 +26,12 @@ public class AccountDirectory  extends ArrayList<Account>{
      * 
      * @param newAccount
      * @return
-     * @throws Exception
      */
-    public boolean addAccount(Account newAccount) throws Exception {
+    public boolean addAccount(Account newAccount) {
         if(!this.userContained(newAccount.getAccountName())){
             return this.add(newAccount);
         }else{
-            throw new Exception(newAccount.getAccountName() + " this account name is exist");
+            return false;
         }
     }
 
@@ -62,5 +61,25 @@ public class AccountDirectory  extends ArrayList<Account>{
             }
         }
         return false;
+    }
+    
+    
+    /**
+     * valid date user for log in
+     * @param username
+     * @param password
+     * @return a account obj if validated usrname and password
+     *         null if not validated 
+     */
+    public Account getUserLogin(String username, String password){
+        Account re = this.stream()
+                    .filter(a -> a.getAccountName().equals(username))
+                    .findAny()
+                    .orElse(null);
+        if(re.getPassword().equals(password)){
+            return re;
+        }else{
+            return null;
+        }
     }
 }

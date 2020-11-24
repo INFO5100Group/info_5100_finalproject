@@ -5,17 +5,25 @@
  */
 package UserInterface.sysadmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
  */
-public class sysadminworkJPanel extends javax.swing.JPanel {
+public class SysadminworkJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form sysadminworkJPanel
-     */
-    public sysadminworkJPanel() {
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
+    public SysadminworkJPanel(JPanel upc, Account a, EcoSystem sys) {
         initComponents();
+        this.container = upc;
+        this.account = a;
+        this.system = sys;
     }
 
     /**
