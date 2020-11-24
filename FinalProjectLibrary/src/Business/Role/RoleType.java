@@ -1,24 +1,29 @@
 package Business.Role;
 
 public enum RoleType {
-    // env
-    EnvScientist,
-    licenseOfficer,
+    // regulate
+    RegulateScientist,
+    RegulateOfficer,
+    RegulateAdmin,
     // forest
     ForestCompanyManager,
-    forestSalesPerson,
+    ForestSalesPerson,
+    ForestAdmin,
     // furnitureManu
-    furnitureManuProcurementPerson,
-    furnitureManuDesigner,
-    furnitureManuProducer,
-    furnitureManuSalsePerson,
+    ManuProcurementPerson,
+    ManuDesigner,
+    ManuProducer,
+    ManuSalsePerson,
+    ManuAdmin,
     // furnitureRetail
-    furnitureRetailProcurementPerson,
-    furnitureRetailSalsePerson,
+    RetailProcurementPerson,
+    RetailSalsePerson,
+    RetailAdmin,
     // Customer
     customer,
     // logistics
-    logisticsPseron,
+    LogisticsPseron,
+    LogisticAdmin,
     // sysAdmin
     sysAdmin;
 
