@@ -8,6 +8,7 @@ package UserInterface;
 import Business.Account.Account;
 import ConfigSystem.*;
 import EcoSystem.EcoSystem;
+import UserInterface.Register.*;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -27,8 +28,8 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents(); 
         system = db.retrieveSystem(); 
-        container = card;
-        this.setSize(1000, 600);
+        this.setSize(1000, 1000);
+        CardLayoutNavigator.goNext(container, new MainPanel(container, system, db), "Main ");
     }
 
     /**
@@ -40,121 +41,25 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        card = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        Use = new javax.swing.JLabel();
-        Password = new javax.swing.JLabel();
-        txtUserName = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
-        btnLogin = new javax.swing.JButton();
-        btnRegisterEnterprise = new javax.swing.JButton();
-        RegCustomer = new javax.swing.JButton();
+        container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        card.setLayout(new java.awt.CardLayout());
-
-        Use.setText("User Name");
-
-        Password.setText("password");
-
-        txtUserName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserNameActionPerformed(evt);
-            }
-        });
-
-        btnLogin.setText("Login");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
-            }
-        });
-
-        btnRegisterEnterprise.setText("Regist As Enterprise");
-
-        RegCustomer.setText("Register As Customer");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Use)
-                            .addComponent(Password))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(395, 395, 395)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnRegisterEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RegCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Use)
-                    .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Password))
-                .addGap(84, 84, 84)
-                .addComponent(btnLogin)
-                .addGap(47, 47, 47)
-                .addComponent(btnRegisterEnterprise)
-                .addGap(61, 61, 61)
-                .addComponent(RegCustomer)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        card.add(jPanel2, "card2");
+        container.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(card, javax.swing.GroupLayout.DEFAULT_SIZE, 1085, Short.MAX_VALUE)
+            .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, 1085, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(card, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
+            .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserNameActionPerformed
-
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        String un = txtUserName.getText();
-        String pw = txtPassword.getText();
-        Account currAccount = null;
-        try{
-            currAccount = system.getAccounts().getUserLogin(un, pw);
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "invalid username or password");
-            return;
-        }
-        JPanel workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
-        container.add(currAccount.getAccountName() + "WorkArea", workArea);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
-        
-        
-    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,23 +97,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Password;
-    private javax.swing.JButton RegCustomer;
-    private javax.swing.JLabel Use;
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnRegisterEnterprise;
-    private javax.swing.JPanel card;
     private javax.swing.JPanel container;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jtxPassword;
-    private javax.swing.JTextField jtxUserName;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }

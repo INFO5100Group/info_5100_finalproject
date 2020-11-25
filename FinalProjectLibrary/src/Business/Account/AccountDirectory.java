@@ -14,7 +14,7 @@ public class AccountDirectory  extends ArrayList<Account>{
      * @param newAccoutName
      * @return
      */
-    private boolean userContained(String newAccoutName){
+    public boolean userContained(String newAccoutName){
         return this.stream()
             .filter(a -> a.getAccountName().equals(newAccoutName))
             .findAny()

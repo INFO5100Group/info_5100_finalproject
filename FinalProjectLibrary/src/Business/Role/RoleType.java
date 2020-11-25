@@ -20,7 +20,7 @@ public enum RoleType {
     RetailSalsePerson,
     RetailAdmin,
     // Customer
-    customer,
+    Customer,
     // logistics
     LogisticsPseron,
     LogisticAdmin,

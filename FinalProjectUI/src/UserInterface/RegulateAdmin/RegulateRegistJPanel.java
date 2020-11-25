@@ -5,17 +5,29 @@
  */
 package UserInterface.RegulateAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
  */
 public class RegulateRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form RegulateRegistJPanel
-     */
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+            
     public RegulateRegistJPanel() {
         initComponents();
+    }
+
+    public RegulateRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
     }
 
     /**

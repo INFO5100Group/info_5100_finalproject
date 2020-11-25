@@ -23,120 +23,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="card" alignment="0" pref="1085" max="32767" attributes="0"/>
+          <Component id="container" alignment="0" pref="1085" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="card" alignment="0" pref="644" max="32767" attributes="0"/>
+          <Component id="container" alignment="0" pref="644" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="card">
+    <Container class="javax.swing.JPanel" name="container">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="Use" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Password" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtPassword" min="-2" pref="423" max="-2" attributes="0"/>
-                                  <Component id="txtUserName" min="-2" pref="423" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="395" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnRegisterEnterprise" max="32767" attributes="0"/>
-                                  <Component id="RegCustomer" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnLogin" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Use" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtUserName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Component id="btnRegisterEnterprise" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Component id="RegCustomer" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="Use">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="User Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="Password">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="password"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtUserName">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUserNameActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtPassword">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnLogin">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Login"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnRegisterEnterprise">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Regist As Enterprise"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="RegCustomer">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Register As Customer"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
     </Container>
   </SubComponents>
 </Form>
