@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 import EcoSystem.EcoSystem;
 import UserInterface.CardLayoutNavigator;
-import UserRole.RegAdminRole;
+import UserRole.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -218,11 +218,11 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 // role for regulate office
                 newAccount.setRole(new RegAdminRole());
             }else if(ComboType.getSelectedIndex() == 2){
-                // TODO: foresty compamy    
+                newAccount.setRole(new ForestAdminRole());
             }else if(ComboType.getSelectedIndex() == 3){
-                // TODO: Manufacturer
+                newAccount.setRole(new ManuAdminRole());
             }else if(ComboType.getSelectedIndex() == 4){
-                // TODO: retailer
+                newAccount.setRole(new RetailAdminRole());
             }
             
             // check enterprise name and account name unique

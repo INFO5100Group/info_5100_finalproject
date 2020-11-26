@@ -5,17 +5,29 @@
  */
 package UserInterface.ForestryAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
  */
 public class ForestryRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ForestryRegistJPanel
-     */
+
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
     public ForestryRegistJPanel() {
         initComponents();
+    }
+
+    public ForestryRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
     }
 
     /**

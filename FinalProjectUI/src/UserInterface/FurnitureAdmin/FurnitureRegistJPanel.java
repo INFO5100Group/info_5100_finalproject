@@ -5,17 +5,29 @@
  */
 package UserInterface.FurnitureAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
  */
 public class FurnitureRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form FurnitureRegistJPanel
-     */
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
     public FurnitureRegistJPanel() {
         initComponents();
+    }
+
+    public FurnitureRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
     }
 
     /**

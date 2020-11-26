@@ -5,17 +5,29 @@
  */
 package UserInterface.RetailAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
  */
 public class RetailRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form RetailRegistJPanel
-     */
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
     public RetailRegistJPanel() {
         initComponents();
+    }
+
+    public RetailRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
     }
 
     /**
