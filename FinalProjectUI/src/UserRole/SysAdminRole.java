@@ -18,7 +18,7 @@ import Business.Role.*;
 public class SysAdminRole extends Role{
     
     public SysAdminRole(){
-        this.rType = RoleType.sysAdmin;
+        this.rType = RoleType.SysAdmin;
     }
 
     @Override

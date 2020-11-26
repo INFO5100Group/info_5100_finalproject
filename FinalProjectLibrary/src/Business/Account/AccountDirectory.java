@@ -1,5 +1,6 @@
 package Business.Account;
 
+import Business.Person.Person;
 import java.util.ArrayList;
 
 public class AccountDirectory  extends ArrayList<Account>{
@@ -43,6 +44,23 @@ public class AccountDirectory  extends ArrayList<Account>{
     public boolean removeAccount(Account toRemove){
         return this.remove(toRemove);
     }
+    
+    /**
+     * remove an account by given person
+     * @param p
+     * @return 
+     */
+    public boolean removeAccountByPerson(Person p){
+        Account toRemove = this.stream()
+                .filter(a -> a.getPerson().getID() == p.getID())
+                .findAny()
+                .orElse(null);
+        if(toRemove == null){
+            return false;
+        }else{
+            return this.addAccount(toRemove);
+        }
+    }
 
     /**
      * update a account
@@ -68,7 +86,7 @@ public class AccountDirectory  extends ArrayList<Account>{
      * valid date user for log in
      * @param username
      * @param password
-     * @return a account obj if validated usrname and password
+     * @return a account obj if validated username and password
      *         null if not validated 
      */
     public Account getUserLogin(String username, String password){

@@ -7,7 +7,9 @@ package EcoSystem;
 
 import Business.Account.AccountDirectory;
 import Business.Enterprise.EnterpriseDirectory;
+import Business.Role.RoleType;
 import Business.WorkQueue.WorkQueue;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -33,6 +35,15 @@ public class EcoSystem {
         }
         return currSystem;
     }
+    
+    public AccountDirectory getAllAdmins(){
+        return this.accounts
+                .stream()
+                .filter(s -> s.getRole().rType == RoleType.SysAdmin)
+                .collect(Collectors
+                        .toCollection(AccountDirectory::new));
+    }
+   
 
     public AccountDirectory getAccounts() {
         return this.accounts;

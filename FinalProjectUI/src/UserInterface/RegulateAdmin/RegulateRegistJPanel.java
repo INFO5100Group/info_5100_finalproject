@@ -6,7 +6,10 @@
 package UserInterface.RegulateAdmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
 import EcoSystem.EcoSystem;
+import UserInterface.CardLayoutNavigator;
+import UserInterface.EnterpriseApproveInfoJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -18,6 +21,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
     private JPanel container;
     private Account account;
     private EcoSystem system;
+    private Enterprise enterprise;
             
     public RegulateRegistJPanel() {
         initComponents();
@@ -28,6 +32,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
         this.container = userProcessContainer;
         this.account = account;
         this.system = system;
+        this.enterprise = system.getEnterprises().getEnterpriseByAccout(account);
     }
 
     /**

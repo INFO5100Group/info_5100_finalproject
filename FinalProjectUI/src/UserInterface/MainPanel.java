@@ -70,6 +70,11 @@ public class MainPanel extends javax.swing.JPanel {
         });
 
         btnRegisterEnterprise.setText("Regist As Enterprise");
+        btnRegisterEnterprise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterEnterpriseActionPerformed(evt);
+            }
+        });
 
         RegCustomer.setText("Register As Customer");
         RegCustomer.addActionListener(new java.awt.event.ActionListener() {
@@ -130,23 +135,27 @@ public class MainPanel extends javax.swing.JPanel {
         String un = txtUserName.getText();
         String pw = txtPassword.getText();
         Account currAccount = null;
+        JPanel workArea = null;
         try{
             currAccount = system.getAccounts().getUserLogin(un, pw);
+            workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "invalid username or password");
             return;
         }
-        JPanel workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
+        
         CardLayoutNavigator.goNext(container, workArea, currAccount.getAccountName() + " work area ");
-
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void RegCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegCustomerActionPerformed
         JPanel customerRegist = new RegistForCustomerJPanel(container, system);
-        container.add("Regist Customer", customerRegist);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        CardLayoutNavigator.goNext(container, customerRegist, "register customer ");
     }//GEN-LAST:event_RegCustomerActionPerformed
+
+    private void btnRegisterEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterEnterpriseActionPerformed
+        JPanel EnterpriseRegist = new RegistForEnterpriseJPanel(container, system);
+        CardLayoutNavigator.goNext(container, EnterpriseRegist, "reguster enterprise ");
+    }//GEN-LAST:event_btnRegisterEnterpriseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

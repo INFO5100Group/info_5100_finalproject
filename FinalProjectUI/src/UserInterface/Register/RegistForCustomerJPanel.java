@@ -239,11 +239,10 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
             return false;
         }
         
-        boolean isSelect = !GenderGroup.getSelection().getActionCommand().equals(null);
-        
+        boolean isSelect = GenderGroup.getSelection()!=(null);
         if(!isSelect){
-        JOptionPane.showMessageDialog(null, "Please Select a Gender");
-        return false;
+            JOptionPane.showMessageDialog(null, "Please Select a Gender");
+            return false;
         }
         
         boolean emailCorrect = DataValidater.EmailPatternCorrect(jtxEmail.getText());
@@ -259,6 +258,11 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         if(inputValidate()){
             Person newPerson = new Person(jtxFName.getText(), jtxLName.getText(), GenderGroup.getSelection().getActionCommand());
+            newPerson.setCity(jtxCity.getText());
+            newPerson.setEmail(jtxEmail.getText());
+            newPerson.setState(jtxState.getText());
+            newPerson.setStreet(jtxStreet.getText());
+            newPerson.setZipCode(jtxZipCode.getText());
             Account newAccount = new Account(jtxUName.getText(), jtxPWord.getText(), newPerson, new CustomerRole());
             boolean addAccountSuccess = system.getAccounts().addAccount(newAccount);
             if(!addAccountSuccess){

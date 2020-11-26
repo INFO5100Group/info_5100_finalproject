@@ -14,12 +14,23 @@ import javax.swing.JPanel;
  */
 public class CardLayoutNavigator {
     
+    /**
+     * go to previous page
+     * @param container
+     * @param currPanel current page
+     */
     public static void goBack(JPanel container, JPanel currPanel){
         container.remove(currPanel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
     }
     
+    /**
+     * go to next page
+     * @param container
+     * @param nextPanel next page
+     * @param nextName  next page name
+     */
     public static void goNext(JPanel container, JPanel nextPanel, String nextName){
         container.add(nextName + " Panel", nextPanel);
         CardLayout layout = (CardLayout) container.getLayout();

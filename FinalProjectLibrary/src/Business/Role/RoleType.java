@@ -25,6 +25,6 @@ public enum RoleType {
     LogisticsPseron,
     LogisticAdmin,
     // sysAdmin
-    sysAdmin;
+    SysAdmin;
 
 }

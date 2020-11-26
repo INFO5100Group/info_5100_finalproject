@@ -6,8 +6,14 @@
 package UserInterface.sysadmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequest;
+import ConfigSystem.DB4OUtil;
 import EcoSystem.EcoSystem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -24,6 +30,26 @@ public class SysadminworkJPanel extends javax.swing.JPanel {
         this.container = upc;
         this.account = a;
         this.system = sys;
+        populateTable();
+    }
+    
+    public void populateTable(){
+        DefaultTableModel model = (DefaultTableModel)this.SysadminJTable1.getModel();
+        model.setRowCount(0);
+        WorkQueue wq = system.getWorkQueue().getRequestsByRecevier(account);
+        for(WorkRequest wr : wq){
+            if(!wr.isIsCompleted()){
+                Enterprise e = system.getEnterprises().getEnterpriseByAccout(wr.getSender());
+                Object row[] = new Object[6];
+                row[1] = e.getName();
+                row[2] = e.getState() + " " + e.getCity();
+                row[3] = e.getAdmin().getAccountName();
+                row[4] = e.getAdmin().getPassword();
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+            }
+        }
     }
 
     /**
@@ -41,8 +67,11 @@ public class SysadminworkJPanel extends javax.swing.JPanel {
         OverallTree = new javax.swing.JTree();
         jScrollPane3 = new javax.swing.JScrollPane();
         SysadminJTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
-        btnAssgin.setText("Assgin to me");
+        setPreferredSize(new java.awt.Dimension(1000, 650));
+
+        btnAssgin.setText("View Detail");
 
         btnApprove.setText("Agree");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
@@ -55,17 +84,17 @@ public class SysadminworkJPanel extends javax.swing.JPanel {
 
         SysadminJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "EnterpriseName", "Localtion", "EntrepriseAdmin", "Password", "Status"
+                "ID", "EnterpriseName", "Localtion", "EntrepriseAdmin", "Password", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                true, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -74,42 +103,61 @@ public class SysadminworkJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(SysadminJTable1);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Enterprose Registe Request");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(189, 189, 189)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(72, 72, 72)
-                        .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(336, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel1))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
+                        .addComponent(jLabel1)
+                        .addGap(31, 31, 31)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(98, 98, 98)
+                        .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(572, Short.MAX_VALUE))
+                            .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
-        // TODO add your handling code here:
+        int selectedRow = this.SysadminJTable1.getSelectedRow();
+        if(selectedRow >= 0){
+            WorkRequest wr = (WorkRequest)(SysadminJTable1.getValueAt(selectedRow, 0));
+            Enterprise e = system.getEnterprises().getEnterpriseByAccout(wr.getSender());
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "You Confirm to Approve Request for " + e.getName(), "Warning", dialogButton);
+            if(dialogResult == JOptionPane.YES_OPTION){ 
+                wr.setIsCompleted(true);
+                wr.resolve();
+                e.setApproved(true);
+                DB4OUtil.storeSystem(system);
+                populateTable();
+            }
+        }
     }//GEN-LAST:event_btnApproveActionPerformed
 
 
@@ -118,6 +166,7 @@ public class SysadminworkJPanel extends javax.swing.JPanel {
     private javax.swing.JTable SysadminJTable1;
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnAssgin;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables

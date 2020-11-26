@@ -1,5 +1,6 @@
 package Business.Enterprise;
 
+import Business.Account.Account;
 import java.util.ArrayList;
 
 
@@ -17,6 +18,9 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
      * @return
      */
     public boolean EnterpriseContained(String enterpriseName){
+        if(this.size() == 0){
+            return false;
+        }
         return this.stream()
             .filter(e -> e.getName().equals(enterpriseName))
             .findAny()
@@ -28,11 +32,11 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
      * @param e
      * @return
      */
-    public boolean addEnterprise(Enterprise e) throws Exception{
+    public boolean addEnterprise(Enterprise e){
         if(!this.EnterpriseContained(e.getName())){
             return this.add(e);
         }else{
-            throw new Exception(e.getName() + " this enterpirse is alrady exist");
+            return false;
         }
     }
 
@@ -61,4 +65,16 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
         }
         return false;
     } 
+    
+    /**
+     * get enterprise by give account
+     * @param a
+     * @return 
+     */
+    public Enterprise getEnterpriseByAccout(Account a){
+        return this.stream()
+                .filter(e -> e.getAdmin().getID() == a.getID())
+                .findAny()
+                .orElse(null);
+    }
 }
