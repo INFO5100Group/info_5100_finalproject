@@ -29,10 +29,8 @@
                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnReceive" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                      <Component id="btnApprove3" min="-2" pref="190" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="328" max="-2" attributes="0"/>
+                      <Component id="btnReceive" min="-2" pref="181" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="527" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -43,22 +41,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
               <Component id="jScrollPane3" min="-2" pref="181" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="btnReceive" min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="btnApprove3" min="-2" pref="43" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="333" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+              <Component id="btnReceive" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace pref="286" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnReceive">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Receive"/>
-      </Properties>
-    </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -95,10 +85,10 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnApprove3">
+    <Component class="javax.swing.JButton" name="btnReceive">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\disapprove.png"/>
+          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\receive.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -107,7 +97,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnApprove3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReceiveActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

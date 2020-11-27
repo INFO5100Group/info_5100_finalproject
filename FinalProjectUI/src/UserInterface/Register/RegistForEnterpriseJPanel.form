@@ -22,71 +22,101 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
-              <Component id="btnApprove5" min="-2" pref="183" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="405" max="-2" attributes="0"/>
-              <Component id="btnRegist" min="-2" pref="219" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="957" max="-2" attributes="0"/>
+              <Component id="btnRegist" min="-2" pref="183" max="-2" attributes="0"/>
+              <EmptySpace pref="452" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="826" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel7" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="119" pref="119" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jtxZipCode" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
-                          <Component id="jtxUserName" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel10" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="119" pref="119" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="jtxEmail" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
-                              <Component id="jtxName" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
-                              <Component id="jtxCity" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
-                              <Component id="jtxStreet" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel7" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="119" pref="119" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jtxZipCode" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
+                                  <Component id="jtxUserName" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="jtxState" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
-                          <Component id="ComboType" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel10" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="119" pref="119" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                              <Component id="jtxEmail" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
+                                              <Component id="jtxName" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
+                                              <Component id="jtxCity" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jtxState" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
+                                          <Component id="ComboType" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jtxStreet" min="-2" pref="201" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="jtxPWord" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel12" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel13" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel14" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel15" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel16" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel17" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jtxPWord" alignment="1" min="-2" pref="201" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel18" min="-2" pref="506" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="303" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="821" max="32767" attributes="0"/>
-              <Component id="btnApprove5" min="-2" pref="43" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel11" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jtxName" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jtxEmail" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="jLabel18" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel11" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jtxName" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jtxEmail" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -94,58 +124,69 @@
                   <Component id="ComboType" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxState" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jtxState" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jtxCity" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel13" min="-2" pref="37" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jtxStreet" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel15" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxCity" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="jtxZipCode" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel14" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxStreet" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jtxUserName" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jtxPWord" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel17" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jLabel16" min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxZipCode" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxUserName" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtxPWord" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="61" max="32767" attributes="0"/>
-              <Component id="btnRegist" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="btnRegist" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnApprove5">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\disapprove.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnApprove5ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JComboBox" name="ComboType">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -239,11 +280,6 @@
         <Property name="text" type="java.lang.String" value="State:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRegist">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Regist"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="jtxStreet">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
@@ -252,6 +288,45 @@
           <Font name="Yu Gothic Light" size="15" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Enterprise Name:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegist">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\regist.png"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Light" size="36" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Regist As Enterprise"/>
       </Properties>
     </Component>
   </SubComponents>

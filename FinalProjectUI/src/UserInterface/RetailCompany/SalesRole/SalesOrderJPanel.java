@@ -40,25 +40,14 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnDistribute = new javax.swing.JButton();
         LogisticCompanyCombo = new javax.swing.JComboBox<>();
-        btnApprove4 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         OrderJTable = new javax.swing.JTable();
+        btnDistribute = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        btnDistribute.setText("Distribution logistics company");
-
         LogisticCompanyCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        btnApprove4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\disapprove.png")); // NOI18N
-        btnApprove4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnApprove4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApprove4ActionPerformed(evt);
-            }
-        });
 
         OrderJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,10 +71,17 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         OrderJTable.setFocusable(false);
         OrderJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         OrderJTable.setRowHeight(25);
-        OrderJTable.setRowMargin(0);
         OrderJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
         OrderJTable.setShowVerticalLines(false);
         jScrollPane2.setViewportView(OrderJTable);
+
+        btnDistribute.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\distribute.png")); // NOI18N
+        btnDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDistribute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistributeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -95,13 +91,10 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 .addContainerGap(585, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(209, 209, 209)
+                        .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(366, 366, 366)
                         .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(166, 166, 166))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnApprove4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(621, 621, 621))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94))))
@@ -112,24 +105,21 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 .addGap(281, 281, 281)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addComponent(btnApprove4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnApprove4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApprove4ActionPerformed
+    private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnApprove4ActionPerformed
+    }//GEN-LAST:event_btnDistributeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> LogisticCompanyCombo;
     private javax.swing.JTable OrderJTable;
-    private javax.swing.JButton btnApprove4;
     private javax.swing.JButton btnDistribute;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
