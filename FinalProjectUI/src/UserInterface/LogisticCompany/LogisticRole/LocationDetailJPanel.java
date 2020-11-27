@@ -5,6 +5,12 @@
  */
 package UserInterface.LogisticCompany.LogisticRole;
 
+import UserInterface.FurnitureManufaCompany.ProducerRole.*;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableColumn;
+
 /**
  *
  * @author Administrator
@@ -12,10 +18,11 @@ package UserInterface.LogisticCompany.LogisticRole;
 public class LocationDetailJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form LocationDetailJPanel
+     * Creates new form NewJPanel
      */
     public LocationDetailJPanel() {
         initComponents();
+        initialJTable();
     }
 
     /**
@@ -27,11 +34,22 @@ public class LocationDetailJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnApprove5 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         SenderLocation = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         ReceiverLocation = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        btnApprove5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\disapprove.png")); // NOI18N
+        btnApprove5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnApprove5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApprove5ActionPerformed(evt);
+            }
+        });
 
         SenderLocation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -52,6 +70,10 @@ public class LocationDetailJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        SenderLocation.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        SenderLocation.setRowHeight(25);
+        SenderLocation.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        SenderLocation.setShowVerticalLines(false);
         jScrollPane1.setViewportView(SenderLocation);
 
         ReceiverLocation.setModel(new javax.swing.table.DefaultTableModel(
@@ -73,6 +95,10 @@ public class LocationDetailJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        ReceiverLocation.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        ReceiverLocation.setRowHeight(25);
+        ReceiverLocation.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        ReceiverLocation.setShowVerticalLines(false);
         jScrollPane2.setViewportView(ReceiverLocation);
 
         jButton1.setText("Back");
@@ -81,35 +107,56 @@ public class LocationDetailJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(547, Short.MAX_VALUE)
+                .addComponent(btnApprove5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(574, 574, 574))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(367, 367, 367)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(573, 573, 573)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addGap(442, 442, 442)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(376, Short.MAX_VALUE)
+                .addContainerGap(140, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(131, 131, 131)
+                .addGap(91, 91, 91)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addGap(134, 134, 134)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnApprove5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(180, 180, 180))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnApprove5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApprove5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnApprove5ActionPerformed
+    private void initialJTable(){
+        SenderLocation.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(74,192,255));
+        for(int i=0;i<4;i++){
+            TableColumn column = SenderLocation.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+        ReceiverLocation.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        for(int i=0;i<4;i++){
+            TableColumn column = ReceiverLocation.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ReceiverLocation;
     private javax.swing.JTable SenderLocation;
+    private javax.swing.JButton btnApprove5;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
