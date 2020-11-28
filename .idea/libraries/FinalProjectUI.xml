@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FinalProjectUI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FinalProjectUI/dist/FinalProjectUI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

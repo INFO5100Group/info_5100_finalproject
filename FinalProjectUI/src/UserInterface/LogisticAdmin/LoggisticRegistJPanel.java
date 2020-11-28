@@ -5,6 +5,10 @@
  */
 package UserInterface.LogisticAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Administrator
@@ -16,6 +20,10 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
      */
     public LoggisticRegistJPanel() {
         initComponents();
+    }
+
+    public LoggisticRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
     }
 
     /**

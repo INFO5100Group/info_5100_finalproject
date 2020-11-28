@@ -28,11 +28,11 @@ public class OrganizationDirectory extends ArrayList<Organization>{
      * @return
      * @throws Exception
      */
-    public boolean addOrganization(Organization o) throws Exception {
+    public boolean addOrganization(Organization o) {
         if(!this.organizationContained(o.getName())){
             return this.add(o);
         }else{
-            throw new Exception(o.getName() + " This department / organization is already exist");
+            return false;
         }
     }
 

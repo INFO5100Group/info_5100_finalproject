@@ -7,6 +7,7 @@ package UserInterface.Register;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
@@ -48,6 +49,7 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
         ComboType.addItem("Forest Logging company");// 2
         ComboType.addItem("Furniture Manufacturer");// 3
         ComboType.addItem("Furniture Retailer");// 4
+        ComboType.addItem("Logistice Enterprise");// 5
     }
 
     /**
@@ -214,15 +216,26 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
             newEnterprise.setName(jtxName.getText());
             newEnterprise.setShortName(jtxEmail.getText());
             // set role for enterpirse admin
+            // create department for different types of enterprise
             if(ComboType.getSelectedIndex() == 1){
-                // role for regulate office
                 newAccount.setRole(new RegAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
             }else if(ComboType.getSelectedIndex() == 2){
                 newAccount.setRole(new ForestAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Logging Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Sales Department"));
             }else if(ComboType.getSelectedIndex() == 3){
                 newAccount.setRole(new ManuAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Production Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
             }else if(ComboType.getSelectedIndex() == 4){
                 newAccount.setRole(new RetailAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+            }else if(ComboType.getSelectedIndex() == 4){
+                newAccount.setRole(new LogisticAdmin());
+                newEnterprise.getDepartments().addOrganization(new Organization("Transportation Department"));
             }
             
             // check enterprise name and account name unique

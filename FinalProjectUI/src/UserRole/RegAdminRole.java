@@ -2,6 +2,7 @@ package UserRole;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
 import Business.Role.*;
 import EcoSystem.EcoSystem;
 import UserInterface.EnterpriseApproveInfoJPanel;

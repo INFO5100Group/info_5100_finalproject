@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="info_5100_finalproject">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/db4o-8.0.184.15484-all-java5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mssql-jdbc-8.4.1.jre8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

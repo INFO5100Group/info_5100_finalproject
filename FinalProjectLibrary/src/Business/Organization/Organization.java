@@ -14,6 +14,11 @@ public class Organization extends SerializiedObject{
         super();
         this.Employee = new PersonDirectory();
     }
+    
+    public Organization(String n){
+        this();
+        this.Name = n;
+    }
 
     public String getName() {
         return this.Name;
