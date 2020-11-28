@@ -2,7 +2,7 @@ package System.Configure;
 
 import Business.Account.Account;
 import Business.Person.Person;
-import Business.Role.SystemAdminRole;
+import System.AccountRole.*;
 import EcoSystem.EcoSystem;
 
 public class ConfigureASystem {
