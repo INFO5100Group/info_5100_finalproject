@@ -16,14 +16,14 @@ public class Account extends SerializiedObject{
         super();
     }
 
-    public Account(String un, String pw, Person p) throws Exception {
+    public Account(String un, String pw, Person p) {
         this();
-        this.setAccountName(un);
-        this.setPassword(pw);
-        this.setPerson(p);
+        this.accountName = un;
+        this.password = pw;
+        this.person = p;
     }
 
-    public Account(String un, String pw, Person p, Role r) throws Exception {
+    public Account(String un, String pw, Person p, Role r){
         this(un, pw, p);
         this.role = r;
     }

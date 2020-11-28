@@ -1,6 +1,8 @@
 package Business.WorkQueue;
 
+import Business.Account.Account;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class WorkQueue extends ArrayList<WorkRequest>{
 
@@ -20,6 +22,27 @@ public class WorkQueue extends ArrayList<WorkRequest>{
             throw new Exception("Message cannot be null");
         }
         return this.add(wr);
+    }
+    
+    public WorkRequest getOneRequestBySender(Account a){
+        return this.stream()
+                .filter(w -> w.getSender().getID() == a.getID())
+                .findAny()
+                .orElse(null);
+    }
+    
+    public WorkQueue getRequestsBySender(Account a){
+        return this.stream()
+                .filter(w -> w.getSender().getID() == a.getID())
+                .collect(Collectors
+                    .toCollection(WorkQueue::new));
+    }
+    
+    public WorkQueue getRequestsByRecevier(Account a){
+        return this.stream()
+                .filter(w -> w.getReceivers().keySet().contains(a))
+                .collect(Collectors
+                    .toCollection(WorkQueue::new));
     }
     
 }

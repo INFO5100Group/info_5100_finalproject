@@ -1,5 +1,6 @@
 package Business.Account;
 
+import Business.Person.Person;
 import java.util.ArrayList;
 
 public class AccountDirectory  extends ArrayList<Account>{
@@ -14,7 +15,7 @@ public class AccountDirectory  extends ArrayList<Account>{
      * @param newAccoutName
      * @return
      */
-    private boolean userContained(String newAccoutName){
+    public boolean userContained(String newAccoutName){
         return this.stream()
             .filter(a -> a.getAccountName().equals(newAccoutName))
             .findAny()
@@ -26,13 +27,12 @@ public class AccountDirectory  extends ArrayList<Account>{
      * 
      * @param newAccount
      * @return
-     * @throws Exception
      */
-    public boolean addAccount(Account newAccount) throws Exception {
+    public boolean addAccount(Account newAccount) {
         if(!this.userContained(newAccount.getAccountName())){
             return this.add(newAccount);
         }else{
-            throw new Exception(newAccount.getAccountName() + " this account name is exist");
+            return false;
         }
     }
 
@@ -43,6 +43,23 @@ public class AccountDirectory  extends ArrayList<Account>{
      */
     public boolean removeAccount(Account toRemove){
         return this.remove(toRemove);
+    }
+    
+    /**
+     * remove an account by given person
+     * @param p
+     * @return 
+     */
+    public boolean removeAccountByPerson(Person p){
+        Account toRemove = this.stream()
+                .filter(a -> a.getPerson().getID() == p.getID())
+                .findAny()
+                .orElse(null);
+        if(toRemove == null){
+            return false;
+        }else{
+            return this.addAccount(toRemove);
+        }
     }
 
     /**
@@ -62,5 +79,25 @@ public class AccountDirectory  extends ArrayList<Account>{
             }
         }
         return false;
+    }
+    
+    
+    /**
+     * valid date user for log in
+     * @param username
+     * @param password
+     * @return a account obj if validated username and password
+     *         null if not validated 
+     */
+    public Account getUserLogin(String username, String password){
+        Account re = this.stream()
+                    .filter(a -> a.getAccountName().equals(username))
+                    .findAny()
+                    .orElse(null);
+        if(re.getPassword().equals(password)){
+            return re;
+        }else{
+            return null;
+        }
     }
 }

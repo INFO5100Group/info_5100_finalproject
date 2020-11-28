@@ -5,9 +5,14 @@
  */
 package EcoSystem;
 
+import Business.Account.Account;
 import Business.Account.AccountDirectory;
 import Business.Enterprise.EnterpriseDirectory;
+import Business.Person.Person;
+import Business.Role.Role;
+import Business.Role.RoleType;
 import Business.WorkQueue.WorkQueue;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -33,6 +38,20 @@ public class EcoSystem {
         }
         return currSystem;
     }
+    
+    public AccountDirectory getAllAdmins(){
+        return this.accounts
+                .stream()
+                .filter(s -> s.getRole().rType == RoleType.SysAdmin)
+                .collect(Collectors
+                        .toCollection(AccountDirectory::new));
+    }
+    
+    public boolean createAccount(String un, String pw, Person p, Role r){
+        Account newAccount = new Account (un, pw, p, r);
+        return this.accounts.addAccount(newAccount);
+    }
+   
 
     public AccountDirectory getAccounts() {
         return this.accounts;

@@ -1,8 +1,9 @@
-package EcoSystem;
+package System.Configure;
 
 import Business.Account.Account;
 import Business.Person.Person;
 import Business.Role.SystemAdminRole;
+import EcoSystem.EcoSystem;
 
 public class ConfigureASystem {
     public static EcoSystem configure() throws Exception {

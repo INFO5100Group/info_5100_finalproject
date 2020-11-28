@@ -1,5 +1,6 @@
-package EcoSystem;
+package System.Configure;
 
+import EcoSystem.EcoSystem;
 import java.nio.file.Paths;
 
 import com.db4o.ObjectContainer;
@@ -30,7 +31,7 @@ public class DB4OUtil {
         }
     }
 
-    private ObjectContainer createConnection() {
+    private static ObjectContainer createConnection() {
         try {
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
             config.common().add(new TransparentPersistenceSupport());
@@ -50,7 +51,7 @@ public class DB4OUtil {
         return null;
     }
 
-    public synchronized void storeSystem(EcoSystem system) {
+    public synchronized static void storeSystem(EcoSystem system) {
         ObjectContainer conn = createConnection();
         conn.store(system);
         conn.commit();

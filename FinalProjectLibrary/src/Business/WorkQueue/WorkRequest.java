@@ -15,17 +15,35 @@ public class WorkRequest extends SerializiedObject{
     private String message;
     private String status;
     private Account sender;
+    private boolean isCompleted;
     private Map<Account, Boolean> receivers;
     private Date requestDate, resolveDate;
 
     public WorkRequest(){
+        this.isCompleted = false;
         this.requestDate = new Date();
         this.receivers = new HashMap<>();
     }
 
     public void resolve(){
-        this.status = "Complete";
+        receivers.replaceAll((k,v) -> v = true);
+        this.isCompleted = true;
+        this.status = "Approved";
         this.resolveDate = new Date();
+    }
+    
+    public void denied(){
+        this.isCompleted = true;
+        this.resolveDate = new Date();
+        this.status = "Denied";
+    }
+
+    public boolean isIsCompleted() {
+        return isCompleted;
+    }
+
+    public void setIsCompleted(boolean isCompleted) {
+        this.isCompleted = isCompleted;
     }
 
     public String getMessage() {
@@ -76,4 +94,20 @@ public class WorkRequest extends SerializiedObject{
         this.resolveDate = resolveDate;
     }
 
+    public boolean complateForReceiver(Account a){
+        for(Account receiver : receivers.keySet()){
+            if(receiver.getID() == a.getID()){
+                receivers.put(receiver, true);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.getID() + "";
+    }
+    
+    
 }
