@@ -7,6 +7,7 @@ package UserInterface.RetailCompany.PurchaseRole;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -15,24 +16,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class OrderJPanel extends javax.swing.JPanel {
-
+    private JPanel UserProcessContainer;
     /**
      * Creates new form OrderJPanel
      */
-    public OrderJPanel() {
+    public OrderJPanel(JPanel UserProcessContainer) {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));        
-        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
-        }
-        for(int i=0;i<6;i++){
-            TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
-        }
+        this.UserProcessContainer = UserProcessContainer;
     }
 
     /**
@@ -138,7 +128,20 @@ public class OrderJPanel extends javax.swing.JPanel {
                 .addGap(106, 106, 106))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void initialJTable(){
+        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));        
+        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(74,192,255));
+        for(int i=0;i<6;i++){
+            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+        for(int i=0;i<6;i++){
+            TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+    }
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCompleteActionPerformed

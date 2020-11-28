@@ -8,6 +8,7 @@ package UserInterface.FurnitureManufaCompany.PurchaseRole;
 import UserInterface.RetailCompany.PurchaseRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -16,24 +17,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class OrderJPanel extends javax.swing.JPanel {
-
+    private JPanel UserProcessContainer;
     /**
      * Creates new form OrderJPanel
      */
-    public OrderJPanel() {
+    public OrderJPanel(JPanel UserProcessContainer) {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));        
-        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
-        }
-        for(int i=0;i<6;i++){
-            TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
-        }
+        this.UserProcessContainer = UserProcessContainer;
     }
 
     /**
@@ -125,21 +115,34 @@ public class OrderJPanel extends javax.swing.JPanel {
                             .addGap(123, 123, 123)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(487, 487, 487))))
+                        .addGap(464, 464, 464))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(271, 271, 271)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addGap(88, 88, 88)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void initialJTable(){
+        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));        
+        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(74,192,255));
+        for(int i=0;i<6;i++){
+            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+        for(int i=0;i<6;i++){
+            TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
+    }
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCompleteActionPerformed

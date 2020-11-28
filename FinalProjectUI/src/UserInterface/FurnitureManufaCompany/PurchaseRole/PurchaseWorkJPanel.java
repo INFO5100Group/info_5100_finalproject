@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.LogisticCompany.LogisticRole;
+package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
+import UserInterface.RetailCompany.PurchaseRole.*;
+import UserInterface.LogisticCompany.LogisticRole.*;
 import UserInterface.Customer.*;
 import UserInterface.sysadmin.*;
 import java.awt.CardLayout;
@@ -14,16 +16,16 @@ import javax.swing.JPanel;
  *
  * @author Administrator
  */
-public class LogisticWorkJPanel extends javax.swing.JPanel {
+public class PurchaseWorkJPanel extends javax.swing.JPanel {
     private JPanel UserProcessContainer;
     /**
      * Creates new form SysadminWorkJPanel1
      */
-    public LogisticWorkJPanel(JPanel UserProcessContainer) {
+    public PurchaseWorkJPanel(JPanel UserProcessContainer) {
         initComponents();
         this.UserProcessContainer = UserProcessContainer;
-        LogisticWorkQueueJPanel panel = new LogisticWorkQueueJPanel(container);
-        container.add("LogisticWorkQueueJPanel",panel);
+        PurchaseJPanel panel = new PurchaseJPanel(container);
+        container.add("PurchaseJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }
@@ -151,16 +153,16 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        LocationDetailJPanel panel = new LocationDetailJPanel(container);
-        container.add("LocationDetailJPanel",panel);
+        PurchaseJPanel panel = new PurchaseJPanel(container);
+        container.add("PurchaseJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        LogisticWorkQueueJPanel panel = new LogisticWorkQueueJPanel(container);
-        container.add("LogisticWorkQueueJPanel",panel);
+        OrderJPanel panel = new OrderJPanel(container);
+        container.add("OrderJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }//GEN-LAST:event_jButton4ActionPerformed

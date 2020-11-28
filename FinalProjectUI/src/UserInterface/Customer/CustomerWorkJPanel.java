@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.LogisticCompany.LogisticRole;
+package UserInterface.Customer;
 
-import UserInterface.Customer.*;
 import UserInterface.sysadmin.*;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -14,16 +13,16 @@ import javax.swing.JPanel;
  *
  * @author Administrator
  */
-public class LogisticWorkJPanel extends javax.swing.JPanel {
+public class CustomerWorkJPanel extends javax.swing.JPanel {
     private JPanel UserProcessContainer;
     /**
      * Creates new form SysadminWorkJPanel1
      */
-    public LogisticWorkJPanel(JPanel UserProcessContainer) {
+    public CustomerWorkJPanel(JPanel UserProcessContainer) {
         initComponents();
         this.UserProcessContainer = UserProcessContainer;
-        LogisticWorkQueueJPanel panel = new LogisticWorkQueueJPanel(container);
-        container.add("LogisticWorkQueueJPanel",panel);
+        CustomerSearchJPanel panel = new CustomerSearchJPanel(container);
+        container.add("CustomerSearchJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }
@@ -39,6 +38,7 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
 
         jFileChooser1 = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         OverallTree = new javax.swing.JTree();
@@ -52,6 +52,13 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(102, 51, 0));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\admin.png")); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\request.png")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +85,9 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -92,7 +101,9 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(254, 254, 254)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(191, 191, 191)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(103, Short.MAX_VALUE))
         );
@@ -151,16 +162,24 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        LocationDetailJPanel panel = new LocationDetailJPanel(container);
-        container.add("LocationDetailJPanel",panel);
+        CustomerHistoryJPanel panel = new CustomerHistoryJPanel(container);
+        container.add("CustomerHistoryJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CustomerReceiveOrderJPanel panel = new CustomerReceiveOrderJPanel(container);
+        container.add("CustomerReceiveOrderJPanel",panel);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.next(container);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        LogisticWorkQueueJPanel panel = new LogisticWorkQueueJPanel(container);
-        container.add("LogisticWorkQueueJPanel",panel);
+        CustomerSearchJPanel panel = new CustomerSearchJPanel(container);
+        container.add("CustomerSearchJPanel",panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -169,6 +188,7 @@ public class LogisticWorkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree OverallTree;
     private javax.swing.JPanel container;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

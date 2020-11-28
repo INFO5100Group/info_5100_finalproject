@@ -8,6 +8,7 @@ package UserInterface.LogisticCompany.LogisticRole;
 import UserInterface.FurnitureManufaCompany.ProducerRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -16,12 +17,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class LocationDetailJPanel extends javax.swing.JPanel {
-
+    private JPanel UserProcessContainer;
     /**
      * Creates new form NewJPanel
      */
-    public LocationDetailJPanel() {
+    public LocationDetailJPanel(JPanel UserProcessContainer) {
         initComponents();
+        this.UserProcessContainer = UserProcessContainer;
         initialJTable();
     }
 

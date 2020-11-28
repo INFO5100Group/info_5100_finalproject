@@ -8,6 +8,7 @@ package UserInterface.RetailCompany.SalesRole;
 import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -16,12 +17,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class SalesOrderJPanel extends javax.swing.JPanel {
-
+    private JPanel UserProcessContainer;
     /**
      * Creates new form SalesOrderJPanel
      */
-    public SalesOrderJPanel() {
+    public SalesOrderJPanel(JPanel UserProcessContainer) {
         initComponents();
+        this.UserProcessContainer = UserProcessContainer;
         OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));

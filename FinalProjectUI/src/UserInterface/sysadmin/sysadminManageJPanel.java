@@ -7,6 +7,7 @@ package UserInterface.sysadmin;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -15,13 +16,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class sysadminManageJPanel extends javax.swing.JPanel {
-
+    private JPanel UserProcessContainer;
     /**
      * Creates new form sysadminManageJPanel
      */
-    public sysadminManageJPanel() {
+    public sysadminManageJPanel(JPanel UserProcessContainer) {
         initComponents();
-        tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 21));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));
         for(int i=0;i<3;i++){
@@ -29,6 +30,7 @@ public class sysadminManageJPanel extends javax.swing.JPanel {
              column.setHeaderRenderer(cellRenderer);
         }
         //tblManage.setRowHeight(25);
+        this.UserProcessContainer = UserProcessContainer;
     }
 
     /**
