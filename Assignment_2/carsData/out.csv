@@ -1,0 +1,2500 @@
+isAvaliable,make,manufactureYear,seatNum,seriesNum,model,location,updateTime,maintanceExpreiedDate
+False,toyota,2008,3,jtezu11f88k007763,cruiser,new jersey,1/26/2016,10/27/2018
+False,ford,2011,1,2fmdk3gc4bbb02217,se,tennessee,4/15/2016,7/4/2022
+False,dodge,2018,4,3c4pdcgg5jt346413,mpv,georgia,4/7/2017,11/16/2021
+True,ford,2014,1,1ftfw1et4efc23745,door,virginia,5/4/2010,11/5/2022
+True,chevrolet,2018,1,3gcpcrec2jg473991,1500,florida,5/13/2017,10/11/2023
+False,dodge,2018,4,2c4rdgeg9jr237989,mpv,texas,1/18/2011,12/22/2024
+False,chevrolet,2010,1,1gcsksea1az121133,pk,georgia,9/27/2019,1/26/2024
+True,gmc,2017,2,1gks2gkc3hr326762,door,california,5/20/2016,1/5/2022
+True,chevrolet,2018,2,1g1zd5st5jf191860,malibu,florida,5/27/2014,3/30/2024
+False,ford,2017,2,2fmpk3j92hbc12542,mpv,texas,6/26/2010,2/21/2016
+True,dodge,2009,4,2b3lj54t49h509675,coupe,georgia,6/12/2014,11/28/2025
+True,gmc,2017,2,1gks2bkc6hr136280,mpv,california,8/16/2019,9/22/2024
+True,chevrolet,2018,5,3gcukrec0jg176059,1500,tennessee,3/13/2012,10/23/2022
+False,chrysler,2017,2,2c4rc1cg5hr616095,wagon,texas,8/13/2015,2/27/2016
+True,ford,2013,4,1ftfw1et7dfa47790,door,virginia,2/16/2012,8/1/2022
+True,gmc,2017,2,1gks2gkc6hr328389,door,california,11/10/2014,7/7/2015
+False,kia,2018,1,3kpfk4a77je198723,forte,north carolina,1/27/2017,10/23/2024
+True,buick,2018,3,kl4cj1sb6jb688844,encore,tennessee,7/31/2020,10/4/2020
+False,ford,2017,2,2fmpk3j95hbb73607,mpv,texas,12/9/2012,12/3/2024
+True,ford,2013,5,1ft8w3dt5deb68569,door,virginia,2/13/2018,3/7/2022
+True,gmc,2017,2,1gks2gkcxhr328380,door,california,12/26/2014,12/28/2019
+False,kia,2018,5,3kpfl4a79je272611,forte,north carolina,1/25/2017,4/22/2019
+True,chevrolet,2015,5,2gnflhe33f6214023,door,ohio,2/2/2010,8/31/2012
+False,ford,2017,3,2fmpk3j84hbc09276,mpv,texas,6/24/2010,9/4/2011
+True,ford,2013,3,1ftfw1efxdfa01008,door,virginia,9/25/2017,3/31/2020
+True,gmc,2017,5,1gks2gkc2hr327918,door,california,4/16/2016,1/14/2019
+True,kia,2020,2,5xypg4a59lg616029,sorento,north carolina,7/13/2010,9/14/2019
+True,buick,2014,1,1g4ps5sk1e4188639,door,ohio,3/12/2017,7/6/2023
+False,ford,2017,2,1fadp5auxhl109013,doors,texas,3/7/2015,7/29/2023
+True,ford,2008,2,1fdwf37r28eb95687,chassis,tennessee,5/6/2016,2/2/2023
+True,gmc,2017,1,1gks2gkc6hr326335,door,california,1/11/2010,7/28/2015
+True,infiniti,2016,3,jn1by1ar7gm271292,q70,new york,1/17/2016,8/2/2023
+True,chevrolet,1973,2,1q87t3n166389,camaro,pennsylvania,10/18/2011,9/22/2024
+False,ford,2017,4,2fmpk3j9xhbb56401,mpv,texas,7/3/2019,4/2/2022
+True,ford,2003,3,1fahp60a63y107799,convertible,virginia,8/27/2010,12/4/2021
+True,gmc,2017,1,1gks2gkc2hr328793,door,california,12/7/2019,11/15/2022
+True,mercedes-benz,2016,2,8btpe7dd4ge127040,vans,new york,5/6/2020,8/18/2025
+True,chevrolet,2018,4,1gcncneh5jz302471,1500,tennessee,6/11/2014,11/30/2014
+False,ford,2017,4,2fmpk4k96hbb16692,mpv,texas,7/21/2019,12/21/2020
+False,ford,2003,2,1ftnx20p73ed69682,pk,tennessee,3/2/2011,7/22/2025
+True,gmc,2017,4,1gks2gkc6hr325461,door,california,3/28/2010,10/22/2019
+True,mercedes-benz,2016,1,wd4pe7dd1gp253504,vans,new york,3/11/2017,10/25/2020
+True,chevrolet,2018,1,3gcukrec4jg204915,1500,tennessee,9/23/2019,4/12/2024
+False,ford,2017,4,2fmpk3j85hbb79415,mpv,texas,6/23/2018,4/19/2020
+True,ford,2017,1,1ft7w3bt5hee88155,srw,pennsylvania,6/9/2016,4/14/2017
+True,gmc,2017,2,1gks2gkcxhr324555,door,california,3/18/2015,1/14/2017
+True,jeep,2019,2,3c4njccb3kt676336,compass,north carolina,1/9/2016,6/19/2020
+True,chevrolet,2017,1,1g1zh5sx9hf118136,malibu,tennessee,4/19/2011,5/8/2017
+False,dodge,2017,2,3c4pddeg7ht595704,mpv,texas,2/4/2017,10/2/2023
+True,ford,2017,1,1ft7w3bt0hef02785,srw,pennsylvania,3/3/2014,11/14/2020
+True,gmc,2017,2,1gks2bkc7hr133811,mpv,california,1/30/2013,8/4/2017
+True,jeep,2019,4,3c4njccb0kt676343,compass,north carolina,9/22/2012,8/13/2017
+True,buick,2017,1,5gakrckdxhj113512,enclave,tennessee,10/31/2015,6/19/2019
+False,ford,2017,3,2fmpk4j87hbb21750,mpv,texas,3/17/2012,5/23/2018
+True,chrysler,2019,1,2c3ccabgxkh559658,300,south carolina,1/30/2011,8/29/2025
+True,gmc,2017,2,1gks2bkc6hr134450,mpv,california,5/2/2010,4/3/2013
+True,jeep,2019,2,1c4pjmbx6kd298806,cherokee,north carolina,6/26/2013,8/30/2013
+True,buick,2017,5,1g4zp5ss8hu149142,door,florida,10/26/2017,7/14/2022
+True,chrysler,2020,3,2c4rc1fg5lr143335,pacifica,ohio,8/28/2017,10/29/2019
+True,chrysler,2019,3,2c3ccaeg5kh585628,300,south carolina,1/30/2019,6/16/2019
+True,gmc,2017,1,1gks2gkc0hr323625,door,california,6/4/2015,6/4/2015
+True,jeep,2019,5,1c4pjmbx2kd360704,cherokee,north carolina,1/25/2017,2/16/2019
+True,chevrolet,2017,3,1g1fb1rsxh0185712,door,florida,3/7/2012,2/10/2013
+False,ford,2017,5,1fmcu0gd8huc93883,door,texas,3/12/2012,3/16/2017
+True,chrysler,2019,5,2c4rc1gg3kr730663,pacifica,south carolina,8/2/2014,1/24/2017
+True,gmc,2017,1,1gks2gkc6hr327937,door,california,7/28/2012,5/19/2014
+True,jeep,2019,5,1c4pjmbx6kd298174,cherokee,north carolina,9/11/2017,4/5/2022
+True,chevrolet,2017,1,1g1fb1rsxh0104806,door,florida,12/17/2016,10/4/2020
+False,ford,2017,3,1fmcu0gd7huc86259,door,texas,9/6/2017,8/25/2019
+True,chrysler,2019,3,2c3ccakg4kh594972,300,south carolina,3/19/2020,2/6/2022
+True,gmc,2017,1,1gks2gkc7hr321306,door,california,7/1/2020,7/6/2021
+True,jeep,2019,1,3c4njccb4kt662767,compass,north carolina,7/31/2018,4/2/2023
+True,bmw,2017,1,5uxwx7c3xh0u44145,x3,tennessee,7/15/2017,1/17/2024
+False,ford,2017,4,1fmcu0gd9huc37922,door,texas,10/21/2013,4/18/2019
+True,chrysler,2019,3,2c3ccakg6kh578112,300,south carolina,9/14/2017,2/23/2025
+True,gmc,2017,5,1gks2gkcxhr323969,door,california,2/15/2020,1/3/2022
+True,jeep,2019,4,3c4njccb7kt660088,compass,north carolina,11/2/2010,6/13/2013
+True,buick,2017,2,5gakvckd2hj308564,door,florida,3/27/2013,11/12/2016
+False,ford,2017,5,1fmcu0gd5hud08310,door,texas,12/13/2012,12/6/2014
+True,chrysler,2019,2,2c3ccaeg0kh555632,300,south carolina,7/29/2010,12/4/2014
+True,gmc,2017,2,1gks2gkcxhr328718,door,california,9/22/2018,1/1/2025
+True,jeep,2019,5,3c4njddb7kt682015,compass,north carolina,7/22/2015,1/18/2021
+True,chevrolet,2017,1,1g1fb3dx5h0143964,camaro,florida,6/3/2015,10/20/2024
+False,ford,2017,5,1fmcu0g95huc13712,door,texas,1/27/2016,8/29/2022
+True,ford,2016,4,1ftfw1ef1gfb13670,door,pennsylvania,3/21/2020,6/21/2025
+True,gmc,2017,5,1gks2gkc5hr326410,door,california,4/8/2011,6/14/2020
+True,jeep,2019,5,3c4njddb0kt686052,compass,north carolina,5/21/2010,6/24/2013
+True,chevrolet,2017,1,2gnalcek7h1548351,equinox,florida,9/25/2020,10/12/2020
+False,ford,2017,5,1fmcu0gd5huc78080,door,texas,1/22/2018,5/15/2019
+True,ford,2016,4,1fmcu9gx9gua57286,door,pennsylvania,1/1/2015,8/3/2021
+False,ford,2017,1,1ftfw1ef5hkc50264,door,texas,7/29/2016,1/23/2023
+False,chrysler,2015,2,1c3cccab7fn613884,door,pennsylvania,4/12/2015,4/17/2025
+True,bmw,2017,5,wba4f9c51hg439932,door,michigan,1/10/2016,7/16/2025
+False,ford,2017,5,1ftfw1ef4hkc50286,door,texas,1/27/2016,4/12/2016
+True,dodge,2015,3,2c3cdzc95fh757310,challenger,pennsylvania,1/29/2016,7/20/2018
+True,bmw,2017,3,5ymkt6c37h0x20696,m,michigan,8/19/2012,10/23/2022
+True,ford,2017,2,1ft7w2bt7hec41164,door,texas,10/7/2019,7/2/2024
+True,ford,2015,4,1ft8w3b61fec52078,door,pennsylvania,12/23/2014,10/16/2018
+True,chevrolet,2017,5,1gcgtcen4h1158648,colorado,michigan,5/29/2016,4/16/2022
+False,ford,2017,2,1fm5k7b86hga87008,mpv,texas,12/15/2017,10/28/2019
+True,ford,2018,1,1fadp3m26jl307477,focus,south carolina,4/2/2016,3/24/2021
+True,cadillac,2017,1,1gyknbrsxhz114969,door,michigan,3/8/2012,7/8/2013
+True,ford,2017,3,1fm5k8ht0hga07252,mpv,texas,10/13/2011,12/4/2018
+True,ford,2018,2,1fadp3j2xjl279400,focus,south carolina,4/9/2010,5/4/2019
+True,cadillac,2017,5,1gyknbrs8hz257399,door,michigan,2/8/2012,10/31/2018
+False,ford,2017,3,1fm5k7d82hgb39148,mpv,texas,12/25/2013,3/27/2018
+False,ford,2018,4,1fadp3k23jl219764,focus,south carolina,10/19/2017,8/22/2023
+True,chevrolet,2017,2,1g1zh5sx7hf141060,malibu,michigan,3/15/2013,2/2/2025
+False,ford,2017,4,1fm5k7f80hga03159,door,texas,4/24/2020,2/26/2021
+True,dodge,2018,5,1c4rdjdg2jc329601,durango,south carolina,3/23/2015,9/12/2018
+True,cadillac,2017,5,1gykndrs1hz125239,door,michigan,6/7/2013,9/26/2014
+False,ford,2017,5,1fm5k7d84hgc31359,mpv,texas,10/10/2013,10/7/2020
+True,ford,2018,1,1fmcu9hd6juc54783,escape,south carolina,3/7/2016,4/18/2020
+True,chevrolet,2017,1,3gcuktej3hg475034,1500,michigan,12/27/2014,3/7/2025
+False,ford,2017,5,1fm5k7d8xhga68751,mpv,texas,6/18/2012,4/28/2013
+True,dodge,2018,5,2c3cdxjg6jh224431,charger,michigan,9/20/2011,1/10/2024
+True,chevrolet,2017,1,1gcgtben3h1180134,colorado,michigan,9/5/2010,4/25/2014
+False,ford,2017,3,1ftew1ep8hfa10123,door,texas,7/31/2017,1/6/2019
+True,chrysler,2017,2,2c4rc1eg2hr669530,pacifica,michigan,9/14/2013,1/24/2014
+True,chevrolet,2017,5,1gcgtcen9h1202076,colorado,michigan,3/9/2018,4/4/2018
+False,ford,2017,3,1fm5k7d82hgb21314,mpv,texas,4/2/2015,10/13/2025
+True,ford,2017,2,1ftew1ep2hkd15978,door,south carolina,5/9/2017,1/22/2019
+True,cadillac,2017,1,1gys4ckj7hr359884,door,michigan,4/3/2016,8/12/2023
+True,ford,2017,4,1fm5k8f80hgc67231,explorer,south carolina,1/8/2019,7/24/2025
+True,chevrolet,2017,2,1gcptce16h1176629,colorado,michigan,10/23/2015,5/23/2019
+True,ford,2017,4,1ftew1ef1hke25038,door,texas,8/6/2018,7/11/2025
+True,ford,2017,5,1ftfw1eg1hfb38806,f-150,south carolina,10/4/2014,1/21/2024
+True,chevrolet,2018,3,1gc4k1ey0jf149152,3500,washington,3/31/2013,10/23/2022
+False,ford,2017,1,1fm5k7dh9hgb05630,mpv,texas,5/4/2012,12/8/2018
+True,dodge,2017,1,2c4rdgcg3hr864989,caravan,south carolina,5/1/2013,10/11/2020
+True,chevrolet,2017,2,3gcukrec3hg429109,1500,michigan,10/29/2010,4/20/2019
+False,dodge,2018,2,3c4pdcab8jt166940,mpv,florida,11/24/2013,4/10/2023
+True,chevrolet,2017,2,1gnkvgkd0hj145877,door,michigan,11/16/2015,2/17/2022
+False,dodge,2018,4,2c4rdgeg8jr337145,mpv,florida,4/12/2013,11/7/2018
+True,chrysler,2017,3,2c4rc1gg4hr635019,van,south carolina,2/5/2010,11/18/2023
+True,chevrolet,2017,3,1gcukrecxhf153500,1500,michigan,1/20/2016,12/17/2024
+False,dodge,2018,2,2c4rdgcg2jr218218,mpv,florida,12/21/2019,7/17/2020
+True,chrysler,2017,4,2c3ccabg5hh538726,300,arizona,9/15/2018,6/30/2025
+True,chevrolet,2017,2,3gcuksej6hg353147,1500,michigan,3/19/2012,3/4/2018
+False,dodge,2016,1,1c3cdffh0gd823262,dart,michigan,8/18/2013,1/24/2019
+False,dodge,2018,2,3c4pdcabxjt311007,mpv,florida,1/24/2013,6/2/2021
+False,dodge,2008,3,2d8hn44h88r669549,van,utah,3/6/2018,9/19/2018
+True,chevrolet,2017,5,1gc1kveg3hf189737,2500,michigan,2/11/2016,2/16/2025
+False,dodge,2018,5,2c3cdxct1jh233225,doors,florida,1/10/2017,9/8/2020
+False,dodge,2014,3,1c3cdzab0en111068,door,utah,9/13/2012,8/4/2022
+True,chevrolet,2017,2,3gcukrec4hg196549,1500,michigan,11/5/2013,8/17/2018
+False,dodge,2018,2,2c3cdxhgxjh125388,doors,florida,5/12/2018,8/29/2019
+True,cadillac,2015,1,1gys4tkj0fr538846,esv,washington,5/9/2010,2/17/2019
+True,dodge,2018,2,1c4sdjct1jc174166,mpv,florida,7/31/2012,6/30/2017
+False,ford,2014,2,1fdfe4fs7eda23699,cutaway,pennsylvania,4/10/2017,12/4/2017
+True,chevrolet,2016,1,3gcuknec9gg342967,1500,washington,5/3/2013,7/8/2019
+False,chrysler,2018,5,2c3ccakg8jh168457,doors,florida,8/20/2013,5/20/2025
+True,ford,2016,3,1fm5k8f8xggc51519,door,south carolina,6/11/2010,4/28/2014
+True,chevrolet,2015,3,1gc1kwegxff145382,door,washington,11/19/2018,10/22/2021
+False,dodge,2018,5,3c4pdcab6jt273002,mpv,florida,7/23/2011,7/31/2018
+True,ford,2016,2,1fm5k8fh9ggc37790,explorer,south carolina,8/28/2017,5/22/2018
+True,chevrolet,2011,2,1gc1kxc86bf208814,door,washington,3/12/2014,4/20/2022
+False,dodge,2018,4,3c4pdcab0jt474412,mpv,florida,9/1/2020,5/6/2025
+True,ford,2016,4,1fmjk1ht3gef52975,el,south carolina,9/3/2013,10/13/2024
+True,cadillac,2016,4,1g6ah1rx1g0193887,door,michigan,12/8/2011,7/7/2016
+False,dodge,2018,1,3c4pdcab8jt384019,mpv,florida,8/8/2018,5/27/2022
+True,ford,2016,5,2fmpk3j98gbb59781,edge,south carolina,6/21/2018,6/19/2022
+True,bmw,2016,4,wba7f2c57gg421020,series,michigan,11/11/2012,7/6/2024
+False,dodge,2018,5,3c4pddgg1jt523058,doors,florida,9/18/2017,2/10/2023
+True,ford,2016,3,1ftew1ep1gfc64335,door,south carolina,8/19/2018,4/15/2021
+True,bmw,2016,1,wba7f2c55gg415264,series,michigan,5/31/2017,3/28/2021
+False,dodge,2018,4,2c3cdxbg0jh187083,doors,florida,12/29/2015,12/5/2018
+True,ford,2016,5,2fmhk6c89gba05297,flex,south carolina,7/16/2019,12/22/2024
+True,buick,2016,5,5gakvbkd8gj196085,door,michigan,3/1/2010,4/9/2012
+False,dodge,2018,4,2c3cdzag7jh321665,doors,florida,1/3/2019,2/16/2024
+True,ford,2014,3,1ft7x2b62eea29551,door,pennsylvania,8/6/2020,2/21/2021
+True,bmw,2016,2,wba7f2c57gg419607,series,michigan,3/21/2013,5/18/2014
+False,dodge,2018,5,3c4pdcgg9jt216280,mpv,florida,8/4/2017,10/8/2020
+True,ford,2014,3,1fm5k8f81egb23411,door,pennsylvania,12/27/2017,5/10/2023
+True,chevrolet,2016,4,3gcuknec6gg150809,1500,michigan,4/24/2020,6/18/2021
+True,ford,2017,3,1ft7w2bt7hec67263,door,texas,5/22/2019,6/13/2020
+False,ford,2014,5,1fmcu0g9xeud52262,door,new york,5/9/2010,11/22/2017
+True,chevrolet,2016,3,3gcukrec5gg383569,door,michigan,4/30/2016,11/21/2022
+True,ford,2017,5,1ft7w2bt0hef21363,door,texas,11/7/2011,10/27/2021
+True,ford,2015,2,1ftew1cf3fke12825,door,south carolina,12/20/2014,12/6/2024
+True,chevrolet,2016,1,3gcukrec0gg380000,door,michigan,3/16/2016,7/17/2022
+False,ford,2017,1,1fmzk1cmxhkb51025,mpv,texas,8/25/2015,9/4/2022
+False,chevrolet,2009,5,1gbhg396191112177,van,michigan,4/7/2011,5/18/2025
+True,chevrolet,2016,4,3gcukrec4gg223800,door,michigan,1/18/2013,12/5/2018
+False,ford,2017,5,3fa6p0h73hr358945,door,texas,5/29/2015,4/30/2024
+False,dodge,2002,1,1b7hg38n62s587845,pk,michigan,5/30/2011,4/17/2025
+True,cadillac,2016,1,3gyfnae36gs538333,srx,michigan,12/30/2017,10/16/2023
+False,ford,2017,3,3fa6p0hd3hr199785,door,texas,9/18/2020,5/8/2024
+False,chrysler,2000,2,2c3hd46r3yh208325,door,north carolina,3/8/2014,1/30/2023
+True,chevrolet,2016,2,1gchtde32g1339478,colorado,michigan,12/10/2010,3/20/2020
+True,ford,2017,4,1ft7w2bt8hec67434,door,texas,6/14/2010,7/12/2023
+True,ford,2014,4,1ftfw1et9efb99877,door,south carolina,2/14/2012,3/27/2013
+True,chevrolet,2016,1,1gcvknec1gz396932,1500,michigan,8/24/2013,7/2/2018
+False,ford,2017,4,3fa6p0hd7hr273550,door,texas,1/25/2012,6/11/2017
+True,ford,2011,1,1ftfw1ef1bfa03548,door,georgia,5/15/2010,7/10/2023
+True,chevrolet,2016,5,3gcuktec5gg350066,door,michigan,7/10/2013,4/26/2019
+False,ford,2017,3,1fbax2cv0hkb32599,mpv,texas,6/8/2015,7/4/2017
+True,ford,2011,3,1fduf5gt8bea80212,cab,south carolina,12/4/2011,9/13/2017
+True,chevrolet,2016,1,3gcuksec3gg369662,door,michigan,3/14/2019,12/25/2024
+False,ford,2017,2,nm0ls7e76h1312963,wagon,texas,12/4/2017,9/30/2019
+False,dodge,2001,1,1b7hc16x01s213315,pickup,georgia,7/29/2014,4/5/2024
+True,chevrolet,2016,1,1gc1kve82gf207345,door,michigan,2/23/2015,12/1/2022
+False,ford,2017,5,1fadp3e24hl348263,doors,texas,11/13/2010,9/29/2017
+False,dodge,2005,3,3d7ks28c15g771945,pickup,south carolina,8/21/2014,9/5/2017
+False,chevrolet,2018,1,1g1zb5st8jf226848,malibu,texas,6/15/2019,10/16/2023
+True,ford,2017,5,1ft7w2b60hec03964,door,texas,3/14/2020,10/13/2020
+False,chevrolet,2020,3,2gnaxkev6l6128374,vehicl,kentucky,3/28/2020,9/3/2022
+True,buick,2017,1,kl4cjcsb1hb024411,encore,texas,4/12/2020,6/4/2022
+False,ford,2017,1,nm0ls7e79h1312701,wagon,texas,5/1/2019,12/21/2022
+False,chrysler,2005,2,2c3ja43r35h179032,door,massachusetts,3/21/2010,2/28/2021
+True,chevrolet,2020,4,1g1fb1rx6l0109117,camaro,georgia,12/31/2013,7/6/2018
+False,ford,2017,2,1fmzk1cm1hkb51026,mpv,texas,12/26/2018,9/5/2020
+True,ford,2016,2,1fatp8uhxg5296168,door,arizona,6/4/2015,3/10/2017
+True,chevrolet,2020,2,3gncjlsb1ll142267,trax,georgia,4/7/2018,2/5/2023
+False,ford,2017,3,3fa6p0g73hr140652,door,texas,2/1/2010,8/11/2019
+True,ford,2016,4,1ft7w2b60geb96643,door,florida,11/24/2014,7/17/2021
+True,chevrolet,2020,2,1gnscbkc4lr164829,tahoe,georgia,5/10/2016,9/1/2018
+False,ford,2017,1,3fa6p0hd8hr305132,door,texas,4/8/2018,3/4/2019
+True,ford,2015,4,1ftew1cg0ffa89853,door,arizona,5/2/2016,7/10/2016
+True,chevrolet,2020,1,1gnscbkcxlr162857,tahoe,georgia,2/18/2018,11/2/2018
+False,ford,2017,4,3fa6p0lu4hr246569,doors,texas,12/4/2017,5/22/2018
+True,dodge,2012,3,1c6rd7lt4cs187334,door,pennsylvania,4/19/2011,8/26/2020
+True,chevrolet,2020,5,3gncjlsb4ll149763,trax,georgia,1/18/2010,8/8/2019
+False,ford,2017,3,1fmzk1cm7hkb51015,mpv,texas,9/26/2018,11/20/2018
+True,dodge,2011,1,1d7rw3gp7bs614101,door,pennsylvania,8/25/2016,6/10/2022
+True,chevrolet,2020,1,1gnscbkc6lr159535,tahoe,georgia,3/13/2010,3/9/2023
+False,ford,2017,2,3fa6p0hd2hr178393,door,texas,9/21/2010,5/19/2016
+True,dodge,2011,2,3d73y4clxbg535425,door,pennsylvania,9/13/2013,12/10/2019
+True,chevrolet,2013,1,2g1fc3d32d9188287,door,texas,6/9/2017,7/5/2018
+False,ford,2017,3,3fa6p0luxhr231039,doors,texas,6/1/2014,7/10/2017
+False,ford,2014,4,1ftss3el7eda50076,van,florida,9/21/2015,9/21/2019
+True,chevrolet,2014,2,1gc3czcg1ef176545,3500,texas,4/29/2017,2/12/2021
+False,ford,2017,2,3fa6p0k93hr257687,door,texas,5/21/2020,7/25/2023
+False,ford,2014,5,1fadp3f20el320177,door,florida,12/16/2015,5/2/2017
+False,bmw,2011,5,wbaph7g58bnn05983,door,texas,3/2/2018,5/1/2025
+False,ford,2016,5,1fmcu0f78gub36672,door,texas,4/6/2012,1/8/2014
+True,dodge,2014,1,2c3cdxct3eh230364,door,arizona,8/29/2010,5/17/2022
+True,chevrolet,2018,3,1gc1kwey3jf123662,2500,georgia,3/4/2020,1/26/2023
+False,dodge,2016,5,2c4rdgbg2gr345223,van,texas,6/28/2015,11/11/2023
+False,ford,2012,3,3fahp0ha5cr389742,door,florida,5/25/2013,1/28/2024
+True,chevrolet,2018,3,1gnschkc6jr269601,suburban,georgia,1/29/2010,11/8/2021
+False,ford,2016,4,2fmpk3k95gbb76939,mpv,texas,5/21/2014,5/5/2020
+False,ford,2011,5,1ftne2ew6bda76057,cargo,florida,12/13/2016,3/27/2017
+True,chevrolet,2018,2,1gc1kwey6jf259008,2500,georgia,7/29/2011,7/1/2021
+False,ford,2016,1,2fmpk3g96gbc42228,mpv,texas,5/26/2020,4/21/2023
+False,ford,2011,3,1ftew1cm0bfc14625,door,florida,1/8/2018,11/23/2019
+True,chevrolet,2018,5,2gnaxjev9j6276848,equinox,georgia,6/12/2016,10/29/2022
+False,dodge,2016,3,3c4pdcbb9gt181387,mpv,texas,7/20/2019,10/1/2025
+True,ford,2008,1,1ftxw43r18eb10682,pickup,pennsylvania,2/16/2016,9/24/2019
+True,chevrolet,2017,1,2gnalcek6h6289807,equinox,georgia,3/7/2019,5/11/2023
+False,ford,2016,4,1ftew1cf8gkd34592,door,texas,1/25/2013,10/17/2017
+False,ford,2008,3,1fdxf46r08ea18180,chassis,florida,7/10/2016,3/15/2025
+True,chevrolet,2017,4,2gnalcek6h6288804,equinox,georgia,3/3/2012,12/25/2015
+False,ford,2016,4,2fmpk3k80gbc65759,mpv,texas,3/25/2020,9/3/2021
+False,ford,2005,3,1fdxf46p35ea79064,chassis,florida,12/6/2013,5/24/2016
+True,chevrolet,2016,5,3gcuksec6gg284475,door,georgia,8/23/2010,9/4/2017
+False,ford,2016,1,2fmpk4g97gbc51848,mpv,texas,6/16/2012,8/24/2019
+True,dodge,2006,1,1d7ks28c96j246101,pickup,pennsylvania,1/31/2015,1/4/2020
+False,chevrolet,2017,4,1g1ze5st0hf155999,door,nebraska,2/1/2016,2/18/2025
+True,ford,2016,2,1ft7w2btxgeb64448,door,texas,4/10/2020,5/5/2024
+True,ford,2012,2,1ftfw1et3cfb01665,door,arizona,2/11/2020,6/18/2023
+True,chevrolet,2018,5,3gcukreh0jg303596,1500,ontario,8/11/2014,6/27/2016
+False,ford,2016,3,1ftfw1ef9gkf57726,door,texas,12/18/2014,11/16/2025
+False,ford,2003,5,1ftne24293hb19928,van,florida,10/15/2013,12/23/2013
+False,ford,2016,3,1ftfx1ef7gkd59790,door,texas,8/28/2017,3/13/2022
+True,ford,2011,5,1fd8w3gt0beb32874,drw,pennsylvania,7/10/2018,1/5/2022
+True,chevrolet,2019,2,1g1zd5st5kf112138,malibu,washington,11/30/2019,3/15/2023
+False,ford,2016,5,1ftew1cp2gke43168,door,texas,9/17/2015,12/26/2019
+True,ford,2019,2,3fadp4bjxkm123238,fiesta,missouri,9/11/2019,4/19/2024
+True,chevrolet,2019,2,1gcwgafgxk1243764,van,washington,7/11/2010,5/22/2022
+True,ford,2016,4,wf0dp3th0g4113219,doors,texas,7/22/2014,12/25/2021
+True,ford,2019,5,3fadp4bj4km123235,fiesta,missouri,7/29/2020,10/3/2021
+True,chevrolet,2019,2,1gcwgafg4k1252945,van,washington,6/25/2020,1/23/2021
+False,ford,2016,5,1ftex1ep1gfd60365,door,texas,7/2/2012,4/25/2024
+True,ford,2019,5,3fadp4bj7km123231,fiesta,missouri,8/23/2020,7/11/2021
+True,chevrolet,2013,3,1gc4k0cgxdf194396,door,washington,11/26/2014,10/22/2024
+False,ford,2016,5,1ftfx1ef0gkf25969,door,texas,1/11/2013,6/2/2020
+True,dodge,2019,2,2c3cdzl97kh518237,challenger,ohio,10/11/2015,6/11/2020
+True,chevrolet,2019,1,1g11z5s37ku129047,impala,texas,4/19/2014,2/3/2016
+True,ford,2019,2,1fd8w3ht1kee23298,doors,florida,6/30/2013,7/20/2017
+True,dodge,2019,4,1c4sdjct6kc717612,durango,ohio,1/7/2017,12/7/2021
+True,chevrolet,2019,1,2g11z5s33k9132248,impala,texas,7/22/2015,9/15/2022
+True,ford,2017,4,1fd8w3ht4hed36245,cab,texas,7/28/2014,1/27/2016
+True,dodge,2019,4,1c4sdjct5kc744865,durango,ohio,4/16/2011,10/24/2021
+False,dodge,2007,2,2b3ka43g87h836300,door,minnesota,2/28/2017,5/2/2023
+False,ford,2000,5,1fafp34p7yw270338,door,oklahoma,7/14/2015,8/28/2015
+False,ford,2019,3,1fatp8uh7k5172626,doors,florida,10/11/2015,9/4/2020
+False,hyundai,2017,5,5npd84lf6hh128808,door,connecticut,12/28/2015,3/10/2025
+False,kia,2013,3,knagm4a75d5378293,door,missouri,7/27/2019,8/14/2025
+False,jeep,2019,3,3c4njdcb3kt659526,mpv,georgia,11/24/2011,7/28/2017
+False,mazda,2009,2,jm3er293590215768,door,indiana,10/25/2017,5/16/2025
+True,kia,2019,3,kndjp3a55k7006351,soul,california,9/22/2012,12/9/2024
+True,kia,2017,4,5xyphda50hg232046,sorento,north carolina,1/19/2014,7/15/2017
+False,chevrolet,1998,1,1gccs1445wk226994,pickup,texas,9/17/2010,12/20/2024
+False,ford,2017,2,3fa6p0h75hr150081,door,virginia,10/28/2012,1/13/2024
+False,ford,2019,2,1fatp8uh2k5188622,doors,florida,10/23/2018,11/2/2020
+False,hyundai,2017,2,kmhd84lf5hu191402,elantra,connecticut,6/8/2014,1/8/2018
+False,honda,2003,2,1hgcm56363a030975,door,arkansas,11/12/2015,9/12/2024
+False,jeep,2019,3,3c4njcbbxkt664931,mpv,georgia,9/20/2013,12/15/2022
+True,infiniti,2019,1,5n1dl0mm9kc550722,mpv,florida,3/9/2019,1/14/2021
+False,chevrolet,2011,4,2g1fb3ddxb9212618,door,arkansas,8/29/2020,11/3/2022
+False,chevrolet,2008,5,1g1al58f787159241,door,texas,4/19/2018,3/5/2023
+False,ford,2006,2,1fafp36n06w137851,wagon,florida,9/20/2012,11/1/2012
+True,ford,2017,3,1ftew1ep3hfb25518,door,michigan,8/25/2014,9/20/2022
+False,ford,2017,3,1fmcu9gd2huc27625,door,california,2/11/2015,7/22/2015
+False,ford,2003,5,1fafp55u03a242094,door,kansas,9/16/2016,1/6/2023
+False,gmc,2017,4,1gkknxls3hz174527,mpv,virginia,5/19/2015,5/30/2025
+True,jeep,2019,4,1c4hjxeg1kw609998,mpv,michigan,11/27/2016,7/7/2019
+True,infiniti,2019,2,5n1dl0mm1kc552741,mpv,florida,12/19/2012,7/26/2017
+False,chevrolet,2004,3,3gnek12t74g240524,door,wyoming,1/12/2018,10/25/2025
+False,chevrolet,2003,4,1gndt13s632267445,door,texas,10/13/2014,3/23/2018
+False,chevrolet,2008,1,1gchk23648f125262,pickup,florida,6/11/2018,3/16/2022
+True,ford,2017,1,1ftfx1ef5hke41700,f-150,michigan,6/5/2014,8/12/2015
+False,ford,1998,1,2fmda5143wba16791,van,california,8/19/2011,10/3/2021
+False,ford,2013,4,3fa6p0h74dr270819,door,minnesota,5/24/2020,10/31/2022
+False,gmc,2017,3,2gkfltek8h6226257,mpv,virginia,4/29/2013,3/7/2023
+True,jeep,2019,1,1c4hjxeg1kw608401,mpv,michigan,5/12/2020,12/16/2021
+False,jeep,2019,4,1c4pjldbxkd300679,mpv,florida,11/26/2019,9/18/2020
+False,chevrolet,2009,3,kl1td66e39b645208,door,colorado,11/2/2013,4/27/2022
+False,chevrolet,2010,3,3gcrkse37ag234620,pickup,colorado,3/17/2016,8/12/2020
+False,dodge,2007,4,2b3ka43g67h630568,door,florida,5/2/2014,1/26/2020
+True,ford,2017,1,1ftew1ep4hkc08477,door,michigan,3/25/2011,7/28/2023
+False,ford,1994,4,1fdee14n7rha47894,chassis,california,3/4/2020,11/24/2021
+False,ford,1997,2,1fmdu35p7vub38059,door,minnesota,3/14/2012,3/25/2025
+False,gmc,2017,3,2gkfltek8h6338184,mpv,virginia,8/1/2018,10/1/2020
+False,heartland,2018,5,5sfpb3326je365727,pioneer,pennsylvania,9/22/2013,9/29/2019
+True,infiniti,2019,1,jn8az2ne0k9233910,mpv,florida,9/11/2013,4/2/2016
+False,chevrolet,2011,5,1gccsbf97b8118236,door,colorado,12/6/2016,5/18/2020
+False,chrysler,2008,4,2a8hr54px8r787529,van,florida,12/7/2015,9/10/2016
+True,ford,2017,4,1ftew1ef3hfc22483,door,michigan,4/15/2019,6/13/2022
+False,ford,1996,3,1falp62w5th144314,door,california,5/28/2017,10/28/2021
+False,ford,2006,4,1fmzk04136ga07119,door,illinois,6/9/2016,9/26/2025
+False,gmc,2017,2,2gkfluek3h6232330,mpv,virginia,4/5/2016,6/23/2020
+False,heartland,2012,3,5sfnb2425ce237109,trail,pennsylvania,9/2/2015,5/27/2024
+True,infiniti,2019,1,5n1dl0mm3kc557634,mpv,florida,11/20/2010,7/20/2022
+False,chevrolet,2014,2,3gcukrec2eg226031,door,colorado,5/29/2015,8/16/2016
+True,chevrolet,2018,4,1gnevhkw8jj148388,traverse,missouri,7/7/2010,10/3/2016
+False,chrysler,2007,3,1c3lc66m77n591138,door,florida,7/17/2018,11/29/2022
+True,ford,2017,2,1ftew1ef4hfa16802,door,michigan,10/12/2013,3/29/2015
+False,ford,2002,5,3fafp37372r151014,door,south carolina,4/6/2013,7/28/2013
+False,ford,2004,2,1fmfu16lx4la45470,door,illinois,8/17/2011,5/9/2020
+False,gmc,2017,5,2gkfltek3h6256220,mpv,virginia,4/26/2015,10/7/2023
+False,heartland,2011,2,5sfbg3524be216811,country,pennsylvania,7/8/2018,10/18/2018
+True,infiniti,2019,3,5n1dl0mm2kc556913,mpv,florida,9/10/2011,5/23/2016
+False,chevrolet,2010,3,2cnflnew5a6355858,door,colorado,2/11/2010,8/14/2018
+False,ford,2015,1,1ftmf1c85fkd31564,door,georgia,7/28/2012,5/25/2025
+True,ford,2017,4,1ftew1epxhfb71427,door,michigan,6/6/2018,5/24/2022
+False,gmc,2004,1,1gket16s646227597,door,south carolina,12/6/2016,8/9/2017
+False,gmc,2017,4,2gkfltek2h6218025,mpv,virginia,12/8/2015,10/6/2024
+False,heartland,2009,2,5sfgf29269e031344,sundance,pennsylvania,12/13/2018,2/14/2022
+False,jaguar,2019,1,sajbd4fx6kcy78964,doors,florida,7/8/2016,11/8/2024
+False,chevrolet,2008,3,2g1wb58kx81220813,door,california,6/10/2020,8/21/2022
+False,ford,2015,5,1ftew1cf6ffc68843,door,georgia,3/26/2018,6/30/2019
+True,ford,2017,1,1ftex1e83hfb13813,f-150,michigan,4/15/2010,6/9/2020
+False,ford,2009,1,1ftyr10d19pa60391,pickup,tennessee,9/7/2020,3/16/2025
+False,ford,2009,4,1fahp35n09w109143,door,illinois,5/9/2019,2/19/2025
+False,gmc,2017,1,2gkfluek6h6317310,mpv,virginia,5/17/2020,4/8/2025
+False,heartland,2010,3,5sfbg3823ae204868,country,pennsylvania,6/20/2019,1/24/2020
+False,jeep,2019,1,1c4pjmdx4kd197521,mpv,florida,1/22/2020,10/27/2024
+False,chevrolet,2008,3,1gnfc13j88r167278,door,california,9/6/2019,1/11/2021
+False,ford,2015,4,1fadp5au3fl108248,door,georgia,12/22/2015,4/6/2021
+True,ford,2017,3,1ft7w2bt3hef41039,door,michigan,6/17/2019,11/1/2020
+False,ford,1994,5,1ftdf15y2rnb12612,pickup,georgia,5/8/2019,7/18/2019
+False,ford,2001,5,1ftrx17w41nb80705,pk,illinois,2/25/2019,4/18/2020
+False,gmc,2017,5,1gkknxls2hz262405,mpv,virginia,11/1/2019,9/11/2025
+True,jeep,2019,2,1c4hjxeg2kw600727,mpv,michigan,7/21/2013,6/12/2023
+False,hyundai,2019,2,km8j33a49ku860727,mpv,florida,1/17/2015,4/8/2024
+False,chevrolet,2004,3,1gcjc33204f177273,door,south carolina,10/4/2020,3/2/2025
+False,ford,2015,3,3fa6p0h71fr180238,door,georgia,12/31/2010,12/16/2022
+True,ford,2017,5,1ft7w2bt6heb60592,door,michigan,1/26/2011,4/25/2025
+False,ford,1997,5,1ftdf18w8vna61251,door,wisconsin,3/9/2019,9/19/2023
+False,ford,1998,3,1ftrf18l7wka62471,door,illinois,10/13/2013,6/18/2023
+False,gmc,2017,2,1gkknxls7hz295013,mpv,virginia,11/4/2010,12/16/2014
+True,infiniti,2019,3,5n1dl0mm9kc556522,mpv,florida,5/4/2018,3/24/2019
+False,acura,2008,3,5j8tb18578a010979,door,michigan,9/20/2010,2/27/2018
+False,bmw,2013,1,5uxwx9c57d0a24286,door,florida,8/17/2014,11/5/2017
+False,ford,2015,2,3fa6p0hdxfr241138,door,georgia,8/31/2016,10/27/2017
+True,ford,2017,3,1ft7w2bt3hed62547,door,michigan,6/9/2018,7/10/2019
+False,gmc,2009,5,1gkfk03219r252659,door,michigan,1/12/2017,6/14/2018
+True,honda,2016,3,5fnrl5h65gb151898,van,new jersey,5/14/2016,6/21/2018
+True,harley-davidson,2016,3,1hd1krm1xgb609213,road/street,virginia,3/7/2016,12/9/2020
+False,honda,2010,2,5fnyf4h99ab034386,door,pennsylvania,4/1/2015,5/11/2020
+True,infiniti,2019,2,jn8az2nf9k9685086,mpv,florida,8/4/2015,8/14/2021
+False,chevrolet,2007,4,3gnfk16307g310044,door,virginia,6/14/2012,6/17/2020
+True,ford,2015,3,1ftew1eg0ffb32472,door,georgia,4/26/2013,6/18/2018
+True,ford,2017,1,1ft7w2bt3heb19966,door,michigan,5/20/2015,12/15/2024
+False,gmc,2003,4,1gkdt13s332100344,door,michigan,3/18/2016,2/18/2018
+False,ford,2006,1,1ftpw14v66fa82105,pickup,mississippi,6/26/2017,8/22/2022
+False,honda,2016,3,2hkrm3h45gh513861,mpv,virginia,10/11/2012,3/5/2024
+False,hyundai,2019,1,5npd84lf6kh456317,doors,florida,4/13/2020,12/12/2023
+False,acura,2009,4,19uua96529a004646,door,texas,1/20/2010,3/14/2020
+False,cadillac,2000,5,1g6el12y9yu148063,coupe,virginia,3/23/2015,1/23/2025
+False,ford,2015,3,3fa6p0hdxfr258523,door,georgia,9/9/2013,4/4/2020
+True,ford,2017,2,1ft8w4dtxhed96692,door,michigan,6/21/2018,11/7/2018
+False,ford,2010,4,1fmeu7de5aua53694,door,michigan,11/27/2012,3/27/2020
+False,ford,1998,2,1ftzx0766wka18481,door,arkansas,4/24/2013,8/24/2019
+False,honda,2015,1,5fnyf4h26fb052452,door,virginia,7/30/2019,5/8/2023
+False,jeep,2014,4,1c4njrfb0ed707552,door,new york,1/11/2020,5/19/2023
+False,jeep,1999,2,1j4gw58s4xc558310,door,florida,7/31/2011,10/6/2021
+True,bmw,2020,4,wba7t2c04lgl17687,series,california,5/28/2020,11/18/2024
+False,buick,2006,5,2g4wc582961163677,door,virginia,2/29/2020,9/4/2024
+True,bmw,2014,2,wba3d5c51ekx97650,series,new jersey,8/30/2018,9/25/2021
+False,ford,2015,2,1fm5k7d88fga24308,door,georgia,7/3/2014,6/12/2017
+True,ford,2017,2,1ft8w3dt8hec12120,door,michigan,1/9/2012,2/3/2016
+False,ford,2010,5,3fahp0ha6ar187697,door,michigan,1/15/2019,7/1/2019
+False,ford,1984,3,2ftcf15y9eca14589,door,arkansas,9/30/2014,7/18/2019
+False,honda,2015,2,5fnrl5h96fb012419,van,virginia,5/28/2010,9/24/2011
+False,jeep,2014,1,1c4rjfbg4ec441069,door,new york,10/19/2011,12/7/2021
+False,jeep,2001,2,1j4ft48s01l590080,door,maryland,2/20/2020,9/9/2020
+False,audi,2008,2,wa1by74l38d010163,door,texas,10/10/2017,10/22/2020
+False,chevrolet,1995,2,2gcec19h8s1195266,door,arizona,9/8/2015,5/27/2019
+False,bmw,2008,2,wbawb33548p132854,coupe,georgia,7/8/2015,4/25/2025
+True,bmw,2017,3,wba7e2c58hg739412,series,california,1/19/2011,3/31/2013
+False,ford,2015,3,1ftew1cg4ffa66589,door,georgia,7/18/2013,11/15/2025
+True,ford,2019,4,1ft8w3bt3kee15023,srw,washington,8/2/2014,12/12/2015
+False,ford,2014,4,1fm5k8gt9ega74266,door,michigan,6/29/2019,3/22/2024
+False,honda,2015,2,19xfb2f81fe252000,door,virginia,9/25/2015,9/8/2023
+False,hyundai,2014,3,5npdh4ae0eh480157,doors,new york,3/30/2016,3/10/2017
+False,honda,2014,1,jhmze2h34es000337,doors,new york,1/1/2010,1/9/2016
+False,kia,2008,1,knafg525787197602,wagon,indiana,2/19/2019,1/27/2024
+False,audi,2005,3,waudg74f05n113751,door,california,6/16/2017,1/15/2024
+False,bmw,2000,2,wbaam3346yfp77118,door,utah,3/14/2018,8/31/2018
+False,gmc,2012,5,1gkkrpedxcj207971,door,utah,3/1/2014,7/30/2016
+True,infiniti,2019,1,jn8az2ne9k9229368,mpv,texas,9/4/2017,4/26/2020
+False,hyundai,2019,4,5npd84lf5kh403222,doors,ohio,10/25/2018,9/25/2023
+True,lincoln,2019,5,2lmpj6l91kbl31468,nautilus,california,6/21/2013,2/10/2022
+True,lexus,2020,1,jtjam7bx4l5251250,gx,florida,5/5/2017,8/23/2022
+False,nissan,2018,5,3n1cn7ap5jl872135,doors,california,8/4/2020,3/4/2024
+False,nissan,2017,3,5n1at2mv4hc773816,mpv,new jersey,5/9/2013,3/25/2023
+True,audi,2017,5,wa1l2afpxha049370,q5,texas,4/13/2010,11/17/2019
+False,chevrolet,2008,5,1g1al18f587145539,coupe,minnesota,6/2/2018,5/20/2021
+True,cadillac,2015,1,3gyfnee39fs587810,door,wisconsin,12/18/2018,4/17/2020
+False,chevrolet,2011,4,2cnfleec9b6313197,door,florida,10/19/2015,5/31/2022
+True,ford,2017,1,1ftfw1eg3hfc66707,f-150,michigan,7/25/2015,2/23/2018
+True,ford,2017,2,1ftew1efxhkc69002,door,arkansas,3/8/2014,9/22/2014
+False,ford,2004,5,1fmfu18l84lb61201,door,maryland,5/20/2011,10/20/2019
+False,gmc,2012,4,1gtr2ve74cz121991,door,utah,8/6/2019,3/12/2020
+True,infiniti,2019,1,jn8az2nexk9236071,mpv,texas,4/2/2011,5/10/2019
+False,hyundai,2019,3,kmhd84lf4ku746279,doors,ohio,10/8/2016,2/26/2025
+True,mercedes-benz,2019,2,4jgda5gb4kb204919,gle,california,7/4/2013,3/12/2017
+True,kia,2017,1,kndpn3ac7h7113313,sportage,new jersey,12/23/2012,1/27/2020
+False,nissan,2018,2,3n1ab7ap2jy244200,doors,california,1/7/2011,7/27/2022
+False,nissan,2017,5,3n1ab7ap5hy411143,doors,new jersey,3/23/2016,10/19/2017
+False,chevrolet,2008,2,1g1al18f187245041,coupe,illinois,11/23/2011,11/29/2022
+True,audi,2015,5,wuac6bfr0fa901212,5,wisconsin,3/2/2012,11/26/2017
+False,ford,2011,3,2fmdk3gc0bbb23680,door,florida,10/1/2016,7/17/2021
+True,ford,2017,2,1ftew1eg0hfb93193,door,michigan,11/23/2016,2/6/2022
+False,ford,2001,1,1ftrw08l61kc05834,pickup,arkansas,10/25/2016,10/12/2017
+False,gmc,2011,3,1gt120c83bf236190,door,utah,8/17/2012,7/29/2016
+True,infiniti,2019,2,jn8az2nexk9236037,mpv,texas,2/23/2014,3/4/2020
+False,hyundai,2019,1,km8k12aa0ku242609,mpv,ohio,7/3/2014,11/21/2021
+True,land,2018,4,salcp2rx6jh739311,sport,california,8/17/2012,9/10/2023
+True,land,2018,1,salrr2rk0ja052195,discovery,florida,8/6/2020,3/29/2021
+True,mercedes-benz,2018,5,wddwk4jb2jf613298,doors,california,11/1/2015,4/9/2017
+False,nissan,2017,1,3n1ab7ap0hy315498,doors,new jersey,12/3/2017,8/13/2024
+False,chevrolet,2006,4,1g1zt53f46f254868,door,texas,5/28/2018,7/26/2018
+False,chrysler,2011,1,1c3bc1fg1bn519076,door,florida,10/5/2010,12/27/2015
+True,ford,2017,1,1ftfw1eg1hfb78397,f-150,michigan,9/27/2011,10/2/2022
+False,gmc,2018,5,1gkknmls5jz177336,door,arkansas,1/8/2010,9/23/2022
+False,gmc,2011,2,1gtr2uea3bz242502,door,utah,4/16/2011,12/15/2024
+True,infiniti,2019,5,jn8az2ne8k9236456,mpv,texas,8/7/2016,3/10/2017
+False,jeep,2019,1,1c4pjldb3kd419559,mpv,ohio,2/11/2014,6/27/2014
+True,land,2018,4,salcp2rx0jh740860,sport,california,9/27/2011,2/21/2018
+False,hyundai,2015,3,km8jucag9fu984199,door,pennsylvania,12/17/2015,9/3/2018
+False,nissan,2018,1,3n1ab7ap5jy293102,doors,california,1/29/2018,1/28/2025
+False,nissan,2017,5,3n1ab7ap1hy310259,doors,new jersey,12/3/2016,1/8/2017
+False,chevrolet,2007,5,3gnfk12387g179905,door,texas,9/21/2015,4/3/2023
+True,bmw,2014,5,wba3b5g54ens10419,door,illinois,3/15/2012,7/5/2023
+True,chevrolet,2011,5,1gc1kyc87bf185906,cab,florida,3/10/2010,2/26/2015
+True,ford,2017,5,1ftew1cf3hfb78746,f-150,michigan,10/7/2010,7/1/2014
+False,ford,2010,1,1ftfx1ev7akc32939,pk,oklahoma,5/31/2013,1/10/2024
+True,gmc,2018,3,1gkknwls6jz133440,acadia,new jersey,3/22/2011,10/13/2022
+False,gmc,2011,3,1gt120cg5bf167316,cab,utah,12/10/2010,3/1/2016
+True,jeep,2019,3,1c4hjxeg0kw596497,mpv,michigan,6/4/2019,12/27/2024
+False,jeep,2019,4,1c4pjllb6kd184477,mpv,ohio,1/22/2011,8/19/2019
+True,land,2018,4,salcp2rx7jh741147,sport,california,7/9/2014,2/5/2017
+True,maserati,2017,5,zam57xslxh1248775,ghibli,florida,1/14/2017,9/5/2025
+False,nissan,2018,3,3n1cn7ap5jl882275,doors,california,12/2/2010,11/9/2011
+False,nissan,2017,4,3n1ab7ap1hl639346,doors,new jersey,12/1/2010,2/22/2017
+False,chevrolet,2011,1,1gnskbe03br198151,door,arkansas,3/13/2015,7/17/2017
+False,chevrolet,2011,5,2cnaldec6b6382868,door,florida,8/21/2011,11/16/2013
+True,ford,2017,2,1ftew1ef2hfb83224,door,michigan,6/21/2016,7/7/2020
+False,ford,2014,5,1fadp3k26el249167,door,oklahoma,7/11/2016,11/21/2018
+True,gmc,2019,3,1gtu9fel6kz311976,1500,pennsylvania,11/19/2013,6/23/2020
+False,gmc,2009,2,1gtgg25k391106224,mpv,utah,11/15/2019,11/19/2025
+True,jeep,2019,5,1c4hjxeg7kw589272,mpv,michigan,3/31/2015,4/16/2018
+False,hyundai,2019,3,km8j23a45ku893842,mpv,ohio,2/9/2011,12/11/2015
+True,mercedes-benz,2018,2,wdc0g4jb4jv097463,glc,california,12/3/2015,1/26/2018
+True,mercedes-benz,2017,2,wddzf4jb6ha277485,e-class,florida,4/22/2015,10/2/2018
+False,nissan,2018,4,1n6aa1ej3jn519666,cab,california,7/17/2012,5/11/2025
+False,peterbilt,2012,2,1xp4d49x9cd123630,truck,florida,6/30/2011,10/8/2015
+False,nissan,2017,2,3n1ab7apxhy302645,doors,new jersey,3/15/2013,3/27/2020
+False,chevrolet,2006,4,1gndu23l46d143789,van,arkansas,6/7/2016,5/21/2024
+False,chevrolet,2006,3,1gbhg31u661113654,cutaway,wisconsin,12/14/2017,5/26/2024
+False,chevrolet,2011,3,3gntkge3xbg398052,utility,florida,6/6/2016,2/25/2023
+True,ford,2017,1,1ftmf1ef2hfb83980,f-150,michigan,5/28/2020,7/6/2023
+False,ford,1996,3,1ftef15n0tlc14455,pickup,oklahoma,4/19/2018,1/6/2021
+True,gmc,2019,2,2gtv2mecxk1173011,limited,pennsylvania,4/20/2018,11/10/2021
+False,honda,2017,5,2hgfc2f52hh522914,doors,virginia,12/31/2010,8/8/2021
+True,jeep,2019,5,1c4hjxeg7kw590115,mpv,michigan,9/20/2018,10/16/2023
+False,jeep,2019,1,1c4rjebg1kc776053,mpv,ohio,3/20/2017,3/14/2019
+True,mercedes-benz,2018,3,4jgda5jbxjb046383,gle,california,5/25/2011,9/8/2013
+True,mercedes-benz,2017,1,wddjk7ea3hf044968,sl-class,florida,7/16/2018,1/10/2021
+True,lexus,2017,3,2t2bzmca4hc087456,mpv,california,12/16/2016,7/12/2024
+False,peterbilt,2012,3,1xp4d49x1cd144875,truck,florida,6/10/2015,2/3/2020
+True,ram,2017,1,1c6rr7pt3hs659994,door,new jersey,11/18/2012,8/10/2023
+False,chevrolet,2012,1,1g1jc5sh7c4114661,door,oklahoma,9/29/2010,1/17/2014
+False,chevrolet,2005,5,1gnet16s156132062,door,wisconsin,6/17/2017,3/27/2025
+False,dodge,2015,1,3c4pdcab2ft637813,door,georgia,4/17/2020,6/5/2023
+True,ford,2017,5,1ftfw1ef5hfb70262,door,michigan,3/9/2017,3/25/2021
+False,ford,2010,2,3fahp0ga3ar366961,door,oklahoma,7/31/2019,8/19/2025
+False,gmc,2017,1,2gkfltek2h6317685,mpv,virginia,11/13/2013,8/31/2016
+True,jeep,2019,5,1c4hjxegxkw589301,mpv,michigan,7/18/2015,8/25/2025
+False,hyundai,2019,3,km8j23a44ku882752,mpv,ohio,11/21/2016,8/16/2021
+False,lincoln,2005,4,1lnhm87a25y619997,door,minnesota,10/27/2018,11/27/2020
+False,nissan,2016,3,5n1at2mn5gc894272,mpv,california,12/16/2018,8/10/2021
+False,peterbilt,2009,5,1xp7d49x09d784257,truck,florida,4/12/2015,4/25/2019
+False,nissan,2017,2,3n1ab7ap6hy249992,doors,new jersey,8/25/2010,1/29/2020
+False,chevrolet,2008,3,1g1al58f787159241,door,texas,3/23/2012,11/7/2013
+False,chevrolet,2004,2,1gchk23204f232462,pickup,wisconsin,6/10/2018,6/7/2022
+False,dodge,2015,1,3c4pdcgb7ft597655,door,georgia,6/8/2012,3/18/2019
+True,ford,2017,3,1ftfw1eg1hke28907,f-150,michigan,9/30/2013,7/25/2014
+False,ford,2008,4,1fmcu03128kc80487,door,oklahoma,9/26/2016,9/10/2019
+False,honda,2017,4,1hgct1b89ha002933,door,virginia,8/26/2011,9/4/2019
+True,jeep,2019,5,1c4hjxeg8kw651309,mpv,michigan,3/24/2020,10/4/2025
+False,hyundai,2019,5,3kpc24a34ke050725,doors,ohio,2/23/2012,7/28/2023
+True,mazda,2016,4,jm1dkbd74g0123647,cx-3,florida,4/14/2018,12/7/2023
+False,kia,2016,3,kndjx3ae3g7012477,door,california,6/21/2013,1/24/2018
+False,peterbilt,2010,4,1xp7d49x0ad793710,truck,georgia,1/31/2012,2/6/2012
+False,nissan,2017,3,3n1ab7ap7hy223787,doors,new jersey,3/11/2014,12/21/2017
+False,chevrolet,2003,3,1gndt13s632267445,door,texas,9/1/2018,12/15/2022
+False,chevrolet,2003,2,1gcgc24u53z128586,pickup,wisconsin,11/8/2018,11/27/2020
+False,ford,2010,1,1fmcu4k37akb80224,door,florida,5/19/2018,11/15/2021
+True,ford,2017,5,1ftew1ep4hfb44546,door,michigan,7/26/2014,12/16/2018
+False,ford,2007,2,3fahp06z07r118828,door,oklahoma,4/10/2018,8/22/2018
+False,honda,2017,4,1hgcr2f55ha080596,doors,virginia,2/5/2010,4/3/2017
+True,jeep,2019,2,1c4hjxegxkw600703,mpv,michigan,3/27/2019,7/13/2022
+False,hyundai,2019,1,km8j23a4xku846404,mpv,ohio,11/5/2016,1/14/2017
+True,mercedes-benz,2015,4,wddhf5kbxfb099457,door,florida,4/29/2011,2/22/2012
+False,nissan,2015,2,1n4al3ap6fc102604,door,california,2/25/2010,2/8/2024
+False,nissan,2017,5,3n1ab7ap0hy260843,doors,new jersey,9/17/2018,11/29/2020
+False,chevrolet,2010,1,3gcrkse37ag234620,pickup,colorado,8/9/2015,6/9/2016
+False,chevrolet,2001,1,2cnbj13c316958216,door,wisconsin,5/28/2014,8/11/2024
+False,chevrolet,2010,4,2g1fk1ejxa9163850,coupe,florida,10/23/2019,6/16/2023
+True,ford,2017,2,1ftew1ef3hfb27101,door,michigan,7/20/2019,12/9/2022
+False,gmc,1993,4,1gkfk16k5pj701631,door,colorado,2/8/2015,11/1/2024
+True,gmc,2018,5,1gt12seg2jf255666,2500hd,pennsylvania,7/4/2018,10/8/2019
+False,honda,2017,1,5j6rw1h81hl005542,mpv,minnesota,6/1/2011,4/10/2023
+True,jeep,2019,4,1c4hjxeg5kw608448,mpv,michigan,6/4/2019,9/14/2023
+False,hyundai,2012,3,5npeb4ac2ch437716,door,mississippi,12/17/2015,9/20/2017
+True,mercedes-benz,2015,1,4jgda5hb2fa567147,door,florida,7/30/2013,10/20/2015
+False,hyundai,2015,2,5npdh4ae3fh644096,door,california,9/10/2013,6/16/2022
+False,nissan,2017,4,3n1ab7apxhy232807,doors,new jersey,1/20/2018,7/4/2022
+True,chevrolet,2017,5,2gnflfek3h6342356,door,pennsylvania,7/7/2014,12/18/2015
+True,ford,2019,1,1ftew1e48kfb37676,f-150,michigan,2/12/2017,11/18/2017
+False,chevrolet,2017,1,1g1bc5sm8h7200200,door,pennsylvania,9/18/2019,3/6/2024
+True,ford,2019,4,1ftfw1e58kfb37772,f-150,michigan,8/10/2010,3/27/2016
+True,chevrolet,2017,5,2gnflfek3h6341370,door,pennsylvania,10/27/2016,3/13/2021
+True,ford,2019,4,1ftew1e45kfb69856,f-150,michigan,5/25/2019,8/19/2019
+True,chevrolet,2017,1,2gnflfek5h6341662,door,pennsylvania,9/6/2013,4/9/2023
+True,ford,2019,5,1ftew1ep6kfb85302,f-150,michigan,11/27/2013,5/15/2014
+True,chevrolet,2017,5,2gnflfek5h6351639,door,pennsylvania,1/17/2020,10/13/2023
+True,ford,2019,4,1ftew1e55kfb96628,f-150,michigan,3/22/2014,7/1/2017
+True,chevrolet,2017,2,2gnflfek4h6351292,door,pennsylvania,3/10/2014,5/5/2016
+True,ford,2019,4,1ftfw1e51kfc13333,f-150,michigan,4/4/2019,8/18/2019
+True,chevrolet,2017,3,2gnflfek8h6350288,door,pennsylvania,1/23/2012,7/29/2014
+True,ford,2019,1,1ftfw1e55kfb37583,f-150,michigan,2/22/2017,5/20/2022
+True,chevrolet,2017,1,2gnflfek7h6351433,door,pennsylvania,10/18/2012,11/7/2025
+True,ford,2019,5,1ftew1e59kfb37761,f-150,michigan,5/26/2015,11/9/2024
+True,chevrolet,2018,2,2g1105s3xj9121918,impala,new jersey,1/27/2010,5/20/2017
+True,ford,2019,4,1ftew1e41kfb70194,f-150,michigan,4/20/2010,6/17/2015
+True,chevrolet,2016,1,1gcwgaff9g1216490,van,pennsylvania,8/27/2017,11/3/2021
+True,ford,2019,4,1ftfw1e5xkfc33564,f-150,michigan,2/8/2018,10/18/2023
+False,chevrolet,2015,3,1g1pc5sb0f7185936,door,pennsylvania,5/10/2014,9/21/2017
+True,ford,2019,2,1ftew1e41kfb69644,f-150,michigan,12/5/2012,1/11/2020
+False,chevrolet,2015,4,1gnkrgkd8fj279098,door,pennsylvania,3/13/2019,5/30/2020
+True,ford,2019,5,1ftfw1e43kfb97031,f-150,michigan,9/5/2017,5/3/2022
+False,chevrolet,2015,4,1gchsaea7f1213972,colorado,pennsylvania,3/13/2010,2/14/2018
+True,ford,2019,5,1ftfw1e53kfc33535,f-150,michigan,12/9/2018,11/3/2020
+False,chevrolet,2015,3,3n63m0yn5fk720622,van,pennsylvania,5/13/2020,8/28/2020
+True,ford,2019,5,1ftew1e55kfb69820,f-150,michigan,3/13/2013,11/19/2022
+False,chevrolet,2013,3,1gcncpex7dz328593,door,pennsylvania,3/31/2013,10/2/2024
+True,ford,2019,3,1ftfw1e52kfb51151,f-150,michigan,6/26/2019,4/20/2021
+False,chevrolet,2013,1,1g1jg6sb3d4251006,sonic,pennsylvania,12/9/2011,7/13/2021
+True,ford,2019,1,1ftew1e42kfb37902,f-150,michigan,9/23/2013,3/10/2015
+True,chevrolet,2019,4,1g1jf5sb0k4122201,sonic,illinois,11/13/2015,11/24/2015
+True,ford,2019,5,1ftfw1e58kfb69878,f-150,michigan,6/1/2018,6/18/2025
+True,chevrolet,2019,5,1gchsbea7k1232845,colorado,illinois,6/9/2014,7/23/2015
+True,ford,2019,5,1ftew1e50kfb51192,f-150,michigan,9/12/2019,7/29/2020
+False,chevrolet,2016,5,2g1115s37g9109571,door,florida,12/27/2016,5/10/2020
+True,ford,2019,4,1ftfw1e51kfb70029,f-150,michigan,11/11/2019,4/28/2025
+True,chevrolet,2015,2,1g1yj2d7xf5106236,corvette,florida,5/15/2019,11/30/2019
+True,ford,2019,1,1ftew1e48kfb37905,f-150,michigan,7/9/2019,9/11/2020
+True,chevrolet,2015,1,2gnalbek5f1140499,door,florida,9/19/2016,2/27/2024
+True,ford,2019,1,1ftew1e59kfb37727,f-150,michigan,7/11/2015,3/23/2019
+True,acura,2014,5,5fryd3h20eb002546,mdx,florida,6/23/2018,1/31/2023
+True,ford,2019,4,1ftew1ep1kfb50960,f-150,michigan,12/24/2016,3/19/2017
+True,bmw,2016,5,wba7f2c58gge12300,series,texas,4/6/2014,12/11/2016
+True,ford,2019,5,1ftew1e47kfb69647,f-150,michigan,9/9/2015,5/5/2017
+True,buick,2016,5,kl4cjbsb4gb700424,encore,texas,6/23/2014,8/3/2025
+True,ford,2019,2,1ftew1e53kfb37982,f-150,michigan,1/22/2019,7/4/2022
+True,ford,2019,5,1ftew1e54kfa00453,f-150,michigan,2/24/2012,12/29/2014
+True,ford,2019,5,1ftew1e59kfb37887,f-150,michigan,7/7/2020,12/30/2020
+True,ford,2019,1,1ftew1e59kfb69755,f-150,michigan,7/27/2017,1/1/2018
+True,ford,2019,5,1ftew1e49kfb96784,f-150,michigan,1/14/2016,2/8/2017
+True,buick,2019,1,5gaevbkw8kj293388,enclave,wisconsin,10/13/2016,12/10/2022
+True,ford,2019,4,2fmhk6dt1kba21554,flex,michigan,7/26/2017,11/13/2024
+True,ford,2019,2,2fmhk6d80kba19788,flex,michigan,9/15/2011,3/16/2021
+True,cadillac,2019,5,1gyknfrs3kz252626,xt5,wisconsin,9/9/2012,8/30/2025
+True,ford,2019,2,2fmhk6dt2kba21630,flex,michigan,6/22/2014,10/14/2018
+True,ford,2019,1,2fmhk6dt1kba21571,flex,michigan,4/8/2014,10/20/2014
+True,ford,2019,4,2fmhk6dt2kba19683,flex,michigan,12/16/2018,1/5/2020
+True,ford,2019,2,1ftew1ep2kfb70022,f-150,michigan,5/30/2016,2/16/2021
+True,ford,2019,4,2fmhk6dt5kba19693,flex,michigan,7/14/2010,4/23/2018
+True,ford,2019,3,1ftew1e55kfb51169,f-150,michigan,7/17/2010,4/21/2021
+True,bmw,2017,3,wbaja7c31hg905802,series,wisconsin,8/12/2010,3/25/2022
+True,ford,2019,4,2fmhk6dt7kba19548,flex,michigan,10/5/2011,11/23/2014
+True,buick,2017,4,1g4zp5ss5hu137398,door,wisconsin,5/15/2015,6/14/2015
+True,ford,2019,2,1ftfw1e40kfb69655,f-150,michigan,12/1/2015,2/7/2021
+True,ford,2019,3,2fmhk6dt9kba19695,flex,michigan,8/12/2018,9/23/2025
+True,ford,2019,4,2fmhk6c81kba19848,flex,michigan,1/3/2013,8/22/2016
+True,buick,2017,2,1g4zp5ss6hu125437,door,wisconsin,5/8/2019,12/19/2021
+True,ford,2019,4,3fa6p0ru0kr211641,fusion,michigan,3/30/2017,4/9/2022
+True,kia,2017,1,5xypgda51hg221253,sorento,connecticut,5/26/2015,9/18/2023
+True,buick,2017,4,5gakvckd5hj216221,door,illinois,10/10/2019,1/6/2023
+True,ford,2019,1,2fmhk6c88kba19846,flex,michigan,11/11/2013,7/2/2020
+True,kia,2017,1,5xypgda39hg262132,door,connecticut,6/20/2016,1/24/2023
+True,bmw,2017,4,5uxwx9c51h0t09021,x3,wisconsin,9/21/2015,8/30/2023
+True,ford,2019,4,2fmhk6c85kba19710,flex,michigan,4/4/2014,7/29/2025
+True,kia,2017,1,5xypgda59hg292944,sorento,connecticut,7/27/2019,10/14/2020
+True,ford,2019,4,3fa6p0ruxkr244131,fusion,michigan,1/25/2017,6/29/2025
+True,kia,2017,5,5xypkda50hg299327,sorento,connecticut,1/24/2013,5/28/2013
+True,ford,2019,3,1fatp8uh4k5177265,mustang,michigan,8/16/2010,1/4/2016
+True,chevrolet,2017,4,2gnaldek2h1500410,equinox,wisconsin,8/23/2018,12/16/2023
+True,chevrolet,2017,1,1gb3gtcgxh1118909,cutaway,illinois,2/16/2011,11/25/2018
+True,chevrolet,2017,2,1g1ze5st9hf229260,door,wisconsin,10/19/2016,11/7/2016
+True,chevrolet,2017,3,1gnkvgkd4hj314704,door,wisconsin,7/28/2020,10/11/2025
+True,chevrolet,2017,1,1g1ze5stxhf257679,door,wisconsin,1/17/2015,3/4/2021
+True,chevrolet,2017,3,3gcuksec0hg271643,1500,wisconsin,4/3/2010,1/24/2017
+True,chevrolet,2017,5,3gcukrec7hg170656,1500,wisconsin,8/30/2017,12/3/2017
+True,chevrolet,2017,3,1gcvkrec8hz169908,1500,wisconsin,6/17/2013,11/16/2021
+True,chevrolet,2016,1,3gcuknec9gg224336,1500,new jersey,6/7/2010,6/26/2016
+True,chevrolet,2016,5,1gcvkrec8gz393856,door,wisconsin,12/25/2017,9/23/2025
+True,chevrolet,2016,5,1gnskckc9gr424401,door,wisconsin,12/25/2015,6/26/2023
+True,chevrolet,2016,5,1g1bg5sm5g7250863,door,wisconsin,7/8/2010,5/7/2011
+True,chevrolet,2016,5,1g1yt2d6xg5612796,corvette,illinois,1/1/2018,1/14/2021
+True,chevrolet,2016,2,1g1yj2d70g5122320,corvette,illinois,1/16/2010,3/11/2023
+False,chevrolet,2016,4,1g1zj5su8gf337274,malibu,wisconsin,7/30/2011,5/12/2013
+True,chevrolet,2016,3,1gcvkrec7gz392164,door,wisconsin,6/30/2019,6/6/2022
+True,chevrolet,2016,1,1gcvkpec7gz283370,door,wisconsin,4/14/2019,5/25/2025
+True,chevrolet,2016,1,2gnaldek7g6323080,door,wisconsin,5/8/2019,7/5/2023
+True,chevrolet,2016,5,1g1ze5st5gf315602,door,wisconsin,3/15/2015,6/25/2019
+True,chevrolet,2016,4,1gc4k0c84gf121926,3500,wisconsin,4/23/2017,6/14/2017
+True,chevrolet,2016,1,1gnkvjkd3gj171692,door,wisconsin,8/26/2017,1/4/2021
+True,chevrolet,2016,2,kl7cjrsb9gb542870,trax,wisconsin,8/7/2015,1/7/2024
+False,chevrolet,2015,2,1g11c5sl8ff311156,door,wisconsin,7/21/2020,9/8/2021
+True,chevrolet,2015,3,1gnskckc5fr181703,door,wisconsin,11/7/2017,3/7/2022
+True,chevrolet,2020,3,3gncjksbxll181398,trax,california,2/19/2014,3/26/2022
+True,chevrolet,2019,1,3gcpwaef0kg291601,1500,california,7/20/2019,4/7/2023
+True,chevrolet,2019,2,2gnaxkev6k6186886,equinox,california,9/7/2014,4/25/2017
+True,chevrolet,2019,4,1gcuwded5kz124282,1500,california,1/8/2018,4/21/2024
+True,chevrolet,2018,5,1gnevhkw8jj148388,traverse,missouri,1/29/2011,11/7/2014
+True,chevrolet,2017,3,3gncjksb6hl148082,trax,california,7/9/2020,10/21/2022
+True,chevrolet,2017,3,1gcpcrec9hf242498,1500,california,2/17/2013,1/21/2015
+True,chevrolet,2017,1,1gcvkrec1hz135955,1500,california,1/20/2012,3/18/2014
+True,chevrolet,2017,2,1gazgpfg0h1169059,passenger,california,3/10/2012,10/14/2021
+True,chevrolet,2017,3,1g1rc6s56hu177143,volt,california,3/11/2017,9/9/2024
+True,chevrolet,2016,5,1g1ys2d6xg5609979,corvette,california,12/16/2014,7/29/2021
+True,chevrolet,2015,1,1gc1kweg8ff170135,door,california,11/10/2015,8/8/2020
+True,chevrolet,2018,1,1gazgpfg7j1254194,passenger,texas,11/29/2014,4/5/2025
+True,chevrolet,2019,4,1gnskbkc0kr335691,tahoe,oklahoma,5/29/2018,6/29/2022
+True,chevrolet,2019,4,1gnskbkc1kr164515,tahoe,oklahoma,9/13/2013,10/29/2020
+True,chevrolet,2019,1,1gnskhkcxkr306962,suburban,oklahoma,10/24/2011,11/27/2020
+True,chevrolet,2019,5,1g1fh1r7xk0140397,camaro,oklahoma,9/10/2019,12/25/2022
+True,chevrolet,2019,2,1gcwgafgxk1242467,van,oklahoma,7/14/2018,12/5/2021
+True,chevrolet,2019,5,1gcwgafg5k1221297,van,oklahoma,3/14/2014,11/21/2024
+True,chevrolet,2019,4,1gcwgafg9k1240337,van,oklahoma,3/26/2010,5/19/2013
+True,chevrolet,2019,2,1g1zd5st4kf126371,malibu,oklahoma,1/6/2018,10/29/2019
+True,chevrolet,2019,2,1gnskhkcxkr288236,suburban,oklahoma,5/6/2013,1/10/2021
+True,chevrolet,2018,1,1gcgtcen5j1157983,colorado,oregon,11/16/2011,6/1/2022
+True,chevrolet,2017,3,1gc2kveg3hz159933,2500,oregon,4/23/2019,11/25/2020
+True,chevrolet,2017,3,1gc2kveg1hz262672,2500,oregon,1/24/2012,6/2/2025
+True,chevrolet,2017,3,3gcukrec0hg249327,1500,oregon,8/11/2015,11/27/2016
+True,chevrolet,2016,4,3gcukrec5gg277008,door,oregon,4/26/2012,8/9/2023
+True,chevrolet,2014,5,3gcukrec6eg373324,door,oregon,6/12/2012,4/23/2023
+True,chevrolet,2018,4,1gnskbkc9jr370082,tahoe,oklahoma,7/13/2013,1/9/2020
+True,chevrolet,2018,2,1g1zd5stxjf140841,malibu,oklahoma,3/30/2020,11/12/2024
+True,chevrolet,2018,2,1gcvkreh7jz295386,1500,oklahoma,3/4/2011,1/10/2023
+True,chevrolet,2018,5,1g1zd5st5jf249837,malibu,oklahoma,9/10/2017,7/31/2019
+False,chevrolet,2018,5,kl8cb6sa3jc459211,spark,oklahoma,6/27/2019,4/25/2021
+True,chevrolet,2018,1,1gcvkreh3jz272445,1500,oklahoma,9/11/2014,3/5/2022
+True,chevrolet,2018,5,1g1zd5st8jf242655,malibu,oklahoma,8/8/2013,11/6/2013
+True,chevrolet,2016,1,1gcvkrec0gz118434,door,oklahoma,12/27/2013,8/9/2022
+False,chevrolet,2017,4,1g1be5sm4h7275597,door,oklahoma,8/7/2012,7/2/2020
+True,chevrolet,2017,5,3gcukrecxhg319917,1500,oklahoma,7/5/2018,7/25/2023
+True,chevrolet,2019,3,3gnaxuev8ks588177,equinox,new york,1/19/2014,9/16/2022
+True,chevrolet,2015,5,2g1ff1e3xf9185411,door,oklahoma,3/6/2018,1/30/2025
+True,chevrolet,2014,3,3gcpcreh4eg204053,door,florida,9/1/2013,10/13/2014
+True,chevrolet,2018,4,1gc1kvey2jf198038,2500,pennsylvania,6/8/2016,1/6/2025
+True,chevrolet,2019,3,1gc1ksey8kf114255,2500,pennsylvania,5/26/2016,10/12/2019
+True,chevrolet,2018,4,1gc1kvey3jf197819,2500,pennsylvania,2/2/2016,6/16/2025
+False,chevrolet,2013,2,3gnal3ek3ds630172,door,pennsylvania,7/12/2010,6/26/2016
+False,chevrolet,2013,3,1g1pa5sgxd7225194,door,pennsylvania,11/29/2012,5/3/2016
+False,chevrolet,2014,1,2gnflfek5e6237636,door,texas,6/29/2012,6/5/2024
+True,chevrolet,2014,2,3gcuksej4eg356687,1500,texas,2/1/2018,4/30/2021
+True,chevrolet,2019,1,1gcuyhel9kz240206,1500,nebraska,8/9/2013,8/14/2017
+True,chevrolet,2019,2,1gcwgafg7k1222516,van,missouri,11/12/2011,4/4/2016
+False,chevrolet,2013,5,1g1jc6sh6d4127084,door,texas,5/13/2013,12/16/2016
+True,chevrolet,2017,4,1gcgtcen1h1148658,colorado,indiana,5/20/2012,12/20/2023
+True,chevrolet,2018,1,1gnskhkc5jr243896,suburban,missouri,1/8/2010,5/20/2011
+True,chevrolet,2017,4,1g1rd6s59hu201853,volt,oklahoma,1/10/2017,9/8/2017
+True,chevrolet,2017,5,1gnskbkc6hr132085,door,missouri,9/6/2017,11/30/2025
+True,chevrolet,2017,2,3gcuktec6hg222226,1500,missouri,6/29/2013,3/30/2020
+True,chevrolet,2017,4,3gcuksec3hg222744,1500,missouri,6/17/2013,2/6/2021
+False,chevrolet,2016,3,kl7cjpsb3gb750120,trax,west virginia,3/27/2011,8/24/2015
+True,chevrolet,2017,3,3gcukrec6hg356561,1500,west virginia,1/6/2012,1/13/2022
+True,chevrolet,2016,3,3gncjnsb1gl264970,trax,west virginia,9/27/2015,8/5/2025
+True,chevrolet,2016,4,2g1145s39g9185641,door,west virginia,6/25/2020,9/28/2023
+True,chevrolet,2019,5,2gnaxhev8k6108774,equinox,west virginia,4/29/2010,4/4/2024
+True,chevrolet,2019,5,1gnevhkw9kj129253,traverse,west virginia,8/13/2016,2/13/2020
+True,chevrolet,2018,3,kl7cjpsbxjb710284,trax,west virginia,5/29/2013,2/12/2024
+True,chevrolet,2019,4,1gcuyged0kz114660,1500,west virginia,6/28/2020,11/26/2023
+False,chevrolet,2016,4,1g1pe5sb4g7168780,door,missouri,3/22/2017,3/23/2019
+False,chevrolet,2016,1,1g1pe5sb1g7193233,door,missouri,3/28/2011,5/8/2023
+True,chevrolet,2016,4,3gcpcrec6gg235750,door,oklahoma,10/21/2018,5/19/2024
+False,chevrolet,2015,2,1gchsaea3f1218425,colorado,west virginia,9/4/2017,4/18/2022
+True,chevrolet,2015,3,1gcrcpehxfz272176,door,west virginia,4/16/2011,6/1/2014
+False,chevrolet,2015,1,1g1pg5sbxf7249436,door,west virginia,8/10/2014,10/20/2023
+True,chevrolet,2015,1,3gcuksej3fg195122,1500,missouri,8/27/2010,6/22/2012
+True,chevrolet,2020,4,3gnaxkev2ll125886,equinox,nevada,10/31/2015,3/4/2024
+True,chevrolet,2020,2,1gnerhkw7lj115518,traverse,nevada,6/10/2014,6/20/2024
+True,chevrolet,2020,4,1g1105s31lu100901,impala,nevada,7/23/2014,10/22/2025
+False,chevrolet,2012,5,1g1pl5sc7c7367895,cruze,illinois,1/16/2016,9/12/2020
+False,chevrolet,2012,1,1gnkvjedxcj172991,door,illinois,7/8/2015,3/23/2022
+True,chevrolet,2019,2,1gnskhkcxkr139079,suburban,nevada,5/22/2014,4/23/2024
+True,chevrolet,2019,5,1gnskhkc2kr158368,suburban,nevada,10/15/2016,10/1/2021
+True,chevrolet,2019,1,2gcrcpec4k1155751,ld,nevada,7/14/2012,2/4/2014
+True,chevrolet,2019,1,1gnschkc9kr204131,suburban,nevada,7/6/2015,1/21/2019
+True,chevrolet,2019,2,1gnskbkc9kr143993,tahoe,nevada,9/20/2014,1/20/2015
+True,chevrolet,2019,2,1gnschkc2kr124931,suburban,nevada,3/6/2016,3/13/2023
+True,chevrolet,2019,5,2g11z5s30k9137729,impala,nevada,7/20/2015,6/19/2020
+True,chevrolet,2019,5,1g1zd5st0kf187281,malibu,nevada,9/5/2020,4/5/2023
+True,chevrolet,2019,3,1gnschkc9kr201844,suburban,nevada,8/24/2012,3/8/2023
+True,chevrolet,2019,1,1gnskhkc1kr203879,suburban,nevada,11/15/2015,5/29/2023
+True,chevrolet,2018,1,1gnschkc6jr106222,suburban,nevada,12/28/2017,8/9/2025
+True,chevrolet,2018,4,1gnschkc1jr387653,suburban,nevada,7/3/2012,8/31/2018
+True,chevrolet,2018,1,1gnschkc1jr235923,suburban,nevada,11/2/2010,6/16/2018
+True,chevrolet,2018,4,1gnschkc5jr280816,suburban,nevada,8/25/2018,11/13/2019
+True,chevrolet,2018,3,3gcukreh2jg284677,1500,new york,5/31/2011,12/7/2019
+True,chevrolet,2017,5,1gnschkc4hr206149,suburban,nevada,6/16/2020,8/28/2025
+True,chevrolet,2017,3,1gnschkc3hr133923,suburban,nevada,5/27/2015,11/27/2025
+True,chevrolet,2016,3,1g1fh1r79g0149647,camaro,nevada,5/24/2011,2/13/2021
+True,chevrolet,2017,2,2gnfleek2h6351253,door,new jersey,3/3/2014,3/8/2017
+True,chevrolet,2017,4,1gcwgaff8h1120366,van,new jersey,8/24/2015,8/7/2019
+True,chevrolet,2017,5,3n63m0yn6hk696088,van,new jersey,1/7/2017,5/7/2019
+True,chevrolet,2018,1,2gnaxsevxj6292207,equinox,florida,2/12/2019,11/22/2025
+True,chevrolet,2018,3,2gnaxsev1j6218321,equinox,florida,7/24/2014,9/25/2020
+False,chevrolet,2015,5,1g11b5sl5ff135735,door,nevada,3/20/2015,5/29/2024
+False,chevrolet,2012,2,1gccsbf92c8121126,door,california,5/9/2013,12/14/2016
+True,chevrolet,2015,1,3gcuksec6fg382971,door,nevada,7/28/2016,2/17/2022
+True,chevrolet,2017,3,1gnkrfed3hj217603,traverse,new york,8/18/2010,7/8/2017
+True,chevrolet,2017,2,1gnkrfed7hj307708,traverse,new york,12/26/2014,3/30/2017
+False,chevrolet,2014,5,1gcsgafx9e1173192,van,nevada,9/26/2015,1/5/2020
+False,chevrolet,2014,2,1g1p75sz3e7332279,door,nevada,9/24/2016,11/14/2018
+True,chevrolet,2019,4,1gcwgafg5k1229335,van,texas,1/15/2013,11/15/2021
+True,chevrolet,2019,1,1gcwgafg1k1229638,van,texas,10/16/2011,5/25/2019
+True,chevrolet,2019,4,1gcwgafg2k1222357,van,texas,4/26/2020,7/17/2020
+True,chevrolet,2019,5,1gcwgafg3k1232427,van,texas,8/27/2010,10/12/2018
+True,chevrolet,2018,5,1g1zd5stxjf175198,malibu,texas,2/1/2014,1/2/2023
+True,chevrolet,2016,4,1gc4k1e88gf118806,3500,texas,7/1/2015,7/7/2015
+True,chevrolet,2015,3,1gnscckc9fr715640,tahoe,texas,12/29/2013,12/15/2016
+True,chevrolet,2016,4,1gnscbkc6gr432916,door,texas,7/31/2018,8/25/2025
+True,chevrolet,2015,1,1gnscakc0fr161697,tahoe,texas,1/5/2015,5/16/2021
+False,chevrolet,2014,4,3gcpcpeh2eg231868,1500,texas,12/25/2012,3/4/2013
+True,chevrolet,2013,2,1gcrcrea5dz179299,door,texas,6/30/2018,8/22/2018
+False,chevrolet,2013,2,1gb3czcg3df161404,door,texas,6/12/2010,4/19/2016
+True,chevrolet,2013,1,3gcpcse09dg282246,door,texas,6/28/2014,1/31/2023
+True,chevrolet,2019,1,2gnaxkev1k6296972,equinox,florida,9/6/2012,5/12/2023
+True,chevrolet,2018,3,3gcukrec2jg216609,1500,kansas,2/26/2014,12/15/2019
+True,chevrolet,2018,3,1g1fb1rx5j0103693,camaro,kansas,6/22/2016,8/4/2020
+True,chevrolet,2016,2,1gcgtce36g1387412,colorado,new jersey,1/6/2019,7/18/2022
+True,chevrolet,2016,4,1gcvkneh3gz336629,1500,new jersey,9/5/2012,4/19/2021
+True,chevrolet,2016,1,1gcvkneh7gz158854,1500,new jersey,1/29/2016,9/5/2022
+True,chevrolet,2016,3,1gcvkneh1gz235878,1500,new jersey,10/16/2015,12/6/2022
+True,chevrolet,2019,1,2gnaxkev2k6183550,equinox,north carolina,2/20/2012,2/26/2024
+True,chevrolet,2019,4,2gnaxuev0k6196714,equinox,north carolina,6/9/2014,11/13/2019
+True,chevrolet,2019,5,2gnaxkevxk6199639,equinox,north carolina,9/19/2018,5/9/2021
+True,chevrolet,2019,1,2gnaxuev8k6190062,equinox,north carolina,4/16/2020,3/22/2025
+True,chevrolet,2019,4,2gnaxkev7k6197637,equinox,north carolina,3/12/2013,5/31/2025
+True,chevrolet,2019,1,2gnaxuev3k6169765,equinox,north carolina,10/6/2017,4/19/2025
+True,chevrolet,2019,3,1gazgpfgxk1197071,passenger,north carolina,10/2/2017,2/16/2019
+True,chevrolet,2019,2,1g11z5sa4ku113760,impala,north carolina,9/26/2014,5/14/2016
+True,chevrolet,2019,2,1g11z5sa7ku117222,impala,north carolina,8/27/2019,1/27/2025
+True,chevrolet,2019,4,2g11z5saxk9120208,impala,north carolina,12/2/2014,3/22/2025
+True,chevrolet,2019,5,2g11z5sa5k9140950,impala,north carolina,1/5/2011,1/9/2014
+True,chevrolet,2019,5,2g11z5sa8k9139310,impala,north carolina,1/21/2013,4/19/2021
+False,chevrolet,2017,4,3g1be6sm0hs561566,cruze,north carolina,9/4/2015,5/21/2024
+False,chevrolet,2017,1,1g1105sa9hu160835,impala,north carolina,4/9/2014,8/25/2017
+True,chevrolet,2013,4,1gc2kvcg8dz256073,door,new jersey,8/28/2020,6/10/2025
+False,chevrolet,2015,3,1g11c5sl0ff208474,door,north carolina,8/8/2010,8/25/2014
+True,chevrolet,2014,5,1gnkvgkd3ej113338,door,north carolina,1/10/2018,5/23/2024
+True,chevrolet,2015,3,1gnscbkc0fr109217,door,florida,4/28/2010,9/29/2016
+False,chevrolet,2014,3,1gnkrgkd3ej285342,door,florida,5/22/2013,6/30/2017
+True,chevrolet,2019,4,2gcvkpec1k1124569,ld,indiana,2/17/2013,1/3/2019
+True,chevrolet,2019,2,2gcvkpec4k1105269,ld,indiana,5/18/2018,8/29/2018
+False,chevrolet,2013,3,1g11c5saxdf350889,door,new jersey,5/10/2013,5/21/2017
+True,chevrolet,2020,1,1gcgtcen7l1101496,colorado,indiana,10/7/2011,4/21/2022
+True,chevrolet,2019,5,2g11z5s37k9134455,impala,indiana,9/22/2017,1/13/2021
+True,dodge,2018,3,2c3cdxjg1jh292507,charger,wisconsin,6/14/2012,8/17/2018
+True,dodge,2018,5,2c3cdxjg4jh292503,charger,wisconsin,2/4/2020,8/13/2020
+False,dodge,2012,3,1c6rd7ft0cs326533,door,wisconsin,3/28/2020,11/22/2021
+True,dodge,2019,3,2c4rdgeg4kr682965,caravan,nebraska,9/10/2019,4/9/2023
+True,dodge,2019,3,3c4pdcgg9kt700676,journey,nebraska,7/29/2017,5/10/2023
+True,dodge,2019,3,2c3cdxjg2kh630921,charger,ontario,9/6/2011,7/11/2014
+True,dodge,2019,4,2c3cdxjg0kh682158,charger,ontario,8/14/2014,10/30/2023
+True,dodge,2019,1,2c3cdxjg2kh658962,charger,ontario,1/31/2013,4/27/2018
+True,dodge,2019,2,2c3cdxjg1kh630912,charger,ontario,7/14/2020,2/23/2024
+True,dodge,2019,1,2c3cdxjg1kh658953,charger,ontario,3/13/2019,5/1/2023
+True,dodge,2019,3,2c3cdxjg6kh630954,charger,ontario,8/19/2013,6/1/2022
+True,dodge,2019,5,2c3cdzgg2kh594165,challenger,washington,9/29/2010,8/27/2012
+True,dodge,2019,4,2c3cdxhg2kh608648,charger,washington,3/18/2017,1/28/2023
+True,dodge,2019,2,2c4rdgcg5kr518563,caravan,washington,5/28/2015,5/25/2025
+False,dodge,2012,1,1c6rd7ht8cs279667,door,washington,12/10/2012,10/14/2013
+True,dodge,2019,3,1c4rdhdg4kc769457,durango,texas,4/13/2017,12/16/2020
+True,dodge,2019,2,2c3cdzag4kh686869,challenger,texas,4/18/2016,12/17/2016
+True,dodge,2018,2,3c4pdcab2jt216649,journey,north carolina,8/11/2014,6/6/2024
+True,dodge,2018,5,2c4rdgeg6jr205887,caravan,north carolina,6/16/2015,3/10/2022
+True,dodge,2017,5,2c3cdzfj5hh650508,challenger,arizona,8/7/2010,12/5/2019
+True,dodge,2017,1,3c4pddeg4ht608652,journey,texas,4/22/2013,3/23/2015
+True,dodge,2016,3,2c3cdxjg0gh303988,door,colorado,5/15/2020,10/29/2025
+True,dodge,2015,3,2c3cdzc99fh713682,challenger,arizona,7/6/2020,5/26/2024
+True,dodge,2015,1,2c3cdzfj8fh877821,challenger,arizona,8/9/2014,10/26/2016
+True,dodge,2018,2,3c4pdcgg1jt257213,journey,texas,8/26/2012,3/7/2017
+True,dodge,2017,3,2c3cdxbg5hh642083,charger,florida,5/2/2014,3/24/2025
+True,dodge,2018,1,2c4rdgegxjr339012,caravan,california,6/2/2016,7/13/2024
+True,dodge,2018,5,2c4rdgcg2jr205677,caravan,california,4/6/2012,5/21/2016
+False,dodge,2013,2,1c3cdzcb6dn599101,door,texas,6/9/2010,11/18/2012
+True,dodge,2019,4,2c4rdgcgxkr751032,caravan,florida,12/19/2018,6/26/2020
+False,dodge,2017,1,3c4pdcbg0ht518476,door,california,4/9/2014,2/18/2016
+False,dodge,2014,1,2c3cdxbg5eh300547,door,florida,10/30/2013,3/8/2016
+True,dodge,2018,1,2c4rdgcg8jr208468,caravan,pennsylvania,4/21/2017,4/21/2025
+False,dodge,2017,1,3c4pdcab8ht507652,journey,pennsylvania,8/20/2016,12/26/2019
+False,dodge,2017,3,3c4pdcgb7ht525941,door,pennsylvania,12/26/2011,4/16/2019
+True,dodge,2018,2,2c3cdzag5jh245542,challenger,new jersey,8/20/2011,7/14/2015
+False,dodge,2017,2,3c4pddbg6ht592197,journey,florida,6/16/2012,4/8/2019
+True,dodge,2017,3,2c3cdxctxhh618731,charger,florida,12/4/2019,3/19/2022
+True,dodge,2016,4,1c4rdjag5gc486469,door,pennsylvania,10/3/2018,2/1/2024
+False,dodge,2016,4,1c3cdfbb6gd515496,door,pennsylvania,4/21/2010,3/24/2025
+False,dodge,2012,2,1c6rd7ft6cs238912,door,pennsylvania,3/22/2018,5/10/2021
+True,dodge,2019,5,2c4rdgdg0kr571878,caravan,illinois,3/14/2017,2/2/2022
+True,dodge,2019,4,1c4sdjct2kc576022,durango,illinois,2/25/2017,11/23/2018
+True,dodge,2019,1,1c4sdjct5kc738497,durango,illinois,4/15/2014,4/20/2022
+True,dodge,2019,1,1c4sdjctxkc691872,durango,illinois,2/6/2011,7/1/2015
+False,dodge,2012,1,3c6jd6dtxcg183219,door,minnesota,10/29/2016,11/17/2025
+True,dodge,2019,1,2c3cdxbg8kh658222,charger,texas,7/22/2016,1/11/2023
+True,dodge,2018,5,2c3cdxjgxjh222262,charger,michigan,9/24/2015,1/31/2019
+False,dodge,2014,1,2c4rdgcg3er266428,van,texas,4/5/2010,3/11/2023
+True,dodge,2018,1,2c3cdxjg6jh182178,charger,michigan,3/27/2017,7/7/2018
+True,dodge,2018,2,2c3cdxjg7jh189253,charger,michigan,3/16/2019,6/16/2021
+True,dodge,2019,2,3c4pddbg3kt708835,journey,wisconsin,10/28/2010,12/19/2014
+True,dodge,2018,4,2c3cdzag8jh321934,challenger,wisconsin,7/17/2016,5/28/2021
+True,dodge,2018,4,3c4pdcgg2jt378879,journey,wisconsin,3/22/2018,12/31/2020
+True,dodge,2018,2,2c4rdgcg8jr327542,caravan,wisconsin,12/13/2013,6/16/2016
+True,dodge,2018,1,2c3cdxbgxjh273288,charger,wisconsin,12/25/2015,6/8/2024
+False,dodge,2015,3,1c3cdfbb3fd213551,door,minnesota,2/6/2012,1/29/2023
+True,dodge,2017,2,3c4pddgg6ht556180,journey,wisconsin,7/10/2010,4/20/2011
+True,dodge,2017,5,2c3cdzc98hh553913,challenger,illinois,5/16/2014,11/15/2025
+False,dodge,2013,5,1c3cdfcb9dd329946,door,minnesota,5/5/2015,12/1/2023
+True,dodge,2016,1,2c3cdxct3gh355660,door,new jersey,8/20/2017,9/22/2019
+True,dodge,2019,5,2c3cdzbt8kh705158,challenger,arizona,7/5/2011,1/6/2013
+True,dodge,2016,4,2c3cdxl92gh285329,charger,illinois,7/22/2020,10/10/2020
+True,dodge,2019,5,2c3cdxhg6kh598321,charger,arizona,5/14/2012,7/10/2024
+True,dodge,2016,4,2c3cdzbt4gh325869,challenger,illinois,9/8/2014,10/12/2014
+True,dodge,2016,4,2c3cdzfj8gh351982,challenger,illinois,11/3/2015,6/4/2017
+True,dodge,2019,1,2c4rdgegxkr599122,caravan,georgia,8/27/2015,6/6/2025
+True,dodge,2015,4,1c4rdjeg3fc112029,door,wisconsin,1/29/2019,11/11/2023
+True,dodge,2017,5,3c4pddeg9ht565166,journey,wisconsin,12/24/2015,6/20/2022
+True,dodge,2017,2,2c4rdgeg8hr632871,caravan,wisconsin,7/6/2011,7/27/2019
+True,dodge,2014,3,2c3cdyag9eh126828,doors,massachusetts,12/1/2016,4/4/2024
+True,dodge,2014,4,2c3cdybt2eh298212,doors,massachusetts,11/28/2012,6/5/2022
+True,dodge,2014,1,2c3cdyag3eh213138,doors,pennsylvania,12/24/2010,6/6/2015
+True,dodge,2014,1,2c3cdybt3eh136783,doors,connecticut,11/29/2016,9/27/2018
+True,dodge,2014,2,2c3cdybt5eh217218,doors,new york,8/1/2010,1/21/2022
+True,dodge,2014,5,2c3cdybt3eh115268,doors,rhode island,12/5/2012,10/12/2018
+True,dodge,2014,5,2c3cdyag6eh133624,doors,new jersey,2/4/2013,7/2/2024
+True,dodge,2014,2,2c3cdyag9eh313809,doors,new york,5/18/2012,4/6/2018
+True,dodge,2014,5,2c3cdybt1eh270465,doors,new york,3/2/2020,8/14/2020
+True,dodge,2014,3,2c3cdybt9eh247614,doors,new york,4/1/2019,2/11/2023
+True,dodge,2014,5,2c3cdybt9eh143592,doors,new jersey,8/4/2016,3/24/2020
+True,dodge,2014,3,2c3cdyag1eh311262,doors,new york,11/24/2010,3/17/2019
+True,dodge,2014,3,2c3cdybt6eh111229,doors,new york,3/27/2011,5/16/2025
+True,dodge,2014,4,2c3cdyag3eh251064,doors,new jersey,1/16/2016,10/28/2019
+True,dodge,2019,2,2c3cdxbgxkh707467,charger,texas,10/29/2016,11/22/2019
+False,dodge,2013,5,3c4pddfg9dt523590,journey,wisconsin,10/29/2017,7/7/2022
+True,dodge,2012,3,2c3cdxej6ch170654,door,illinois,3/6/2020,5/15/2021
+True,dodge,2018,4,2c4rdgeg5jr147562,caravan,new jersey,1/13/2019,7/7/2019
+True,dodge,2018,4,3c4pdcgg9jt352215,journey,florida,11/4/2012,11/15/2013
+True,dodge,2019,5,1c4sdhct3kc769532,durango,missouri,10/15/2016,11/8/2016
+True,dodge,2017,1,2c4rdgeg1hr716871,caravan,florida,4/10/2011,3/14/2025
+False,dodge,2017,1,3c4pdcabxht695526,journey,missouri,11/14/2017,6/14/2024
+False,dodge,2013,2,1c4rdjdg3dc674852,door,missouri,4/7/2015,1/18/2023
+False,dodge,2014,3,2c3cdxbg3eh170784,door,nevada,1/26/2018,5/24/2019
+False,dodge,2013,3,2c4rdgbg8dr566594,van,tennessee,6/7/2011,10/9/2019
+True,dodge,2018,1,2c3cdxct8jh197730,charger,california,1/3/2018,7/4/2020
+True,dodge,2018,4,2c3cdzag4jh302832,challenger,california,1/16/2013,3/27/2014
+True,dodge,2018,2,2c3cdzag3jh242672,challenger,california,4/25/2017,9/14/2025
+False,dodge,2016,4,3c4pdcab7gt103739,door,louisiana,11/6/2018,11/20/2019
+False,dodge,2015,1,1c3cdfbb5fd213552,door,minnesota,6/23/2018,5/19/2023
+True,dodge,2017,3,1c4sdhctxhc936557,durango,california,4/10/2013,2/17/2018
+False,dodge,2012,5,3c4pdcdg6ct146745,door,missouri,4/5/2019,2/21/2021
+True,dodge,2019,5,1c4rdjdgxkc744523,durango,california,10/4/2018,5/15/2023
+True,dodge,2019,2,2c3cdxhgxkh527140,charger,california,9/30/2010,10/14/2011
+True,dodge,2019,5,2c3cdxjg8kh527857,charger,california,3/22/2018,5/29/2018
+False,dodge,2015,1,1c3cdfaa2fd144750,door,california,12/6/2018,11/5/2024
+True,dodge,2019,3,2c3cdzggxkh532268,challenger,california,5/18/2012,12/3/2023
+True,dodge,2019,3,1c4rdhdg3kc769255,durango,california,3/27/2019,6/24/2024
+True,dodge,2015,3,2c3cdzc90fh834388,challenger,california,12/19/2016,8/24/2021
+True,dodge,2019,4,1c4rdhdg1kc557017,durango,california,4/6/2019,10/13/2023
+True,dodge,2019,4,1c4rdhdg3kc675893,durango,california,5/29/2011,9/28/2013
+False,dodge,2016,4,1c3cdfbb8gd766472,door,new jersey,2/2/2013,3/28/2019
+True,dodge,2019,2,1c4rdhdg7kc675959,durango,california,3/9/2011,9/7/2017
+True,dodge,2014,4,1c4rdjeg3ec591566,door,california,5/12/2016,10/20/2025
+True,dodge,2019,5,1c4rdhdg6kc557000,durango,california,11/16/2013,1/1/2015
+True,dodge,2019,1,1c4rdhdg0kc557042,durango,california,8/2/2011,11/9/2014
+False,dodge,2014,3,2c4rdgcg9er400696,van,california,7/27/2012,7/2/2021
+True,dodge,2019,2,1c4rdjdg6kc684983,durango,california,7/13/2013,10/20/2024
+True,dodge,2019,3,2c4rdgcg3kr514530,caravan,california,6/29/2017,5/19/2018
+True,dodge,2019,1,3c4pdcgg4kt707549,journey,california,5/7/2010,3/1/2013
+True,dodge,2019,5,2c4rdgeg5kr563175,caravan,california,7/27/2017,6/1/2022
+True,dodge,2019,2,2c3cdzagxkh583746,challenger,texas,7/2/2013,6/8/2019
+True,dodge,2019,4,2c4rdgcg1kr761805,caravan,texas,8/8/2019,3/5/2020
+True,dodge,2019,1,2c4rdgcg3kr753690,caravan,texas,3/5/2010,10/14/2016
+True,dodge,2012,2,3c6ud5dl9cg338415,door,new jersey,5/23/2011,4/4/2025
+True,dodge,2018,3,2c4rdgeg5jr337118,caravan,texas,9/27/2013,4/17/2022
+True,dodge,2018,3,2c4rdgcg3jr364854,caravan,california,8/26/2012,8/22/2018
+True,dodge,2019,3,2c4rdgbgxkr624069,caravan,oklahoma,3/19/2020,8/18/2024
+True,dodge,2018,4,2c4rdgegxjr331914,caravan,california,2/24/2015,11/1/2017
+True,dodge,2018,3,2c4rdgcg0jr241626,caravan,california,4/28/2010,1/1/2021
+True,dodge,2017,5,2c4rdgeg9hr852858,caravan,california,1/9/2020,11/26/2022
+False,dodge,2013,2,2c3cdyag9dh607919,door,california,5/28/2014,4/27/2025
+True,dodge,2019,5,1c4rdjdg7kc780041,durango,colorado,9/23/2010,1/11/2024
+True,dodge,2019,2,2c4rdgcgxkr747353,caravan,colorado,2/27/2018,6/17/2025
+False,dodge,2014,2,2c3cdxbg1eh268115,door,florida,4/16/2018,3/6/2024
+True,dodge,2019,4,2c3cdzag9kh642088,challenger,virginia,4/19/2019,6/18/2020
+True,dodge,2019,5,2c3cdzag1kh656275,challenger,virginia,10/31/2014,9/20/2015
+True,dodge,2018,1,3c4pdcbb1jt319818,journey,oklahoma,6/17/2012,12/5/2024
+True,dodge,2019,5,2c3cdzgg5kh709017,challenger,virginia,1/11/2010,7/2/2017
+True,dodge,2019,3,3c4pdcgg2kt803633,journey,virginia,11/18/2016,3/18/2024
+True,dodge,2016,1,2c3cdzag4gh309689,door,oklahoma,1/5/2010,5/7/2011
+True,dodge,2019,2,3c4pdcgg0kt809995,journey,virginia,7/24/2017,5/22/2025
+False,dodge,2013,5,1c3cdzcb5dn552741,door,michigan,2/8/2019,8/18/2019
+False,dodge,2014,3,1c3cdfbaxed815126,door,nevada,4/18/2018,9/19/2024
+True,dodge,2019,5,2c4rdgeg0kr557123,caravan,florida,4/5/2015,4/6/2016
+True,dodge,2019,3,2c4rdgeg9kr529238,caravan,florida,11/27/2019,10/15/2024
+True,dodge,2017,4,3c4pdcab0ht524414,journey,florida,4/3/2020,7/9/2023
+True,dodge,2019,4,2c3cdxct7kh608441,charger,florida,3/8/2010,12/23/2022
+True,dodge,2019,3,2c4rdgcg9kr578507,caravan,florida,1/21/2012,5/28/2025
+True,dodge,2019,4,3c4pdcgg0kt783155,journey,virginia,5/26/2020,7/2/2024
+True,dodge,2019,3,2c4rdgeg6kr578882,caravan,florida,10/7/2018,8/4/2020
+True,dodge,2019,2,1c4rdjdg5kc733915,durango,north carolina,4/3/2020,4/26/2025
+True,dodge,2019,2,2c3cdzbt4kh578392,challenger,north carolina,6/27/2012,8/29/2022
+True,dodge,2019,2,3c4pddeg4kt738776,journey,north carolina,6/27/2010,10/14/2022
+True,dodge,2019,4,3c4pdceg4kt716822,journey,north carolina,11/17/2013,3/17/2019
+False,dodge,2014,4,2c3cdxbg9eh266032,door,florida,1/7/2017,5/15/2024
+True,dodge,2019,2,1c4rdjdg2kc780335,durango,arizona,9/10/2018,8/19/2022
+True,dodge,2019,3,2c4rdgeg7kr743175,caravan,arizona,3/16/2011,9/8/2022
+True,dodge,2019,1,2c4rdgcg0kr798456,caravan,arizona,5/4/2016,1/28/2021
+True,dodge,2019,4,2c4rdgcg3kr747548,caravan,arizona,3/14/2016,6/22/2022
+False,dodge,2012,4,1c3cdzag7cn309641,door,texas,3/15/2012,7/31/2012
+True,dodge,2019,5,2c3cdxbg0kh753132,charger,california,2/5/2020,6/16/2024
+True,dodge,2019,1,1c4sdjet3kc625404,durango,new jersey,5/6/2019,2/23/2023
+True,dodge,2017,4,3c4pddgg5ht702827,journey,pennsylvania,3/6/2012,11/24/2012
+True,dodge,2018,4,2c3cdzag1jh288453,challenger,west virginia,3/22/2017,10/31/2021
+True,dodge,2018,1,3c4pdcab0jt444388,journey,west virginia,7/22/2020,3/16/2024
+True,dodge,2019,1,1c4rdjdg6kc701149,durango,nevada,10/15/2014,6/5/2021
+True,dodge,2019,4,1c4rdjdg6kc770276,durango,nevada,6/29/2015,4/6/2017
+True,dodge,2019,3,1c4rdjdgxkc770197,durango,nevada,6/22/2020,2/29/2024
+True,dodge,2019,4,1c4rdjdg5kc744770,durango,nevada,8/6/2017,9/19/2025
+False,dodge,2017,1,2c4rdgcg9hr818437,caravan,florida,12/30/2013,9/15/2016
+True,dodge,2019,3,2c3cdzag6kh668955,challenger,south carolina,3/10/2015,12/27/2022
+False,dodge,2015,5,1c3cdfcb9fd102064,door,west virginia,6/26/2012,8/22/2014
+False,dodge,2013,2,2c4rdgbg6dr505681,van,florida,10/3/2015,6/21/2018
+False,dodge,2013,4,3c4pddbg6dt605945,door,illinois,3/13/2018,12/18/2018
+True,dodge,2019,5,2c3cdxhg6kh611276,charger,pennsylvania,6/11/2017,10/7/2018
+True,dodge,2019,4,2c3cdzag9kh617109,challenger,pennsylvania,2/11/2014,7/10/2021
+True,dodge,2019,4,2c3cdxhg0kh608762,charger,pennsylvania,7/8/2011,7/18/2024
+True,dodge,2019,2,2c3cdzgg1kh712965,challenger,pennsylvania,8/26/2020,12/5/2020
+False,dodge,2016,3,2c4rdgcg4gr384748,van,south carolina,3/9/2014,3/4/2024
+True,dodge,2019,1,2c4rdgeg1kr664259,caravan,pennsylvania,10/9/2018,2/29/2020
+False,dodge,2016,5,2c3cdxhg4gh237287,door,south carolina,8/7/2018,6/26/2025
+True,dodge,2019,3,2c4rdgeg2kr724727,caravan,pennsylvania,9/17/2019,7/9/2021
+False,dodge,2015,3,3c4pdcab4ft518015,door,south carolina,3/11/2012,4/2/2022
+True,dodge,2019,4,2c3cdzag2kh656320,challenger,pennsylvania,1/10/2016,9/27/2024
+False,dodge,2014,1,2c4rdgbg3er453122,van,missouri,3/27/2014,9/3/2020
+True,dodge,2019,2,2c3cdzgg0kh702489,challenger,pennsylvania,4/14/2014,1/23/2025
+False,dodge,2014,5,1c3cdfbb6ed862064,door,south carolina,8/6/2011,5/3/2019
+True,dodge,2014,3,1c4sdjct7ec971656,door,missouri,9/8/2012,4/28/2016
+True,dodge,2019,3,1c4rdjdg3kc827484,durango,pennsylvania,4/9/2010,11/12/2013
+True,dodge,2019,1,2c4rdgegxkr786263,caravan,pennsylvania,7/8/2019,9/2/2022
+True,dodge,2019,3,2c4rdgeg6kr623139,caravan,nevada,5/22/2018,2/11/2021
+True,dodge,2019,2,1c4sdjct2kc683796,durango,colorado,3/5/2011,1/21/2020
+True,dodge,2019,1,2c3cdzbt4kh642012,challenger,nevada,5/26/2018,5/10/2021
+True,dodge,2019,1,2c3cdxhg2kh585016,charger,pennsylvania,10/9/2014,4/20/2018
+True,dodge,2019,1,2c3cdxbg2kh644607,charger,pennsylvania,12/4/2018,6/16/2025
+True,dodge,2019,5,1c4sdjct0kc744790,durango,nevada,3/27/2018,7/1/2023
+True,dodge,2019,5,2c3cdzag2kh679841,challenger,pennsylvania,12/7/2010,10/10/2017
+True,dodge,2014,1,2c7wdgbg1er432307,caravan,california,1/18/2013,4/30/2017
+True,dodge,2019,4,2c4rdgcg9kr696007,caravan,nevada,12/20/2018,11/27/2024
+True,dodge,2019,3,2c4rdgeg8kr695119,caravan,pennsylvania,3/18/2017,2/11/2019
+True,dodge,2019,4,2c4rdgeg2kr565983,caravan,nevada,10/10/2010,5/25/2013
+True,dodge,2019,2,1c4rdjdg0kc622141,durango,pennsylvania,6/30/2011,6/2/2015
+True,dodge,2019,2,2c4rdgcg2kr648283,caravan,nevada,7/31/2016,3/10/2025
+True,dodge,2019,3,2c3cdzgg3kh684649,challenger,pennsylvania,6/7/2014,10/14/2014
+True,dodge,2019,3,2c3cdxhg3kh630447,charger,pennsylvania,3/6/2016,2/23/2020
+True,dodge,2019,3,3c4pddgg5kt779690,journey,nevada,12/30/2012,11/1/2016
+True,dodge,2019,2,2c3cdzag6kh701727,challenger,pennsylvania,4/20/2012,5/2/2016
+True,dodge,2019,4,1c4sdjct3kc820776,durango,michigan,3/6/2011,6/21/2022
+True,dodge,2019,3,2c4rdgcg5kr606318,caravan,nevada,9/30/2012,4/29/2023
+True,dodge,2019,4,2c4rdgcgxkr753573,caravan,pennsylvania,1/3/2014,3/22/2022
+True,dodge,2019,4,1c4sdjct1kc817603,durango,michigan,5/22/2016,11/29/2017
+True,dodge,2019,4,3c4pddgg3kt720539,journey,nevada,3/28/2010,6/30/2012
+True,dodge,2019,2,2c4rdgeg9kr518336,caravan,pennsylvania,2/7/2016,3/29/2018
+True,dodge,2019,3,1c4rdjdg9kc722562,durango,michigan,4/8/2018,3/8/2021
+True,dodge,2019,4,2c4rdgcg1kr520021,caravan,nevada,2/22/2016,12/26/2019
+True,dodge,2019,5,2c4rdgcg3kr765807,caravan,pennsylvania,6/3/2014,1/15/2020
+True,dodge,2019,3,2c4rdgcg5kr749382,caravan,pennsylvania,2/23/2014,10/10/2015
+True,dodge,2019,4,2c3cdxjg8kh573477,charger,michigan,5/28/2017,2/12/2021
+True,dodge,2019,3,3c4pdcgg4kt815525,journey,nevada,8/14/2015,5/10/2020
+True,dodge,2019,2,3c4pddgg1kt858578,journey,pennsylvania,9/5/2012,12/22/2014
+True,dodge,2019,5,3c4pddgg8kt858576,journey,pennsylvania,8/16/2016,9/14/2022
+True,dodge,2017,3,2c3cdzbt8hh655998,challenger,georgia,11/30/2018,11/11/2023
+True,dodge,2019,3,3c4pddgg9kt805269,journey,pennsylvania,6/7/2015,1/2/2020
+True,dodge,2018,2,3c4pdceg6jt516474,journey,pennsylvania,9/13/2019,1/7/2023
+True,dodge,2017,4,2c4rdgeg6hr575487,caravan,michigan,12/21/2014,12/1/2019
+True,dodge,2018,3,2c4rdgeg8jr340109,caravan,pennsylvania,11/25/2013,12/30/2016
+True,dodge,2017,1,2c3cdzgg8hh584894,challenger,michigan,9/20/2012,12/15/2019
+True,dodge,2018,5,3c4pdceg2jt426366,journey,pennsylvania,11/7/2018,12/31/2021
+False,dodge,2012,5,3c6td4ht4cg255894,door,texas,10/4/2014,9/18/2018
+True,dodge,2017,4,3c4pddeg4ht610210,journey,michigan,11/20/2010,4/7/2013
+True,dodge,2018,5,2c4rdgeg0jr327368,caravan,florida,7/30/2017,5/21/2020
+False,dodge,2015,3,1c3cdfbb5fd319614,door,florida,11/4/2012,3/20/2021
+False,dodge,2015,3,3c4pdcbg0ft637173,door,florida,1/22/2013,7/9/2015
+True,dodge,2019,2,2c4rdgeg6kr674401,caravan,minnesota,10/19/2015,2/22/2017
+True,dodge,2019,5,2c4rdgeg8kr690731,caravan,minnesota,10/23/2012,9/4/2017
+True,dodge,2019,4,1c4sdjct3kc632985,durango,minnesota,5/3/2018,7/7/2021
+True,dodge,2015,5,1c4rdjdg4fc750792,door,michigan,1/23/2010,1/8/2011
+True,dodge,2019,1,2c4rdgcg2kr725699,caravan,minnesota,10/11/2014,7/23/2024
+True,dodge,2019,2,2c4rdgeg7kr674858,caravan,minnesota,8/6/2014,5/31/2023
+True,dodge,2019,5,3c4pdcgg0kt783172,journey,minnesota,7/22/2015,2/8/2016
+True,dodge,2019,5,2c4rdgcg4kr735473,caravan,minnesota,9/3/2015,8/12/2025
+True,dodge,2013,1,1c4rdjag0dc608666,door,illinois,6/28/2020,11/1/2024
+True,dodge,2019,1,1c4sdjct7kc647733,durango,minnesota,5/20/2016,9/27/2024
+True,dodge,2019,2,2c4rdgeg6kr619687,caravan,minnesota,1/2/2019,8/21/2020
+True,dodge,2017,3,2c3cdxjg2hh505412,charger,massachusetts,10/17/2017,6/18/2022
+True,dodge,2019,2,2c4rdgcg5kr668950,caravan,minnesota,3/3/2020,10/31/2020
+True,dodge,2019,3,2c4rdgcg1kr691027,caravan,minnesota,10/23/2017,12/5/2024
+True,dodge,2019,2,2c4rdgeg6kr683079,caravan,minnesota,10/24/2013,5/7/2020
+True,dodge,2018,3,2c4rdgcgxjr282071,caravan,nevada,1/8/2012,6/18/2025
+True,dodge,2019,1,2c4rdgcg3kr545227,caravan,minnesota,8/10/2016,3/17/2018
+True,dodge,2019,1,2c4rdgcg1kr735463,caravan,minnesota,4/14/2016,11/17/2016
+True,dodge,2019,2,1c4sdjct7kc633007,durango,minnesota,1/18/2019,8/9/2024
+True,dodge,2019,1,2c4rdgcg6kr660825,caravan,minnesota,4/23/2012,5/5/2014
+True,dodge,2019,2,2c4rdgeg5kr516518,caravan,minnesota,4/14/2018,6/4/2024
+True,dodge,2019,1,2c4rdgeg4kr662134,caravan,minnesota,11/2/2012,11/17/2020
+True,dodge,2020,2,2c3cdxbg6lh100855,charger,pennsylvania,6/19/2016,4/3/2017
+False,dodge,2016,1,3c4pdcbgxgt136860,door,alabama,5/19/2014,7/30/2014
+False,dodge,2013,3,1c3cdfbaxdd150548,door,alabama,11/3/2016,3/1/2017
+True,dodge,2012,5,3c63drgl5cg107218,door,mississippi,7/5/2020,4/5/2024
+True,dodge,2013,4,2c4rdgdg1dr557085,van,nevada,1/19/2011,11/4/2020
+True,dodge,2012,2,3c6ud5hl1cg109558,door,mississippi,2/26/2011,8/11/2017
+True,dodge,2019,1,2c3cdzagxkh687783,challenger,pennsylvania,2/7/2014,3/20/2017
+True,dodge,2019,2,2c3cdxbg2kh640928,charger,pennsylvania,5/4/2014,11/12/2014
+False,dodge,2013,3,2c4rdgcg3dr749500,van,tennessee,7/5/2014,10/14/2014
+True,dodge,2019,3,2c3cdxhg5kh681108,charger,pennsylvania,8/22/2011,9/24/2014
+False,dodge,2012,2,2c4rdgbg5cr408504,van,maryland,5/23/2014,12/23/2018
+True,dodge,2019,2,1c4rdjdg5kc780720,durango,pennsylvania,7/29/2019,8/15/2025
+False,dodge,2012,1,2c4rdgbg1cr183286,van,north carolina,5/7/2020,8/24/2025
+True,dodge,2019,1,2c4rdgeg7kr786270,caravan,pennsylvania,6/4/2014,6/22/2016
+False,dodge,2012,2,3c4pdcab1ct362558,door,georgia,3/31/2017,3/7/2025
+True,dodge,2019,1,1c4sdjct2kc585450,durango,pennsylvania,7/6/2014,10/21/2015
+False,dodge,2013,3,1c3cdzab4dn594353,door,connecticut,9/30/2011,8/26/2021
+True,dodge,2019,3,2c4rdgeg5kr786266,caravan,pennsylvania,7/14/2016,2/11/2021
+True,dodge,2019,2,1c4rdjdg9kc780705,durango,pennsylvania,1/8/2019,8/22/2019
+False,dodge,2016,5,2c4rdgbgxgr116627,van,texas,5/31/2020,8/24/2021
+True,dodge,2019,4,2c3cdzag8kh617554,challenger,pennsylvania,6/7/2020,10/15/2021
+True,dodge,2019,2,1c4sdjct7kc626641,durango,pennsylvania,3/18/2019,5/4/2023
+True,dodge,2019,4,2c4rdgcgxkr517117,caravan,texas,7/29/2016,5/23/2020
+True,dodge,2019,5,2c4rdgeg7kr663746,caravan,pennsylvania,9/19/2013,1/31/2025
+False,dodge,2013,5,1c4rdhag5dc663297,door,michigan,1/20/2019,3/1/2019
+True,dodge,2019,3,2c4rdgeg5kr509682,caravan,pennsylvania,3/9/2012,4/5/2016
+False,dodge,2015,2,1c3cdfaa2fd434311,door,texas,1/6/2011,11/11/2015
+True,dodge,2019,2,2c4rdgcg1kr671800,caravan,pennsylvania,6/5/2012,8/15/2020
+False,dodge,2015,3,3c4pdcdg6ft650328,door,texas,9/30/2020,7/18/2022
+True,dodge,2019,5,3c4pddgg0kt858538,journey,pennsylvania,7/17/2017,11/19/2021
+True,dodge,2019,2,2c3cdxbg5kh725391,charger,illinois,12/13/2014,6/6/2018
+True,dodge,2019,2,2c4rdgcg0kr744767,caravan,pennsylvania,1/13/2016,10/19/2018
+False,dodge,2014,5,3c4pdcab3et310674,door,texas,12/26/2018,10/8/2020
+True,dodge,2019,2,1c4sdjct4kc740628,durango,illinois,6/2/2011,10/17/2025
+True,dodge,2019,3,2c4rdgcg7kr519648,caravan,pennsylvania,1/30/2020,7/20/2024
+True,dodge,2019,2,1c4sdjct5kc811965,durango,illinois,12/2/2012,2/23/2023
+True,dodge,2019,2,2c4rdgcg6kr749441,caravan,pennsylvania,5/10/2012,3/8/2017
+True,dodge,2019,4,1c4sdjct2kc681580,durango,illinois,5/11/2017,11/3/2024
+True,dodge,2019,4,1c4sdjct7kc779861,durango,illinois,7/14/2013,1/2/2018
+True,dodge,2019,3,1c4sdjct4kc745182,durango,illinois,3/7/2015,11/2/2025
+True,dodge,2019,5,1c4sdjct7kc769752,durango,illinois,6/21/2020,11/15/2025
+True,dodge,2018,2,2c4rdgbg6jr221818,caravan,virginia,8/16/2010,6/8/2022
+True,dodge,2019,4,1c4sdjct4kc779848,durango,illinois,3/24/2020,6/11/2023
+True,dodge,2019,5,2c3cdxct5kh529589,charger,illinois,4/20/2020,8/12/2022
+True,dodge,2019,3,1c4sdjct1kc779869,durango,illinois,9/13/2019,6/1/2022
+True,dodge,2017,4,2c3cdzfjxhh633364,challenger,north carolina,2/11/2015,9/14/2019
+True,dodge,2019,2,1c4sdjct2kc632962,durango,illinois,3/11/2020,11/25/2022
+True,dodge,2018,4,1c4sdjgj9jc370929,durango,pennsylvania,3/13/2010,4/16/2010
+True,dodge,2019,4,1c4sdjgj9kc575135,durango,illinois,8/9/2010,12/1/2013
+True,dodge,2018,1,2c4rdgcg6jr301523,caravan,pennsylvania,2/20/2016,4/5/2024
+True,dodge,2018,2,1c4sdjct3jc248087,durango,illinois,2/27/2019,5/4/2019
+True,dodge,2017,2,1c4rdjdgxhc847904,durango,illinois,6/30/2018,11/28/2024
+True,dodge,2017,3,1c4sdjct5hc857353,durango,illinois,2/22/2017,8/9/2024
+False,dodge,2013,1,1c3cdfba9dd316977,door,texas,5/27/2012,10/28/2023
+True,dodge,2013,2,2c3cdyag4dh530716,door,illinois,8/5/2019,11/13/2021
+True,dodge,2018,3,2c3cdxbg4jh164292,charger,texas,3/23/2013,6/22/2013
+False,dodge,2015,1,1c3cdfeb8fd116826,door,texas,6/17/2019,5/24/2021
+False,dodge,2014,3,2c3cdyag0eh274494,door,texas,3/28/2011,9/7/2014
+True,dodge,2019,2,2c4rdgcg8kr631438,caravan,michigan,3/2/2010,6/19/2017
+True,dodge,2019,2,3c4pddeg5kt774458,journey,michigan,12/21/2019,1/12/2021
+True,dodge,2019,3,1c4rdjdgxkc664221,durango,michigan,2/24/2016,12/12/2019
+True,dodge,2019,4,2c3cdxbg8kh659970,door,massachusetts,2/6/2015,5/20/2023
+True,dodge,2019,3,2c4rdgcg0kr682478,caravan,michigan,10/29/2012,4/16/2023
+True,dodge,2019,2,1c4rdhdg3kc645177,durango,north carolina,10/13/2015,1/23/2025
+True,dodge,2019,4,3c4pddeg4kt708418,journey,michigan,12/23/2017,3/11/2025
+True,dodge,2019,2,1c4rdhdg7kc684421,durango,north carolina,8/22/2015,10/14/2015
+True,dodge,2019,1,2c3cdzbt8kh593686,challenger,north carolina,12/10/2018,3/23/2023
+True,dodge,2019,2,2c3cdzbt5kh578448,challenger,north carolina,12/10/2016,5/11/2018
+True,dodge,2019,4,1c4rdjdg7kc651586,durango,north carolina,5/17/2019,7/6/2020
+True,dodge,2019,4,2c3cdzbt1kh573652,challenger,north carolina,6/4/2016,8/20/2021
+True,dodge,2019,5,1c4rdhdg2kc645025,durango,north carolina,4/23/2016,1/29/2025
+True,dodge,2019,1,2c4rdgcg1kr565329,caravan,michigan,10/24/2012,10/12/2022
+True,dodge,2019,3,2c3cdzbt7kh606377,challenger,north carolina,8/1/2020,12/26/2021
+True,dodge,2019,3,1c4rdjdg1kc691579,durango,north carolina,6/20/2017,3/22/2021
+True,dodge,2019,3,2c4rdgeg3kr529509,caravan,north carolina,2/17/2020,8/29/2025
+True,dodge,2018,2,3c4pddeg6jt463152,journey,michigan,11/21/2011,1/21/2020
+True,dodge,2019,3,2c4rdgeg6kr618815,caravan,north carolina,12/18/2013,10/24/2022
+True,dodge,2018,4,2c4rdgeg8jr219449,caravan,indiana,6/18/2012,4/1/2013
+True,dodge,2019,1,2c4rdgeg0kr529483,caravan,north carolina,12/20/2016,12/25/2017
+True,dodge,2019,4,2c4rdgeg3kr578354,caravan,north carolina,12/2/2018,10/27/2024
+True,dodge,2019,3,2c4rdgeg5kr594507,caravan,north carolina,8/7/2012,3/14/2018
+True,dodge,2017,3,1c4rdjdg6hc833787,durango,michigan,6/8/2016,7/24/2018
+True,dodge,2019,5,2c4rdgeg3kr529851,caravan,north carolina,7/5/2012,7/25/2018
+True,dodge,2019,3,2c4rdgeg0kr578974,caravan,north carolina,7/31/2017,2/1/2018
+True,dodge,2016,2,2c3cdzag4gh312012,door,indiana,1/25/2019,1/1/2020
+True,dodge,2019,2,2c4rdgeg9kr556908,caravan,north carolina,4/14/2015,6/28/2016
+True,dodge,2019,2,2c4rdgeg3kr578709,caravan,north carolina,11/25/2014,6/23/2015
+True,dodge,2019,1,2c3cdxhg2kh608892,charger,new mexico,10/8/2012,10/16/2017
+True,dodge,2019,1,2c4rdgeg2kr600103,caravan,north carolina,8/25/2014,3/5/2018
+True,dodge,2019,5,1c4rdjdgxkc701199,durango,new mexico,3/28/2011,8/30/2013
+True,dodge,2019,4,2c4rdgcg8kr556692,caravan,north carolina,12/6/2016,7/24/2023
+True,dodge,2019,2,2c4rdgcg7kr631205,caravan,north carolina,10/9/2011,3/23/2014
+True,dodge,2019,3,2c4rdgeg1kr579115,caravan,north carolina,2/4/2012,8/26/2022
+True,dodge,2019,4,2c4rdgcg2kr658912,caravan,north carolina,7/22/2014,7/4/2019
+True,dodge,2019,1,2c4rdgcg1kr659131,caravan,north carolina,8/20/2015,12/27/2019
+True,dodge,2019,4,2c4rdgeg8kr529277,caravan,north carolina,8/4/2015,5/17/2019
+True,dodge,2019,4,2c4rdgcg9kr600148,caravan,north carolina,1/30/2014,8/15/2025
+True,dodge,2019,3,2c4rdgcgxkr529381,caravan,north carolina,12/19/2017,9/24/2018
+True,dodge,2019,4,2c4rdgcg2kr659171,caravan,north carolina,1/2/2018,3/11/2020
+True,dodge,2019,2,3c4pdcgg5kt717085,journey,north carolina,10/18/2010,9/22/2022
+True,dodge,2018,3,3c4pddgg2jt370853,journey,texas,12/1/2013,5/15/2023
+True,dodge,2019,3,3c4pdcgg6kt716981,journey,north carolina,2/12/2011,2/22/2022
+True,dodge,2019,5,3c4pddeg8kt738778,journey,north carolina,6/14/2015,6/28/2018
+True,dodge,2019,4,3c4pddeg0kt687602,journey,north carolina,8/21/2018,12/20/2024
+True,dodge,2019,5,3c4pddeg0kt694646,journey,north carolina,11/13/2016,12/19/2023
+True,dodge,2019,1,3c4pdceg1kt680751,journey,north carolina,11/21/2018,10/18/2025
+True,dodge,2019,1,3c4pdcgg0kt694119,journey,north carolina,7/11/2020,3/20/2025
+True,dodge,2019,1,3c4pddeg5kt749804,journey,north carolina,7/25/2011,3/28/2013
+True,dodge,2019,4,3c4pdceg4kt680601,journey,north carolina,4/16/2020,8/20/2024
+True,dodge,2019,2,3c4pdceg0kt680319,journey,north carolina,7/2/2010,12/11/2014
+True,dodge,2019,2,3c4pdceg0kt681048,journey,north carolina,12/29/2019,6/19/2025
+True,dodge,2019,4,3c4pdceg2kt716799,journey,north carolina,4/23/2012,7/22/2016
+True,dodge,2019,4,3c4pddeg4kt701856,journey,north carolina,9/10/2018,9/9/2020
+True,dodge,2015,4,2c3cdzc92fh716195,challenger,texas,11/28/2014,1/18/2021
+True,dodge,2019,1,3c4pdcgg0kt716944,journey,north carolina,5/25/2014,8/5/2022
+True,dodge,2019,3,3c4pdcgg8kt717033,journey,north carolina,5/15/2018,5/24/2023
+True,dodge,2019,1,3c4pdcgg9kt737369,journey,north carolina,9/26/2013,3/28/2018
+True,dodge,2019,2,3c4pddeg2kt694986,journey,north carolina,6/11/2015,3/31/2022
+True,dodge,2017,1,2c4rdgbg8hr652428,caravan,north carolina,7/9/2010,2/19/2014
+True,dodge,2019,1,3c4pdceg1kt716986,journey,north carolina,6/23/2020,6/18/2022
+True,dodge,2019,2,3c4pddeg0kt745899,journey,north carolina,2/15/2013,3/1/2014
+True,dodge,2019,4,3c4pdceg5kt680932,journey,north carolina,11/27/2010,1/9/2018
+True,dodge,2019,4,3c4pddeg8kt701794,journey,north carolina,6/20/2020,9/13/2021
+True,dodge,2017,5,1c4rdjdg8hc653002,durango,pennsylvania,12/12/2015,6/6/2018
+True,dodge,2018,4,2c3cdxgj3jh314932,charger,virginia,12/15/2016,5/13/2018
+True,dodge,2019,4,1c4rdhdg0kc675964,durango,georgia,9/8/2020,9/20/2021
+True,dodge,2019,2,2c3cdzag1kh617105,challenger,georgia,10/14/2014,6/9/2017
+True,dodge,2019,4,2c3cdzag2kh616402,challenger,georgia,12/7/2016,7/12/2023
+True,dodge,2019,1,2c3cdxct5kh527020,charger,georgia,4/28/2010,6/19/2014
+True,dodge,2019,2,2c3cdxhg1kh567414,charger,georgia,12/18/2016,4/29/2018
+True,dodge,2018,2,2c4rdgeg6jr341288,caravan,florida,9/29/2015,5/2/2022
+True,dodge,2017,3,1c4rdjag5hc622178,durango,virginia,9/22/2016,7/14/2018
+True,dodge,2018,4,3c4pddgg1jt387157,journey,north carolina,12/30/2017,9/20/2022
+True,dodge,2018,2,3c4pddgg5jt387288,journey,north carolina,11/15/2015,6/13/2024
+True,ford,2017,5,1ft7w2bt6heb61418,door,texas,9/21/2016,1/8/2018
+True,ford,2017,3,1ft7w2bt2hee62669,door,texas,12/23/2014,8/11/2023
+False,ford,2017,2,3fa6p0hd4hr370379,door,texas,11/14/2010,4/8/2022
+True,ford,2015,5,1fatp8ff4f5394347,doors,connecticut,2/25/2015,4/18/2024
+True,ford,2017,5,1ft7w2bt6hec19849,door,texas,5/23/2011,10/11/2015
+True,ford,2015,5,1fa6p8th4f5373291,doors,massachusetts,2/6/2017,8/1/2022
+True,ford,2016,1,1ftew1c82gkd45492,door,texas,7/3/2014,12/3/2022
+True,ford,2015,4,1fa6p8cf2f5430053,doors,new jersey,8/10/2020,6/27/2024
+False,ford,2017,3,3fa6p0luxhr267362,fusion,tennessee,6/17/2011,9/14/2015
+True,ford,2015,2,1fa6p8cf7f5308496,doors,new york,10/12/2017,7/16/2024
+True,ford,2015,5,1fa6p8th8f5304703,doors,new jersey,8/20/2011,9/19/2021
+False,ford,2012,2,1fahp3f29cl226555,door,texas,8/3/2017,3/4/2025
+True,ford,2015,1,1fa6p8cf8f5308068,doors,pennsylvania,7/11/2010,1/21/2025
+True,ford,2015,4,1fa6p8am3f5330934,doors,new jersey,1/9/2016,1/10/2024
+True,ford,2014,4,1fd7x3a68eeb54072,srw,arizona,3/29/2018,2/8/2019
+False,ford,2012,4,1fdrf3ht6cea87430,drw,texas,8/16/2011,2/11/2012
+False,ford,2015,5,1ftbf2a6xfeb60033,door,florida,11/18/2016,7/25/2023
+True,ford,2019,4,1ft7w2bt0kec44818,srw,indiana,5/1/2010,5/28/2015
+True,ford,2018,3,1fbzx2zm1jka44328,wagon,florida,1/14/2019,8/17/2019
+True,ford,2020,4,1fmsk8dh2lga15480,explorer,missouri,6/19/2016,7/10/2024
+False,ford,2018,3,3fa6p0h75jr243141,fusion,pennsylvania,7/30/2011,6/17/2015
+True,ford,2017,5,1ftew1eg3hkc49103,door,pennsylvania,9/16/2015,8/5/2017
+True,ford,2020,5,3fa6p0d94lr133238,fusion,california,1/8/2013,9/17/2016
+True,ford,2019,1,1ft7w2bt3kee55737,srw,illinois,10/23/2017,10/26/2022
+True,ford,2016,4,1fdbf2a6xgec32765,door,pennsylvania,4/23/2017,9/8/2018
+True,ford,2019,5,1ft7w2b63kee65677,srw,illinois,3/30/2019,4/15/2021
+True,ford,2018,5,1fatp8uh4j5166362,mustang,new jersey,3/1/2018,11/5/2022
+True,ford,2019,3,1fbax2cm3kka61610,wagon,california,9/28/2010,8/25/2011
+True,ford,2019,3,3fa6p0cd5kr265137,fusion,california,3/28/2017,4/19/2019
+False,ford,2016,2,3fa6p0hd5gr285811,door,pennsylvania,8/25/2015,7/9/2017
+True,ford,2019,4,1ftyr2cm1kka61447,transit,california,4/30/2012,2/19/2023
+True,ford,2020,3,3fa6p0d98lr117690,fusion,california,4/25/2018,1/24/2021
+True,ford,2016,4,1ftye2yg5gka02732,van,pennsylvania,12/18/2018,1/31/2021
+True,ford,2015,1,1fm5k8d81fga01930,door,pennsylvania,9/12/2019,9/5/2020
+False,ford,2014,4,1fmcu9g96euc38537,door,pennsylvania,5/20/2019,4/18/2022
+False,ford,2015,5,1fa6p0g70f5119774,door,pennsylvania,1/23/2018,4/21/2018
+False,ford,2013,3,3fadp4fj7dm130032,door,pennsylvania,12/4/2013,10/6/2018
+False,ford,2013,2,3fa6p0hr7dr120916,door,pennsylvania,6/2/2012,2/23/2013
+False,ford,2013,3,1fadp3j23dl155179,door,pennsylvania,11/29/2015,12/16/2022
+False,ford,2013,2,1ftse3el2dda91463,van,pennsylvania,5/10/2015,8/3/2021
+False,ford,2012,3,3fahp0ja9cr334589,door,pennsylvania,1/20/2011,6/8/2019
+False,ford,2012,1,1ftfw1et2cfc83729,door,pennsylvania,5/10/2016,5/15/2019
+True,ford,2018,5,2fmpk4k99jbb06857,edge,illinois,6/28/2015,1/27/2019
+True,ford,2017,5,1ft7w2b62hed00227,door,texas,4/15/2019,12/11/2020
+True,ford,2019,3,1ftmf1c58kkd07954,f-150,south carolina,6/2/2012,3/21/2022
+False,ford,2017,1,1fbax2cm1hka52638,van,illinois,6/15/2020,3/21/2023
+True,ford,2012,1,1ftfw1et5cfb83382,door,texas,7/13/2015,11/9/2023
+True,ford,2019,3,1ftyr1ym8kka42378,transit,south carolina,11/3/2013,5/11/2014
+True,ford,2016,5,1fm5k7bh1ggc33135,explorer,texas,9/23/2011,7/14/2014
+True,ford,2018,4,1ftex1ep0jkd02147,f-150,indiana,10/13/2015,8/22/2024
+True,ford,2019,5,1ftyr1zm0kka42485,transit,south carolina,11/15/2013,4/26/2023
+True,ford,2018,1,1ftew1eg4jfb55634,f-150,indiana,12/15/2010,8/14/2015
+True,ford,2019,4,1ft7w2bt4ked42668,srw,minnesota,8/27/2014,3/3/2023
+True,ford,2019,4,2fmhk6c88kba16090,flex,illinois,8/7/2012,1/14/2025
+True,ford,2019,2,1ftyr1zm2kka54847,transit,south carolina,11/9/2015,7/27/2021
+True,ford,2019,1,1fter4fh7klb13025,ranger,wisconsin,9/13/2010,3/2/2012
+True,ford,2019,5,3fa6p0ru1kr120930,fusion,south carolina,4/6/2017,2/28/2021
+True,ford,2019,5,2fmhk6dt4kba19698,flex,wisconsin,9/22/2014,1/11/2022
+True,ford,2019,1,1ftyr1ym4kka50820,transit,south carolina,9/20/2010,11/7/2020
+True,ford,2018,5,1fahp2d80jg104075,taurus,missouri,3/15/2011,9/9/2021
+True,ford,2019,1,1ftyr1ym3kka51084,transit,south carolina,10/30/2010,7/2/2022
+True,ford,2018,2,1ftex1cp1jkf40656,f-150,illinois,5/20/2017,7/8/2024
+True,ford,2019,2,1ft8w3bt7kee15090,srw,nevada,8/16/2019,6/4/2022
+True,ford,2018,4,1fahp2j88jg135238,taurus,wisconsin,4/9/2010,4/7/2020
+True,ford,2018,1,1ftfw1e53jfd63829,f-150,illinois,9/18/2010,6/2/2013
+True,ford,2018,5,1fmcu0hdxjuc12967,escape,wisconsin,6/14/2015,4/19/2017
+True,ford,2018,1,1fm5k7dh1jgb86970,explorer,illinois,5/13/2017,4/21/2018
+True,ford,2018,2,1ftyr2xm7jkb19070,transit,california,10/11/2013,9/14/2023
+True,ford,2018,3,1fa6p8th3j5135439,mustang,illinois,2/11/2010,9/29/2015
+True,ford,2019,1,1fa6p8k02k5503784,mustang,florida,5/3/2015,2/22/2019
+True,ford,2018,5,1ftyr2xm4jka56820,transit,california,6/5/2018,10/28/2022
+True,ford,2018,5,1fa6p8cf9j5131958,mustang,illinois,7/11/2019,9/17/2024
+True,ford,2019,3,2fmhk6d87kba29234,flex,florida,3/25/2013,12/13/2018
+True,ford,2018,1,1ftyr3xm6jkb03481,transit,california,7/1/2017,9/17/2017
+True,ford,2018,3,1ftfw1e51jfa37950,f-150,illinois,12/19/2014,3/7/2023
+True,ford,2014,1,1ftmf1ctxefa36472,door,illinois,3/8/2020,3/29/2021
+True,ford,2017,3,1fmcu9jd6huc93491,escape,wisconsin,6/2/2017,7/11/2022
+True,ford,2019,5,1ftmf1c50kkd60101,f-150,michigan,2/16/2011,6/11/2022
+True,ford,2017,3,1fm5k8ht2hgd13448,explorer,wisconsin,1/5/2010,7/28/2018
+True,ford,2019,5,1ftyr1zm1kka42642,transit,michigan,6/15/2016,2/11/2023
+True,ford,2017,2,2fmpk4ap7hbc41894,edge,wisconsin,8/12/2011,7/3/2018
+True,ford,2019,3,1ftyr1zm8kka55050,transit,michigan,6/4/2010,1/1/2020
+True,ford,2017,1,1ftew1eg0hfa43326,door,wisconsin,6/23/2011,3/14/2021
+True,ford,2019,3,1ftyr1zm3kka71267,transit,michigan,5/22/2010,6/21/2017
+True,ford,2017,4,2fmpk4j9xhbb41421,edge,wisconsin,4/2/2017,5/9/2023
+True,ford,2019,2,1ftmf1c58kkd60105,f-150,michigan,5/10/2019,7/10/2021
+True,ford,2017,2,1fmcu0gd5huc74384,door,wisconsin,11/27/2019,10/1/2020
+True,ford,2019,3,1ftyr1ym9kka55673,transit,michigan,7/23/2016,1/8/2023
+True,ford,2019,4,1ftmf1c53kkd60111,f-150,michigan,7/11/2019,7/28/2024
+True,ford,2017,5,1ftew1eg2hfb38793,door,wisconsin,7/6/2018,1/18/2022
+True,ford,2019,3,1ftmf1c5xkkd39112,f-150,michigan,10/8/2013,4/30/2024
+True,ford,2019,1,1ftyr1zm1kka55052,transit,michigan,1/23/2010,7/24/2015
+True,ford,2019,1,1ftmf1c51kkd08329,f-150,michigan,10/27/2014,3/28/2023
+True,ford,2017,4,1ftew1ep8hfb07225,door,wisconsin,12/14/2010,4/20/2023
+True,ford,2019,3,1ftyr1zm1kka56203,transit,michigan,11/9/2015,3/5/2017
+True,ford,2017,1,1ftew1ef5hkd84963,door,wisconsin,11/5/2011,1/22/2019
+True,ford,2019,2,1ftyr1ym0kka55674,transit,michigan,10/25/2015,1/27/2018
+True,ford,2017,5,1ftfw1rg4hfc12326,f-150,wisconsin,10/19/2019,8/11/2021
+True,ford,2019,3,1ftyr1ym7kka55672,transit,michigan,6/2/2020,1/15/2022
+True,ford,2017,1,1ftyr2cv1hka17899,transit,wisconsin,3/22/2010,5/20/2017
+True,ford,2017,4,1fa6p8jz8h5523692,mustang,illinois,1/10/2017,9/5/2018
+True,ford,2017,3,1ftyr2cv3hkb52320,transit,wisconsin,9/27/2020,11/3/2021
+True,ford,2017,5,2fmhk6c8xhba10655,flex,illinois,2/15/2014,5/29/2021
+False,ford,2012,2,1ftfw1ef2ckd08095,door,minnesota,10/16/2013,12/25/2014
+True,ford,2016,1,2fmpk4k80gbc01288,edge,wisconsin,2/23/2020,11/26/2023
+True,ford,2016,4,2fmpk4k82gbc46880,edge,wisconsin,9/25/2014,3/1/2025
+True,ford,2019,2,2fmpk4k95kbc23479,edge,virginia,7/19/2012,1/29/2020
+True,ford,2016,5,1ftew1eg5gfc13646,door,wisconsin,2/22/2011,10/13/2024
+True,ford,2019,5,2fmpk4k90kbc02488,edge,virginia,11/28/2014,6/21/2016
+True,ford,2016,2,1ftew1eg9gkd71799,door,wisconsin,1/6/2018,11/9/2023
+True,ford,2019,4,2fmpk4k91kbc22474,edge,virginia,1/5/2018,7/16/2018
+True,ford,2019,2,2fmpk4k92kbc02945,edge,virginia,2/5/2011,8/16/2016
+True,ford,2016,5,1ftew1ef9gfb09068,door,wisconsin,6/13/2018,1/15/2023
+True,ford,2019,5,1ftew1e54kfb20317,f-150,tennessee,10/5/2017,7/14/2023
+True,ford,2016,3,1ftfw1ef5gfc20298,door,illinois,2/8/2015,1/22/2020
+True,ford,2016,4,1ftfw1eg5gkf22898,door,wisconsin,7/28/2012,5/27/2017
+True,ford,2019,2,1fatp8uh6k5153386,mustang,virginia,7/15/2012,3/22/2023
+True,ford,2016,5,2fmpk4j99gbc10713,edge,wisconsin,12/16/2011,9/1/2017
+True,ford,2019,1,1fatp8uh3k5162367,mustang,virginia,8/12/2013,10/22/2019
+False,ford,2016,4,1fadp3f29gl296335,door,new jersey,3/30/2017,5/6/2021
+True,ford,2015,3,1fdwe4fl3fda32622,cutaway,wisconsin,10/24/2010,1/18/2012
+True,ford,2015,3,1fdwe4fl2fda28433,cutaway,wisconsin,4/27/2012,6/21/2021
+True,ford,2015,5,1fdwe4fl1fda28424,cutaway,wisconsin,2/24/2020,5/14/2024
+True,ford,2015,2,1fdwe4fl3fda32619,cutaway,wisconsin,5/22/2011,8/7/2023
+True,ford,2015,3,1fm5k8gt1fgb88036,door,wisconsin,12/29/2010,1/28/2011
+True,ford,2015,1,1fm5k8f89fga62388,door,wisconsin,8/3/2010,9/20/2010
+True,ford,2015,1,1fdwe4fl5fda28412,cutaway,wisconsin,4/5/2018,1/7/2019
+True,ford,2014,1,1ftfx1ef9efc44937,door,wisconsin,7/7/2018,11/1/2024
+True,ford,2014,2,1ftfw1et3efb08800,door,illinois,3/23/2013,3/1/2025
+True,ford,2019,3,1ftew1eg0kfa74454,f-150,kentucky,5/5/2018,6/1/2025
+False,ford,2013,5,1fmcu9gx0duc48476,door,wisconsin,2/10/2018,4/12/2023
+True,ford,2019,1,1ftew1e41kkc07168,f-150,kentucky,11/22/2012,5/28/2015
+True,ford,2013,5,1zvbp8jz3d5271544,door,illinois,5/3/2016,7/28/2021
+True,ford,2019,5,1fmjk2at0kea08300,max,kentucky,1/28/2019,7/9/2020
+True,ford,2017,5,1ft8w3b63hec69791,srw,minnesota,12/16/2013,7/4/2021
+True,ford,2019,4,1ftyr1zm2kka42617,transit,illinois,5/4/2019,10/30/2020
+True,ford,2019,2,1ft7w2bt7ked44785,srw,illinois,7/28/2018,6/15/2019
+True,ford,2019,2,1ft7w2bt2ked42670,srw,illinois,6/25/2010,12/27/2018
+True,ford,2019,2,1ft8w3dt3kee48276,drw,illinois,1/15/2015,10/17/2018
+True,ford,2019,3,1ft7w2bt6kee88988,srw,kentucky,7/30/2019,4/5/2020
+True,ford,2019,3,1ft7w2b64kec00217,srw,wisconsin,2/11/2012,12/5/2014
+True,ford,2019,2,1ft7w2bt6kee59894,srw,kentucky,7/21/2010,10/13/2013
+True,ford,2019,5,1ft8w4dt6ked32656,drw,illinois,7/15/2015,1/18/2019
+True,ford,2019,5,1ft7w2bt6ked11132,srw,kentucky,4/24/2015,11/24/2017
+True,ford,2018,5,1ft7w2btxjeb54932,srw,illinois,7/22/2013,8/11/2017
+True,ford,2018,1,1ft7w2bt3jec31754,srw,illinois,12/14/2015,5/6/2025
+True,ford,2014,1,1ftfw1ef6efa39398,door,wisconsin,7/30/2010,12/16/2014
+False,ford,2014,4,3fa6p0pu0er246171,energi,wisconsin,6/21/2013,12/18/2024
+False,ford,2012,5,1fmhk8d89cga65125,door,wisconsin,12/24/2011,12/19/2015
+True,ford,2013,1,1ftfw1et9dke64965,door,wisconsin,1/6/2010,12/9/2012
+True,ford,2019,3,3fa6p0ru2kr260565,fusion,mississippi,3/23/2018,7/18/2023
+True,ford,2019,3,3fa6p0cd1kr118278,fusion,alabama,9/10/2020,7/24/2021
+True,ford,2019,2,1ftew1c4xkfc10243,f-150,mississippi,8/15/2014,10/15/2020
+True,ford,2012,2,1fduf5gt0ceb55163,cab,wisconsin,5/9/2015,5/7/2018
+True,ford,2019,5,1fatp8ff1k5110151,mustang,mississippi,5/16/2013,4/11/2015
+True,ford,2018,4,1ftew1e56jfa97539,f-150,new jersey,8/20/2011,3/13/2024
+True,ford,2019,2,1fatp8ff5k5106670,mustang,mississippi,12/31/2014,8/31/2015
+True,ford,2019,5,1ftew1c46kkc52450,f-150,california,11/1/2014,1/1/2024
+True,ford,2019,3,1fatp8ff0k5119522,mustang,mississippi,6/28/2017,2/7/2023
+True,ford,2019,4,1fter4eh5kla17864,ranger,california,4/27/2016,10/3/2019
+True,ford,2019,3,2fmpk3k90kbb54470,edge,california,3/14/2014,6/17/2015
+True,ford,2019,1,1fmju1kt7kea38431,expedition,california,2/16/2015,1/28/2016
+True,ford,2019,5,1ftew1c59kkc39782,f-150,california,9/18/2015,8/29/2017
+True,ford,2019,2,2fmpk3k91kbb62934,edge,california,1/3/2016,11/2/2018
+True,ford,2019,5,1ftew1e51kkc05297,f-150,california,9/17/2018,5/12/2020
+True,ford,2019,1,1ftew1c54kkc38135,f-150,california,6/27/2010,12/24/2011
+True,ford,2019,5,1ftew1e4xkfb37968,f-150,california,8/29/2014,7/29/2017
+False,ford,2018,4,3fadp4ej1jm128239,fiesta,arizona,5/5/2016,1/6/2020
+True,ford,2019,2,3fa6p0hdxkr114772,fusion,california,9/28/2018,3/12/2021
+True,ford,2019,1,1ftew1cp5kkc11026,f-150,texas,9/14/2015,4/5/2021
+True,ford,2019,2,1fmju2at7kea02696,expedition,california,1/30/2019,12/18/2020
+True,ford,2017,3,1ft8w3dt8hed50014,door,texas,8/30/2020,9/14/2023
+True,ford,2019,1,1ftew1e49kkc40340,f-150,california,4/4/2014,4/21/2024
+True,ford,2015,3,1ft8w3bt4fec75439,door,new jersey,12/9/2018,7/14/2021
+True,ford,2018,2,1fmjk1jt1jea23803,max,wisconsin,3/5/2019,10/24/2023
+True,ford,2018,5,1fbzx2zm6jka97476,wagon,wisconsin,11/21/2014,8/30/2025
+True,ford,2019,5,1ft8w3dt6kef15629,drw,alabama,12/4/2013,12/26/2017
+True,ford,2019,4,1ft7w2btxkee45528,srw,alabama,9/11/2012,11/13/2025
+True,ford,2018,3,1fa6p8th0j5176725,mustang,california,7/19/2013,3/25/2020
+True,ford,2018,1,1fa6p8th1j5133883,mustang,california,12/18/2012,11/21/2014
+True,ford,2018,4,2fmgk5d88jba13550,flex,california,1/26/2015,6/9/2023
+True,ford,2018,3,1ftew1cp2jkd08540,f-150,california,9/27/2016,9/5/2023
+True,ford,2018,5,1fm5k8d89jgb59845,explorer,california,7/18/2016,6/27/2017
+True,ford,2018,1,1ftbw3xgxjkb24777,transit,california,2/25/2020,1/18/2024
+True,ford,2018,5,1fatp8uh2j5109805,mustang,california,1/23/2019,11/25/2021
+True,ford,2018,3,2fmgk5d81jba01059,flex,california,7/29/2014,12/3/2014
+True,ford,2018,1,1fmcu0gd7jud41377,escape,florida,4/3/2013,2/4/2023
+True,ford,2018,2,1ft7w2bt8jec80853,srw,california,8/15/2015,6/12/2025
+False,ford,2018,4,3fadp4ej7jm111509,fiesta,florida,8/8/2017,8/13/2025
+True,ford,2020,1,1ftew1e57lfa24246,f-150,pennsylvania,3/8/2020,1/11/2023
+True,ford,2020,1,3fa6p0d98lr194138,fusion,pennsylvania,5/17/2017,3/30/2019
+True,ford,2017,3,1ftew1ep0hfb00592,door,california,7/4/2010,10/15/2010
+True,ford,2017,5,1ftew1ep9hfc23372,door,california,1/1/2011,11/17/2024
+True,ford,2017,1,3fa6p0k9xhr201097,door,california,5/16/2017,2/4/2018
+True,ford,2017,5,2fmgk5c83hba04539,flex,california,11/23/2018,10/27/2024
+False,ford,2012,5,1ftfw1cf5cfa60758,door,texas,11/6/2016,2/3/2020
+True,ford,2017,5,1fm5k7d84hgd56068,explorer,california,11/5/2016,12/27/2017
+False,ford,2013,5,3fa6p0h70dr346858,door,oklahoma,3/8/2017,11/11/2022
+True,ford,2020,1,3fa6p0k98lr118096,fusion,pennsylvania,7/7/2012,12/10/2013
+True,ford,2018,5,3fa6p0h76jr175058,fusion,illinois,11/5/2018,5/18/2025
+True,ford,2017,4,1ft7w2bt3hec44885,door,california,4/29/2019,3/1/2021
+False,ford,2016,2,3fa6p0h7xgr182944,door,oklahoma,12/12/2011,4/24/2021
+True,ford,2020,2,1ftbr1c86lka43630,van,pennsylvania,7/19/2014,3/7/2019
+True,ford,2019,4,1ft7w2btxkee87763,srw,florida,2/2/2016,11/15/2019
+True,ford,2017,1,1ftfw1rg4hfa86887,f-150,california,8/16/2015,12/12/2019
+False,ford,2016,5,1fa6p0hd4g5100361,door,oklahoma,1/12/2014,4/22/2023
+True,ford,2019,2,1ft7w2bt9kef54157,srw,florida,9/3/2019,2/13/2022
+True,ford,2017,3,1fmcu0gd4huc28156,door,california,1/26/2013,10/9/2014
+True,ford,2013,3,1ft7w2bt9deb86453,door,texas,1/26/2018,9/25/2018
+True,ford,2017,1,1fmcu0gd1hua50769,door,california,7/11/2011,6/26/2016
+True,ford,2017,1,1ftew1cp1hfa12279,f-150,california,9/25/2016,9/28/2019
+True,ford,2019,3,3fa6p0cdxkr116450,fusion,north carolina,7/12/2016,8/25/2025
+True,ford,2017,4,1fm5k7dh4hga93774,explorer,california,10/21/2014,3/27/2020
+True,ford,2017,3,1fmjk1kt6hea45630,el,florida,1/22/2016,1/26/2019
+True,ford,2017,4,1fmcu0gd4huc28111,door,california,3/17/2018,2/4/2020
+True,ford,2017,2,1fmjk1ktxhea45632,el,florida,10/22/2011,12/24/2018
+True,ford,2016,3,1ft7w2bt1ged12535,door,california,1/4/2017,3/27/2018
+False,ford,2015,5,1fa6p0h72f5106961,door,missouri,5/13/2018,11/18/2020
+True,ford,2016,2,1ftew1cg4gke05649,door,california,9/8/2012,2/9/2022
+True,ford,2019,5,1fmju2at2kea46511,expedition,pennsylvania,11/13/2011,10/20/2015
+True,ford,2019,2,1fmju2at0kea25415,expedition,pennsylvania,9/17/2020,4/16/2022
+False,ford,2012,4,nm0ls7bn3ct082251,van,missouri,7/21/2018,1/5/2024
+True,ford,2015,2,1ftew1cp9fkd25357,door,california,4/13/2012,6/20/2012
+True,ford,2019,3,2fmpk4k98kbc02352,edge,pennsylvania,6/14/2019,7/3/2023
+False,ford,2015,1,1fdrf3g6xfec28306,door,south carolina,8/18/2019,1/1/2023
+True,ford,2019,3,1fmju2at5kea33705,expedition,pennsylvania,8/23/2010,9/30/2014
+False,ford,2018,2,3fadp4ej7jm133008,fiesta,minnesota,9/25/2015,1/6/2017
+True,ford,2019,3,1fmju2at2kea52910,expedition,pennsylvania,12/26/2016,2/16/2018
+True,ford,2019,5,1fmjk2at0kea52913,max,pennsylvania,12/26/2011,2/2/2016
+True,ford,2019,3,1fmju2atxkea46594,expedition,pennsylvania,7/1/2019,4/20/2025
+True,ford,2019,1,1fbax2cm9kka31236,wagon,pennsylvania,7/31/2019,4/17/2024
+True,ford,2014,4,1zvbp8cf8e5321701,door,california,2/28/2011,9/18/2013
+True,ford,2019,3,1fmcu0gdxkub10166,escape,pennsylvania,8/4/2018,2/7/2024
+True,ford,2019,1,1fbzx2ym9kka49036,wagon,pennsylvania,5/29/2014,5/2/2022
+True,ford,2019,4,1fmjk2at7kea45361,max,pennsylvania,3/8/2014,5/11/2021
+True,ford,2019,4,1fbax2cm3kka31250,wagon,pennsylvania,2/22/2010,5/27/2020
+True,ford,2013,5,1fm5k8d8xdgb17544,door,new jersey,10/15/2013,1/27/2014
+True,ford,2019,4,1fmjk2at1kea40415,max,pennsylvania,12/22/2010,1/25/2014
+True,ford,2019,3,1fbax2cm3kka37047,wagon,pennsylvania,4/21/2015,12/5/2018
+True,ford,2018,2,1ftew1eg8jfd74483,f-150,ohio,4/22/2014,12/4/2016
+True,ford,2019,4,2fmpk4k97kbb81428,edge,pennsylvania,5/17/2019,4/16/2025
+True,ford,2019,4,1fbax2cm1kka31246,wagon,pennsylvania,2/11/2015,7/17/2017
+True,ford,2016,2,1fahp2kt0gg121703,taurus,ohio,3/5/2012,4/25/2022
+False,ford,2013,4,1fadp3e26dl161150,door,georgia,4/15/2017,12/5/2023
+True,ford,2019,2,1fmjk2at8kea45286,max,pennsylvania,6/27/2010,1/29/2012
+True,ford,2019,3,1fbax2cm4kka31239,wagon,pennsylvania,10/9/2016,2/10/2018
+True,ford,2015,1,1ftne1zmxfka31885,van,new jersey,10/8/2012,12/13/2023
+False,ford,2013,3,1fm5k8d80dgc79389,door,michigan,11/5/2017,2/15/2024
+True,ford,2019,4,1fmju2at2kea33712,expedition,pennsylvania,7/26/2015,5/8/2016
+True,ford,2019,3,1fbax2cm1kka37046,wagon,pennsylvania,9/6/2011,5/13/2017
+False,ford,2014,5,1fmcu9gx5eua01844,door,new jersey,2/28/2018,2/23/2019
+False,ford,2019,5,1ftyr1zm3kkb00458,door,michigan,2/21/2020,6/25/2025
+True,ford,2019,1,1fmju2at7kea46505,expedition,pennsylvania,6/18/2019,2/23/2025
+True,ford,2019,5,1fbax2cm0kka37040,wagon,pennsylvania,12/25/2012,10/5/2016
+False,ford,2014,4,1fmcu9gx7eue04899,door,new jersey,11/28/2015,4/20/2023
+True,ford,2019,3,1fmjk2at1kea46571,max,pennsylvania,3/17/2011,3/27/2011
+True,ford,2019,5,1fmjk2at3kea46569,max,pennsylvania,1/8/2017,10/7/2024
+True,ford,2019,2,1fmjk2at3kea19064,max,pennsylvania,2/7/2017,10/31/2020
+True,ford,2017,5,1ftfw1rg3hfa94897,f-150,louisiana,8/7/2014,2/29/2016
+True,ford,2019,3,1fmjk2at5kea39283,max,pennsylvania,1/14/2015,5/17/2022
+True,ford,2019,1,1ftew1e45kfc11202,f-150,texas,12/14/2014,7/12/2023
+True,ford,2019,2,1fmjk2at1kea46568,max,pennsylvania,1/25/2011,3/12/2020
+False,ford,2015,1,1fa6p0h76f5128221,door,louisiana,2/5/2012,8/19/2021
+False,ford,2013,5,1fbne3bl5dda27813,bus,new jersey,5/21/2015,4/14/2016
+True,ford,2019,4,1fmjk2at1kea45369,max,pennsylvania,9/10/2011,5/18/2017
+False,ford,2015,4,1fa6p0h78f5126079,door,louisiana,1/3/2015,4/8/2021
+True,ford,2019,3,1fmju1jtxkea33631,expedition,pennsylvania,8/17/2017,6/1/2020
+True,ford,2015,5,1ft7w2btxfeb19752,door,louisiana,9/11/2019,12/4/2021
+True,ford,2019,2,1fmjk2atxkea46536,max,pennsylvania,9/9/2018,1/9/2021
+False,ford,2015,5,1fa6p0h74f5125348,door,louisiana,8/11/2015,10/8/2017
+True,ford,2018,5,1fatp8ff8j5181457,mustang,texas,4/4/2020,4/8/2025
+True,ford,2019,5,1fmjk1kt8kea43272,max,pennsylvania,4/29/2018,2/24/2020
+True,ford,2015,4,1ft7w2bt0fea55852,door,louisiana,5/13/2013,11/7/2019
+True,ford,2019,4,1fmju1jt3kea33633,expedition,pennsylvania,6/4/2012,4/30/2025
+True,ford,2015,5,1fa6p8cf0f5385064,door,louisiana,11/5/2016,7/26/2025
+True,ford,2019,2,1fmjk1jt9kea20200,max,pennsylvania,6/11/2019,11/9/2023
+True,ford,2019,2,1fmju1jt2kea46499,expedition,pennsylvania,7/25/2018,8/13/2019
+True,ford,2018,2,1ftew1epxjfa22456,f-150,illinois,2/24/2020,5/23/2024
+True,ford,2019,5,1fmjk2at7kea40404,max,pennsylvania,5/29/2013,8/12/2013
+True,ford,2018,3,1ftew1eg8jfd05390,f-150,illinois,7/25/2016,3/13/2023
+True,ford,2019,1,1ftfw1e53kfb70422,f-150,pennsylvania,10/10/2017,10/23/2024
+True,ford,2018,2,1ftfw1e5xjke09941,f-150,illinois,3/16/2020,12/10/2021
+True,ford,2019,3,1ftew1e57kfc13266,f-150,pennsylvania,2/5/2013,5/1/2016
+True,ford,2019,1,1ftmf1c55kkd38708,f-150,oklahoma,12/2/2010,5/25/2017
+True,ford,2018,1,1ftew1ep8jfb14732,f-150,illinois,6/12/2019,11/7/2024
+True,ford,2019,1,1ftew1e40kfc09714,f-150,pennsylvania,1/25/2018,4/2/2018
+True,ford,2019,3,1fmcu0gd5kua05504,escape,missouri,5/3/2010,11/1/2015
+True,ford,2019,1,1ftmf1c57kkd08125,f-150,oklahoma,3/13/2012,4/4/2017
+True,ford,2019,2,1ftew1epxkfa83324,f-150,pennsylvania,11/3/2019,9/9/2022
+True,ford,2019,4,3fa6p0hd8kr114141,fusion,missouri,8/2/2015,10/16/2017
+True,ford,2019,5,1ftmf1c51kkd38706,f-150,oklahoma,7/16/2014,6/12/2016
+True,ford,2019,2,1ftfw1e43kfb70539,f-150,pennsylvania,12/12/2014,5/7/2023
+True,ford,2017,4,3fa6p0vp2hr189117,fusion,missouri,9/1/2020,1/14/2022
+True,ford,2019,2,1fmju1jt7kea29391,expedition,oklahoma,12/21/2015,2/13/2017
+True,ford,2019,1,1ftfw1e57kfa45438,f-150,pennsylvania,2/16/2012,8/4/2016
+False,ford,2013,1,3fa6p0h72dr150212,door,missouri,7/23/2017,9/23/2021
+True,ford,2019,3,1fmjk1jt6kea37259,max,oklahoma,5/24/2015,3/22/2019
+True,ford,2019,4,1ftew1e40kfa83015,f-150,pennsylvania,8/18/2012,10/20/2017
+True,ford,2019,1,1ftmf1c5xkkc79168,f-150,oklahoma,5/31/2011,3/29/2021
+True,ford,2019,4,1ftfw1e45kfb85334,f-150,pennsylvania,2/11/2015,8/15/2021
+True,ford,2019,4,1ftmf1c5xkkd39210,f-150,oklahoma,4/3/2018,3/31/2024
+True,ford,2019,3,1ftew1e45kfa45361,f-150,pennsylvania,6/28/2019,4/26/2020
+True,ford,2019,2,1ftmf1c58kkc79170,f-150,oklahoma,12/28/2014,1/21/2016
+False,ford,2015,2,1fmcu9gx5fuc13614,door,oregon,9/10/2019,12/18/2019
+True,ford,2019,1,1ftfw1e55kfa45440,f-150,pennsylvania,5/18/2013,5/2/2024
+True,ford,2019,5,1ftmf1c59kkd08126,f-150,oklahoma,12/19/2011,3/29/2014
+False,ford,2014,2,3fa6p0lu4er381093,door,oregon,1/14/2018,3/2/2019
+True,ford,2019,1,1ftew1e50kfc34279,f-150,pennsylvania,6/23/2011,8/26/2012
+True,ford,2019,1,1ftmf1c53kkc79173,f-150,oklahoma,10/22/2011,11/23/2016
+True,ford,2019,5,1ftew1epxkkd77667,f-150,pennsylvania,1/4/2012,9/28/2019
+True,ford,2019,2,1ftmf1c55kkd08124,f-150,oklahoma,7/30/2020,1/3/2023
+True,ford,2019,3,1ftfw1e55kfc66570,f-150,pennsylvania,6/25/2013,6/20/2020
+True,ford,2019,1,1ftyr1zm9kka54926,transit,oklahoma,4/30/2017,2/1/2022
+True,ford,2019,4,1ftew1e57kfb37614,f-150,pennsylvania,6/4/2011,10/13/2012
+True,ford,2019,4,1ftyr1ym9kka56662,transit,oklahoma,10/22/2017,2/8/2024
+True,ford,2018,2,1ftew1cp8jfd42703,f-150,texas,11/24/2015,9/12/2024
+True,ford,2019,1,1ftfw1e48kkd08888,f-150,pennsylvania,11/19/2018,2/10/2022
+True,ford,2019,3,1ftyr1ym0kka56663,transit,oklahoma,8/9/2018,7/26/2024
+True,ford,2018,2,1ftfw1e19jfd95844,f-150,texas,5/6/2017,12/11/2021
+True,ford,2019,1,1ftfw1e44kfa45372,f-150,pennsylvania,2/28/2014,5/17/2019
+True,ford,2018,5,3fa6p0k95jr156818,fusion,oregon,5/2/2015,10/26/2020
+True,ford,2019,3,1ftfw1e59kfa45439,f-150,pennsylvania,11/15/2016,7/3/2020
+True,ford,2017,5,1ftfw1eg0hkd21010,f-150,oregon,11/4/2011,6/13/2022
+True,ford,2019,4,1ftfw1e52kfb51070,f-150,pennsylvania,12/8/2011,1/5/2022
+True,ford,2017,3,1fmcu9gd5huc55340,escape,oregon,9/28/2015,1/21/2018
+True,ford,2019,2,1ftew1ep6kfb50971,f-150,pennsylvania,1/11/2017,5/27/2023
+True,ford,2017,2,1fm5k8fh3hgb01057,explorer,oregon,7/12/2013,2/8/2020
+True,ford,2019,1,1ftfw1e47kfa45446,f-150,pennsylvania,11/25/2019,3/7/2022
+False,ford,2016,1,3fa6p0lu9gr318607,door,oregon,9/9/2014,5/6/2025
+True,ford,2019,5,1ftfw1e56kfc13215,f-150,pennsylvania,8/5/2014,8/18/2024
+False,ford,2016,4,3fa6p0h79gr262879,door,oregon,9/12/2018,3/9/2019
+True,ford,2019,3,1ftew1ep5kfb96789,f-150,pennsylvania,1/6/2018,3/15/2021
+True,ford,2016,5,1fm5k7d82gga11295,door,oregon,12/25/2012,5/11/2016
+True,ford,2019,3,1ftfw1e40kkc25486,f-150,pennsylvania,7/14/2011,8/1/2022
+True,ford,2016,3,1ft7x2b61geb56195,door,oregon,2/16/2015,1/14/2019
+True,ford,2019,5,1ftfw1e50kfc13209,f-150,pennsylvania,2/6/2013,4/16/2013
+True,ford,2016,2,3fa6p0h76gr145938,door,oregon,11/14/2016,2/17/2019
+True,ford,2019,5,1ftfw1e48kfa45374,f-150,pennsylvania,3/22/2014,4/30/2022
+True,ford,2019,1,1ftew1c42kkd75453,f-150,california,7/15/2017,2/23/2023
+False,ford,2016,2,3fa6p0h76gr269546,door,oregon,7/1/2014,4/22/2021
+True,ford,2019,3,1ftfw1e44kkc25474,f-150,pennsylvania,4/30/2013,4/10/2025
+True,ford,2019,2,1ftew1e50kkc39540,f-150,california,3/17/2019,3/21/2021
+True,ford,2016,5,1ftfw1eg9gke06958,door,oregon,11/3/2015,12/9/2019
+True,ford,2019,1,1ftew1e50kfb83107,f-150,pennsylvania,7/16/2017,8/24/2024
+True,ford,2019,1,1ftew1c55kkc38466,f-150,california,9/2/2012,9/17/2019
+True,ford,2016,1,2fmpk4ap5gbb89860,edge,oregon,2/11/2020,3/24/2021
+True,ford,2019,1,1ftew1e59kfa00593,f-150,pennsylvania,9/3/2016,5/27/2019
+True,ford,2019,2,1ftew1c46kkd75553,f-150,california,4/25/2010,11/15/2021
+True,ford,2016,4,3fa6p0lu5gr235305,door,oregon,9/15/2019,6/18/2024
+True,ford,2019,4,1ftew1c52kfa64476,f-150,pennsylvania,9/18/2015,2/23/2020
+True,ford,2019,3,1fmcu9gd7kub30198,escape,california,4/5/2012,10/29/2015
+True,ford,2015,3,3fa6p0h75fr306648,door,oregon,9/8/2012,1/20/2024
+True,ford,2019,5,1ftew1e42kfc10086,f-150,pennsylvania,1/24/2010,7/17/2015
+True,ford,2019,1,3fa6p0cd6kr140082,fusion,california,5/14/2013,7/9/2022
+False,ford,2013,5,1ftnf1et8dkf99625,f-150,oregon,6/6/2014,4/28/2025
+True,ford,2019,5,1ftew1c59kfb19764,f-150,pennsylvania,8/12/2013,9/13/2016
+True,ford,2019,3,1ftyr2cm0kkb25249,transit,california,1/21/2016,12/13/2020
+False,ford,2014,3,1ftnf1et8ekg10382,f-150,oregon,3/6/2017,8/6/2022
+True,ford,2019,1,1ftew1c47kfc12080,f-150,pennsylvania,3/27/2019,10/17/2024
+True,ford,2019,3,3fa6p0d93kr124089,fusion,california,9/13/2019,12/4/2022
+False,ford,2013,3,1ftbf2b66dea35574,door,oregon,12/31/2019,6/25/2020
+True,ford,2019,4,1ftfw1e57kfc13238,f-150,pennsylvania,1/4/2011,12/3/2015
+True,ford,2019,4,3fa6p0d9xkr105006,fusion,california,12/17/2013,10/5/2016
+False,ford,2013,2,1ftnf1et8dkd91793,f-150,oregon,11/7/2013,10/3/2020
+True,ford,2019,4,2fmhk6d81kba19766,flex,pennsylvania,4/22/2016,1/31/2023
+True,ford,2019,2,3fa6p0d91kr118405,fusion,california,9/27/2015,7/28/2018
+True,ford,2017,1,1ft7w2bt8hed83183,door,texas,1/1/2019,9/7/2020
+True,ford,2019,4,3fa6p0t90kr253764,fusion,pennsylvania,4/11/2019,4/9/2020
+True,ford,2018,1,1fm5k8d87jgc15281,explorer,oklahoma,1/26/2019,2/16/2022
+True,ford,2019,5,2fmhk6dt5kba15871,flex,pennsylvania,12/16/2014,9/16/2019
+True,ford,2019,5,2fmhk6c82kba19874,flex,pennsylvania,9/25/2013,11/10/2013
+True,ford,2018,3,1ftew1e56jkd36112,f-150,oklahoma,9/6/2020,8/21/2024
+True,ford,2019,3,3fa6p0lu3kr185724,fusion,pennsylvania,5/31/2020,7/3/2020
+True,ford,2019,1,3fa6p0ru3kr180188,fusion,pennsylvania,8/7/2018,5/7/2025
+True,ford,2015,2,1ftex1cp8fke04211,door,oklahoma,11/18/2012,2/23/2018
+True,ford,2019,2,3fa6p0k96kr261093,fusion,pennsylvania,4/3/2011,7/12/2016
+False,ford,2015,2,3fa6p0h77fr138558,door,oklahoma,7/2/2013,1/17/2019
+True,ford,2019,3,3fa6p0mu3kr180747,fusion,pennsylvania,9/5/2015,12/10/2017
+False,ford,2013,4,1fmcu9h94dua07603,door,oklahoma,5/4/2014,3/30/2018
+True,ford,2019,5,3fa6p0ruxkr116813,fusion,pennsylvania,1/6/2018,9/29/2020
+True,ford,2019,2,1ft7w2bt8kee90712,srw,oklahoma,2/3/2015,1/8/2017
+True,ford,2019,5,3fa6p0ru7kr138767,fusion,pennsylvania,4/15/2019,3/27/2022
+False,ford,2012,1,1ftfw1cf6cfb56754,door,oklahoma,12/19/2015,12/10/2024
+True,ford,2017,5,1ft7x2b69hec16645,srw,oregon,5/30/2015,12/22/2015
+True,ford,2019,4,1fahp2j84kg115859,taurus,pennsylvania,9/27/2014,10/14/2019
+False,ford,2015,2,1fmcu0gx1fub82812,door,oklahoma,6/4/2018,11/4/2019
+True,ford,2018,4,1fd8w3ht1jeb13182,drw,oklahoma,8/22/2018,1/5/2023
+True,ford,2019,1,1fahp2j81kg116841,taurus,pennsylvania,6/11/2013,6/15/2015
+True,ford,2016,2,1ft8w3dt6ged23165,door,oklahoma,3/29/2019,3/30/2023
+True,ford,2018,3,1fd0w5ht9jeb13276,drw,oklahoma,11/16/2012,3/5/2015
+True,ford,2019,5,1fahp2j8xkg115025,taurus,pennsylvania,3/10/2014,11/14/2022
+True,ford,2015,3,1ft7w2bt2fea81305,door,oklahoma,12/4/2011,7/19/2022
+True,ford,2017,2,1fd8w3htxhed36198,drw,oklahoma,7/25/2013,1/14/2021
+True,ford,2019,5,1ftyr2cm5kkb55220,transit,pennsylvania,9/28/2012,4/26/2017
+True,ford,2019,1,1ftew1e42kfc12713,f-150,georgia,7/12/2016,5/16/2024
+True,ford,2017,4,1fd8w3ht6hed35386,drw,oklahoma,5/13/2012,8/30/2014
+True,ford,2019,5,1fahp2j87kg116553,taurus,pennsylvania,8/12/2010,8/29/2024
+True,ford,2013,5,1fm5k7f93dgc57984,door,florida,1/4/2011,11/22/2017
+True,ford,2019,2,1fahp2j89kg115971,taurus,pennsylvania,12/2/2014,7/8/2016
+False,ford,2013,1,1fmcu0f75dud93994,door,florida,3/12/2011,12/10/2019
+True,ford,2019,4,1ftye9zm5kka75959,transit,pennsylvania,2/18/2016,7/1/2020
+True,ford,2019,1,1ftyr2cm5kkb17292,transit,pennsylvania,10/5/2011,5/28/2024
+True,ford,2019,4,1ftew1e53kfb51512,f-150,colorado,5/13/2020,2/25/2025
+True,ford,2013,1,1ftfw1ct8dfb88189,door,florida,5/17/2017,1/19/2020
+True,ford,2019,4,1ftyr2cm7kkb12031,transit,pennsylvania,5/26/2020,10/24/2022
+True,ford,2016,2,1fd8w3ht0geb20021,door,texas,3/23/2013,5/21/2025
+True,ford,2015,1,2fmtk4j99fbb84272,doors,new york,4/23/2016,5/9/2020
+True,ford,2019,3,1fbax2cm0kka31240,wagon,pennsylvania,1/19/2011,4/1/2011
+True,ford,2017,5,1ft7w2bt4hed76215,door,florida,8/11/2020,11/16/2022
+True,ford,2017,4,3fa6p0h74hr259986,door,pennsylvania,5/17/2010,6/23/2018
+True,ford,2015,3,2fmtk4j99fbb94378,doors,new york,4/26/2012,6/14/2014
+True,ford,2017,5,1ft7w2b62heb39135,door,florida,10/24/2011,3/28/2013
+True,ford,2016,4,1ft7w2bt1ged33630,door,pennsylvania,9/26/2011,4/30/2018
+True,ford,2015,1,2fmtk4k85fbb28755,doors,pennsylvania,11/28/2018,4/27/2022
+True,ford,2017,1,1fmcu9gd8hud43346,escape,colorado,7/19/2010,3/27/2023
+False,ford,2012,3,1fmcu9d76cka93351,door,pennsylvania,12/1/2018,1/24/2021
+True,ford,2015,3,1ft7w2bt5fec61782,door,texas,3/20/2010,3/30/2016
+False,ford,2012,4,1fmcu0d7xcka88620,door,minnesota,5/30/2016,10/4/2017
+True,ford,2019,1,1fbax2cm8kka31244,wagon,pennsylvania,1/2/2018,12/11/2022
+True,ford,2016,3,1ftfx1ef1gke85837,door,colorado,8/24/2020,9/27/2023
+False,ford,2014,3,1ftew1cm8efc15574,door,texas,6/7/2019,4/2/2025
+False,ford,2017,2,1fadp3k21hl268441,door,california,9/19/2020,8/31/2023
+True,ford,2019,4,1fbzx2zmxkka31904,wagon,pennsylvania,11/13/2015,2/10/2024
+True,ford,2016,3,3fa6p0k9xgr317088,door,colorado,10/19/2011,11/3/2015
+True,ford,2014,2,1ft7w2bt8eea52700,door,texas,6/17/2014,8/28/2015
+False,ford,2012,3,1fahp3m22cl334180,door,virginia,10/21/2012,11/6/2018
+True,ford,2019,4,1fbzx2zm9kka48743,wagon,pennsylvania,5/29/2011,8/24/2012
+True,ford,2014,3,1ftfw1ef4ekd10563,door,texas,4/30/2016,12/24/2017
+False,ford,2014,1,1ftmf1cm3ekd09140,door,georgia,1/26/2020,4/16/2024
+False,ford,2014,1,2fmdk3gc9ebb58643,door,colorado,6/11/2019,9/12/2023
+True,ford,2014,1,1ft7w2a67eeb61127,door,texas,10/7/2010,11/21/2025
+False,ford,2014,4,3fadp4bj5em136791,door,georgia,11/6/2017,2/4/2019
+True,ford,2013,2,1fdwe3fs8dda78168,cutaway,colorado,12/7/2015,12/14/2018
+False,ford,2013,2,3fa6p0hrxdr251001,door,texas,11/21/2018,7/22/2019
+False,ford,2014,3,1fmcu0gx0euc40715,door,massachusetts,2/6/2015,12/12/2016
+True,ford,2013,3,1ftfw1ct7dkg07754,door,texas,4/11/2016,7/9/2021
+False,ford,2016,1,1fadp3f26gl367412,door,massachusetts,7/26/2013,1/25/2014
+True,ford,2019,1,1ftmf1c57kkc79371,f-150,missouri,11/26/2014,5/13/2017
+True,ford,2019,2,3fa6p0ru3kr188341,door,massachusetts,2/13/2019,3/19/2021
+True,ford,2019,5,1ftmf1c51kkd08279,f-150,missouri,7/14/2013,4/12/2022
+True,ford,2020,4,3fa6p0cd0lr116667,fusion,virginia,8/1/2014,6/24/2024
+True,ford,2019,2,1ftmf1c52kkc79259,f-150,missouri,12/16/2018,12/3/2020
+True,ford,2020,2,1fatp8uh3l5101487,mustang,virginia,4/13/2015,6/14/2017
+True,ford,2019,5,1fmju1kt1kea32785,expedition,oklahoma,1/26/2020,12/21/2024
+True,ford,2020,4,3fa6p0cd8lr115427,fusion,virginia,4/3/2019,12/8/2023
+True,ford,2019,4,1ftmf1c56kkd08097,f-150,missouri,5/26/2012,11/21/2013
+True,ford,2019,4,1fmju1kt7kea32953,expedition,oklahoma,10/30/2014,4/16/2023
+True,ford,2019,1,1ftyr1ymxkka55522,transit,missouri,12/25/2015,10/2/2021
+True,ford,2019,5,1fbzx2cg3kka74824,wagon,oklahoma,12/21/2018,1/25/2025
+True,ford,2019,5,2fmpk3k98kbc03043,edge,virginia,1/1/2011,12/4/2022
+True,ford,2016,3,1fadp3l99gl358964,focus,west virginia,7/19/2010,3/30/2016
+True,ford,2019,5,1fmjk2at0kea58243,max,virginia,3/27/2020,4/3/2023
+True,ford,2014,5,1ft7w2btxeea16216,door,west virginia,1/22/2016,3/24/2024
+True,ford,2019,2,1fmjk2at6kea38501,max,virginia,8/4/2014,1/10/2018
+False,ford,2013,1,2fmdk4kc9dba82059,door,west virginia,10/11/2017,3/5/2021
+True,ford,2012,1,1ftfw1ef2cfa90460,door,west virginia,6/22/2019,10/7/2023
+True,ford,2019,1,2fmpk4k90kbb81660,edge,virginia,4/22/2012,4/8/2016
+False,ford,2013,3,1fm5k8d84dgc38344,door,west virginia,5/16/2014,2/1/2024
+True,ford,2019,2,2fmpk4k98kbc23105,edge,virginia,4/15/2011,4/26/2021
+True,ford,2013,5,1ft7w2btxdea17039,door,west virginia,2/9/2015,10/8/2025
+True,ford,2019,4,2fmpk3k92kbb89267,edge,virginia,7/21/2018,10/22/2022
+False,ford,2012,1,3fadp4bj7cm128642,door,west virginia,9/24/2015,1/24/2022
+True,ford,2019,1,maj6s3kl6kc281547,ecosport,virginia,5/31/2012,7/22/2023
+True,ford,2015,2,2fmtk4k99fbb35183,edge,missouri,2/9/2016,6/17/2024
+True,ford,2019,2,1fmcu0gd6kub08933,escape,virginia,6/13/2019,6/6/2022
+True,ford,2015,4,1ftew1cp9fke05161,door,oklahoma,9/12/2017,5/26/2019
+True,ford,2019,5,1ftew1e54kfb82591,f-150,michigan,11/10/2013,8/15/2023
+True,ford,2019,3,maj6s3kl2kc287149,ecosport,virginia,2/24/2013,11/9/2013
+False,ford,2014,3,1fmcu9g9xeuc07694,door,missouri,11/20/2014,8/16/2024
+True,ford,2019,3,1ftew1e54kfb48392,f-150,michigan,9/24/2014,11/14/2020
+True,ford,2019,3,2fmpk4k95kbc01949,edge,virginia,7/17/2017,7/15/2021
+True,ford,2019,5,1ftew1e53kkd48767,f-150,michigan,9/5/2018,3/22/2025
+True,ford,2019,4,2fmpk3k98kbb62817,edge,virginia,4/26/2010,3/5/2021
+True,ford,2019,2,1fm5k8gt7kgb48943,explorer,michigan,2/14/2016,5/21/2017
+True,ford,2013,5,1ftfw1et6dke81934,door,oklahoma,1/19/2017,10/1/2022
+True,ford,2019,4,1fm5k8f8xkgb26965,explorer,michigan,2/15/2011,7/5/2012
+True,ford,2019,2,2fmhk6d81kba20559,flex,virginia,5/7/2016,8/17/2019
+True,ford,2012,1,3frnf7fa7cv186728,f-750,missouri,9/6/2019,4/27/2020
+True,ford,2020,2,3fa6p0hd6lr110753,fusion,michigan,7/22/2018,10/6/2023
+True,ford,2019,3,3fa6p0lu2kr180496,fusion,virginia,1/16/2016,11/4/2019
+True,ford,2019,4,1ftew1c47kfb18880,f-150,virginia,6/4/2020,1/1/2025
+True,ford,2019,5,3fa6p0lu8kr117368,fusion,virginia,11/13/2016,9/10/2021
+True,ford,2019,2,1ftew1e53kfa65102,f-150,virginia,7/14/2015,12/1/2019
+True,ford,2019,4,1ftew1e57kfb48077,f-150,virginia,8/17/2012,4/23/2022
+True,ford,2019,5,1ftew1e54kfb47744,f-150,michigan,6/6/2019,1/16/2022
+True,ford,2019,5,3fa6p0ruxkr138018,fusion,virginia,8/6/2015,4/16/2016
+True,ford,2019,2,3fa6p0lu1kr225363,fusion,michigan,10/19/2016,11/18/2024
+True,ford,2019,5,1ftew1e52kfb46754,f-150,virginia,5/28/2016,10/24/2023
+True,ford,2019,5,3fa6p0d98kr187124,fusion,michigan,9/21/2017,10/19/2021
+True,ford,2019,3,1ftew1e57kfc11954,f-150,virginia,8/8/2014,7/6/2017
+True,ford,2019,1,maj3s2ke8kc268152,ecosport,nevada,1/16/2010,5/23/2017
+True,ford,2019,5,1fbzx2zm3kkb24344,wagon,virginia,9/4/2017,7/7/2023
+True,ford,2019,5,1fmjk2at6kea15946,max,texas,9/5/2013,9/12/2019
+True,ford,2019,3,1fter4fh6kla60107,ranger,virginia,10/11/2014,8/31/2025
+True,ford,2019,2,2fmpk4k96kbc37150,edge,nevada,2/20/2013,12/24/2024
+True,ford,2019,5,1fm5k7f88kgb11648,explorer,texas,2/16/2014,1/28/2022
+True,ford,2019,2,1fmcu0gdxkub80752,escape,nevada,4/23/2015,11/9/2024
+True,ford,2019,3,1fa6p8cf9k5108973,mustang,new mexico,11/20/2014,9/8/2019
+True,ford,2019,5,2fmpk4k90kbb55589,edge,nevada,5/15/2020,7/14/2025
+True,ford,2019,5,1fmcu0f72kub34778,escape,texas,1/13/2013,9/19/2018
+True,ford,2019,1,maj6s3kl3kc251132,ecosport,nevada,7/29/2018,5/30/2023
+True,ford,2014,5,1ftfw1ct0efc61704,door,florida,1/6/2020,6/12/2024
+True,ford,2019,4,maj3s2ke1kc286878,ecosport,nevada,3/20/2019,12/28/2019
+True,ford,2020,2,1fmsk8fh3lga11841,explorer,virginia,10/8/2016,7/24/2019
+False,ford,2013,1,1fadp3k22dl187362,door,florida,4/2/2011,8/30/2019
+True,ford,2019,2,1fmcu9gdxkub80402,escape,nevada,4/18/2013,7/26/2022
+True,ford,2020,4,1fmcu9f61lua48374,escape,virginia,5/29/2016,9/15/2017
+True,ford,2019,2,1fmjk1ht9kea27962,max,nevada,11/13/2017,10/6/2020
+True,ford,2019,3,1ft7w2bt5kee35425,srw,texas,4/26/2013,9/22/2018
+True,ford,2017,3,1ft8w3bt6hee98746,door,texas,9/10/2017,5/6/2025
+True,ford,2019,4,1fmju1kt0kea17775,expedition,nevada,1/8/2019,11/27/2025
+True,ford,2019,5,1ft8w3bt8kec78838,srw,texas,6/23/2018,3/2/2025
+False,ford,2015,2,1fadp3f2xfl240127,door,texas,8/31/2020,5/12/2022
+True,ford,2019,1,1fmjk1jt7kea20244,max,nevada,2/9/2015,5/15/2020
+False,ford,2015,2,1fmcu9gx8fuc81762,door,texas,8/10/2017,8/11/2023
+True,ford,2019,2,1fmcu0gd3kub29710,escape,nevada,1/27/2011,11/14/2022
+True,ford,2020,2,1fmsk7fh0lgb38489,explorer,south carolina,5/22/2020,4/18/2024
+False,ford,2013,5,3fa6p0hr1dr126940,door,texas,2/28/2016,9/20/2016
+True,ford,2019,1,1fmju1kt4kea43604,expedition,nevada,3/8/2020,1/27/2021
+True,ford,2013,5,1ft7w2bt3deb85914,door,texas,6/18/2019,11/22/2019
+True,ford,2019,1,1fmcu0gd2kub10601,escape,nevada,11/7/2013,7/11/2017
+True,ford,2012,5,1ft7w2bt4cea20954,door,texas,8/27/2017,1/24/2023
+True,ford,2019,3,1fmjk1ht3kea17945,max,nevada,9/15/2016,11/19/2017
+True,ford,2012,5,1ft7w2bt8ced04247,door,texas,1/21/2014,11/17/2014
+True,ford,2019,1,1fmcu9hdxkub65946,escape,nevada,5/22/2019,11/21/2019
+True,ford,2019,4,1fmcu9gd1kub80952,escape,virginia,5/27/2012,4/10/2015
+True,ford,2012,3,1fduf5gt3cea67577,cab,texas,7/24/2011,10/17/2012
+True,ford,2019,3,1fmjk1kt6kea28110,max,nevada,10/23/2019,10/14/2025
+True,ford,2019,5,1fmju2at1kea28890,expedition,virginia,12/17/2015,11/17/2019
+True,ford,2017,1,3fa6p0hd6hr205675,door,wisconsin,5/9/2010,2/4/2022
+True,ford,2019,3,1fm5k7f81kgb42773,explorer,nevada,1/31/2010,1/17/2019
+True,ford,2019,5,1fmcu9gd2kub09873,escape,virginia,3/6/2018,6/12/2021
+True,ford,2019,4,1ftew1c51kke08595,f-150,nevada,7/8/2011,10/1/2024
+True,ford,2019,1,1fmcu9gd2kua07649,escape,virginia,4/11/2014,6/12/2018
+True,ford,2019,1,1ft7w2b66kee46377,srw,new jersey,7/11/2011,10/16/2021
+True,ford,2019,4,1ftew1c50kke09205,f-150,nevada,10/18/2011,5/31/2019
+True,ford,2019,1,1fmjk1jt7kea20776,max,tennessee,3/3/2013,7/20/2014
+True,ford,2019,2,1fmcu9gdxkua14655,escape,pennsylvania,4/5/2017,12/12/2021
+True,ford,2019,3,1ftew1e43kkc41032,f-150,nevada,3/22/2016,4/12/2020
+True,ford,2019,1,1fmjk2at3kea27617,max,virginia,7/8/2019,2/3/2023
+True,ford,2019,2,1ftex1e51kkd09298,f-150,pennsylvania,11/10/2012,10/10/2020
+True,ford,2019,4,1fm5k7f87kgb11625,explorer,nevada,11/8/2014,5/29/2018
+True,ford,2017,4,1fadp3m2xhl322025,focus,new jersey,6/10/2011,3/9/2014
+True,ford,2019,2,1ftew1e58kkd14212,f-150,nevada,12/21/2013,6/22/2016
+True,ford,2019,2,1ftew1ebxkkd48349,f-150,nevada,10/19/2017,1/25/2025
+True,ford,2019,5,1ftew1c52kfa20803,f-150,virginia,7/15/2012,3/25/2020
+True,ford,2017,2,1ftex1ep6hfa52321,f-150,pennsylvania,12/29/2015,6/7/2019
+True,ford,2019,5,1ftew1c50kkc38522,f-150,nevada,3/5/2014,2/14/2018
+False,ford,2017,4,3fa6p0hd5hr138812,door,pennsylvania,2/3/2010,8/26/2013
+True,ford,2019,2,1ftew1c57kkc38467,f-150,nevada,1/27/2018,11/25/2025
+False,ford,2017,4,3fa6p0h78hr355815,door,pennsylvania,6/7/2012,11/5/2023
+True,ford,2019,4,1fatp8uh2k5158763,mustang,nevada,2/29/2016,3/23/2024
+True,ford,2016,2,1fmcu9gx9gub00752,door,pennsylvania,2/13/2016,5/29/2024
+True,ford,2019,3,1fatp8ff1k5179289,mustang,nevada,5/7/2017,2/16/2025
+True,ford,2016,5,2fmpk4j8xgbc53478,edge,pennsylvania,2/20/2015,5/22/2025
+True,ford,2019,4,1ftyr2cm5kka60432,transit,nevada,7/8/2016,1/24/2018
+False,ford,2016,5,3fa6p0g74gr199577,door,pennsylvania,12/23/2019,12/21/2024
+True,ford,2019,4,1fbzx2zm0kka60182,wagon,nevada,2/18/2010,10/26/2010
+False,ford,2016,5,3fa6p0g70gr318340,door,pennsylvania,7/19/2010,1/2/2019
+True,ford,2019,5,1ftyr2cm5kka75108,transit,nevada,7/5/2019,10/31/2020
+False,ford,2016,2,3fa6p0lu2gr318609,door,pennsylvania,9/26/2019,4/1/2020
+True,ford,2019,1,1ft7w2bt5kef24315,srw,nevada,2/11/2012,1/14/2023
+True,ford,2016,4,1ftye1ym1gkb56631,van,pennsylvania,3/4/2017,6/2/2021
+True,ford,2019,2,1ft7w2b6xkee55356,srw,nevada,8/21/2016,5/6/2021
+True,ford,2019,3,1fa6p8cf1k5144124,mustang,georgia,7/18/2013,8/10/2019
+True,ford,2018,3,1fmcu0gd0juc90126,escape,nevada,1/11/2014,9/29/2024
+False,ford,2013,1,1ftex1cm2dfc43995,door,pennsylvania,10/2/2019,1/4/2022
+False,ford,2018,1,3fadp4bj2jm136595,fiesta,nevada,1/21/2011,5/19/2012
+True,ford,2015,2,2fmpk3j80fbb14677,edge,florida,7/12/2015,2/22/2025
+True,ford,2018,4,maj3p1ve4jc210836,ecosport,nevada,3/9/2013,5/2/2013
+True,ford,2019,4,2fmpk3k94kbb62331,edge,georgia,10/14/2010,8/30/2012
+True,ford,2014,1,1ftfw1cf3efa59580,door,florida,10/26/2011,2/22/2024
+True,ford,2018,3,1fm5k7f8xjga57221,explorer,nevada,3/26/2016,11/6/2025
+True,ford,2018,4,3fa6p0lu9jr269920,fusion,nevada,3/27/2017,9/18/2024
+True,ford,2016,2,1fa6p8am4g5301086,door,new jersey,11/7/2015,2/14/2025
+True,ford,2018,2,1fatp8uhxj5166415,mustang,nevada,11/24/2015,5/3/2021
+False,ford,2016,3,1fadp3f20gl369771,door,new jersey,12/26/2017,7/27/2021
+True,ford,2018,5,1fm5k8b89jga75379,explorer,connecticut,7/18/2018,4/5/2020
+True,ford,2018,2,1ftew1eb4jfc37481,f-150,new york,6/28/2019,2/13/2022
+True,ford,2016,2,1ftew1cg0gke04837,door,nevada,6/23/2016,1/16/2022
+True,ford,2019,5,1ft7w2bt2kee85523,srw,tennessee,7/25/2020,7/15/2021
+True,ford,2017,2,1fm5k7f8xhgd79206,door,florida,7/17/2010,12/7/2018
+True,ford,2019,2,1ft8w3dt1kee72172,drw,virginia,7/20/2019,1/15/2020
+True,ford,2017,4,1fmcu0f78huc53640,escape,new york,4/28/2012,8/29/2013
+True,ford,2016,2,1ftew1cf8gke70396,door,florida,10/5/2019,2/28/2020
+False,ford,2017,5,1fmcu9gd8hub34463,escape,new york,12/17/2017,4/24/2022
+False,ford,2017,1,3fa6p0g71hr143386,door,new jersey,5/13/2011,4/30/2024
+False,ford,2017,2,1fmcu9gd4huc53644,escape,new jersey,9/28/2020,10/19/2021
+False,ford,2017,4,3fa6p0g79hr143393,door,connecticut,4/3/2014,10/14/2014
+True,ford,2017,4,1ftew1e80hfb12444,f-150,new york,6/20/2015,10/5/2015
+True,ford,2017,2,1fm5k8d81hgd05701,explorer,new york,9/4/2017,8/28/2018
+False,ford,2014,4,1fm5k7d8xega27936,door,california,2/25/2011,5/1/2014
+False,ford,2013,5,1fahp2f87dg198571,door,florida,12/9/2018,6/3/2020
+True,ford,2019,4,1fmjk1jt5kea14068,max,nevada,1/15/2013,7/17/2014
+True,ford,2019,3,1ftyr1zm9kka71256,transit,texas,10/12/2018,10/26/2025
+True,ford,2019,5,1ftbw3xm3kka93802,transit,texas,12/24/2011,1/31/2024
+True,ford,2019,1,1fmcu0gd0kub64172,escape,south carolina,10/11/2012,9/26/2013
+True,ford,2019,5,1ftmf1c5xkkc79283,f-150,texas,9/6/2013,8/21/2019
+True,ford,2019,3,1ftmf1c53kkc79075,f-150,south carolina,7/18/2014,8/3/2025
+True,ford,2019,5,1ftmf1c58kkc79282,f-150,texas,6/23/2014,5/4/2020
+True,ford,2019,3,1ftmf1c59kkd07753,f-150,south carolina,6/7/2012,12/27/2022
+True,ford,2019,2,1ftmf1c53kkd08302,f-150,texas,8/23/2014,9/28/2022
+True,ford,2019,5,1ftmf1c57kkc79077,f-150,south carolina,3/18/2012,7/26/2014
+True,ford,2019,1,1ftmf1c5xkkd07941,f-150,north carolina,4/25/2019,2/6/2020
+True,ford,2019,2,1ftew1e5xkfc48223,f-150,south carolina,10/16/2010,3/10/2024
+True,ford,2016,2,1ft8x3bt7gea37597,srw,nevada,6/8/2010,10/2/2013
+True,ford,2019,4,1ftmf1c57kkc78933,f-150,south carolina,12/23/2018,7/4/2020
+True,ford,2019,3,1ftmf1c57kkd07962,f-150,south carolina,4/11/2010,2/4/2014
+True,ford,2019,5,1ftmf1c58kkd07940,f-150,north carolina,1/23/2015,8/22/2019
+False,ford,2016,1,1fa6p0hd9g5118807,door,mississippi,9/8/2016,6/10/2023
+True,ford,2019,2,1ftmf1c54kkd38537,f-150,north carolina,3/17/2017,5/27/2019
+False,ford,2014,2,1fm5k7f82ega78361,door,mississippi,7/2/2018,12/18/2018
+True,ford,2019,4,3fadp4bj9km116331,fiesta,north carolina,6/20/2013,1/17/2014
+False,ford,2017,5,3fa6p0h73hr103244,door,south carolina,6/22/2010,10/18/2020
+True,ford,2019,1,1ftmf1c55kkd38546,f-150,north carolina,3/10/2013,11/7/2013
+False,ford,2012,3,1fahp2kt0cg106208,door,california,11/10/2016,11/21/2022
+True,ford,2019,4,1ftyr1ym9kka50814,transit,north carolina,5/25/2018,10/12/2021
+True,ford,2019,2,1ftyr1zm1kka42480,transit,north carolina,6/17/2018,11/4/2024
+False,ford,2016,5,1fadp3k25gl216776,door,south carolina,9/3/2014,12/18/2016
+True,ford,2017,2,1ftew1ep7hkd92670,door,texas,3/22/2018,11/25/2022
+True,ford,2017,1,3fa6p0h77hr214525,door,texas,11/16/2017,7/9/2020
+False,ford,2015,2,3fa6p0h71fr175122,door,south carolina,2/2/2010,1/27/2012
+True,ford,2016,4,1fm5k7dh8ggd26344,explorer,texas,12/25/2018,10/6/2022
+False,ford,2015,3,3fa6p0g78fr218971,door,south carolina,12/25/2011,10/20/2019
+False,ford,2016,5,1fa6p8am2g5230129,door,texas,1/21/2015,6/13/2025
+True,ford,2016,5,1fm5k7d82gga51375,door,texas,3/16/2010,4/9/2025
+False,ford,2014,2,1fadp3f22el318074,door,south carolina,2/12/2019,2/16/2023
+True,ford,2015,5,1ftfw1eg8ffa33385,door,texas,2/6/2020,10/25/2025
+False,ford,2013,4,1fadp3k26dl359277,door,south carolina,6/24/2016,7/15/2016
+False,ford,2013,1,1fadp3k21dl266148,door,south carolina,10/6/2011,12/21/2024
+True,ford,2015,4,1fbzx2cm3fka83325,van,texas,9/30/2015,7/20/2018
+False,ford,2016,5,3fadp4bj3gm105087,door,california,5/12/2018,8/23/2022
+True,ford,2017,3,1fmju2at7hea52412,expedition,colorado,1/19/2019,1/2/2023
+True,ford,2014,1,1zvbp8cf7e5320703,door,texas,7/2/2012,2/20/2021
+True,ford,2014,4,1fadp3l99el442649,door,california,1/22/2017,10/3/2019
+True,ford,2014,4,1ftfx1ct4efc92709,door,texas,1/30/2014,7/21/2017
+False,ford,2013,3,1fmcu0gx7dua39893,door,texas,1/14/2012,5/7/2015
+True,ford,2015,5,1fmcu9j90fuc00490,door,new jersey,11/9/2019,6/26/2020
+True,ford,2013,4,1fbne3bl8dda45318,bus,california,7/22/2017,7/11/2018
+True,ford,2014,1,1fd8w3ht2eeb77253,door,texas,12/31/2019,3/7/2023
+True,ford,2013,1,1ft8w3b64dea40501,door,california,9/11/2010,3/31/2015
+False,ford,2013,4,1ftex1cm3dfa94061,door,texas,8/28/2010,10/12/2022
+True,ford,2014,5,1ftew1cm6efc31661,door,texas,6/20/2010,4/5/2014
+True,ford,2015,4,1ft7w2b69feb06680,door,colorado,12/9/2019,5/25/2022
+True,ford,2013,5,1ftfw1et7dkf11233,door,colorado,5/5/2011,7/31/2015
+False,ford,2013,4,1ft7x2a68deb25801,door,texas,6/9/2018,3/3/2023
+True,ford,2019,1,2fmpk4k93kbc22718,edge,minnesota,10/25/2011,8/14/2025
+True,ford,2012,4,1ft8w3bt9cea39011,door,texas,6/11/2017,12/29/2023
+True,ford,2012,3,1zvbp8cfxc5274121,door,texas,1/31/2020,3/27/2022
+True,ford,2018,4,1fmcu0f79jud41148,escape,north carolina,11/13/2017,1/29/2019
+False,ford,2015,4,1fdfe4fs3fda25516,cutaway,illinois,3/21/2017,11/12/2023
+True,ford,2018,1,1fadp3n27jl252178,focus,north carolina,5/19/2013,5/9/2023
+True,ford,2019,4,1fmjk1kt5kea50146,max,florida,8/9/2010,7/20/2022
+True,ford,2014,4,1fdrf3bt6eea35761,door,idaho,11/21/2013,10/1/2025
+True,ford,2019,4,1fmjk2at4kea20188,max,florida,7/1/2010,2/12/2014
+True,ford,2016,5,1fdrf3bt4gec18045,door,idaho,12/2/2010,8/7/2023
+True,ford,2019,3,1fmcu0gd7kuc06417,escape,minnesota,9/8/2018,2/10/2025
+True,ford,2019,2,1fmjk1kt1kea13997,max,florida,7/28/2018,2/4/2022
+True,ford,2015,4,1fd8x3f67feb56345,door,texas,7/29/2013,11/15/2018
+True,ford,2019,4,2fmpk4k99kbb55946,edge,florida,1/5/2014,10/21/2025
+True,ford,2015,1,1fd8x3f67fec17452,door,texas,10/17/2011,10/8/2014
+True,ford,2019,4,1fmju2at3kea40507,expedition,minnesota,5/11/2020,2/19/2025
+True,ford,2017,2,1ftew1eg4hfa66124,door,tennessee,5/14/2012,6/30/2016
+True,ford,2019,3,1fmcu0gd2kuc33587,escape,florida,3/22/2019,10/5/2024
+True,ford,2019,3,1fmjk2at0kea45301,max,minnesota,11/3/2015,9/29/2017
+True,ford,2019,2,1fmcu0gd3kub08839,escape,florida,11/17/2011,8/29/2025
+True,ford,2016,3,nm0ls7f70g1257651,d,texas,12/16/2019,1/10/2023
+True,ford,2019,1,1fm5k7f81kgb41445,explorer,florida,5/25/2010,12/18/2011
+True,ford,2019,5,2fmpk3k91kbb56583,edge,florida,11/4/2013,8/22/2020
+True,ford,2012,5,3frxw7fe4cv310949,dr,california,8/18/2019,1/13/2020
+True,ford,2019,3,1fmjk2at2kea17807,max,florida,1/22/2011,1/30/2011
+False,ford,2012,3,1fduf5gt7ceb24329,cab,virginia,12/5/2012,1/15/2016
+True,ford,2019,2,1fmcu0gd0kub14114,escape,florida,8/31/2017,3/15/2024
+True,ford,2017,5,1fm5k8d85hga74740,explorer,michigan,7/8/2015,2/28/2016
+True,ford,2019,1,1fm5k7f83kgb41513,explorer,florida,12/5/2015,5/26/2022
+False,ford,2014,3,1fdwe3fs3eda53096,cutaway,florida,8/12/2016,12/19/2016
+True,ford,2016,2,1fa6p8th6g5218050,doors,connecticut,6/23/2017,2/4/2018
+True,ford,2019,5,1fmjk1ht4kea17579,max,florida,12/7/2011,5/9/2024
+True,ford,2016,2,1fa6p8cf1g5209884,doors,connecticut,12/31/2010,5/12/2019
+True,ford,2019,1,1fmju1kt8kea27843,expedition,florida,7/25/2020,3/28/2021
+True,ford,2016,3,1fa6p8cf8g5263621,doors,massachusetts,6/25/2013,5/10/2024
+True,ford,2019,3,1fmju1kt7kea17627,expedition,florida,3/20/2014,11/27/2022
+False,ford,2013,5,1fdfe4fs4dda28874,cutaway,new jersey,12/25/2013,10/24/2015
+True,ford,2016,3,1fa6p8cf2g5223518,doors,connecticut,7/10/2019,3/12/2025
+True,ford,2019,2,2fmpk4j94kbc24835,edge,florida,3/16/2018,6/15/2022
+True,ford,2016,1,1fa6p8th8g5255908,doors,new jersey,4/16/2016,8/31/2022
+False,ford,2015,2,3fadp4aj6fm132638,door,florida,5/7/2017,5/10/2023
+True,ford,2019,1,1fmjk1ht1kea42603,max,florida,10/9/2011,12/11/2020
+True,ford,2016,3,1fatp8ffxg5291869,doors,new york,4/1/2012,2/24/2018
+False,ford,2014,1,1fmcu0gx4eub39564,door,florida,6/2/2016,2/4/2019
+True,ford,2019,3,1fmcu0gd4kub08736,escape,florida,7/25/2020,9/22/2025
+True,ford,2016,3,1fa6p8thxg5208671,doors,new york,7/1/2010,4/16/2016
+True,ford,2019,5,1ftfw1e55kkd19095,f-150,minnesota,5/18/2014,2/10/2019
+True,ford,2019,5,1fm5k7f82kgb41597,explorer,florida,5/17/2011,1/8/2013
+True,ford,2019,4,maj3s2ge4kc278721,d,florida,10/5/2020,4/5/2023
+True,ford,2016,4,1fa6p8cf8g5225189,doors,new york,3/15/2010,12/30/2024
+True,ford,2019,4,3fa6p0luxkr109398,fusion,minnesota,4/10/2018,11/27/2019
+False,ford,2012,3,3fahp0ga5cr113207,door,florida,1/13/2018,10/6/2023
+True,ford,2019,2,1ftfw1rg5kfa62833,f-150,florida,5/7/2011,6/4/2012
+False,ford,2012,1,1fahp3j23cl241544,door,indiana,11/18/2011,1/7/2022
+True,ford,2016,3,1fatp8ff0g5296868,doors,massachusetts,7/13/2016,2/14/2023
+True,ford,2019,5,1fmjk2at1kea40396,max,minnesota,6/1/2019,11/7/2023
+True,ford,2014,4,1ft7w2bt0eea41481,door,kentucky,12/14/2013,9/10/2023
+True,ford,2019,5,1ftfw1rg6kfc08396,f-150,florida,3/27/2010,3/23/2012
+False,ford,2013,5,1fmcu9gx5dub47157,door,minnesota,7/10/2013,3/23/2022
+True,ford,2016,5,1fa6p8jz6g5525309,doors,new jersey,2/22/2013,4/30/2013
+True,ford,2019,4,3fa6p0ru2kr118068,fusion,minnesota,3/27/2019,7/31/2023
+True,ford,2013,4,1ft7w2btxdea14898,door,kentucky,11/9/2016,9/3/2017
+True,ford,2019,4,1ftew1e59kfc47399,f-150,florida,12/14/2014,12/9/2016
+True,ford,2016,2,1fa6p8cf0g5204627,doors,new jersey,2/17/2011,5/24/2020
+True,ford,2019,4,1ftew1e54kkc88465,f-150,minnesota,2/5/2012,7/26/2024
+True,ford,2012,4,1ftfw1cf3cfc75961,door,louisiana,2/28/2020,3/14/2025
+True,ford,2019,3,1ftew1eb6kfb83943,f-150,florida,4/19/2020,2/14/2021
+True,ford,2016,1,1fa6p8am3g5250504,doors,massachusetts,10/15/2015,10/16/2017
+True,ford,2019,5,2fmhk6d8xkba20365,flex,minnesota,8/30/2013,6/11/2015
+True,ford,2016,3,1fa6p8cf3g5242238,mustang,illinois,5/10/2017,10/6/2023
+True,ford,2019,4,2fmhk6d88kba29775,flex,florida,2/8/2015,11/8/2020
+False,ford,2012,2,1fmcu9eg7ckb88497,door,illinois,2/28/2011,12/17/2014
+True,ford,2016,4,1fa6p8cf5g5235498,doors,new jersey,3/20/2019,9/3/2020
+True,ford,2019,2,2fmhk6d86kba05247,flex,minnesota,9/20/2012,5/23/2013
+True,ford,2019,2,1fm5k8gt5kgb41683,explorer,florida,8/27/2020,4/5/2022
+False,ford,2016,4,3fadp4bjxgm137986,door,mississippi,4/16/2014,8/18/2015
+True,ford,2019,1,1ftfw1e54kfc34435,f-150,minnesota,7/13/2012,2/13/2018
+True,ford,2018,1,1fadp3e23jl254221,focus,massachusetts,7/6/2016,6/13/2017
+True,ford,2019,3,1fm5k8gt2kgb41298,explorer,florida,2/23/2016,6/12/2020
+False,ford,2012,1,3fadp4bj5cm221076,door,mississippi,8/14/2014,11/10/2016
+True,ford,2019,2,1ftew1e59kkc89708,f-150,minnesota,6/18/2011,2/21/2013
+True,ford,2016,2,2fmpk4j97gbb67005,edge,new york,2/10/2020,5/5/2025
+True,ford,2018,3,1fa6p8thxj5164792,doors,new york,2/22/2017,11/25/2025
+True,ford,2019,1,1ftfw1e5xkfb51429,f-150,minnesota,5/13/2019,8/25/2022
+False,ford,2016,5,3fa6p0g72gr397705,door,connecticut,1/20/2015,10/24/2019
+True,ford,2018,3,1fmcu0gd3jub60681,escape,missouri,10/7/2011,11/20/2025
+True,ford,2018,3,1fatp8uh7j5182314,doors,massachusetts,12/24/2014,4/29/2022
+True,ford,2019,3,1ftew1e49kfc10392,f-150,minnesota,8/29/2018,1/6/2025
+True,ford,2017,5,1ft7w2b60hee77178,door,massachusetts,5/11/2019,11/6/2019
+True,ford,2016,4,1fm5k8d82ggc60329,door,new york,6/3/2014,12/8/2023
+True,ford,2018,2,1fatp8uh2j5132890,doors,new jersey,9/9/2018,9/22/2021
+True,ford,2019,5,1ftfw1e50kfb96721,f-150,minnesota,7/18/2019,12/16/2019
+True,ford,2017,2,1ft7w2bt4hee52015,door,massachusetts,9/7/2015,9/17/2022
+False,ford,2016,3,1fmcu0f77gub25484,door,new jersey,6/21/2010,3/20/2023
+True,ford,2018,2,1fatp8uh3j5157023,doors,massachusetts,6/23/2012,1/9/2013
+True,ford,2019,4,2fmhk6d85kba09063,flex,minnesota,9/18/2018,6/27/2022
+True,ford,2018,3,1ftew1cb3jfc81295,f-150,mississippi,5/7/2011,11/6/2021
+True,ford,2016,4,1fadp5au1gl114180,hybrid,new york,10/9/2016,5/1/2019
+True,ford,2018,1,1fa6p8th1j5167452,doors,new york,5/29/2016,10/4/2023
+True,ford,2019,4,1ftew1e4xkfc10403,f-150,minnesota,11/2/2010,12/20/2018
+True,ford,2018,5,1ftew1ep2jfb83786,f-150,mississippi,9/30/2015,7/4/2024
+True,ford,2016,3,1fahp2e84gg136518,door,new jersey,8/21/2020,8/1/2023
+True,ford,2018,2,1fatp8uh1j5115336,doors,new york,6/29/2014,10/14/2014
+True,ford,2019,1,3fa6p0cd0kr117056,fusion,minnesota,6/29/2014,10/4/2025
+False,ford,2016,1,1fadp3k28gl330142,door,massachusetts,3/17/2013,9/9/2016
+True,ford,2019,5,1fatp8uhxk5148658,mustang,florida,2/25/2014,1/13/2025
+False,ford,2018,2,1ftex1c53jkd88586,door,oklahoma,10/28/2010,6/7/2011
+True,ford,2018,2,1fa6p8th8j5115591,doors,new york,10/5/2020,11/13/2023
+True,ford,2019,2,3fa6p0cd1kr110357,fusion,minnesota,10/9/2012,10/11/2012
+True,ford,2016,1,1ftbf2b61ged08196,door,massachusetts,8/31/2011,12/21/2022
+True,ford,2019,4,1fbzx2zm7kka48532,wagon,florida,7/31/2010,12/21/2022
+True,ford,2018,3,3fa6p0d97jr219835,fusion,california,6/24/2012,10/13/2019
+True,ford,2018,5,1fa6p8cf4j5145797,doors,new york,7/7/2014,9/11/2018
+True,ford,2019,4,1ftfw1e52kfb85249,f-150,minnesota,7/20/2013,9/23/2015
+True,ford,2017,3,1fm5k7d82hgb82470,explorer,mississippi,8/17/2012,8/21/2025
+True,ford,2019,4,3fa6p0d97kr118571,fusion,florida,10/4/2011,11/24/2018
+True,ford,2018,2,1fatp8uh2j5132629,mustang,california,9/17/2015,10/1/2018
+True,ford,2018,4,1fa6p8cf2j5161626,doors,new york,9/1/2013,11/19/2024
+True,ford,2019,4,1fbzx2zm0kka75345,wagon,minnesota,4/27/2013,3/3/2022
+True,ford,2017,2,1fm5k7fh2hgb04056,explorer,mississippi,3/8/2017,7/26/2018
+True,ford,2019,2,3fa6p0d98kr138974,fusion,florida,10/2/2020,2/20/2025
+True,ford,2018,2,1fmcu9hd7jua30891,escape,california,1/14/2020,1/31/2025
+True,ford,2018,2,1fatp8uh0j5124044,doors,new york,1/24/2010,5/20/2017
+True,ford,2019,2,3fa6p0ru2kr117017,fusion,minnesota,7/10/2016,7/1/2017
+True,ford,2017,1,1ftew1ep9hkc82719,door,alabama,4/4/2014,4/26/2015
+True,ford,2019,4,3fa6p0ru4kr181558,hybrid,florida,1/15/2017,2/3/2023
+True,ford,2018,2,1fatp8uh9j5132644,mustang,california,8/12/2013,11/6/2025
+True,ford,2018,3,1fatp8uh6j5142578,doors,new hampshire,7/30/2017,1/8/2019
+True,ford,2017,4,1ft8w3dt1hee12434,door,alabama,8/2/2015,5/26/2018
+True,ford,2019,1,1fatp8ff0k5161477,mustang,florida,5/8/2015,7/12/2020
+False,ford,2014,1,1fmjk1g53eef23881,door,montana,2/6/2016,4/1/2024
+True,ford,2018,5,1fa6p8cf3j5172103,doors,new jersey,11/23/2018,4/24/2019
+False,ford,2014,4,3fa6p0hd9er326468,door,new jersey,5/27/2020,3/4/2025
+True,ford,2017,4,1ft7w2bt7hef07573,door,alabama,4/19/2017,4/2/2018
+True,ford,2019,5,1fter4fh5kla45887,ranger,florida,3/2/2020,8/23/2021
+True,ford,2017,1,1ftfx1ef8hkd03259,door,california,6/24/2013,1/24/2016
+True,ford,2018,1,1fa6p8cf0j5118581,doors,new jersey,2/17/2010,7/17/2023
+True,ford,2014,3,1fm5k8d84egc31539,door,new jersey,1/21/2018,9/11/2020
+False,ford,2017,1,1fadp3j22hl268403,focus,alabama,9/16/2010,3/15/2023
+True,ford,2019,5,1fatp8uh8k5109583,mustang,florida,2/10/2012,12/10/2022
+False,ford,2012,3,1fahp3f23cl414648,door,virginia,5/17/2014,9/26/2023
+True,ford,2018,4,1fa6p8cf1j5126821,doors,new jersey,3/7/2016,1/30/2018
+True,ford,2019,1,1ft7w2bt7kee46393,srw,minnesota,10/1/2017,6/2/2020
+True,ford,2017,1,1ftew1ef2hfb30250,door,mississippi,6/28/2010,4/12/2020
+True,ford,2019,3,1fter4eh3kla09133,ranger,florida,12/17/2012,9/29/2016
+True,ford,2015,3,1fatp8ff5f5323738,doors,connecticut,3/10/2014,5/26/2014
+True,ford,2018,2,1fa6p8cf9j5110592,doors,new jersey,12/18/2014,2/11/2015
+True,ford,2019,5,1ft7w2b68ked77546,srw,minnesota,6/16/2010,2/17/2018
+True,ford,2017,3,1fbzx2zm3hka72688,wagon,mississippi,8/16/2013,9/10/2018
+True,ford,2019,5,3fa6p0cd8kr138334,fusion,florida,8/6/2012,9/11/2017
+True,ford,2015,2,1fa6p8cf9f5365377,doors,new york,8/15/2013,2/23/2017
+True,ford,2018,5,1fa6p8cf9j5125433,doors,new jersey,5/24/2016,12/4/2019
+True,ford,2019,5,1ft7w2bt7kef15907,srw,minnesota,1/12/2015,6/21/2020
+True,ford,2013,2,1ftfw1ef7dfd73034,door,connecticut,3/4/2014,4/24/2021
+True,ford,2019,1,3fa6p0lu6kr119958,hybrid,florida,3/2/2015,8/7/2016
+True,ford,2015,1,1fa6p8cf3f5404612,doors,new hampshire,9/6/2014,1/17/2021
+True,ford,2018,5,1fa6p8cf0j5159227,doors,new york,9/25/2014,4/29/2023
+True,ford,2015,1,1fa6p8cf0f5308078,doors,new jersey,1/26/2013,6/9/2015
+True,ford,2018,1,1fa6p8cf9j5120362,doors,pennsylvania,9/26/2019,7/9/2022
+True,ford,2015,1,1fa6p8th8f5341198,doors,new york,8/7/2017,4/4/2018
+True,ford,2018,3,1fa6p8cf5j5125462,doors,pennsylvania,1/14/2019,7/22/2023
+True,ford,2015,3,1fa6p8am4f5334930,doors,new jersey,7/25/2018,12/4/2020
+True,ford,2018,5,1fa6p8th8j5120337,doors,pennsylvania,11/27/2010,12/2/2016
+True,ford,2016,3,1ftew1cf9gfa55757,door,alabama,4/17/2017,11/27/2020
+True,ford,2015,4,1fa6p8cf7f5325900,doors,new york,7/23/2015,1/9/2023
+True,ford,2018,4,1fa6p8cf1j5175131,doors,pennsylvania,1/24/2019,8/11/2024
+True,ford,2015,1,1fatp8em4f5415097,doors,new jersey,5/20/2010,6/15/2015
+True,ford,2018,1,1fahp2f84jg117375,taurus,utah,12/18/2013,10/18/2016
+True,ford,2020,4,1fter4fh1lla02732,ranger,ohio,10/27/2011,4/18/2013
+True,ford,2016,2,1ft7w2bt2ged14343,door,alabama,1/1/2014,6/28/2018
+True,ford,2015,2,1fa6p8th7f5344481,doors,new york,11/21/2014,9/2/2022
+False,ford,2014,1,3fa6p0h78er183765,door,michigan,6/4/2016,2/10/2019
+True,ford,2012,5,1ftfw1ct4ckd77105,door,florida,8/12/2011,10/27/2011
+True,ford,2016,2,1ft7w2b61geb39979,door,mississippi,8/11/2010,8/18/2023
+True,ford,2015,3,1fa6p8th5f5420201,doors,new york,6/15/2015,1/27/2024
+True,ford,2012,4,1zvbp8ff3c5288048,door,florida,6/15/2016,1/21/2023
+False,ford,2016,5,1fadp3k28gl311932,door,alabama,12/6/2013,8/19/2023
+True,ford,2015,5,1fatp8uh0f5331279,doors,new jersey,4/8/2017,12/13/2024
+True,ford,2015,1,1ft7w2bt8fec08946,door,alabama,12/13/2011,1/15/2021
+True,ford,2015,1,1fa6p8cf6f5325225,doors,new york,8/13/2017,1/3/2018
+True,ford,2015,3,1fbzx2ym4fka72472,van,mississippi,5/12/2013,2/20/2018
+True,ford,2015,4,1fa6p8am3f5306570,doors,new jersey,2/17/2012,11/28/2014
+True,ford,2020,3,3fa6p0d92lr117801,fusion,illinois,1/3/2014,2/15/2023
+True,ford,2015,2,1ftew1ef2fke07659,door,mississippi,10/5/2010,5/19/2012
+True,ford,2015,4,1fa6p8cf2f5362711,doors,massachusetts,10/8/2016,8/5/2023
+True,ford,2015,2,1fmju1ht4fef41606,expedition,mississippi,12/30/2018,6/4/2022
+True,ford,2015,5,1fa6p8am2f5403582,doors,massachusetts,6/6/2014,3/16/2020
+True,ford,2014,4,1ftfw1ct6eke95627,door,mississippi,4/25/2011,12/17/2018
+True,ford,2015,5,1fa6p8th8f5307097,doors,new jersey,2/21/2012,11/15/2017
+True,ford,2015,1,1fa6p8th8f5346675,doors,new york,7/1/2016,2/28/2023
+True,ford,2015,1,1fa6p8am0f5365382,doors,new jersey,7/13/2013,9/26/2019
+True,ford,2015,1,1fa6p8cf0f5312423,doors,new jersey,8/25/2015,8/25/2016
+False,ford,2017,3,3fa6p0h76hr319394,door,arkansas,6/4/2018,6/28/2019
+True,ford,2015,3,1fa6p8cf7f5357357,doors,new jersey,9/1/2014,8/4/2020
+True,ford,2015,4,1fa6p8cf2f5306378,doors,pennsylvania,9/18/2015,10/17/2023
+True,ford,2015,3,1fatp8uh8f5397899,doors,new jersey,9/21/2016,2/1/2020
+True,ford,2015,3,1fa6p8th0f5382067,doors,new york,3/13/2015,1/6/2022
+True,ford,2015,2,2fmtk4j95fbb24313,doors,new york,11/11/2017,4/20/2022
+True,ford,2015,5,2fmtk4k80fbb56382,doors,connecticut,9/14/2017,5/16/2023
+True,ford,2015,1,2fmtk4j86fbb17376,doors,new york,12/13/2017,3/22/2018
+True,ford,2015,3,2fmtk3j86fbb54504,doors,new york,7/24/2012,8/15/2020
+True,ford,2019,4,1fmju2at1kea37413,expedition,illinois,9/16/2013,9/20/2023
+True,ford,2015,1,2fmtk3j92fbc41664,doors,connecticut,1/8/2018,7/29/2018
+True,ford,2019,1,1fmjk2at2kea45381,max,illinois,5/25/2017,12/16/2022
+True,ford,2015,2,2fmtk4j81fbc21743,doors,new york,8/23/2019,4/21/2021
+True,ford,2019,1,1fmjk2at0kea39191,max,illinois,11/26/2012,12/2/2013
+True,ford,2015,3,2fmtk4j86fbc21494,doors,massachusetts,6/2/2020,1/30/2022
+True,ford,2019,2,1fmcu9gd3kub30490,escape,illinois,12/16/2012,5/16/2014
+True,ford,2015,2,2fmtk4k88fbb49003,suv,pennsylvania,2/12/2020,11/10/2024
+True,ford,2019,1,1fmjk2at9kea46589,max,illinois,11/27/2019,9/20/2025
+True,ford,2015,3,2fmtk3ap9fbc28957,doors,new jersey,9/27/2018,5/26/2019
+True,ford,2019,1,1fmju2at8kea33665,expedition,illinois,5/13/2015,10/10/2020
+True,ford,2015,1,2fmtk4j87fbb34901,doors,new jersey,4/28/2013,2/24/2025
+True,ford,2019,5,1fmjk2at3kea46572,max,illinois,6/30/2013,8/4/2023
+True,ford,2015,1,2fmtk4j96fbb10890,doors,new york,11/10/2012,5/15/2019
+True,ford,2019,4,1fmju2at9kea25414,expedition,illinois,3/12/2011,12/27/2023
+True,ford,2015,3,2fmtk4j82fbc36462,doors,new york,5/11/2018,1/10/2020
+True,ford,2019,1,2fmhk6dt1kba15866,flex,illinois,10/16/2013,8/4/2018
+True,ford,2015,3,2fmtk4j88fbb19078,doors,new jersey,9/29/2015,2/14/2024
+True,ford,2019,1,2fmhk6d84kba36268,flex,illinois,10/6/2011,9/17/2019
+True,ford,2015,1,2fmtk4j94fbc08560,doors,new york,5/21/2015,7/8/2024
+True,ford,2019,3,1ftfw1e56kfc13232,f-150,illinois,12/9/2014,11/15/2016
+False,ford,2014,3,1fa6p0hd0e5355683,door,arkansas,12/10/2019,1/24/2022
+True,ford,2015,5,2fmtk4ap1fbc36380,doors,new jersey,9/22/2013,12/6/2017
+True,ford,2019,1,1fatp8uhxk5148949,mustang,illinois,6/7/2015,7/14/2025
+True,ford,2015,5,1ftew1cf5fkd41840,door,arkansas,10/12/2010,11/18/2010
+True,ford,2015,4,2fmtk4g88fbb75562,doors,new york,11/28/2011,9/28/2024
+True,ford,2019,3,1ftyr2zm1kkb65539,transit,illinois,7/1/2011,9/10/2014
+True,ford,2018,4,1fmjk1kt9jea41402,max,north carolina,3/30/2017,5/14/2021
+True,ford,2015,1,2fmtk4g8xfbb98373,doors,new york,3/22/2010,12/7/2016
+True,ford,2015,3,2fmtk4j93fbb69606,doors,massachusetts,9/20/2012,9/29/2014
+True,ford,2016,1,1fm5k7f81gga06232,door,florida,8/16/2018,12/22/2022
+True,ford,2015,1,2fmtk4ap6fbc01186,doors,massachusetts,11/8/2014,8/1/2016
+False,ford,2015,4,nm0ls6e75f1193116,connect,florida,8/13/2010,7/15/2018
+True,ford,2015,5,2fmtk4k86fbb36847,doors,massachusetts,3/13/2011,12/7/2021
+True,ford,2017,5,1fmcu0gd0hue05897,door,illinois,8/21/2016,10/2/2021
+True,ford,2015,2,2fmtk3j95fbc21893,doors,pennsylvania,3/19/2019,8/7/2021
+True,ford,2017,5,1ftfw1ef3hfc08748,door,illinois,4/20/2019,11/5/2019
+True,ford,2015,5,2fmtk4g88fbb94547,doors,pennsylvania,12/22/2019,5/24/2025
+True,ford,2017,1,1ftfw1ef2hfb56304,door,illinois,9/17/2020,4/16/2023
+True,ford,2015,5,2fmtk4j98fbc15642,doors,new jersey,7/30/2019,3/6/2025
+True,ford,2017,4,1ftfw1ef0hfa02688,door,illinois,5/30/2010,4/9/2016
+True,ford,2018,3,2fmpk4k82jbb61657,edge,colorado,8/12/2015,7/22/2016
+True,ford,2017,1,1ftfw1ef5hfb57303,door,illinois,2/8/2019,5/26/2021
+True,ford,2020,5,1fmjk2at4lea11492,max,ohio,2/14/2018,3/24/2018
+True,ford,2017,5,1ftfw1eg9hfc63181,f-150,illinois,4/28/2017,2/27/2023
+True,ford,2017,5,1ftfw1ef8hfa28276,f-150,illinois,3/23/2015,11/23/2018
+True,ford,2019,5,1fm5k8f85kgb47660,explorer,north carolina,10/7/2010,6/20/2019
+True,ford,2018,4,1ftew1cg6jfd15757,f-150,virginia,9/21/2020,8/16/2022
+True,ford,2017,2,1ftfw1ef6hfa36117,door,illinois,9/26/2020,6/20/2025
+True,ford,2018,5,1fmju1kt7jea10840,expedition,virginia,7/28/2017,8/16/2021
+True,ford,2017,4,1ftew1eg4hfc14661,door,illinois,2/24/2018,12/4/2021
+True,ford,2017,4,1ftfw1eg4hfa61042,f-150,illinois,6/4/2018,3/21/2019
+True,ford,2018,2,1fbvu4xg0jka34387,wagon,virginia,3/8/2015,1/12/2025
+True,ford,2017,3,1ft7w2bt6hed37724,door,illinois,11/20/2014,9/27/2020
+True,ford,2018,1,1fm5k8gt5jga17377,explorer,pennsylvania,4/7/2016,8/17/2020
+True,ford,2018,5,1fmcu9gd2jua74282,escape,pennsylvania,12/24/2010,9/13/2025
+True,ford,2019,1,1fm5k7f85kgb16175,explorer,north carolina,7/10/2016,9/21/2023
+True,ford,2018,2,1ftex1cb2jkd88410,f-150,texas,3/8/2013,8/5/2014
+True,ford,2016,1,1ftfw1eg1gfa91324,door,illinois,1/1/2014,4/12/2016
+True,ford,2018,3,1ftew1eg1jfb92141,f-150,pennsylvania,9/17/2019,11/17/2024
+True,ford,2019,4,1fm5k7f8xkga63974,explorer,north carolina,8/3/2012,9/17/2025
+True,ford,2016,5,1ftfw1ef7gfd42886,door,illinois,9/10/2020,11/30/2021
+True,ford,2018,1,1ftfw1e53jfa49565,f-150,pennsylvania,10/4/2011,2/3/2019
+False,ford,2012,5,1fahp3f27cl372579,door,pennsylvania,7/19/2011,1/9/2025
+True,ford,2016,3,1fmcu9g99guc59224,door,illinois,11/22/2012,10/30/2018
+True,ford,2018,1,1ftfw1eg6jfc96497,f-150,pennsylvania,5/11/2010,11/9/2012
+True,ford,2015,5,3frnf6fb7fv723704,f-650,texas,5/2/2015,3/9/2017
+False,ford,2015,5,3fa6p0hd9fr112940,door,illinois,2/14/2010,4/2/2011
+True,ford,2018,4,1ftfw1eg6jfa49562,f-150,pennsylvania,10/10/2012,9/15/2018
+True,ford,2015,2,3frnf6fb5fv723703,f-650,texas,5/16/2012,11/2/2022
+True,ford,2018,4,1fbzx2zm8jka97477,wagon,wisconsin,6/25/2018,7/23/2021
+True,ford,2015,1,1fmcu0jx4fua38177,escape,illinois,3/24/2020,11/24/2020
+True,ford,2018,3,1ftew1ep8jfe30258,f-150,pennsylvania,9/15/2016,5/12/2021
+True,ford,2019,3,1ft7w2bt0kee34621,srw,florida,7/20/2019,12/4/2019
+True,ford,2015,5,1ftfw1ef5ffa07480,door,illinois,4/24/2014,9/23/2016
+True,ford,2018,1,1ftew1e50jfa49583,f-150,pennsylvania,4/16/2014,11/6/2018
+True,ford,2018,5,1ftfw1eg8jfc18450,f-150,pennsylvania,7/13/2014,5/9/2017
+True,ford,2017,5,1fahp2e88hg132084,taurus,missouri,7/7/2016,2/20/2017
+True,ford,2018,3,1ftfw1eg3jfa50880,f-150,pennsylvania,11/13/2010,10/26/2016
+True,ford,2016,5,1fmcu9gx7gub92704,door,missouri,7/5/2017,1/3/2025
+True,ford,2018,4,1ftfw1eg4jfe78490,f-150,pennsylvania,1/3/2016,11/19/2021
+True,ford,2014,5,1fmju2a50eef65739,expedition,missouri,9/15/2019,9/3/2022
+True,ford,2018,2,1ftfw1eg1jfc34506,f-150,pennsylvania,3/18/2020,1/15/2021
+True,ford,2019,1,1fa6p8cf3k5102120,mustang,texas,10/14/2013,7/13/2025
+True,ford,2018,1,1ftfw1eg8jfa10617,f-150,pennsylvania,5/24/2010,11/3/2022
+True,ford,2019,1,1fm5k7f83kga17399,explorer,north carolina,1/31/2019,9/24/2022
+True,ford,2018,4,1ftfw1e55jfa37529,f-150,pennsylvania,2/19/2013,10/20/2023
+True,ford,2019,2,1fmcu9j9xkuc36052,escape,north carolina,4/17/2019,5/1/2022
+True,ford,2017,3,1ftex1cp8hkd08288,door,texas,12/27/2013,9/29/2022
+True,ford,2018,1,1ftew1ep8jfd90148,f-150,pennsylvania,12/21/2014,5/28/2016
+True,ford,2019,5,1fmcu0g96kub33780,escape,north carolina,6/4/2013,1/22/2025
+True,ford,2017,3,1ft8w3dt0hef24562,door,texas,1/30/2017,10/21/2022
+True,ford,2018,2,1ftfw1e53jkc06275,f-150,pennsylvania,6/26/2018,11/19/2018
+True,ford,2019,2,1fm5k8f83kgb26838,explorer,north carolina,8/26/2014,5/18/2016
+True,ford,2016,4,1ft8w3dt7gec81766,door,texas,12/8/2019,12/9/2023
+True,ford,2018,4,1ftew1ep8jfd35859,f-150,pennsylvania,12/22/2017,7/27/2022
+True,ford,2018,3,1ftew1ep8jfc58328,f-150,pennsylvania,5/13/2013,6/30/2018
+True,ford,2019,5,maj6s3kl4kc273222,ecosport,north carolina,4/10/2010,1/13/2019
+False,ford,2015,4,1fmcu0gx0fua05555,door,texas,2/17/2014,9/30/2015
+True,ford,2018,5,1ftfw1e51jfe26457,f-150,pennsylvania,5/24/2010,4/2/2021
+True,ford,2015,5,1ft7w2btxfea09767,door,texas,11/14/2014,9/11/2024
+True,ford,2018,1,1ftfw1e53jfa36542,f-150,pennsylvania,2/16/2010,3/26/2017
+True,ford,2018,4,1ftew1ep0jfd90421,f-150,pennsylvania,11/2/2012,3/20/2023
+False,ford,2014,2,1ftew1cm7efa19352,door,texas,4/12/2013,11/26/2024
+True,ford,2018,1,1ftex1cb4jfa24241,f-150,pennsylvania,9/2/2010,3/14/2013
+True,ford,2019,2,1fm5k7f89kga64209,explorer,north carolina,11/9/2016,11/30/2022
+True,ford,2018,4,1ftew1ep2jkc89288,f-150,pennsylvania,1/12/2019,5/15/2024
+True,ford,2019,4,1fm5k8gt9kgb48958,explorer,north carolina,1/2/2018,1/26/2021
+False,ford,2018,3,3fadp4bj5jm122531,fiesta,pennsylvania,3/6/2012,5/24/2022
+True,ford,2019,4,1fm5k7f85kga32678,explorer,north carolina,5/20/2016,7/16/2024
+True,ford,2018,4,1ftfw1e58jfa37766,f-150,pennsylvania,2/25/2020,6/18/2023
+False,ford,2017,1,1fadp3f25hl234464,focus,north carolina,6/6/2010,11/23/2024
+True,ford,2018,4,1ftfw1e50jkc66708,f-150,pennsylvania,5/28/2017,7/22/2020
+False,ford,2019,3,3fadp4ej3km124114,fiesta,north carolina,5/12/2015,3/18/2019
+True,ford,2018,2,1ftew1ep9jfa21976,f-150,pennsylvania,12/3/2011,7/10/2014
+False,ford,2019,1,3fadp4bjxkm138371,fiesta,north carolina,2/13/2014,4/4/2016
+True,ford,2018,3,1ftfw1eg8jfb90617,f-150,pennsylvania,6/26/2013,9/13/2014
+True,ford,2019,1,2fmhk6dt8kba14603,flex,north carolina,10/20/2014,11/4/2020
+True,ford,2018,1,1ftew1ep1jfa02757,f-150,pennsylvania,5/17/2012,10/16/2019
+False,ford,2019,5,3fadp4ej8km130958,fiesta,north carolina,2/4/2013,7/10/2019
+True,ford,2018,3,1ftew1ep1jkd75109,f-150,pennsylvania,4/25/2014,7/17/2022
+True,ford,2019,2,2fmhk6c8xkba14373,flex,north carolina,7/13/2018,11/8/2019
+True,ford,2018,3,1ftfw1e55jfc57253,f-150,pennsylvania,6/6/2016,3/11/2017
+True,ford,2019,2,3fa6p0lu4kr188583,hybrid,north carolina,1/13/2015,11/26/2018
+True,ford,2018,1,1ftfw1e54jfa50563,f-150,pennsylvania,8/2/2012,10/11/2017
+False,ford,2019,5,3fadp4ej4km131038,fiesta,north carolina,1/18/2010,11/23/2015
+True,ford,2018,2,1ftew1egxjfa11599,f-150,pennsylvania,1/12/2020,12/24/2021
+True,ford,2019,2,2fmhk6dt9kba22922,flex,north carolina,4/20/2018,7/15/2020
+True,ford,2018,5,1ftew1ep9jfc17402,f-150,pennsylvania,6/10/2014,10/8/2014
+False,ford,2019,5,3fadp4bj1km123807,fiesta,north carolina,4/25/2018,5/30/2022
+True,ford,2018,1,3fa6p0ru4jr247959,fusion,pennsylvania,9/23/2020,1/26/2022
+True,ford,2019,2,2fmgk5d8xkba08187,flex,north carolina,6/14/2017,1/13/2021
+True,ford,2018,2,3fa6p0d99jr206522,fusion,pennsylvania,2/13/2018,8/21/2022
+True,ford,2019,4,3fa6p0luxkr225023,fusion,north carolina,10/25/2016,10/18/2023
+True,ford,2018,5,1ftyr2cm0jka24226,transit,pennsylvania,6/24/2017,3/31/2022
+True,ford,2019,5,3fa6p0lu0kr210790,fusion,north carolina,4/2/2018,12/6/2018
+True,ford,2018,4,1ftyr2cm5jka24223,transit,pennsylvania,3/21/2016,1/24/2018
+True,ford,2019,5,3fa6p0lu8kr225408,fusion,north carolina,3/13/2017,3/13/2018
+True,ford,2018,2,1ftyr2cm2jka24227,transit,pennsylvania,3/24/2016,6/25/2017
+True,ford,2019,1,3fa6p0lu3kr205504,fusion,north carolina,7/26/2017,1/5/2023
+True,ford,2018,3,1fbzx2ym5jka57441,wagon,pennsylvania,5/28/2012,8/3/2025
+True,ford,2019,4,3fa6p0lu6kr220563,fusion,north carolina,2/19/2018,2/9/2023
+True,ford,2018,1,1fbzx2xm1jka57423,wagon,pennsylvania,5/7/2013,9/3/2018
+True,ford,2019,1,3fa6p0lu0kr210613,fusion,north carolina,4/15/2011,5/8/2015
+True,ford,2018,5,1ftyr2cm6jka24229,transit,pennsylvania,8/5/2012,11/11/2024
+True,ford,2019,4,3fa6p0lu2kr225727,fusion,north carolina,9/30/2014,9/1/2020
+True,ford,2019,5,3fa6p0lu5kr210591,fusion,north carolina,4/27/2013,6/21/2018
+True,ford,2019,5,3fa6p0lu4kr222151,fusion,north carolina,10/5/2016,4/28/2022
+True,ford,2019,2,3fa6p0ru6kr257894,hybrid,north carolina,2/11/2020,7/18/2023
+True,ford,2019,3,3fa6p0lu0kr210823,fusion,north carolina,9/17/2018,12/26/2021
+True,ford,2019,2,3fa6p0lu5kr226287,fusion,north carolina,5/4/2010,10/4/2010
+True,ford,2018,5,1fdnf6dc1jdf00931,f-650,pennsylvania,8/24/2020,10/1/2020
+True,ford,2019,3,3fa6p0lu2kr207325,fusion,north carolina,12/28/2010,5/15/2011
+True,ford,2018,5,1ft7w2bt1jec31753,srw,pennsylvania,2/14/2012,3/21/2019
+True,ford,2019,5,3fa6p0lu1kr222799,fusion,north carolina,10/29/2012,10/25/2025
+True,ford,2018,1,1ft7w2bt4jec50359,srw,pennsylvania,6/2/2017,12/10/2024
+True,ford,2019,4,3fa6p0lu3kr210749,fusion,north carolina,6/22/2020,5/6/2021
+True,ford,2018,5,1ft7w2bt3jeb02932,srw,pennsylvania,7/22/2011,10/22/2020
+True,ford,2019,5,3fa6p0lu8kr225585,fusion,north carolina,6/29/2017,11/13/2022
+False,nissan,2018,5,3n1ab7ap9jy345766,sentra,north carolina,11/15/2016,10/20/2018
+True,nissan,2020,4,1n4bl4bv5lc127707,altima,arizona,3/23/2016,2/24/2020
+True,nissan,2018,1,jn1bj1cpxjw108745,sport,florida,5/16/2014,7/22/2019
+True,nissan,2018,2,jn1bj1cp5jw102514,sport,florida,9/23/2015,12/6/2016
+True,nissan,2018,5,jn1bj1cp7jw161029,sport,florida,7/29/2017,1/13/2025
+True,nissan,2018,2,jn1bj1cp5jw108622,sport,florida,7/28/2018,12/8/2024
+True,nissan,2018,3,jn1bj1cp7jw102689,sport,florida,8/21/2014,11/9/2018
+True,nissan,2018,5,jn1bj1cp5jw163832,sport,florida,7/25/2013,12/15/2024
+True,nissan,2018,4,jn1bj1cp5jw161563,sport,florida,4/21/2013,8/26/2013
+True,nissan,2018,4,jn1bj1cp3jw108442,sport,florida,8/23/2019,2/21/2021
+True,nissan,2018,2,jn1bj1cp1jw161494,sport,florida,1/8/2019,11/22/2022
+True,nissan,2018,5,jn1bj1cp7jw107732,sport,florida,10/14/2015,12/6/2020
+True,nissan,2018,4,jn1bj1cp8jw161668,sport,florida,7/24/2012,11/11/2025
+True,nissan,2018,2,jn1bj1cp2jw106181,sport,florida,2/8/2020,1/9/2021
+True,nissan,2018,1,jn1bj1cp7jw163492,sport,florida,4/24/2017,1/10/2019
+True,nissan,2018,2,jn1bj1cp7jw108055,sport,florida,9/10/2014,4/1/2017
+True,nissan,2018,1,jn1bj1cp0jw108009,sport,florida,3/4/2014,4/25/2023
+True,nissan,2018,2,jn1bj1cp1jw105037,sport,florida,4/25/2015,3/18/2019
+True,nissan,2018,5,jn1bj1cp2jw108545,sport,florida,2/23/2011,7/9/2015
+True,nissan,2018,2,jn1bj1cpxjw152048,sport,florida,2/4/2016,12/17/2024
+True,nissan,2018,4,jn1bj1cp7jw108458,sport,florida,8/18/2015,7/2/2025
+True,nissan,2018,1,jn1bj1cp6jw106037,sport,florida,9/25/2016,3/4/2019
+True,nissan,2018,5,jn1bj1cpxjw108647,sport,florida,2/20/2011,7/28/2012
+True,nissan,2018,1,jn1bj1cpxjw161087,sport,florida,12/5/2013,1/11/2017
+True,nissan,2018,4,jn1bj1cp9jw108428,sport,florida,10/22/2016,3/17/2018
+True,nissan,2019,2,1n6ad0er0kn738643,frontier,arizona,2/25/2018,11/7/2019
+True,nissan,2019,2,knmat2mt7kp522890,rogue,arizona,10/6/2010,2/2/2024
+True,nissan,2019,1,1n4aa6av0kc367891,maxima,arizona,12/24/2010,10/12/2021
+False,nissan,2019,1,3n1ab7ap3ky284206,sentra,arizona,12/8/2015,6/7/2019
+False,nissan,2019,2,3n1cn7ap8kl876794,versa,arizona,6/24/2017,9/16/2019
+True,nissan,2019,3,5n1at2mv3kc809079,rogue,arizona,3/24/2016,9/5/2016
+False,nissan,2019,4,jn8at2mt2kw259864,rogue,arizona,6/29/2017,8/17/2023
+False,nissan,2019,5,3n1cn7ap4kl859703,versa,arizona,7/14/2015,3/9/2016
+True,nissan,2019,1,3n1ce2cp8kl362332,note,arizona,3/3/2013,3/15/2017
+False,nissan,2019,4,3n1cn7ap0kl845989,versa,arizona,12/7/2019,11/2/2021
+True,nissan,2019,2,jn1bj1cp9kw215996,sport,arizona,2/4/2020,8/11/2020
+True,nissan,2019,3,3n1ab7ap4ky222670,sentra,arizona,6/29/2019,4/16/2023
+False,nissan,2019,2,3n1cn7ap0kl859617,versa,arizona,10/5/2017,10/22/2021
+False,nissan,2019,5,3n1cn7ap5kl850671,versa,arizona,6/20/2016,12/5/2024
+False,nissan,2019,2,3n1cn7ap1kl821247,versa,arizona,4/17/2010,3/6/2020
+True,nissan,2017,2,jn8ay2nd3h9007167,armada,texas,1/23/2017,8/30/2020
+True,nissan,2018,3,1n4al3ap8jc257020,altima,wisconsin,1/23/2018,4/9/2022
+True,nissan,2018,1,knmat2mv0jp584843,rogue,wisconsin,3/18/2018,8/22/2021
+True,nissan,2018,2,5n1dr2mmxjc615473,pathfinder,wisconsin,9/13/2012,5/16/2024
+True,nissan,2017,5,knmat2mv3hp582112,rogue,wisconsin,6/16/2015,1/9/2024
+True,nissan,2017,3,1n4al3ap8hc494018,door,wisconsin,8/17/2020,10/18/2021
+False,nissan,2013,3,5n1ar2mm9dc642588,door,illinois,1/21/2012,1/10/2017
+True,nissan,2018,1,5n1dr2mn0jc622571,pathfinder,florida,9/21/2011,7/21/2023
+False,nissan,2018,5,3n1cn7ap0jl803031,versa,florida,6/30/2010,10/18/2015
+True,nissan,2018,4,knmat2mt3jp508547,rogue,florida,5/21/2010,6/6/2015
+False,nissan,2018,2,3n1cn7apxjl833122,versa,florida,10/7/2017,10/8/2022
+False,nissan,2019,1,1n4bl4ev8kc201874,altima,missouri,5/28/2015,11/17/2016
+False,nissan,2018,2,3n1ab7ap3jy312956,sentra,missouri,11/10/2014,1/2/2020
+True,nissan,2017,5,1n4al3ap3hc221262,door,florida,2/4/2014,8/30/2019
+True,nissan,2017,4,1n6aa1ej0hn508411,titan,texas,1/4/2013,2/5/2013
+False,nissan,2018,5,3n1cn7apxjl833105,sedan,california,6/2/2018,12/20/2022
+False,nissan,2018,4,3n1cn7ap7jl819100,sedan,california,11/9/2016,2/27/2022
+False,nissan,2018,4,3n1cn7ap9jl817056,sedan,california,3/4/2017,6/18/2021
+True,nissan,2018,5,1n6bd0ct0jn772776,frontier,alabama,4/1/2020,7/15/2021
+False,nissan,2017,1,3n1cn7ap4hl810879,sedan,california,3/24/2017,1/24/2022
+False,nissan,2017,4,1n4al3ap4hn358022,door,connecticut,3/3/2012,7/28/2017
+True,nissan,2017,2,1n4al3ap4hc198591,door,connecticut,2/21/2018,11/16/2021
+False,nissan,2017,1,jn8af5mrxht705637,juke,connecticut,11/21/2016,8/7/2021
+False,nissan,2015,3,1n4al3ap8fc191026,door,florida,9/9/2014,6/16/2020
+True,nissan,2020,1,jn8ay2nc6l9615894,armada,california,5/25/2018,2/24/2023
+False,nissan,2017,2,3n1cn7ap7hl863981,door,florida,1/22/2015,7/11/2016
+True,nissan,2020,4,1n4bl4bv4lc140657,altima,california,7/21/2015,11/8/2015
+False,nissan,2015,4,3n1cn7apxfl814609,door,florida,11/2/2018,7/5/2021
+True,nissan,2017,4,5n1dr2mm8hc628832,pathfinder,connecticut,1/31/2015,8/1/2020
+False,nissan,2013,4,jn8as5mv0dw660449,door,ohio,10/28/2011,8/5/2016
+True,nissan,2017,1,1n6aa1r74hn571882,titan,missouri,11/18/2018,10/19/2020
+False,nissan,2018,2,3n1cn7ap9jl828199,versa,california,4/12/2013,2/28/2024
+True,nissan,2016,1,1n4aa6apxgc432268,door,louisiana,7/30/2013,11/30/2013
+False,nissan,2018,2,3n1cn7ap6jl831688,versa,california,10/5/2015,7/20/2021
+False,nissan,2013,5,jn8as5mt3dw524301,door,louisiana,6/25/2013,4/7/2016
+False,nissan,2017,1,3n1ab7ap8hl685756,sentra,connecticut,7/14/2016,6/13/2018
+False,nissan,2017,4,1n4al3ap8hc255116,door,california,1/15/2015,5/6/2018
+False,nissan,2012,4,1n4al2ap1cn403663,door,indiana,1/17/2012,8/27/2019
+True,nissan,2018,1,knmat2mv3jp514463,rogue,florida,1/21/2015,12/22/2019
+False,nissan,2015,1,3n1ab7apxfy368576,door,california,4/10/2017,4/13/2021
+False,nissan,2012,3,3n1ab6ap0cl688945,door,kansas,11/6/2017,9/10/2022
+True,nissan,2018,3,jn1bj1cr5jw281199,sport,california,8/6/2017,10/6/2019
+False,nissan,2013,4,3n1ab7ap3dl795351,door,texas,10/16/2010,10/30/2020
+False,nissan,2018,3,3n1cn7ap8jl818263,versa,california,11/12/2012,4/29/2025
+False,nissan,2015,4,3n1cn7apxfl824461,door,texas,8/11/2010,2/22/2017
+False,nissan,2018,4,3n1cn7ap4jl828918,versa,california,12/24/2010,2/11/2022
+False,nissan,2016,5,1n4al3ap7gc240931,door,missouri,1/2/2010,7/17/2021
+False,nissan,2018,5,3n1cn7ap3jl818641,versa,california,5/19/2016,11/20/2017
+False,nissan,2012,4,jn8as5mvxcw706691,door,missouri,8/28/2013,5/8/2014
+False,nissan,2018,5,3n1cn7apxjl802906,versa,california,11/18/2012,3/25/2023
+False,nissan,2012,3,1n4aa5ap4cc822996,door,oklahoma,7/30/2019,3/4/2024
+False,nissan,2018,4,3n1cn7ap0jl821772,versa,california,1/3/2018,10/2/2022
+False,nissan,2018,1,3n1cn7ap5jl830774,versa,california,12/26/2018,10/16/2024
+True,nissan,2019,1,1n6ad0ev0kn768867,frontier,california,8/30/2011,6/2/2014
+False,nissan,2018,3,3n1cn7ap1jl822946,versa,california,6/28/2010,5/22/2014
+True,nissan,2019,2,1n6ad0ev8kn726625,frontier,california,5/29/2016,7/20/2022
+False,nissan,2018,2,3n1cn7ap3jl833592,versa,california,2/5/2013,10/17/2024
+True,nissan,2019,4,jn8ay2ncxk9583031,armada,california,10/7/2010,9/27/2023
+True,nissan,2020,3,5n1at2mt6lc714032,rogue,south carolina,7/26/2018,5/28/2023
+True,nissan,2019,3,knmat2mvxkp508886,rogue,california,8/2/2013,6/2/2024
+False,nissan,2015,2,1n4az0cp5fc322746,doors,vermont,9/25/2013,7/15/2023
+True,nissan,2020,5,knmat2mv5lp500471,rogue,pennsylvania,1/2/2014,5/14/2016
+True,nissan,2020,2,3n6cm0kn9lk693851,cargo,california,7/24/2014,1/13/2025
+False,nissan,2016,3,1n4al3apxgn356323,door,texas,3/31/2015,8/2/2022
+False,nissan,2015,5,1n4az0cp2fc306536,doors,vermont,5/26/2017,5/12/2025
+True,nissan,2015,3,1n4az0cp1fc329211,doors,massachusetts,11/2/2011,5/22/2019
+False,nissan,2012,4,jn8as5mv0cw412832,door,north carolina,8/27/2011,9/14/2021
+False,nissan,2015,2,1n4az0cp6fc322884,doors,new hampshire,6/16/2019,7/21/2022
+True,nissan,2016,3,5n1az2mg7gn100344,murano,alabama,9/24/2013,3/4/2018
+False,nissan,2018,2,3n1ab7ap3jy262463,sentra,new jersey,4/10/2010,12/9/2012
+True,nissan,2015,1,1n4az0cp8fc301146,doors,massachusetts,10/12/2017,1/19/2021
+True,nissan,2015,3,1n6ad0ev4fn729804,door,alabama,2/19/2019,8/23/2019
+True,nissan,2015,4,1n4az0cp0fc326204,doors,rhode island,3/7/2015,9/17/2021
+True,nissan,2015,4,1n4az0cp4fc309194,doors,new hampshire,3/12/2017,7/29/2022
+False,nissan,2012,3,1n4aa5ap0cc820341,door,alabama,7/2/2014,6/23/2020
+True,nissan,2015,5,1n4az0cp7fc314468,doors,new york,11/17/2010,5/1/2016
+True,nissan,2017,4,knmat2mv8hp540065,rogue,tennessee,5/3/2010,4/12/2021
+True,nissan,2020,1,jn8at2mv7lw102351,rogue,ohio,11/1/2015,8/20/2024
+True,nissan,2020,3,1n4bl4cv4lc134145,altima,ohio,9/14/2016,7/11/2019
+False,nissan,2016,1,3n1ab7ap9gy325347,door,georgia,5/8/2020,3/8/2022
+True,nissan,2018,1,jn8ay2nc4j9558303,armada,pennsylvania,2/18/2019,7/5/2021
+True,nissan,2018,2,1n4aa6ap0jc397943,maxima,pennsylvania,2/12/2014,12/12/2018
+True,nissan,2018,5,1n4aa6ap6jc388082,maxima,pennsylvania,12/5/2017,4/20/2021
+True,nissan,2018,2,jn1bj1cp2jw186856,sport,pennsylvania,4/22/2013,8/14/2015
+True,nissan,2018,4,1n4al3ap1jc191541,altima,texas,11/10/2019,4/20/2020
+False,nissan,2012,5,5n1an0nu7cc517019,xterra,georgia,5/6/2014,10/22/2015
+True,nissan,2018,2,5n1az2mg3jn162296,murano,texas,5/29/2020,10/20/2024
+True,nissan,2018,3,1n6aa1ej0jn540880,titan,new mexico,5/29/2018,4/17/2024
+True,nissan,2018,2,jn1bj1cr5jw269215,sport,tennessee,12/17/2018,7/20/2022
+True,nissan,2018,3,5n1at2mv4jc797992,rogue,virginia,12/28/2016,9/26/2024
+True,nissan,2016,2,1n6ad0ev8gn783236,door,new jersey,6/25/2019,9/14/2022
+True,nissan,2018,2,knmat2mv5jp602138,rogue,virginia,9/1/2018,11/1/2020
+True,nissan,2020,1,knmat2mvxlp505598,rogue,minnesota,8/26/2010,5/10/2025
+True,nissan,2018,4,3n1ab7ap5jy332934,sentra,tennessee,6/8/2012,8/12/2024
+True,nissan,2018,5,jn1bj1cp4jw195994,sport,virginia,12/16/2016,5/15/2021
+True,nissan,2020,4,knmat2mv2lp511637,rogue,minnesota,9/22/2017,2/20/2023
+True,nissan,2018,5,jn8at2mv3jw342140,rogue,virginia,3/12/2018,8/22/2019
+True,nissan,2020,2,jn8at2mt4lw003761,rogue,minnesota,9/25/2011,4/5/2019
+True,nissan,2020,3,jn8at2mv1lw104855,rogue,minnesota,7/7/2012,4/29/2016
+True,nissan,2020,3,knmat2mv1lp508342,rogue,minnesota,9/11/2020,4/20/2023
+True,nissan,2020,5,jn8at2mvxlw103235,rogue,minnesota,12/5/2011,10/31/2020
+True,nissan,2019,4,1n6ad0ev3kn713569,frontier,minnesota,2/17/2014,9/16/2015
+True,nissan,2019,4,1n6ad0ev6kn772552,frontier,minnesota,10/30/2010,7/26/2023
+True,nissan,2019,4,1n6ad0ev4kn776678,frontier,minnesota,5/6/2020,7/6/2023
+True,nissan,2019,5,1n4bl4ev6kc195850,altima,minnesota,10/10/2015,12/2/2023
+True,nissan,2019,2,1n4bl4ev5kc113073,altima,minnesota,12/20/2018,4/1/2025
+True,nissan,2019,5,1n4bl4cv1kc146106,altima,minnesota,7/26/2015,1/11/2024
+True,nissan,2019,4,1n4bl4bv6kc147611,altima,minnesota,8/23/2014,4/5/2016
+True,nissan,2019,5,1n4bl4bv2kc158895,altima,minnesota,5/24/2015,5/17/2025
+True,nissan,2019,4,1n6ad0er7kn757187,frontier,minnesota,7/1/2012,4/28/2023
+True,nissan,2019,4,1n4bl4ev9kc174619,altima,minnesota,6/5/2015,4/22/2019
+True,nissan,2019,3,1n6ad0ev1kn770708,frontier,minnesota,5/15/2010,7/13/2024
+True,nissan,2019,2,1n6ad0ev7kn771684,frontier,minnesota,6/4/2010,3/27/2024
+True,nissan,2019,1,1n4bl4ev6kc182600,altima,minnesota,9/23/2018,9/25/2021
+True,nissan,2019,2,1n4bl4cv4kc215340,altima,minnesota,12/20/2015,1/28/2022
+True,nissan,2019,4,1n4bl4bv3kc205738,altima,minnesota,9/11/2010,3/15/2023
+True,nissan,2019,5,knmat2mt6kp511315,rogue,minnesota,4/6/2011,4/23/2018
+True,nissan,2019,3,jn1bj1cr6kw314745,sport,minnesota,1/15/2020,8/8/2020
+True,nissan,2019,2,knmat2mt5kp510172,rogue,minnesota,8/16/2018,7/2/2025
+True,nissan,2019,5,jn1bj1cr1kw325880,sport,minnesota,9/17/2014,6/5/2023
+True,nissan,2018,3,5n1az2mg6jn171087,murano,georgia,7/9/2010,8/23/2019
+True,nissan,2019,2,3n1cp5cu6kl530566,kicks,minnesota,9/12/2014,11/22/2024
+True,nissan,2019,5,5n1dr2mm2kc630096,pathfinder,minnesota,6/9/2020,10/16/2025
+True,nissan,2019,4,3n1ab7apxky263126,sentra,minnesota,10/30/2017,4/9/2021
+True,nissan,2019,3,3n1ab7ap7ky221626,sentra,minnesota,10/23/2011,11/1/2011
+True,nissan,2018,1,jn1butcp0jw1s4309,rogue,south carolina,9/4/2011,4/20/2024
+True,nissan,2019,5,5n1at2mt3kc829542,rogue,minnesota,3/20/2014,11/5/2020
+True,nissan,2019,1,jn1bj1cr4kw315960,sport,minnesota,2/2/2019,10/27/2022
+True,nissan,2019,1,3n1ab7ap9kl608997,sentra,minnesota,5/2/2012,1/16/2015
+True,nissan,2017,3,jn8at2mv7hw264732,rogue,virginia,9/1/2013,10/26/2025
+True,nissan,2019,4,knmat2mv3kp536609,rogue,minnesota,3/9/2010,5/13/2012
+True,nissan,2017,2,1n6ba1f46hn535299,xd,virginia,9/10/2012,12/18/2024
+True,nissan,2019,3,jn1bj1cr4kw325341,sport,minnesota,10/19/2010,10/15/2025
+True,nissan,2017,2,knmat2mv8hp516090,rogue,virginia,8/3/2011,6/2/2014
+True,nissan,2019,2,knmat2mt6kp529541,rogue,minnesota,5/16/2014,10/19/2021
+True,nissan,2017,4,3n1ab7ap1hy384412,sentra,tennessee,4/19/2017,10/8/2017
+True,nissan,2019,5,5n1dr2mm1kc635595,pathfinder,minnesota,12/20/2010,11/18/2024
+True,nissan,2017,5,1n4al3apxhc122728,door,tennessee,1/4/2016,12/16/2018
+True,nissan,2019,2,jn1bj1cr3kw312158,sport,minnesota,8/8/2010,9/4/2014
+True,nissan,2019,5,5n1at2mt7kc832007,rogue,minnesota,6/19/2013,6/26/2023
+True,nissan,2019,2,jn1bj1cr6kw323624,sport,minnesota,1/8/2016,7/3/2017
+True,nissan,2019,5,5n1dr2mm6kc637875,pathfinder,minnesota,8/3/2016,10/3/2019
+True,nissan,2019,2,5n1dr2mm9kc621704,pathfinder,minnesota,5/14/2018,10/9/2020
+True,nissan,2016,1,knmat2mv8gp727076,rogue,virginia,4/9/2018,7/10/2024
+True,nissan,2019,1,3n1ab7ap2ky279224,sentra,minnesota,9/11/2019,3/28/2020
+True,nissan,2019,1,5n1dr2mm3kc636893,pathfinder,minnesota,5/14/2017,11/18/2020
+True,nissan,2017,1,1n4al3ap5hc144474,door,pennsylvania,5/6/2018,8/23/2024
+True,nissan,2019,5,knmat2mt9kp518680,rogue,minnesota,11/16/2016,7/31/2022
+True,nissan,2017,2,1n4al3ap1hc129888,door,pennsylvania,7/5/2014,2/17/2025
+False,nissan,2019,1,3n1cn7ap9kl804020,versa,minnesota,12/22/2012,8/23/2021
+True,nissan,2018,3,3n1ab7ap6jl660439,sentra,minnesota,8/11/2010,9/18/2010
+True,nissan,2018,2,3n1ab7ap1jy239344,sentra,minnesota,8/23/2016,2/8/2022
+True,nissan,2018,4,jn1bj1cr7jw262489,sport,minnesota,4/28/2012,10/11/2017
+True,nissan,2018,4,3n1ab7ap7jy308330,sentra,minnesota,11/14/2011,12/7/2018
+True,nissan,2018,1,3n1ab7ap4jy297769,sentra,minnesota,2/16/2014,11/19/2022
+True,nissan,2018,2,3n1ab7ap7jy307016,sentra,minnesota,4/3/2020,11/23/2022
+True,nissan,2018,1,3n1ab7ap1jy308971,sentra,minnesota,7/20/2014,12/9/2023
+True,nissan,2018,3,5n1az2mhxjn157718,murano,minnesota,2/8/2015,10/4/2022
+True,nissan,2018,5,3n1ab7ap0jy322490,sentra,minnesota,7/20/2015,6/11/2016
+True,nissan,2018,4,3n1ab7ap3jy324878,sentra,minnesota,8/22/2018,12/6/2018
+False,nissan,2018,5,3n1cn7ap6jl823820,versa,minnesota,6/29/2010,9/23/2018
+True,nissan,2018,2,3n1ab7ap9jl662721,sentra,minnesota,10/2/2010,8/1/2020
+True,nissan,2018,4,3n1ab7apxjl642008,sentra,minnesota,7/18/2010,7/20/2020
+False,nissan,2016,2,1n4al3ap3gn379927,door,pennsylvania,6/1/2012,10/23/2017
+False,nissan,2018,1,3n1cn7ap6jl882723,versa,minnesota,2/22/2012,9/6/2016
+True,nissan,2016,2,knmat2mv4gp710291,rogue,pennsylvania,8/5/2020,10/9/2024
+False,nissan,2012,5,jn8af5mr5ct111885,door,tennessee,5/22/2017,2/8/2025
+False,nissan,2012,1,jn8as5mt4cw269429,door,tennessee,1/16/2010,6/19/2024
+True,nissan,2016,4,knmat2mv1gp666895,rogue,pennsylvania,8/11/2019,7/29/2022
+True,nissan,2016,4,knmat2mvxgp669049,rogue,pennsylvania,5/15/2017,6/18/2018
+False,nissan,2013,2,5n1ar2mn3dc619753,door,tennessee,9/30/2013,11/22/2020
+False,nissan,2012,4,1n4al2ap9cc190456,door,florida,2/23/2018,12/15/2022
+True,nissan,2018,2,5n1dr2mn2jc625942,pathfinder,south carolina,6/7/2015,2/3/2025
+False,nissan,2017,3,3n1ce2cp0hl360793,door,north carolina,12/4/2015,4/30/2021
+False,nissan,2015,2,1n4al3ap4fn890836,door,pennsylvania,12/31/2016,11/29/2019
+True,nissan,2017,5,5n1at2mt7hc846000,rogue,south carolina,12/1/2013,11/24/2020
+False,nissan,2015,3,3n1ab7ap9fl684869,door,north carolina,1/23/2019,4/7/2025
+True,nissan,2017,2,1n4aa6ap1hc373256,door,south carolina,3/4/2020,12/21/2024
+True,nissan,2017,5,1n6aa1e66hn506500,titan,south carolina,12/23/2011,5/9/2024
+False,nissan,2014,4,5n1at2mv7ec872853,door,pennsylvania,2/25/2019,12/28/2023
+True,nissan,2012,2,5n1aa0nc6cn602411,door,pennsylvania,8/24/2014,9/24/2015
+True,nissan,2017,1,5n1dr2mm1hc690282,pathfinder,missouri,10/8/2018,4/18/2021
+True,nissan,2018,1,knmat2mt9jp601489,rogue,ohio,7/28/2020,11/2/2024
+True,nissan,2018,4,1n6dd0ev1jn706650,frontier,ohio,2/18/2020,10/14/2023
+True,nissan,2018,1,1n6bd0ct2jn715379,frontier,ohio,11/25/2015,5/5/2021
+False,nissan,2016,4,1n4al3apxgn304206,door,texas,4/27/2016,5/10/2018
+True,nissan,2018,2,jn1bj1cr2jw289275,sport,ohio,6/11/2010,12/13/2019
+True,nissan,2018,5,jn1bj1cr3jw263168,sport,ohio,11/20/2015,1/26/2025
+True,nissan,2019,5,5n1dr2mn9kc600778,pathfinder,florida,5/10/2016,6/3/2017
+True,nissan,2018,2,3n1ab7ap8jl635929,sentra,ohio,7/20/2020,12/20/2022
+False,nissan,2015,3,3n1ab7ap5fy313713,door,south carolina,2/6/2010,5/27/2019
+True,nissan,2019,4,knmat2mt8kp524910,rogue,florida,3/21/2016,2/1/2024
+True,nissan,2019,4,knmat2mt6kp525148,rogue,florida,12/1/2017,7/16/2020
+True,nissan,2017,4,1n4aa6apxhc456376,door,ohio,3/30/2016,2/9/2020
+True,nissan,2016,1,5bzbf0aa5gn855028,nvp,ohio,5/27/2013,5/25/2024
+False,nissan,2015,1,3n1ab7ap8fy311793,door,texas,9/12/2018,11/27/2024
+False,nissan,2018,4,1n4al3ap6jc271871,door,connecticut,5/24/2020,4/27/2021
+True,nissan,2018,4,3n1ab7apxjy272844,sentra,illinois,1/7/2019,12/11/2024
+True,nissan,2018,1,5n1dr2mm3jc651473,pathfinder,illinois,10/3/2019,2/15/2025
+False,nissan,2017,5,3n1ab7ap2hy357557,sentra,illinois,5/3/2014,7/29/2022
+True,nissan,2016,4,5n1az2mg0gn147411,murano,illinois,9/11/2010,7/20/2015
+False,nissan,2015,4,3n1ce2cp7fl440279,door,california,2/13/2015,8/25/2015
+True,nissan,2016,2,knmat2mv3gp680121,rogue,illinois,10/30/2011,2/11/2025
+True,nissan,2018,1,1n4al3ap1jc193208,altima,florida,1/16/2011,12/8/2013
+True,nissan,2018,4,5n1dr2mm9jc667726,pathfinder,florida,6/8/2016,11/7/2023
+True,nissan,2018,3,5n1dr2mm3jc649500,pathfinder,florida,2/23/2014,12/2/2014
+True,nissan,2018,5,5n1dr2mm9jc649808,pathfinder,florida,8/19/2015,12/16/2017
+True,nissan,2018,4,knmat2mt1jp582050,rogue,florida,11/27/2019,7/12/2020
+True,nissan,2018,1,knmat2mt6jp582724,rogue,florida,7/10/2018,7/14/2020
+False,nissan,2013,3,3n1ab7ap9dl691012,door,maryland,1/18/2011,7/23/2022
+True,nissan,2018,3,5n1dr2mm5jc631645,pathfinder,florida,9/27/2013,6/2/2023
+True,nissan,2018,3,knmat2mt7jp582084,rogue,florida,1/30/2016,3/17/2024
+True,nissan,2018,3,5n1dr2mm0jc631567,pathfinder,florida,1/15/2014,2/5/2017
+True,nissan,2018,1,5n1at2mt8jc761351,rogue,florida,4/10/2013,11/27/2025
+True,nissan,2018,4,1n4al3apxjc193322,altima,florida,5/21/2015,6/15/2019
+True,nissan,2018,4,1n4al3ap4jc153320,altima,florida,12/10/2011,5/10/2014
+True,nissan,2018,5,5n1dr2mm2jc632610,pathfinder,florida,8/26/2017,10/13/2018
+True,nissan,2018,5,knmat2mt2jp581604,rogue,florida,9/14/2015,12/13/2015
+True,nissan,2018,3,5n1dr2mm8jc627265,pathfinder,florida,9/1/2018,10/18/2022
+True,nissan,2018,2,5n1at2mt3jc761242,rogue,florida,8/24/2020,12/12/2020
+True,nissan,2018,3,knmat2mt4jp581457,rogue,florida,5/30/2019,7/12/2024
+True,nissan,2018,2,5n1at2mt4jc764747,rogue,florida,6/27/2017,7/10/2025
+True,nissan,2018,5,1n4al3apxjc159820,altima,florida,10/24/2019,2/14/2023
+True,nissan,2018,4,5n1dr2mm6jc650009,pathfinder,florida,7/31/2011,2/7/2025
+True,nissan,2018,5,5n1dr2mm3jc657841,pathfinder,florida,6/12/2018,2/8/2024
+True,nissan,2018,5,knmat2mtxjp581687,rogue,florida,5/12/2018,12/15/2019
+False,nissan,2015,4,3n1ab7ap4fy228278,door,illinois,6/9/2015,3/2/2023
+True,nissan,2019,1,5n1dr2mn9kc620299,pathfinder,north carolina,12/10/2016,1/23/2021
+False,nissan,2018,2,3n1cn7ap3jl883781,versa,florida,6/12/2015,8/22/2025
+True,nissan,2019,4,1n6aa1e56kn519701,titan,north carolina,4/30/2018,9/27/2019
+False,nissan,2018,4,3n1cn7ap5jl882616,versa,florida,6/10/2019,7/22/2024
+True,nissan,2019,3,3n1ab7apxkl613545,sentra,north carolina,8/13/2019,6/1/2022
+True,nissan,2018,1,knmat2mt8jp581980,rogue,florida,2/16/2013,2/25/2023
+False,nissan,2018,2,3n1cn7ap0jl882846,versa,florida,3/30/2015,6/10/2023
+True,nissan,2019,2,1n6ad0evxkn714086,frontier,illinois,2/8/2014,1/27/2016
+True,nissan,2018,4,knmat2mt3jp582048,rogue,florida,3/4/2020,5/1/2025
+True,nissan,2019,4,1n4bl4cv1kc171832,altima,california,1/7/2019,12/12/2020
+False,nissan,2018,4,3n1cn7ap7jl883833,versa,florida,6/19/2014,5/14/2025
+True,nissan,2019,3,1n4bl4cv8kc157345,altima,california,3/11/2011,9/29/2013
+False,nissan,2018,1,3n1cn7ap6jl883130,versa,florida,11/21/2016,12/23/2022
+False,nissan,2019,1,1n6ad0ev9kn786557,frontier,california,8/13/2019,4/4/2020
+True,nissan,2018,5,knmat2mt4jp581250,rogue,florida,6/18/2013,5/13/2020
+False,nissan,2019,4,3n1ab7ap4ky350343,sentra,california,1/17/2015,7/18/2019
+True,nissan,2018,4,knmat2mt6jp582092,rogue,florida,8/11/2017,4/14/2018
+False,nissan,2019,3,3n1ce2cp0kl363331,note,california,8/27/2014,2/10/2015
+True,nissan,2018,3,knmat2mt9jp582734,rogue,florida,12/8/2018,12/12/2021
+True,nissan,2019,2,3n1ab7ap4ky323241,sentra,california,9/22/2015,12/8/2024
+False,nissan,2018,4,3n1cn7ap7jl882312,versa,florida,9/27/2011,7/9/2025
+False,nissan,2019,4,3n1cn7ap5kl841811,versa,california,6/14/2010,4/7/2023
+False,nissan,2018,5,3n1cn7ap0jl883768,versa,florida,6/14/2010,4/25/2015
+False,nissan,2019,1,3n1cn7ap9kl880319,versa,california,8/4/2015,7/23/2025
+False,nissan,2018,5,3n1cn7ap5jl884088,versa,florida,7/16/2020,2/12/2022
+False,nissan,2018,2,3n1cn7ap9jl884191,versa,florida,10/4/2017,10/13/2022
+False,nissan,2018,3,3n1cn7ap3jl883263,versa,florida,8/14/2012,2/22/2019
+False,nissan,2018,3,3n1cn7ap4jl884311,versa,florida,6/3/2018,8/27/2023
