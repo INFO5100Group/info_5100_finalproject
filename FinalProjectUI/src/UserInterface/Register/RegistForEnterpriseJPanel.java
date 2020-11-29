@@ -5,7 +5,19 @@
  */
 package UserInterface.Register;
 
-import UserInterface.FurnitureManufaCompany.ProducerRole.*;
+import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.Person.Person;
+import Business.WorkQueue.WorkRequest;
+import EcoSystem.EcoSystem;
+import System.AccountRole.*;
+import System.Configure.DB4OUtil;
+import UserInterface.CardLayoutNavigator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,11 +25,24 @@ import UserInterface.FurnitureManufaCompany.ProducerRole.*;
  */
 public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form NewJPanel
-     */
-    public RegistForEnterpriseJPanel() {
+    private JPanel container;
+    private EcoSystem system;
+            
+    public RegistForEnterpriseJPanel(JPanel container, EcoSystem system) {
         initComponents();
+        this.container = container;
+        this.system = system;
+        populateCombo();
+    }
+    
+    public void populateCombo(){
+        ComboType.removeAllItems();
+        ComboType.addItem("Select your Enterprise Type");// 0
+        ComboType.addItem("Regulate Office");// 1
+        ComboType.addItem("Forest Logging company");// 2
+        ComboType.addItem("Furniture Manufacturer");// 3
+        ComboType.addItem("Furniture Retailer");// 4
+        ComboType.addItem("Logistice Enterprise");// 5
     }
 
     /**
@@ -230,9 +255,100 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
+         if(inputValidate()){
+            // create admin for enterprise
+            Person newPerson = new Person(jtxName.getText(), "Admin", "Other");
+            newPerson.setCity(jtxCity.getText());
+            newPerson.setEmail(jtxEmail.getText());
+            newPerson.setState(jtxState.getText());
+            newPerson.setStreet(jtxStreet.getText());
+            newPerson.setZipCode(jtxZipCode.getText());
+            // create admin account
+            Account newAccount = new Account(jtxUserName.getText(), jtxPWord.getText(), newPerson);
+            // create enterprise with admin
+            Enterprise newEnterprise = new Enterprise(newAccount); 
+            newEnterprise.setName(jtxName.getText());
+            newEnterprise.setShortName(jtxEmail.getText());
+            // set role for enterpirse admin
+            // create department for different types of enterprise
+            if(ComboType.getSelectedIndex() == 1){
+                newAccount.setRole(new RegAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
+            }else if(ComboType.getSelectedIndex() == 2){
+                newAccount.setRole(new ForestAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Logging Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Sales Department"));
+            }else if(ComboType.getSelectedIndex() == 3){
+                newAccount.setRole(new ManuAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Production Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+            }else if(ComboType.getSelectedIndex() == 4){
+                newAccount.setRole(new RetailAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
+                newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+            }else if(ComboType.getSelectedIndex() == 4){
+                newAccount.setRole(new LogisticAdminRole());
+                newEnterprise.getDepartments().addOrganization(new Organization("Transportation Department"));
+            }
+            
+            // check enterprise name and account name unique
+            boolean addAccountSuccess = system.getAccounts().addAccount(newAccount); 
+            
+            if(!addAccountSuccess){
+                JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " cannot add account, pleanse change to another user name");
+                return;
+            }
+            
+            boolean addEnterpirseSuccess = system.getEnterprises().addEnterprise(newEnterprise);
+            if(!addEnterpirseSuccess){
+                JOptionPane.showMessageDialog(null, newEnterprise.getName() + " cannot add Enterprise, pleanse change to another enterprise name");
+                return;
+            }
+            
+            // create request for enterprise
+            WorkRequest enterpriseRequest = new WorkRequest();
+            enterpriseRequest.setMessage("enterprise regiset for " + jtxName.getText());
+            enterpriseRequest.setSender(newAccount);
+            enterpriseRequest.setStatus("Procesing");
+            for(Account adminAccount : system.getAllAdmins()){ // 所有 sysadmin 设为receiver
+                enterpriseRequest.getReceivers().put(adminAccount, false);
+            }
+            // add request to queue
+            try {
+                system.getWorkQueue().addRequest(enterpriseRequest);
+            } catch (Exception ex) {
+                Logger.getLogger(RegistForEnterpriseJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            JOptionPane.showMessageDialog(null, newEnterprise.getName() + " enterpirse repuest is send to system admin, plase wait for your enterpires appreoved");
+            DB4OUtil.storeSystem(system);
+            CardLayoutNavigator.goBack(container, this);
+       }
     }//GEN-LAST:event_btnRegistActionPerformed
 
+    private boolean inputValidate(){
+        boolean isEmpty = this.jtxName.getText().equals("") ||
+                          this.jtxEmail.getText().equals("") ||
+                          this.jtxPWord.getText().equals("") ||
+                          this.jtxState.getText().equals("") ||
+                          this.jtxCity.getText().equals("") ||
+                          this.jtxStreet.getText().equals("") ||
+                          this.jtxZipCode.getText().equals("") ||
+                          this.jtxEmail.getText().equals("");
+        if(isEmpty){
+            JOptionPane.showMessageDialog(null, "Please fill all text fields");
+            return false;
+        }
+        
+        boolean isSelect = this.ComboType.getSelectedIndex() != 0;
+        
+        if(!isSelect){
+            JOptionPane.showMessageDialog(null, "Please Select a Etnerprise type");
+            return false;
+        }
+        
+        return true;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboType;
