@@ -51,7 +51,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 row[3] = e.getAdmin().getAccountName();
                 row[4] = e.getAdmin().getPassword();
                 row[5] = wr.getStatus();
-                row[0] = wr;
+                row[0] = e.getAdmin();
                 model.addRow(row);
             }
         }

@@ -69,7 +69,7 @@ public class AccountDirectory  extends ArrayList<Account>{
      * @return
      * @throws Exception
      */
-    public boolean updateAccount(Account toUpdate) throws Exception {
+    public boolean updateAccount(Account toUpdate) {
         if(!this.userContained(toUpdate.getAccountName())){
             for(int i =0; i < this.size(); i++){
                 if(this.get(i).getID() == toUpdate.getID()){

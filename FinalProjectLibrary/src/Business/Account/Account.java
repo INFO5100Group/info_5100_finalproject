@@ -32,15 +32,15 @@ public class Account extends SerializiedObject{
         return this.accountName;
     }
 
-    public void setAccountName(String accountName) throws Exception {
-            this.accountName = accountName;
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
     }
 
     public String getPassword() {
         return this.password;
     }
 
-    public void setPassword(String password) throws Exception {
+    public void setPassword(String password) {
         this.password = password;    
     }
 
@@ -60,5 +60,9 @@ public class Account extends SerializiedObject{
         this.role = role;
     }
 
-
+    @Override
+    public String toString() {
+        return this.accountName;
+    }
+ 
 }

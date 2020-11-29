@@ -6,11 +6,15 @@
 package UserInterface.sysadmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 /**
@@ -18,7 +22,6 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class SysadminManageJPanel extends javax.swing.JPanel {
-    private JPanel navContainer;
     private Account account;
     private EcoSystem system;
     /**
@@ -31,15 +34,25 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
         tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 21));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<3;i++){
+        for(int i=0;i<4;i++){
             TableColumn column = tblManage.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
         //tblManage.setRowHeight(25);
+        populateTable();
     }
     
     public void populateTable(){
-        
+        DefaultTableModel model = (DefaultTableModel)this.tblManage.getModel();
+        model.setRowCount(0);
+        for(Enterprise e : system.getEnterprises()){
+            Object row[] = new Object[6];
+                row[1] = e.getAdmin().getPassword();
+                row[2] = e.getAdmin().getRole().rType.toString().split("Admin")[0];
+                row[3] = e;
+                row[0] = e.getAdmin();
+                model.addRow(row);
+        }
         
     }
 
@@ -56,8 +69,8 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
         tblManage = new javax.swing.JTable();
         btnDelete = new javax.swing.JButton();
         btnModify = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -67,17 +80,17 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
 
         tblManage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "EnterpriseAdm", "Password", "EnterpriseType"
+                "Enterprise Admin Account", "Password", "Enterprise Type", "Enterprise Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -88,9 +101,13 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
         tblManage.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblManage.setRowHeight(25);
         tblManage.setShowVerticalLines(false);
+        tblManage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblManageMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblManage);
 
-        btnDelete.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\delete.png")); // NOI18N
         btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +115,6 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnModify.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Modify.png")); // NOI18N
         btnModify.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,27 +133,27 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(694, Short.MAX_VALUE)
+                .addContainerGap(389, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(171, 171, 171)
-                                .addComponent(btnModify, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(345, 345, 345))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(464, 464, 464))))
+                                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(464, 464, 464))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(171, 171, 171)
+                        .addComponent(btnModify, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(345, 345, 345))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1051, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,11 +162,11 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(76, 76, 76)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(98, 98, 98)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,12 +177,67 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
+        // get selected row
+        int row = tblManage.getSelectedRow();
+        if(row < 0){
+            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // get selected enterprise
+        Enterprise e = (Enterprise) tblManage.getValueAt(row, 3);
+        
+        // remove admin and enterprise
+        system.getAccounts().removeAccount(e.getAdmin());
+        system.getEnterprises().removeEnterprise(e);
+        
+        // store to database
+        DB4OUtil.storeSystem(system);
+        JOptionPane.showMessageDialog(null, "remove enterprise " + e + "success");
+        populateTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyActionPerformed
-        // TODO add your handling code here:
+        // get selected row
+        int row = tblManage.getSelectedRow();
+        if(row < 0){
+            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // get selected enterprise
+        Enterprise e = (Enterprise) tblManage.getValueAt(row, 3);
+        
+        // check if txtfields are empty
+        if("".equals(txtUsername.getText()) || "".equals(txtPassword.getText())){
+            JOptionPane.showMessageDialog(null, "Please fill text field!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+      
+        // check if user name is unique
+        boolean updateAccountValidate = system.getAccounts().userContained(txtUsername.getText());
+        if(!updateAccountValidate){
+            JOptionPane.showMessageDialog(null, txtUsername.getText() + " cannot add account, please change to another user name");
+            return;
+        }
+        
+        // update username and password
+        Account adminAccount = e.getAdmin();
+        adminAccount.setAccountName(txtUsername.getText());
+        adminAccount.setPassword(txtPassword.getText());
+        
+        // store to database
+        DB4OUtil.storeSystem(system);
+        JOptionPane.showMessageDialog(null, "user name and password is updated for " + adminAccount + " in " + e);
+        populateTable();
     }//GEN-LAST:event_btnModifyActionPerformed
+
+    private void tblManageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblManageMouseClicked
+        int row = tblManage.getSelectedRow();
+        Enterprise e = (Enterprise) tblManage.getValueAt(row, 3);
+        txtUsername.setText(e.getAdmin().getAccountName());
+        txtPassword.setText(e.getAdmin().getPassword());
+    }//GEN-LAST:event_tblManageMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -175,8 +246,8 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTable tblManage;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

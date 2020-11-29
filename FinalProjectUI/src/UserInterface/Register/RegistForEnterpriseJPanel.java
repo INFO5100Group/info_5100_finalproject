@@ -296,13 +296,13 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
             boolean addAccountSuccess = system.getAccounts().addAccount(newAccount); 
             
             if(!addAccountSuccess){
-                JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " cannot add account, pleanse change to another user name");
+                JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " cannot add account, please change to another user name");
                 return;
             }
             
             boolean addEnterpirseSuccess = system.getEnterprises().addEnterprise(newEnterprise);
             if(!addEnterpirseSuccess){
-                JOptionPane.showMessageDialog(null, newEnterprise.getName() + " cannot add Enterprise, pleanse change to another enterprise name");
+                JOptionPane.showMessageDialog(null, newEnterprise.getName() + " cannot add Enterprise, please change to another enterprise name");
                 return;
             }
             
