@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package System.AccountRole;
+package System.AccountRole ;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;

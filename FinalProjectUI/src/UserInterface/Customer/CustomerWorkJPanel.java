@@ -5,6 +5,9 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
+import UserInterface.CardLayoutNavigator;
 import UserInterface.sysadmin.*;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -14,17 +17,20 @@ import javax.swing.JPanel;
  * @author Administrator
  */
 public class CustomerWorkJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
-    /**
-     * Creates new form SysadminWorkJPanel1
-     */
-    public CustomerWorkJPanel(JPanel UserProcessContainer) {
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
+    private CustomerHistoryJPanel histPanel;
+    private CustomerSearchJPanel searchPanel;
+    private CustomerReceiveOrderJPanel receivePanel;
+    
+    public CustomerWorkJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
         initComponents();
-        this.UserProcessContainer = UserProcessContainer;
-        CustomerSearchJPanel panel = new CustomerSearchJPanel(container);
-        container.add("CustomerSearchJPanel",panel);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
+        CardLayoutNavigator.goNext(navContainer, new CustomerSearchJPanel(container, account, system), "search JPanel " + this.account.getAccountName());
     }
 
     /**
@@ -47,20 +53,18 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        container = new javax.swing.JPanel();
+        navContainer = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(102, 51, 0));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\admin.png")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\request.png")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -69,7 +73,6 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
 
         jScrollPane2.setViewportView(OverallTree);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\admin.png")); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -109,10 +112,7 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
         );
 
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\红叉 (1).png")); // NOI18N
         jButton3.setBorder(null);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\我的 (2).png")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
         jLabel2.setText("System admin");
@@ -136,7 +136,7 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        container.setLayout(new java.awt.CardLayout());
+        navContainer.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -148,7 +148,7 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,38 +156,32 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        CustomerHistoryJPanel panel = new CustomerHistoryJPanel(container);
-        container.add("CustomerHistoryJPanel",panel);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        CardLayoutNavigator.goBack(navContainer, (JPanel)navContainer.getComponent(0));
+        CardLayoutNavigator.goNext(navContainer, new CustomerHistoryJPanel(container, account, system), "history  " + this.account.getAccountName());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CustomerReceiveOrderJPanel panel = new CustomerReceiveOrderJPanel(container);
-        container.add("CustomerReceiveOrderJPanel",panel);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        CardLayoutNavigator.goBack(navContainer, (JPanel)navContainer.getComponent(0));
+        CardLayoutNavigator.goNext(navContainer, new CustomerReceiveOrderJPanel(container, account, system), "receive  " + this.account.getAccountName());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        CustomerSearchJPanel panel = new CustomerSearchJPanel(container);
-        container.add("CustomerSearchJPanel",panel);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        CardLayoutNavigator.goBack(navContainer, (JPanel)navContainer.getComponent(0));
+        CardLayoutNavigator.goNext(navContainer, new CustomerSearchJPanel(container, account, system), "search  " + this.account.getAccountName());
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree OverallTree;
-    private javax.swing.JPanel container;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -198,5 +192,6 @@ public class CustomerWorkJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel navContainer;
     // End of variables declaration//GEN-END:variables
 }

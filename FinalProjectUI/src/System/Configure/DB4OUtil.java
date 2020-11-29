@@ -58,7 +58,7 @@ public class DB4OUtil {
         conn.close();
     }
     
-    public EcoSystem retrieveSystem() throws Exception {
+    public EcoSystem retrieveSystem(){
         ObjectContainer conn = createConnection();
         ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
         EcoSystem system;

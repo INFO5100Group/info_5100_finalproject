@@ -5,7 +5,10 @@
  */
 package UserInterface.LogisticAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import UserInterface.RetailAdmin.*;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,12 +16,19 @@ import UserInterface.RetailAdmin.*;
  */
 public class LoggisticRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form RetailRegistJPanel1
-     */
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
     public LoggisticRegistJPanel() {
         initComponents();
     }
+
+    public LoggisticRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;    }
 
     /**
      * This method is called from within the constructor to initialize the form.

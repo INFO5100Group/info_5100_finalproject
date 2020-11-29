@@ -23,7 +23,7 @@ public class SysAdminRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
-        return new SysadminworkJPanel(userProcessContainer, account, system);
+        return new SysadminWorkJPanel(userProcessContainer, account, system);
     }
     
 }

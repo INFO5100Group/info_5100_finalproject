@@ -19,9 +19,9 @@ import javax.swing.JPanel;
  *
  * @author Bohan Feng
  */
-public class LogisticAdmin extends Role{
+public class LogisticAdminRole extends Role{
 
-    public LogisticAdmin(){
+    public LogisticAdminRole(){
         this.rType = RoleType.LogisticAdmin;
     }
     

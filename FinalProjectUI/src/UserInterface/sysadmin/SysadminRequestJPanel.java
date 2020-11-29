@@ -5,6 +5,8 @@
  */
 package UserInterface.sysadmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import javax.swing.JPanel;
 
 /**
@@ -12,13 +14,26 @@ import javax.swing.JPanel;
  * @author Administrator
  */
 public class SysadminRequestJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
+    private JPanel navContainer;
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form SysadminRequestJPanel
      */
-    public SysadminRequestJPanel(JPanel UserProcessContainer) {
+    public SysadminRequestJPanel() {
         initComponents();
-        this.UserProcessContainer = UserProcessContainer;
+    }
+
+    SysadminRequestJPanel(Account a, EcoSystem sys) {
+        this();
+        this.account = a;
+        this.system = sys;
+    }
+    
+    
+    public void populateTable(){
+        
+        
     }
 
     /**

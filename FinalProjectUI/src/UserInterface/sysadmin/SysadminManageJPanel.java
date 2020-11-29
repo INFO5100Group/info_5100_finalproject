@@ -5,6 +5,8 @@
  */
 package UserInterface.sysadmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -15,13 +17,17 @@ import javax.swing.table.TableColumn;
  *
  * @author Administrator
  */
-public class sysadminManageJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
+public class SysadminManageJPanel extends javax.swing.JPanel {
+    private JPanel navContainer;
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form sysadminManageJPanel
      */
-    public sysadminManageJPanel(JPanel UserProcessContainer) {
+    public SysadminManageJPanel(Account a, EcoSystem sys) {
         initComponents();
+        this.account = a;
+        this.system = sys;
         tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 21));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));
@@ -30,7 +36,11 @@ public class sysadminManageJPanel extends javax.swing.JPanel {
              column.setHeaderRenderer(cellRenderer);
         }
         //tblManage.setRowHeight(25);
-        this.UserProcessContainer = UserProcessContainer;
+    }
+    
+    public void populateTable(){
+        
+        
     }
 
     /**
