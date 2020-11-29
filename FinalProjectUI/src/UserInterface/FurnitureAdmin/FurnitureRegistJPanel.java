@@ -5,7 +5,10 @@
  */
 package UserInterface.FurnitureAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import UserInterface.RetailAdmin.*;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,11 +16,21 @@ import UserInterface.RetailAdmin.*;
  */
 public class FurnitureRegistJPanel extends javax.swing.JPanel {
 
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form RetailRegistJPanel1
      */
     public FurnitureRegistJPanel() {
         initComponents();
+    }
+
+    public FurnitureRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;
     }
 
     /**

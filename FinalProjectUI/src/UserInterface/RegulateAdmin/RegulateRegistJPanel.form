@@ -123,20 +123,12 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\&#x7ea2;&#x53c9; (1).png"/>
-            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\&#x6211;&#x7684; (2).png"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
@@ -188,21 +180,11 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\admin.png"/>
-            </Property>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\request.png"/>
-            </Property>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
           </Events>
@@ -296,9 +278,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnRegist1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\regist.png"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -311,9 +290,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDelete">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\delete.png"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>

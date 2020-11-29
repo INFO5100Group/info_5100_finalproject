@@ -5,7 +5,10 @@
  */
 package UserInterface.ForestryAdmin;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import UserInterface.RetailAdmin.*;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,11 +16,20 @@ import UserInterface.RetailAdmin.*;
  */
 public class ForestryRegistJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form RetailRegistJPanel1
-     */
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+    
     public ForestryRegistJPanel() {
         initComponents();
+    }
+
+    public ForestryRegistJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;    
     }
 
     /**

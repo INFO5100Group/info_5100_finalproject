@@ -8,7 +8,8 @@ package System.AccountRole;
 import Business.Account.Account;
 import Business.Role.*;
 import EcoSystem.EcoSystem;
-import UserInterface.Customer.CustomerSearchJPanel;
+import UserInterface.Customer.*;
+import UserInterface.Customer.CustomerWorkJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -23,7 +24,7 @@ public class CustomerRole extends Role{
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
-        return new CustomerSearchJPanel(userProcessContainer, account, system);
+        return new CustomerWorkJPanel(userProcessContainer, account, system);
     }
     
 }

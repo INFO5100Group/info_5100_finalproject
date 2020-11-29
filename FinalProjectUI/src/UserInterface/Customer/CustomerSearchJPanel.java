@@ -5,6 +5,8 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -16,11 +18,11 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerSearchJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
-    /**
-     * Creates new form CustomerHistoryOrderJPanel
-     */
-    public CustomerSearchJPanel(JPanel UserProcessContainer) {
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
+            
+    public CustomerSearchJPanel() {
         initComponents();
         OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
@@ -29,7 +31,13 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        this.UserProcessContainer = UserProcessContainer;
+    }
+
+    public CustomerSearchJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+        this();
+        this.container = userProcessContainer;
+        this.account = account;
+        this.system = system;  
     }
 
     /**

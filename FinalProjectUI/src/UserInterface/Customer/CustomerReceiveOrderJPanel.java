@@ -5,6 +5,8 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -16,11 +18,13 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
+    private JPanel container;
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form CustomerReceiveOrderJPanel
      */
-    public CustomerReceiveOrderJPanel(JPanel UserProcessContainer) {
+    public CustomerReceiveOrderJPanel() {
         initComponents();
         OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
@@ -29,7 +33,13 @@ public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        this.UserProcessContainer = UserProcessContainer;
+    }
+
+    CustomerReceiveOrderJPanel(JPanel container, Account account, EcoSystem system) {
+        this();
+        this.container = container;
+        this.account = account;
+        this.system = system;  
     }
 
     /**
