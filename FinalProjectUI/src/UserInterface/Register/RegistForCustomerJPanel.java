@@ -5,19 +5,37 @@
  */
 package UserInterface.Register;
 
+import Business.Account.Account;
+import Business.Person.Person;
+import EcoSystem.DataValidater;
+import EcoSystem.EcoSystem;
+import System.AccountRole.CustomerRole;
+import System.Configure.DB4OUtil;
+import UserInterface.CardLayoutNavigator;
 import UserInterface.FurnitureManufaCompany.ProducerRole.*;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Administrator
  */
-public class RegistForCustomerJPanle extends javax.swing.JPanel {
+public class RegistForCustomerJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form NewJPanel
-     */
-    public RegistForCustomerJPanle() {
+    JPanel container;
+    EcoSystem system;
+    
+    public RegistForCustomerJPanel(JPanel ups, EcoSystem sys) {
         initComponents();
+        this.container = ups;
+        this.system = sys;
+        setrbtnCommand();
+    }
+    
+    public void setrbtnCommand(){
+        rbtnFemale.setActionCommand("Female");
+        rbtnMale.setActionCommand("Male");
+        rbtnOther.setActionCommand("Other");
     }
 
     /**
@@ -29,8 +47,9 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        sexGroup = new javax.swing.ButtonGroup();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        rbtnOther = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jtxUName = new javax.swing.JTextField();
@@ -46,9 +65,9 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jtxStreet = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        rbtnMale = new javax.swing.JRadioButton();
         jtxEmail = new javax.swing.JTextField();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rbtnFemale = new javax.swing.JRadioButton();
         jtxZipCode = new javax.swing.JTextField();
         btnRegist = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
@@ -66,7 +85,8 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel7.setText("Password:");
 
-        jRadioButton3.setText("Other");
+        sexGroup.add(rbtnOther);
+        rbtnOther.setText("Other");
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel8.setText("UserName:");
@@ -98,21 +118,22 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
         jLabel12.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel12.setText("Email:");
 
-        jRadioButton1.setText("Male");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        sexGroup.add(rbtnMale);
+        rbtnMale.setText("Male");
+        rbtnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rbtnMaleActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("Female");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        sexGroup.add(rbtnFemale);
+        rbtnFemale.setText("Female");
+        rbtnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rbtnFemaleActionPerformed(evt);
             }
         });
 
-        btnRegist.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\regist.png")); // NOI18N
         btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +158,7 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(170, 170, 170))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(793, 793, 793)
+                .addGap(808, 808, 808)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -168,11 +189,11 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
                             .addGap(119, 119, 119)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbtnMale, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jRadioButton2)
+                                    .addComponent(rbtnFemale)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(rbtnOther, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +215,7 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
                         .addComponent(jtxLName, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(235, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(1272, Short.MAX_VALUE)
@@ -232,9 +253,9 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                    .addComponent(rbtnMale)
+                    .addComponent(rbtnFemale)
+                    .addComponent(rbtnOther))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -274,22 +295,68 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rbtnMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnMaleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rbtnMaleActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void rbtnFemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnFemaleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_rbtnFemaleActionPerformed
 
     private void jtxFNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxFNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxFNameActionPerformed
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
+        if(inputValidate()){
+            Person newPerson = new Person(jtxFName.getText(), jtxLName.getText(), sexGroup.getSelection().getActionCommand());
+            newPerson.setCity(jtxCity.getText());
+            newPerson.setEmail(jtxEmail.getText());
+            newPerson.setState(jtxState.getText());
+            newPerson.setStreet(jtxStreet.getText());
+            newPerson.setZipCode(jtxZipCode.getText());
+            Account newAccount = new Account(jtxUName.getText(), jtxPWord.getText(), newPerson, new CustomerRole());
+            boolean addAccountSuccess = system.getAccounts().addAccount(newAccount);
+            if(!addAccountSuccess){
+                JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " cannot add account, pleanse change to another user name");
+            }else{
+                JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " Account created");
+                DB4OUtil.storeSystem(system);
+                CardLayoutNavigator.goBack(container, this);
+            }
+        }
     }//GEN-LAST:event_btnRegistActionPerformed
 
+    private boolean inputValidate(){
+        boolean isEmpty = this.jtxFName.getText().equals("") ||
+                          this.jtxLName.getText().equals("") ||
+                          this.jtxUName.getText().equals("") ||
+                          this.jtxPWord.getText().equals("") ||
+                          this.jtxState.getText().equals("") ||
+                          this.jtxCity.getText().equals("") ||
+                          this.jtxStreet.getText().equals("") ||
+                          this.jtxZipCode.getText().equals("") ||
+                          this.jtxEmail.getText().equals("");
+        if(isEmpty){
+            JOptionPane.showMessageDialog(null, "Please fill all text fields");
+            return false;
+        }
+        
+        boolean isSelect = sexGroup.getSelection()!=(null);
+        if(!isSelect){
+            JOptionPane.showMessageDialog(null, "Please Select a Gender");
+            return false;
+        }
+        
+        boolean emailCorrect = DataValidater.EmailPatternCorrect(jtxEmail.getText());
+        
+        if(!emailCorrect){
+            JOptionPane.showMessageDialog(null, "Please Enter a validated email");
+            return false;
+        }
+        
+        return true;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegist;
@@ -311,9 +378,6 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTextField jtxCity;
     private javax.swing.JTextField jtxEmail;
     private javax.swing.JTextField jtxFName;
@@ -323,5 +387,9 @@ public class RegistForCustomerJPanle extends javax.swing.JPanel {
     private javax.swing.JTextField jtxStreet;
     private javax.swing.JTextField jtxUName;
     private javax.swing.JTextField jtxZipCode;
+    private javax.swing.JRadioButton rbtnFemale;
+    private javax.swing.JRadioButton rbtnMale;
+    private javax.swing.JRadioButton rbtnOther;
+    private javax.swing.ButtonGroup sexGroup;
     // End of variables declaration//GEN-END:variables
 }

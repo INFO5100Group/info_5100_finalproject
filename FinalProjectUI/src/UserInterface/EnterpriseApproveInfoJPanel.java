@@ -9,6 +9,7 @@ import Business.Account.Account;
 import Business.Enterprise.Enterprise;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import javax.swing.JPanel;
 
 /**
@@ -44,6 +45,7 @@ public class EnterpriseApproveInfoJPanel extends javax.swing.JPanel {
     public void DestoryProfile(){
         system.getAccounts().removeAccount(account);
         system.getEnterprises().removeEnterprise(enterprise);
+        DB4OUtil.storeSystem(system);
     }
 
     /**
@@ -58,6 +60,8 @@ public class EnterpriseApproveInfoJPanel extends javax.swing.JPanel {
         jblApproved = new javax.swing.JLabel();
         jblMsg = new javax.swing.JLabel();
         btnConfirm = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jblApproved.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jblApproved.setText("<isApproved>");

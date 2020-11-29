@@ -6,8 +6,14 @@
 package UserInterface.sysadmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -28,11 +34,27 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         this();
         this.account = a;
         this.system = sys;
+        populateTable();
     }
     
     
     public void populateTable(){
-        
+        DefaultTableModel model = (DefaultTableModel)this.SysadminJTable1.getModel();
+        model.setRowCount(0);
+        WorkQueue wq = system.getWorkQueue().getRequestsByRecevier(account);
+        for(WorkRequest wr : wq){
+            if(!wr.isIsCompleted()){
+                Enterprise e = system.getEnterprises().getEnterpriseByAccout(wr.getSender());
+                Object row[] = new Object[6];
+                row[1] = e.getName();
+                row[2] = e.getState() + " " + e.getCity();
+                row[3] = e.getAdmin().getAccountName();
+                row[4] = e.getAdmin().getPassword();
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+            }
+        }
         
     }
 
@@ -55,17 +77,17 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         SysadminJTable1.setFont(new java.awt.Font("Yu Gothic", 1, 15)); // NOI18N
         SysadminJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "EnterpriseName", "Localtion", "EntrepriseAdmin", "Password", "Status"
+                "ID", "EnterpriseName", "Localtion", "EntrepriseAdmin", "Password", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                true, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -74,7 +96,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(SysadminJTable1);
 
-        btnDisapprove.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\disapprove.png")); // NOI18N
+        btnDisapprove.setBackground(new java.awt.Color(255, 255, 255));
         btnDisapprove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDisapprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +104,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnApprove.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Approve.png")); // NOI18N
+        btnApprove.setBackground(new java.awt.Color(255, 255, 255));
         btnApprove.setBorder(null);
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,11 +117,11 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(538, 538, 538)
-                .addComponent(btnApprove)
-                .addGap(190, 190, 190)
+                .addGap(513, 513, 513)
+                .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(240, 240, 240)
                 .addComponent(btnDisapprove, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(514, Short.MAX_VALUE))
+                .addContainerGap(483, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(447, 447, 447)
@@ -110,9 +132,9 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(580, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnDisapprove, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnApprove))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnApprove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDisapprove, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
                 .addGap(277, 277, 277))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -123,11 +145,37 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
-        // TODO add your handling code here:
+        int selectedRow = this.SysadminJTable1.getSelectedRow();
+        if(selectedRow >= 0){
+            WorkRequest wr = (WorkRequest)(SysadminJTable1.getValueAt(selectedRow, 0));
+            Enterprise e = system.getEnterprises().getEnterpriseByAccout(wr.getSender());
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "You Confirm to Approve Request for " + e.getName(), "Warning", dialogButton);
+            if(dialogResult == JOptionPane.YES_OPTION){ 
+                wr.setIsCompleted(true);
+                wr.resolve();
+                e.setApproved(true);
+                DB4OUtil.storeSystem(system);
+                populateTable();
+            }
+        }
     }//GEN-LAST:event_btnApproveActionPerformed
 
     private void btnDisapproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisapproveActionPerformed
-        // TODO add your handling code here:
+        int selectedRow = this.SysadminJTable1.getSelectedRow();
+        if(selectedRow >= 0){
+            WorkRequest wr = (WorkRequest)(SysadminJTable1.getValueAt(selectedRow, 0));
+            Enterprise e = system.getEnterprises().getEnterpriseByAccout(wr.getSender());
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "You Confirm to Denie Request for " + e.getName(), "Warning", dialogButton);
+            if(dialogResult == JOptionPane.YES_OPTION){ 
+                wr.setIsCompleted(true);
+                wr.denied();
+                e.setApproved(false);
+                DB4OUtil.storeSystem(system);
+                populateTable();
+            }
+        }
     }//GEN-LAST:event_btnDisapproveActionPerformed
 
 

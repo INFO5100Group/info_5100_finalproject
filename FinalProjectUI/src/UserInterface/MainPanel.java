@@ -8,6 +8,7 @@ package UserInterface;
 import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
+import UserInterface.Register.*;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -97,8 +98,18 @@ public class MainPanel extends javax.swing.JPanel {
         });
 
         btnCustomer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCustomerActionPerformed(evt);
+            }
+        });
 
         btnEnterprise.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnEnterprise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnterpriseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -219,6 +230,16 @@ public class MainPanel extends javax.swing.JPanel {
         
         CardLayoutNavigator.goNext(container, workArea, currAccount.getAccountName() + " work area ");
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
+        JPanel customerRegist = new RegistForCustomerJPanel(container, system);
+        CardLayoutNavigator.goNext(container, customerRegist, "register customer ");
+    }//GEN-LAST:event_btnCustomerActionPerformed
+
+    private void btnEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterpriseActionPerformed
+        JPanel EnterpriseRegist = new RegistForEnterpriseJPanel(container, system);
+        CardLayoutNavigator.goNext(container, EnterpriseRegist, "reguster enterprise ");
+    }//GEN-LAST:event_btnEnterpriseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
