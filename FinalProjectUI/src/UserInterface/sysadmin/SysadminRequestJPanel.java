@@ -5,7 +5,11 @@
  */
 package UserInterface.sysadmin;
 
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -19,6 +23,13 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
     public SysadminRequestJPanel(JPanel UserProcessContainer) {
         initComponents();
         this.UserProcessContainer = UserProcessContainer;
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(184,75,9));
+        //SysadminJTable.getTableHeader().setForeground(new Color(255,255,255));
+        for(int i=0;i<5;i++){
+            TableColumn column = SysadminJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);
+        }
     }
 
     /**
@@ -31,14 +42,14 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane3 = new javax.swing.JScrollPane();
-        SysadminJTable1 = new javax.swing.JTable();
+        SysadminJTable = new javax.swing.JTable();
         btnDisapprove = new javax.swing.JButton();
         btnApprove = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        SysadminJTable1.setFont(new java.awt.Font("Yu Gothic", 1, 15)); // NOI18N
-        SysadminJTable1.setModel(new javax.swing.table.DefaultTableModel(
+        SysadminJTable.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
+        SysadminJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -57,7 +68,11 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(SysadminJTable1);
+        SysadminJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        SysadminJTable.setRowHeight(25);
+        SysadminJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        SysadminJTable.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(SysadminJTable);
 
         btnDisapprove.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\disapprove.png")); // NOI18N
         btnDisapprove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -85,25 +100,21 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 .addGap(190, 190, 190)
                 .addComponent(btnDisapprove, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(514, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(447, 447, 447)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(447, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 805, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(437, 437, 437))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(580, Short.MAX_VALUE)
+                .addContainerGap(249, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(201, 201, 201)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDisapprove, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnApprove))
                 .addGap(277, 277, 277))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(258, 258, 258)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(512, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -117,7 +128,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable SysadminJTable1;
+    private javax.swing.JTable SysadminJTable;
     private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnDisapprove;
     private javax.swing.JScrollPane jScrollPane3;

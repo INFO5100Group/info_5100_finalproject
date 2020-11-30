@@ -22,7 +22,6 @@ public class sysadminManageJPanel extends javax.swing.JPanel {
      */
     public sysadminManageJPanel(JPanel UserProcessContainer) {
         initComponents();
-        tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 21));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));
         for(int i=0;i<3;i++){
@@ -55,6 +54,7 @@ public class sysadminManageJPanel extends javax.swing.JPanel {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
+        tblManage.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         tblManage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},

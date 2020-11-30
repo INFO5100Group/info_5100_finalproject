@@ -55,7 +55,7 @@ public class ProducerJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(102, 51, 0));
+        jPanel1.setBackground(new java.awt.Color(184, 75, 9));
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\admin.png")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
