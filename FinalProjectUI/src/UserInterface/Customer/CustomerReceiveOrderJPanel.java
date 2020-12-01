@@ -35,9 +35,8 @@ public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
         }
     }
 
-    CustomerReceiveOrderJPanel(JPanel container, Account account, EcoSystem system) {
+    public CustomerReceiveOrderJPanel( Account account, EcoSystem system) {
         this();
-        this.container = container;
         this.account = account;
         this.system = system;  
     }

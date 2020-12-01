@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\fohhy\\repos\\info_5100_finalproject\\FinalProjectLibrary\\dist\\FinalProjectLibrary.jar"
+    ]
+}

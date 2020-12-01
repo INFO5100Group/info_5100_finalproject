@@ -35,9 +35,8 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
         }
     }
 
-    CustomerHistoryJPanel(JPanel container, Account account, EcoSystem system) {
+    public CustomerHistoryJPanel(Account account, EcoSystem system) {
         this();
-        this.container = container;
         this.account = account;
         this.system = system;  
     }

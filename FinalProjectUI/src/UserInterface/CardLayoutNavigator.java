@@ -6,6 +6,7 @@
 package UserInterface;
 
 import java.awt.CardLayout;
+import java.awt.Component;
 import javax.swing.JPanel;
 
 /**
@@ -35,5 +36,13 @@ public class CardLayoutNavigator {
         container.add(nextName + " Panel", nextPanel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
+    }
+    
+    public static void logout(JPanel container, JPanel currPanel){
+        goBack(container, currPanel);
+        Component [] componentArray = container.getComponents();
+        Component c = componentArray[componentArray.length-1];
+        MainPanel ms = (MainPanel) c;
+        ms.cleanfield();
     }
 }

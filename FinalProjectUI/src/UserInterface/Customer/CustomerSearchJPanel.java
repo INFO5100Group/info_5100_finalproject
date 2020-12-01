@@ -18,7 +18,6 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerSearchJPanel extends javax.swing.JPanel {
-    private JPanel container;
     private Account account;
     private EcoSystem system;
             
@@ -33,9 +32,8 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
         }
     }
 
-    public CustomerSearchJPanel(JPanel userProcessContainer, Account account, EcoSystem system) {
+    public CustomerSearchJPanel(Account account, EcoSystem system) {
         this();
-        this.container = userProcessContainer;
         this.account = account;
         this.system = system;  
     }

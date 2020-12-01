@@ -6,9 +6,11 @@
 package System.AccountRole;
 
 import Business.Account.Account;
-import Business.Role.*;
+import Business.Role.Role;
+import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
-import UserInterface.Customer.*;
+import UserInterface.ForestryCompany.SalesRole.SalesBargainJPanel;
+import UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel;
 import UserInterface.NavgateableJPanel;
 import javax.swing.JPanel;
 
@@ -16,20 +18,18 @@ import javax.swing.JPanel;
  *
  * @author Bohan Feng
  */
-public class CustomerRole extends Role{
+public class ForestLoggingManagerRole extends Role{
 
-    public CustomerRole(){
-        this.rType = RoleType.Customer;
+    public ForestLoggingManagerRole(){
+        this.rType = RoleType.ForestLoggingManager;
     }
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
         NavgateableJPanel WorkArea = new NavgateableJPanel (userProcessContainer, account, system);
-            WorkArea.JPanelPos1 = new CustomerSearchJPanel(account, system);
-            WorkArea.JPanelPos2 = new CustomerReceiveOrderJPanel(account, system);
-            WorkArea.JPanelPos3 = new CustomerHistoryJPanel(account, system);
-            WorkArea.loadNavBtn();
-            return WorkArea;
+        WorkArea.JPanelPos1 = new SalesOrderJPanel(account, system);
+        WorkArea.loadNavBtn();
+        return WorkArea; 
     }
     
 }
