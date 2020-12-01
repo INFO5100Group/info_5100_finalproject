@@ -1,6 +1,7 @@
 package Business.Enterprise;
 
 import Business.Account.Account;
+import Business.Organization.Organization;
 import Business.SerializiedObject;
 import Business.Organization.OrganizationDirectory;
 import Business.Person.Person;
@@ -30,6 +31,12 @@ public class Enterprise extends SerializiedObject{
         this.admin = adac;
     }
 
+    public void removeEmployee(Person p){
+        for(Organization department : this.getDepartments()){
+            department.getEmployee().removePerson(p);
+        }
+    }
+    
     public boolean isApproved() {
         return approved;
     }

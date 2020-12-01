@@ -30,7 +30,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    SysadminRequestJPanel(Account a, EcoSystem sys) {
+    public SysadminRequestJPanel(Account a, EcoSystem sys) {
         this();
         this.account = a;
         this.system = sys;
@@ -51,7 +51,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 row[3] = e.getAdmin().getAccountName();
                 row[4] = e.getAdmin().getPassword();
                 row[5] = wr.getStatus();
-                row[0] = e.getAdmin();
+                row[0] = wr;
                 model.addRow(row);
             }
         }
@@ -124,8 +124,8 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 .addContainerGap(483, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(447, 447, 447)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(297, 297, 297)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 856, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(447, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(

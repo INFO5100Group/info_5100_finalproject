@@ -10,6 +10,7 @@ import EcoSystem.EcoSystem;
 import UserInterface.sysadmin.*;
 import javax.swing.JPanel;
 import Business.Role.*;
+import UserInterface.NavgateableJPanel;
 
 /**
  *
@@ -23,7 +24,11 @@ public class SysAdminRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
-        return new SysadminWorkJPanel(userProcessContainer, account, system);
+        NavgateableJPanel sysWorkArea = new NavgateableJPanel (userProcessContainer, account, system);
+        sysWorkArea.JPanelPos1 = new SysadminRequestJPanel(account, system);
+        sysWorkArea.JPanelPos2 = new SysadminManageJPanel(account, system);
+        sysWorkArea.loadNavBtn();
+        return sysWorkArea;
     }
     
 }

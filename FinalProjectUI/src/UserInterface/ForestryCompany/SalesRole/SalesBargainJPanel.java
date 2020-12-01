@@ -5,9 +5,10 @@
  */
 package UserInterface.ForestryCompany.SalesRole;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -16,11 +17,11 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class SalesBargainJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
-    /**
-     * Creates new form SalesWorkJPanel1
-     */
-    public SalesBargainJPanel(JPanel UserProcessContainer) {
+    
+    private Account account;
+    private EcoSystem system;
+    
+    public SalesBargainJPanel() {
         initComponents();
         BargainJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         StorageJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
@@ -34,7 +35,12 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             TableColumn column = StorageJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        this.UserProcessContainer = UserProcessContainer;
+    }
+    
+    public SalesBargainJPanel(Account a, EcoSystem sys){
+        this();
+        this.system = sys;
+        this.account = a;
     }
 
     /**
@@ -113,7 +119,6 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
         StorageJTable.setShowVerticalLines(false);
         jScrollPane3.setViewportView(StorageJTable);
 
-        btnAccept.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Accept.png")); // NOI18N
         btnAccept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +126,6 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBargain.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Bargain.png")); // NOI18N
         btnBargain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnBargain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +133,6 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnRefresh.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Refresh.png")); // NOI18N
         btnRefresh.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,8 +145,8 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(309, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -160,7 +163,7 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
+                .addGap(147, 147, 147)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -172,7 +175,7 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71)
                 .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -28,6 +28,11 @@ public class MainPanel extends javax.swing.JPanel {
         container = ups;
         system = sys;
     }
+    
+    public void cleanfield(){
+        this.userNameJTextField4.setText("");
+        this.passwordField3.setText("");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -222,12 +227,11 @@ public class MainPanel extends javax.swing.JPanel {
         JPanel workArea = null;
         try{
             currAccount = system.getAccounts().getUserLogin(un, pw);
-            workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "invalid username or password");
             return;
         }
-        
+        workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
         CardLayoutNavigator.goNext(container, workArea, currAccount.getAccountName() + " work area ");
     }//GEN-LAST:event_btnLoginActionPerformed
 

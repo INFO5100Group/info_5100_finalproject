@@ -6,7 +6,7 @@ public enum RoleType {
     RegulateOfficer,
     RegulateAdmin,
     // forest
-    ForestCompanyManager,
+    ForestLoggingManager,
     ForestSalesPerson,
     ForestAdmin,
     // furnitureManu

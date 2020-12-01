@@ -2,6 +2,7 @@ package System.Configure;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Role.Role;
 import System.AccountRole.*;
@@ -20,11 +21,25 @@ public class ConfigureASystem {
         system.getAccounts().addAccount(adminAccount);
 
         // add enterprise
-        addEnterprise("test reg", new RegAdminRole());
-        addEnterprise("test forest", new ForestAdminRole());
-        addEnterprise("test manu", new ManuAdminRole());
-        addEnterprise("test retail", new RetailAdminRole());
-        addEnterprise("test logistic", new LogisticAdminRole());
+        Enterprise reg = addEnterprise("test reg", new RegAdminRole());
+        reg.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
+        
+        Enterprise fore = addEnterprise("test forest", new ForestAdminRole());
+        fore.getDepartments().addOrganization(new Organization("Logging Department"));
+        fore.getDepartments().addOrganization(new Organization("Sales Department"));
+        
+        Enterprise man = addEnterprise("test manu", new ManuAdminRole());
+        man.getDepartments().addOrganization(new Organization("Purchasing Department"));
+        man.getDepartments().addOrganization(new Organization("Production Department"));
+        man.getDepartments().addOrganization(new Organization("Salse Department"));
+        
+        Enterprise ret = addEnterprise("test retail", new RetailAdminRole());
+        ret.getDepartments().addOrganization(new Organization("Purchasing Department"));
+        ret.getDepartments().addOrganization(new Organization("Salse Department"));
+        
+        Enterprise log = addEnterprise("test logistic", new LogisticAdminRole());
+        log.getDepartments().addOrganization(new Organization("Transportation Department"));
+
         
         // add customer
         Person cust = new Person("Joe", "Doe", "other");
@@ -34,7 +49,7 @@ public class ConfigureASystem {
         return system;
     }
     
-    public static void addEnterprise(String Name, Role r){
+    public static Enterprise addEnterprise(String Name, Role r){
         Person admin = new Person(Name, "admin", "other");
         Account account = new Account("t" + Name.split(" ")[1] + "admin", "admin", admin, r);
         Enterprise enterprise =  new Enterprise(account);
@@ -43,7 +58,7 @@ public class ConfigureASystem {
         enterprise.setName(Name);
         system.getAccounts().addAccount(account);
         system.getEnterprises().addEnterprise(enterprise);
-        
+        return enterprise;
     }
      
 }

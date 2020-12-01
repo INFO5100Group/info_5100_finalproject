@@ -6,30 +6,29 @@
 package System.AccountRole;
 
 import Business.Account.Account;
-import Business.Role.*;
+import Business.Role.Role;
+import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
-import UserInterface.Customer.*;
 import UserInterface.NavgateableJPanel;
+import UserInterface.RegulateDepartment.ScientistRole.ScientistRoleManageJPanel;
 import javax.swing.JPanel;
 
 /**
  *
  * @author Bohan Feng
  */
-public class CustomerRole extends Role{
+public class RegulateScientistRole extends Role{
 
-    public CustomerRole(){
-        this.rType = RoleType.Customer;
+    public RegulateScientistRole(){
+        this.rType = RoleType.RegulateScientist;
     }
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
         NavgateableJPanel WorkArea = new NavgateableJPanel (userProcessContainer, account, system);
-            WorkArea.JPanelPos1 = new CustomerSearchJPanel(account, system);
-            WorkArea.JPanelPos2 = new CustomerReceiveOrderJPanel(account, system);
-            WorkArea.JPanelPos3 = new CustomerHistoryJPanel(account, system);
-            WorkArea.loadNavBtn();
-            return WorkArea;
+        WorkArea.JPanelPos1 = new ScientistRoleManageJPanel(account, system);
+        WorkArea.loadNavBtn();
+        return WorkArea;
     }
     
 }

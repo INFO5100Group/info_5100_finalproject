@@ -5,6 +5,8 @@
  */
 package UserInterface.ForestryCompany.SalesRole;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -16,11 +18,11 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class SalesOrderJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
-    /**
-     * Creates new form SalesOrderJPanel
-     */
-    public SalesOrderJPanel(JPanel UserProcessContainer) {
+    
+    private Account account;
+    private EcoSystem system;
+    
+    public SalesOrderJPanel() {
         initComponents();
         OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
@@ -29,7 +31,12 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        this.UserProcessContainer = UserProcessContainer;
+    }
+    
+    public SalesOrderJPanel(Account a, EcoSystem sys){
+        this();
+        this.system = sys;
+        this.account = a;
     }
 
     /**
@@ -76,7 +83,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         OrderJTable.setShowVerticalLines(false);
         jScrollPane3.setViewportView(OrderJTable);
 
-        btnDistribute.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\distribute.png")); // NOI18N
         btnDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDistribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +95,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(615, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(165, 165, 165)
@@ -108,7 +114,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
