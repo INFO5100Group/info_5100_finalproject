@@ -100,4 +100,16 @@ public class AccountDirectory  extends ArrayList<Account>{
             return null;
         }
     }
+    
+    /**
+     * 
+     * @param p
+     * @return 
+     */
+    public Account getAccontByPerson(Person p){
+        return this.stream()
+                .filter(a -> a.getPerson().getID() == p.getID())
+                .findAny()
+                .orElse(null);
+    }
 }
