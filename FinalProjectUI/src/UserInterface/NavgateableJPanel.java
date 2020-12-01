@@ -99,11 +99,12 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         topBar = new javax.swing.JPanel();
         jblUserType = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         navContainer = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        sideBar.setBackground(new java.awt.Color(102, 51, 0));
+        sideBar.setBackground(new java.awt.Color(184, 75, 9));
         sideBar.setMinimumSize(new java.awt.Dimension(269, 737));
 
         jScrollPane1.setViewportView(jTree1);
@@ -169,6 +170,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 .addGap(64, 64, 64))
         );
 
+        jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -177,23 +179,26 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\我的 (2).png")); // NOI18N
+
         javax.swing.GroupLayout topBarLayout = new javax.swing.GroupLayout(topBar);
         topBar.setLayout(topBarLayout);
         topBarLayout.setHorizontalGroup(
             topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topBarLayout.createSequentialGroup()
-                .addContainerGap(675, Short.MAX_VALUE)
+                .addContainerGap(613, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(127, 127, 127)
                 .addComponent(jblUserType)
-                .addGap(196, 196, 196)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134)
+                .addComponent(jButton1))
         );
         topBarLayout.setVerticalGroup(
             topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(topBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jblUserType)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jblUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         navContainer.setBackground(new java.awt.Color(255, 255, 255));
@@ -246,6 +251,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     public javax.swing.JButton btn3;
     public javax.swing.JButton btn4;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
     private javax.swing.JLabel jblUserType;

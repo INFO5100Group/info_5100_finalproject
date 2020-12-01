@@ -18,7 +18,6 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerHistoryJPanel extends javax.swing.JPanel {
-    private JPanel container;
     private Account account;
     private EcoSystem system;
     /**
@@ -33,14 +32,13 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
             TableColumn column = HistoryJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        //this.UserProcessContainer = UserProcessContainer;
     }
-
     public CustomerHistoryJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
         this.system = system;  
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
