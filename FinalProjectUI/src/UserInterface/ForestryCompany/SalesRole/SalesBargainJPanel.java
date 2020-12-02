@@ -9,6 +9,8 @@ import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -35,8 +37,16 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             TableColumn column = StorageJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
-    
+     private void setButtonImage(){
+         ImageIcon bargain=new ImageIcon("./image/Bargain.png");
+         JButton btnBargain=new JButton(bargain);
+         ImageIcon accept=new ImageIcon("./image/Accept.png");
+         JButton btnAccept=new JButton(accept);
+         ImageIcon refresh=new ImageIcon("./image/Refresh.png");
+         JButton btnRefresh=new JButton(refresh);
+    }   
     public SalesBargainJPanel(Account a, EcoSystem sys){
         this();
         this.system = sys;

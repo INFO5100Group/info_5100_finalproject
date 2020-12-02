@@ -8,6 +8,8 @@ package UserInterface.LogisticAdmin;
 import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import UserInterface.RetailAdmin.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +23,7 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
     
     public LoggisticRegistJPanel() {
         initComponents();
+        setButtonImage();
     }
 
     public LoggisticRegistJPanel(Account account, EcoSystem system) {
@@ -151,7 +154,12 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
                 .addGap(60, 60, 60))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/delete.png");
+         JButton btnDelete=new JButton(delete);
+         ImageIcon regist=new ImageIcon("./image/regist.png");
+         JButton btnRegist=new JButton(regist);
+    } 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistActionPerformed

@@ -46,7 +46,7 @@
                       <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnRegist1" min="-2" pref="183" max="-2" attributes="0"/>
+                      <Component id="btnRegist" min="-2" pref="183" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="btnDelete" min="-2" pref="183" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="392" max="-2" attributes="0"/>
@@ -78,7 +78,7 @@
               <EmptySpace pref="82" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnDelete" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="btnRegist1" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="btnRegist" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
           </Group>
@@ -160,7 +160,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jtxPassword">
     </Component>
-    <Component class="javax.swing.JButton" name="btnRegist1">
+    <Component class="javax.swing.JButton" name="btnRegist">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -169,7 +169,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegist1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnDelete">

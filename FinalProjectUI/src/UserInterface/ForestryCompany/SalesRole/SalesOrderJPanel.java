@@ -9,6 +9,8 @@ import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -31,6 +33,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
     
     public SalesOrderJPanel(Account a, EcoSystem sys){
@@ -117,7 +120,10 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 .addContainerGap(188, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void setButtonImage(){
+         ImageIcon distribute=new ImageIcon("./image/distribute.png");
+         JButton btnDistribute=new JButton(distribute);
+    }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDistributeActionPerformed

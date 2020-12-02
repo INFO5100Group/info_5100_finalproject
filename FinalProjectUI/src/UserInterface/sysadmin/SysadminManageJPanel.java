@@ -11,6 +11,8 @@ import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -32,16 +34,22 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
         this.account = a;
         this.system = sys;
         tblManage.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 21));
+        tblManage.getTableHeader().setForeground(new Color(255,255,255));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
         cellRenderer.setBackground(new Color(74,192,255));
         for(int i=0;i<4;i++){
             TableColumn column = tblManage.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        //tblManage.setRowHeight(25);
         populateTable();
+        setButtonImage();
     }
-    
+     private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/delete.png");
+         JButton btnDelete=new JButton(delete);
+         ImageIcon modify=new ImageIcon("./image/Modify.png");
+         JButton btnModify=new JButton(modify);
+    }   
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.tblManage.getModel();
         model.setRowCount(0);

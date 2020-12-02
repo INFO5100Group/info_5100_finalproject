@@ -11,6 +11,8 @@ import Business.WorkQueue.WorkQueue;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -36,7 +38,12 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         this.system = sys;
         populateTable();
     }
-    
+    private void setButtonImage(){
+         ImageIcon approve=new ImageIcon("./image/Approve.png");
+         JButton btnApprove=new JButton(approve);
+         ImageIcon disapprove=new ImageIcon("./image/disapprove.png");
+         JButton btnDisapprove=new JButton(disapprove);
+    }    
     
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.SysadminJTable1.getModel();

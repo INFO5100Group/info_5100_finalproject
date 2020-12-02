@@ -9,6 +9,8 @@ import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
@@ -30,6 +32,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
             TableColumn column = LicenseJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
     
     public ManagerWorkJPanel(Account a, EcoSystem sys){
@@ -38,7 +41,14 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         this.account = a;
         
     }
-
+    private void setButtonImage(){
+         ImageIcon apply=new ImageIcon("./image/Apply.png");
+         JButton btnApply=new JButton(apply);
+         ImageIcon complete=new ImageIcon("./image/Complete.png");
+         JButton btnComplete=new JButton(complete);
+         ImageIcon upload=new ImageIcon("./image/Upload.png");
+         JButton btnUpload=new JButton(upload);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
