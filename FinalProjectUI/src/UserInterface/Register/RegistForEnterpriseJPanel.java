@@ -319,6 +319,7 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 system.getWorkQueue().addRequest(enterpriseRequest);
             } catch (Exception ex) {
                 Logger.getLogger(RegistForEnterpriseJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                return;
             }
             JOptionPane.showMessageDialog(null, newEnterprise.getName() + " enterpirse repuest is send to system admin, plase wait for your enterpires appreoved");
             DB4OUtil.storeSystem(system);

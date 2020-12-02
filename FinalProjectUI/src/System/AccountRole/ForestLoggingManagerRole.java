@@ -9,6 +9,7 @@ import Business.Account.Account;
 import Business.Role.Role;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import UserInterface.ForestryCompany.ManagerRole.ManagerWorkJPanel;
 import UserInterface.ForestryCompany.SalesRole.SalesBargainJPanel;
 import UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel;
 import UserInterface.NavgateableJPanel;
@@ -27,7 +28,7 @@ public class ForestLoggingManagerRole extends Role{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
         NavgateableJPanel WorkArea = new NavgateableJPanel (userProcessContainer, account, system);
-        WorkArea.JPanelPos1 = new SalesOrderJPanel(account, system);
+        WorkArea.JPanelPos1 = new ManagerWorkJPanel(account, system);
         WorkArea.loadNavBtn();
         return WorkArea; 
     }

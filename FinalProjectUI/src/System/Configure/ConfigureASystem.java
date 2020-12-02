@@ -23,10 +23,12 @@ public class ConfigureASystem {
         // add enterprise
         Enterprise reg = addEnterprise("test reg", new RegAdminRole());
         reg.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
+        reg.setState("Washington");
         
         Enterprise fore = addEnterprise("test forest", new ForestAdminRole());
         fore.getDepartments().addOrganization(new Organization("Logging Department"));
         fore.getDepartments().addOrganization(new Organization("Sales Department"));
+        fore.setName("Logger Lovers");
         
         Enterprise man = addEnterprise("test manu", new ManuAdminRole());
         man.getDepartments().addOrganization(new Organization("Purchasing Department"));

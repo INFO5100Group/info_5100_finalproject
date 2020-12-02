@@ -6,11 +6,20 @@
 package UserInterface.RegulateDepartment.ScientistRole;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.Iterator;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /**
  *
@@ -20,15 +29,15 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
 
     private Account account;
     private EcoSystem system;
-    
+
     public ScientistRoleManageJPanel() {
         initComponents();
-        LicenseJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        LicenseJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<7;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 7; i++) {
             TableColumn column = LicenseJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
     }
 
@@ -36,6 +45,63 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
         this();
         this.account = account;
         this.system = system;
+        populateTable();
+    }
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.LicenseJTable.getModel();
+        model.setRowCount(0);
+        WorkQueue wq = system.getWorkQueue().getRequestsByRecevier(account);
+        for (WorkRequest wr : wq) {
+            if (!wr.isIsCompleted()) {
+                Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(wr.getSender());
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                Object row[] = new Object[7];
+                row[1] = e.getName() + "-" + wr.getSender().getAccountName();
+                row[2] = currInfo.getString("Species");
+                row[3] = currInfo.getString("Weight");
+                row[4] = currInfo.getString("StartTime");
+                row[5] = currInfo.getString("EndTime");
+                row[6] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+
+            }
+        }
+    }
+
+    public void populateCommnet() {
+        int selectedRow = this.LicenseJTable.getSelectedRow();
+
+        if (selectedRow >= 0) {
+            WorkRequest wr = (WorkRequest) (LicenseJTable.getValueAt(selectedRow, 0));
+            
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            txtOtherCommnet.setText("");
+            if(currInfo.isNull("Commnet")){
+                JSONObject com = new JSONObject(); 
+                com.accumulate(account.getID()+"", "");
+                currInfo.accumulate("Commnet", com);
+                
+                wr.setMessage(currInfo.toString());
+            }else{
+                JSONObject com = currInfo.getJSONObject("Commnet");
+                Iterator<String> keys = com.keys();
+                
+                while(keys.hasNext()){
+                    String key = keys.next();
+                    txtOtherCommnet.setText(txtOtherCommnet.getText() 
+                            + system.getAccounts().getAccountByID(Integer.parseInt(key)) 
+                            + " : " 
+                            +com.get(key) + "\n");
+                    
+                    if(key.equals(this.account.getID() + "")){
+                        jtxArea.setText(com.getString(key));
+                    }
+                }
+            }
+            DB4OUtil.storeSystem(system);
+        }
     }
 
     /**
@@ -48,11 +114,15 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnAccept = new javax.swing.JButton();
-        btnSubmit = new javax.swing.JButton();
+        btnReject = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtxArea = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
         LicenseJTable = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtOtherCommnet = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1001, 716));
@@ -65,16 +135,19 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnReject.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btnRejectActionPerformed(evt);
             }
         });
 
         jtxArea.setColumns(20);
         jtxArea.setRows(5);
+        jtxArea.setBorder(null);
         jScrollPane2.setViewportView(jtxArea);
+
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         LicenseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,77 +157,157 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "EnterpriseName", "DepartementName", "TimberSpecies", "TimberWeight", "StartTime", "EndTime", "Status"
+                "ID", "Sender", "TimberSpecies", "TimberWeight", "StartTime", "EndTime", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                true, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        LicenseJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        LicenseJTable.setFocusable(false);
         LicenseJTable.setRowHeight(25);
-        LicenseJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        LicenseJTable.setRowMargin(0);
+        LicenseJTable.setSelectionBackground(new java.awt.Color(153, 204, 255));
         LicenseJTable.setShowVerticalLines(false);
+        LicenseJTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LicenseJTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(LicenseJTable);
+
+        jLabel1.setText("Comment");
+
+        txtOtherCommnet.setEditable(false);
+        txtOtherCommnet.setColumns(20);
+        txtOtherCommnet.setRows(5);
+        txtOtherCommnet.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        txtOtherCommnet.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtOtherCommnet.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtOtherCommnet.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jScrollPane3.setViewportView(txtOtherCommnet);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 482, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1157, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(167, 167, 167)
-                            .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(237, 237, 237)
-                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(120, 120, 120)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(29, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 573, Short.MAX_VALUE)
+                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 936, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(114, 114, 114)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(88, 88, 88)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(378, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        // TODO add your handling code here:
+        String currCommnet = jtxArea.getText();
+        if(currCommnet.equals("")){
+            currCommnet += "Accepted";
+        }
+        int selectedRow = this.LicenseJTable.getSelectedRow();
+
+        submitCommnet(selectedRow, currCommnet, true);
     }//GEN-LAST:event_btnAcceptActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
+        String currCommnet = jtxArea.getText();
+        if(currCommnet.equals("")){
+            currCommnet += "Not Accepted";
+        }
+        int selectedRow = this.LicenseJTable.getSelectedRow();
+        
+        submitCommnet(selectedRow, currCommnet, false);
+    }//GEN-LAST:event_btnRejectActionPerformed
+
+    public void submitCommnet(int selectedRow, String currCommnet, boolean isAccept){
+        if (selectedRow >= 0) {
+            WorkRequest wr = (WorkRequest) (LicenseJTable.getValueAt(selectedRow, 0));
+            
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            
+            currInfo.getJSONObject("Commnet").put(this.account.getID()+"", currCommnet);
+            
+            wr.setMessage(currInfo.toString());
+            
+            wr.getReceivers().put(account, isAccept);
+            
+            wr.setStatus("Evaluated by scientist");
+            
+            populateCommnet();
+            populateTable();
+            
+            DB4OUtil.storeSystem(system);
+        }
+    }
+    
+    public boolean nameDefined(){
+        return this.account.getPerson().getFirstName() != null &&
+         this.account.getPerson().getLastName()!= null;
+                
+    }
+    
+    private void LicenseJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LicenseJTableMouseClicked
+        populateCommnet();
+    }//GEN-LAST:event_LicenseJTableMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable LicenseJTable;
     private javax.swing.JButton btnAccept;
-    private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton btnReject;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jtxArea;
+    private javax.swing.JTextArea txtOtherCommnet;
     // End of variables declaration//GEN-END:variables
 }

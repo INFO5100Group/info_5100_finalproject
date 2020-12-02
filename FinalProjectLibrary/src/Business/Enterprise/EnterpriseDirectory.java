@@ -1,6 +1,8 @@
 package Business.Enterprise;
 
 import Business.Account.Account;
+import Business.Organization.Organization;
+import Business.Person.Person;
 import java.util.ArrayList;
 
 
@@ -67,7 +69,7 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
     } 
     
     /**
-     * get enterprise by give account
+     * get enterprise by give administer account
      * @param a
      * @return 
      */
@@ -76,5 +78,23 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
                 .filter(e -> e.getAdmin().getID() == a.getID())
                 .findAny()
                 .orElse(null);
+    }
+    
+    /**
+     * get enterprise by given employee account
+     * @param a
+     * @return 
+     */
+    public Enterprise getEnterpriseByEmployeeAccount(Account a){
+        for(Enterprise e : this){
+            for(Organization o : e.getDepartments()){
+                for(Person p : o.getEmployee()){
+                    if(a.getPerson().getID() == p.getID()){
+                        return e;
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

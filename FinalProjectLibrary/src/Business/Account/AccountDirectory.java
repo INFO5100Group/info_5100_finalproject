@@ -89,15 +89,17 @@ public class AccountDirectory  extends ArrayList<Account>{
      * @return a account obj if validated username and password
      *         null if not validated 
      */
-    public Account getUserLogin(String username, String password){
+    public Account getUserLogin(String username, String password) throws Exception{
         Account re = this.stream()
                     .filter(a -> a.getAccountName().equals(username))
                     .findAny()
                     .orElse(null);
-        if(re.getPassword().equals(password)){
+        if(re == null){
+            throw new Exception("no shuch account " + username);
+        }else if(re.getPassword().equals(password)){
             return re;
         }else{
-            return null;
+            throw new Exception("invalid password for " + username);
         }
     }
     
@@ -109,6 +111,18 @@ public class AccountDirectory  extends ArrayList<Account>{
     public Account getAccontByPerson(Person p){
         return this.stream()
                 .filter(a -> a.getPerson().getID() == p.getID())
+                .findAny()
+                .orElse(null);
+    }
+    
+    /**
+     * 
+     * @param aID
+     * @return 
+     */
+    public Account getAccountByID(int aID){
+        return this.stream()
+                .filter(a -> a.getID() == aID)
                 .findAny()
                 .orElse(null);
     }
