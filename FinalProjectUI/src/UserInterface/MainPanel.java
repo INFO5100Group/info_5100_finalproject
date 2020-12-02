@@ -268,7 +268,7 @@ public class MainPanel extends javax.swing.JPanel {
         try{
             currAccount = system.getAccounts().getUserLogin(un, pw);
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "invalid username or password");
+            JOptionPane.showMessageDialog(null, e.getMessage());
             return;
         }
         workArea = currAccount.getRole().createWorkArea(container, currAccount, system);
