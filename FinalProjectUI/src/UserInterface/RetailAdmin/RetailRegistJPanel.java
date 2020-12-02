@@ -7,6 +7,8 @@ package UserInterface.RetailAdmin;
 
 import Business.Account.Account;
 import EcoSystem.EcoSystem;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -23,6 +25,7 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
      */
     public RetailRegistJPanel() {
         initComponents();
+        setButtonImage();
     }
 
     public RetailRegistJPanel(Account account, EcoSystem system) {
@@ -154,7 +157,12 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
                 .addGap(45, 45, 45))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/delete.png");
+         JButton btnDelete=new JButton(delete);
+         ImageIcon regist=new ImageIcon("./image/regist.png");
+         JButton btnRegist=new JButton(regist);
+    }  
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteActionPerformed

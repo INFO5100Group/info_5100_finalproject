@@ -8,6 +8,7 @@ package UserInterface;
 import Business.Account.Account;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -29,6 +30,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         this.account = account;
         this.system = system;
         checkUser();
+        setButtonImage();
     }
     
     public void checkUser(){
@@ -59,7 +61,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 
         }
     }
-    
+     private void setButtonImage(){
+         ImageIcon imageIcon=new ImageIcon("./image/红叉 (2)_1.png");
+         JButton btnOut=new JButton(imageIcon);
+    }   
     public void loadNavBtn(){
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
         if(JPanelPos1 == null){
@@ -98,7 +103,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn4 = new javax.swing.JButton();
         topBar = new javax.swing.JPanel();
         jblUserType = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnOut = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         navContainer = new javax.swing.JPanel();
 
@@ -148,7 +153,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             .addGroup(sideBarLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
             .addComponent(btn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -173,9 +178,9 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
 
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnOutActionPerformed(evt);
             }
         });
 
@@ -186,18 +191,18 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         topBarLayout.setHorizontalGroup(
             topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topBarLayout.createSequentialGroup()
-                .addContainerGap(613, Short.MAX_VALUE)
+                .addContainerGap(766, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(127, 127, 127)
                 .addComponent(jblUserType)
                 .addGap(134, 134, 134)
-                .addComponent(jButton1))
+                .addComponent(btnOut))
         );
         topBarLayout.setVerticalGroup(
             topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel1)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnOut, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jblUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -240,9 +245,9 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         CardLayoutNavigator.goNext(navContainer, JPanelPos4, this.account.getAccountName() + "pos4");
     }//GEN-LAST:event_btn4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
         CardLayoutNavigator.logout(contianer, this);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnOutActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -250,7 +255,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     public javax.swing.JButton btn2;
     public javax.swing.JButton btn3;
     public javax.swing.JButton btn4;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnOut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;

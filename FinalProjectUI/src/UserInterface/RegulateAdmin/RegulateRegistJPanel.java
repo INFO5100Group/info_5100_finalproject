@@ -13,6 +13,8 @@ import EcoSystem.EcoSystem;
 import System.AccountRole.RegulateOfficerRole;
 import System.AccountRole.RegulateScientistRole;
 import System.Configure.DB4OUtil;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -30,6 +32,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
      */
     public RegulateRegistJPanel() {
         initComponents();
+        setButtonImage();
     }
 
     public RegulateRegistJPanel( Account account, EcoSystem system) {
@@ -40,7 +43,12 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
         populateTable();
         populateCombo();
     }
-    
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/delete.png");
+         JButton btnDelete=new JButton(delete);
+         ImageIcon regist=new ImageIcon("./image/regist.png");
+         JButton btnRegist=new JButton(regist);
+    }        
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.tblEmployee.getModel();
         model.setRowCount(0);
@@ -80,7 +88,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         ComboRole = new javax.swing.JComboBox<>();
         jtxPassword = new javax.swing.JTextField();
-        btnRegist1 = new javax.swing.JButton();
+        btnRegist = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -119,10 +127,10 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
         ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ComboRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btnRegist1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnRegist1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegist1ActionPerformed(evt);
+                btnRegistActionPerformed(evt);
             }
         });
 
@@ -157,7 +165,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(321, 321, 321))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(392, 392, 392))))
@@ -182,12 +190,12 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegist1ActionPerformed
+    private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         if(inputValidate()){
             Person p = new Person();
             Account a = new Account(jtxUserName.getText(), jtxPassword.getText(), p);
@@ -208,7 +216,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
             DB4OUtil.storeSystem(system);
             populateTable();
         }
-    }//GEN-LAST:event_btnRegist1ActionPerformed
+    }//GEN-LAST:event_btnRegistActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         int row = tblEmployee.getSelectedRow();
@@ -250,7 +258,7 @@ public class RegulateRegistJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboRole;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnRegist1;
+    private javax.swing.JButton btnRegist;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -12,6 +12,8 @@ import Business.Person.Person;
 import EcoSystem.EcoSystem;
 import System.AccountRole.*;
 import System.Configure.DB4OUtil;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -37,8 +39,14 @@ public class ForestryRegistJPanel extends javax.swing.JPanel {
         enterprise = system.getEnterprises().getEnterpriseByAccout(account);
         populateTable();
         populateCombo();
+        setButtonImage();
     }
-    
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/delete.png");
+         JButton btnDelete=new JButton(delete);
+         ImageIcon regist=new ImageIcon("./image/regist.png");
+         JButton btnRegist=new JButton(regist);
+    }    
     public void populateCombo(){
         ComboRole.removeAllItems();
         ComboRole.addItem("");// 0
