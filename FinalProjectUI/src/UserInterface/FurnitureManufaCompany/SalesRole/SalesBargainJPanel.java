@@ -8,6 +8,7 @@ package UserInterface.FurnitureManufaCompany.SalesRole;
 import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -36,8 +37,16 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
              column.setHeaderRenderer(cellRenderer);
         }
         this.UserProcessContainer = UserProcessContainer;
+        setButtonImage();
     }
-
+     private void setButtonImage(){
+         ImageIcon bargain=new ImageIcon("./image/Bargain.png");
+         btnBargain.setIcon(bargain);
+         ImageIcon accept=new ImageIcon("./image/Accept.png");
+         btnAccept.setIcon(accept);
+         ImageIcon refresh=new ImageIcon("./image/Refresh.png");
+         btnRefresh.setIcon(refresh);
+    }   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

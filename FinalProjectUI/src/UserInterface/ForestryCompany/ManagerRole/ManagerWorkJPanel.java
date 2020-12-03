@@ -56,7 +56,12 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         populateTable();
         populateCombo();
     }
-    
+    private void setButtonImage(){
+         ImageIcon Apply=new ImageIcon("./image/Apply.png");
+         btnApply.setIcon(Apply);
+         ImageIcon Upload=new ImageIcon("./image/Upload.png");
+         btnUpload.setIcon(Upload);
+    }   
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.LicenseJTable.getModel();
         model.setRowCount(0);
@@ -132,14 +137,6 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
                     comboStartDay.addItem(i + "");
                 }
         }
-    }
-    private void setButtonImage(){
-         ImageIcon apply=new ImageIcon("./image/Apply.png");
-         JButton btnApply=new JButton(apply);
-         ImageIcon complete=new ImageIcon("./image/Complete.png");
-         JButton btnComplete=new JButton(complete);
-         ImageIcon upload=new ImageIcon("./image/Upload.png");
-         JButton btnUpload=new JButton(upload);
     }
     /**
      * This method is called from within the constructor to initialize the form.

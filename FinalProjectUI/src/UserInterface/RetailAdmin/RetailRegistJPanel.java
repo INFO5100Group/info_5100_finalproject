@@ -52,7 +52,7 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
         ComboRole = new javax.swing.JComboBox<>();
         jtxPassword = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
-        btnRegist1 = new javax.swing.JButton();
+        btnRegist = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -97,10 +97,10 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnRegist1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnRegist1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegist1ActionPerformed(evt);
+                btnRegistActionPerformed(evt);
             }
         });
 
@@ -128,7 +128,7 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(321, 321, 321))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(382, 382, 382))))
@@ -153,29 +153,29 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
          ImageIcon delete=new ImageIcon("./image/delete.png");
-         JButton btnDelete=new JButton(delete);
+         btnDelete.setIcon(delete);
          ImageIcon regist=new ImageIcon("./image/regist.png");
-         JButton btnRegist=new JButton(regist);
+         btnRegist.setIcon(regist);
     }  
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void btnRegist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegist1ActionPerformed
+    private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegist1ActionPerformed
+    }//GEN-LAST:event_btnRegistActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboRole;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnRegist1;
+    private javax.swing.JButton btnRegist;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

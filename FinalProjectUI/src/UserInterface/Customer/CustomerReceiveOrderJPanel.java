@@ -9,6 +9,7 @@ import Business.Account.Account;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -33,6 +34,7 @@ public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
 
     public CustomerReceiveOrderJPanel( Account account, EcoSystem system) {
@@ -40,7 +42,10 @@ public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
         this.account = account;
         this.system = system;  
     }
-
+    private void setButtonImage(){
+         ImageIcon Receive=new ImageIcon("./image/receive.png");
+         btnReceive.setIcon(Receive);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

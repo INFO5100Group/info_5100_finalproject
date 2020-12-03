@@ -122,7 +122,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
          ImageIcon distribute=new ImageIcon("./image/distribute.png");
-         JButton btnDistribute=new JButton(distribute);
+         btnDistribute.setIcon(distribute);
     }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         // TODO add your handling code here:

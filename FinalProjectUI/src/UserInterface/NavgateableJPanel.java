@@ -63,7 +63,9 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     }
      private void setButtonImage(){
          ImageIcon imageIcon=new ImageIcon("./image/红叉 (2)_1.png");
-         JButton btnOut=new JButton(imageIcon);
+         ImageIcon main=new ImageIcon("./image/我的 (2).png");
+         jLabel1.setIcon(main);
+         btnOut.setIcon(imageIcon);
     }   
     public void loadNavBtn(){
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");

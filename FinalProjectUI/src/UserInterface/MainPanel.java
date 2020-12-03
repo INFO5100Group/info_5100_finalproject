@@ -255,6 +255,10 @@ public class MainPanel extends javax.swing.JPanel {
          ImageIcon enterprise=new ImageIcon("./image/enterprise.png");
          ImageIcon department=new ImageIcon("./image/Login_1.png");
          ImageIcon customer=new ImageIcon("./image/customer.png");
+         ImageIcon main=new ImageIcon("./image/我的 (2).png");
+         ImageIcon main1=new ImageIcon("./image/密码 (1).png");
+         jLabel7.setIcon(main1);
+         jLabel4.setIcon(main);
          btnCustomer.setIcon(customer);
          btnEnterprise.setIcon(enterprise);
          btnLogin.setIcon(imageIcon);

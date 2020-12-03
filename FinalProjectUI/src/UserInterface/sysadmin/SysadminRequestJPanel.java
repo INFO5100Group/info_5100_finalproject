@@ -40,9 +40,9 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
     }
     private void setButtonImage(){
          ImageIcon approve=new ImageIcon("./image/Approve.png");
-         JButton btnApprove=new JButton(approve);
+         btnApprove.setIcon(approve);
          ImageIcon disapprove=new ImageIcon("./image/disapprove.png");
-         JButton btnDisapprove=new JButton(disapprove);
+         btnDisapprove.setIcon(disapprove);
     }    
     
     public void populateTable(){

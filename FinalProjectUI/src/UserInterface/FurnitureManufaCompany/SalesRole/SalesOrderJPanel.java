@@ -8,6 +8,7 @@ package UserInterface.FurnitureManufaCompany.SalesRole;
 import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -31,6 +32,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
              column.setHeaderRenderer(cellRenderer);
         }
         this.UserProcessContainer = UserProcessContainer;
+        setButtonImage();
     }
 
     /**
@@ -116,7 +118,10 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDistributeActionPerformed
-
+    private void setButtonImage(){
+         ImageIcon distribute=new ImageIcon("./image/distribute.png");
+         btnDistribute.setIcon(distribute);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> LogisticCompanyCombo;

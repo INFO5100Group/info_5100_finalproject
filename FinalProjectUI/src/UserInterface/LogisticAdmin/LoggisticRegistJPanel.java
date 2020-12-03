@@ -156,9 +156,9 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
          ImageIcon delete=new ImageIcon("./image/delete.png");
-         JButton btnDelete=new JButton(delete);
+         btnDelete.setIcon(delete);
          ImageIcon regist=new ImageIcon("./image/regist.png");
-         JButton btnRegist=new JButton(regist);
+         btnRegist.setIcon(regist);
     } 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:

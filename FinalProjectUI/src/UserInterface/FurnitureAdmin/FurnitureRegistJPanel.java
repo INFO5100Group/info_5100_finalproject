@@ -55,9 +55,9 @@ public class FurnitureRegistJPanel extends javax.swing.JPanel {
     }
     private void setButtonImage(){
          ImageIcon delete=new ImageIcon("./image/delete.png");
-         JButton btnDelete=new JButton(delete);
+         btnDelete.setIcon(delete);
          ImageIcon regist=new ImageIcon("./image/regist.png");
-         JButton btnRegist=new JButton(regist);
+         btnRegist.setIcon(regist);
     }    
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.tblEmployee.getModel();

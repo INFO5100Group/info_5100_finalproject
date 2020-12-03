@@ -41,11 +41,11 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
     }
      private void setButtonImage(){
          ImageIcon bargain=new ImageIcon("./image/Bargain.png");
-         JButton btnBargain=new JButton(bargain);
+         btnBargain.setIcon(bargain);
          ImageIcon accept=new ImageIcon("./image/Accept.png");
-         JButton btnAccept=new JButton(accept);
+         btnAccept.setIcon(accept);
          ImageIcon refresh=new ImageIcon("./image/Refresh.png");
-         JButton btnRefresh=new JButton(refresh);
+         btnRefresh.setIcon(refresh);
     }   
     public SalesBargainJPanel(Account a, EcoSystem sys){
         this();

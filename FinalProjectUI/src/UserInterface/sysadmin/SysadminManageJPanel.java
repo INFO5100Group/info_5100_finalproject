@@ -46,9 +46,9 @@ public class SysadminManageJPanel extends javax.swing.JPanel {
     }
      private void setButtonImage(){
          ImageIcon delete=new ImageIcon("./image/delete.png");
-         JButton btnDelete=new JButton(delete);
+         btnDelete.setIcon(delete);
          ImageIcon modify=new ImageIcon("./image/Modify.png");
-         JButton btnModify=new JButton(modify);
+         btnModify.setIcon(modify);
     }   
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.tblManage.getModel();

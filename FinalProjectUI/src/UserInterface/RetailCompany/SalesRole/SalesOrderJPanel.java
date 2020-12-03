@@ -8,6 +8,7 @@ package UserInterface.RetailCompany.SalesRole;
 import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -31,6 +32,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
 
     /**
@@ -113,7 +115,10 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 .addContainerGap(369, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void setButtonImage(){
+         ImageIcon distribute=new ImageIcon("./image/distribute.png");
+         btnDistribute.setIcon(distribute);
+    }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDistributeActionPerformed
