@@ -57,6 +57,8 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
          btnAccept.setIcon(accept);
          ImageIcon refresh=new ImageIcon("./image/Refresh.png");
          btnRefresh.setIcon(refresh);
+         ImageIcon add=new ImageIcon("./image/addDstirbute.png");
+         btnAddDistribute.setIcon(add);
     }   
     public SalesBargainJPanel(Account a, EcoSystem sys){
         this();

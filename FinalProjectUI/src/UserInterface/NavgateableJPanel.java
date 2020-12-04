@@ -169,7 +169,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 btnOutActionPerformed(evt);
             }
         });
-        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 0, 42, 32));
+        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1272, 0, 40, 40));
         topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 0, -1, -1));
 
         navContainer.setBackground(new java.awt.Color(255, 255, 255));
@@ -181,16 +181,16 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(sideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, 1310, Short.MAX_VALUE)))
+                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, 1316, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );

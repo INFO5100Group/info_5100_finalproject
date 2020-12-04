@@ -16,6 +16,7 @@ import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.Iterator;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -45,6 +46,7 @@ public class PurchaseJPanel extends javax.swing.JPanel {
             TableColumn column = BargainJTable.getTableHeader().getColumnModel().getColumn(i);
             column.setHeaderRenderer(cellRenderer);
         }
+        setButtonImage();
     }
 
     public PurchaseJPanel(Account a, EcoSystem sys) {
@@ -93,7 +95,12 @@ public class PurchaseJPanel extends javax.swing.JPanel {
             }
         }
     }
-
+    private void setButtonImage(){
+         ImageIcon accept=new ImageIcon("./image/Accept.png");
+         btnAccept.setIcon(accept);
+         ImageIcon request=new ImageIcon("./image/request122.png");
+         btnRequest.setIcon(request);
+    }  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
