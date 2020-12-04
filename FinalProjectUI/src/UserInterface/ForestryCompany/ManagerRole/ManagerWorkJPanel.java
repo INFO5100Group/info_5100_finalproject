@@ -9,6 +9,7 @@ import Business.Account.Account;
 import Business.Enterprise.Enterprise;
 import Business.Person.Person;
 import Business.Role.RoleType;
+import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkQueue;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
@@ -158,7 +159,6 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         btnApply = new javax.swing.JButton();
-        btnUpload = new javax.swing.JButton();
         btnComplete = new javax.swing.JButton();
         MapJPanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -223,13 +223,6 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         btnApply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApplyActionPerformed(evt);
-            }
-        });
-
-        btnUpload.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnUpload.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUploadActionPerformed(evt);
             }
         });
 
@@ -330,8 +323,8 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 126, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,11 +335,6 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnApply, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(321, 321, 321)
-                                .addComponent(btnUpload, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jtxSpecies)
@@ -393,11 +381,15 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jtxlongitude, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(MapJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(MapJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(190, 190, 190)
+                                .addComponent(btnApply, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1017, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(187, 187, 187))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -450,9 +442,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(MapJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(40, 40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnApply, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpload, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnApply, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(91, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -466,11 +456,12 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Your location is not valid");
             }
-            
+            System.out.print(getLocation(jtxLatitude.getText(), jtxlongitude.getText()).getString("state"));
+
             String jsonString = "{"
                 + "\"Species\": \"" +jtxSpecies.getText() +"\","
                 + "\"Weight\": \"" +jtxWeight.getText() +"\","
-                + "\"Latitude \": \"" +jtxLatitude.getText() +"\","
+                + "\"Latitude\": \"" +jtxLatitude.getText() +"\","
                 + "\"longitude\": \"" +jtxlongitude.getText() +"\","
                 + "\"StartTime\": \"" + comboStartYear.getSelectedItem() + "-" + comboStartMonth.getSelectedItem() + "-" + comboStartDay.getSelectedItem()+"\","
                 + "\"EndTime\": \"" + comboEndYear.getSelectedItem() + "-" + comboEndMonth.getSelectedItem() + "-" + comboEndDay.getSelectedItem() +"\","
@@ -517,7 +508,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
             }
             
            System.out.print(getLocation(jtxLatitude.getText(), jtxlongitude.getText()).getString("state"));
-           JOptionPane.showMessageDialog(null, " Your repuest is send to" + reg.getName() + " , plase wait for your request appreoved");
+           JOptionPane.showMessageDialog(null, " Your repuest is send to " + reg.getName() + " , plase wait for your request appreoved");
            DB4OUtil.storeSystem(system);
            populateTable();
         }   
@@ -578,13 +569,9 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         return true;
     }
     
-    private void btnUploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUploadActionPerformed
-
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         int selectedRow = this.LicenseJTable.getSelectedRow();
-        
+        Enterprise currEnterprise = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
         if(selectedRow >= 0){
             WorkRequest wr = (WorkRequest)(LicenseJTable.getValueAt(selectedRow, 0));
             if(!wr.getStatus().equals("Approved")){
@@ -596,6 +583,11 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
             if(dialogResult == JOptionPane.YES_OPTION){ 
                 wr.setIsCompleted(true);
                 wr.resolve();
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                if(currEnterprise.getWoodStorage() == null){
+                    currEnterprise.setWoodStorage(new WoodStorage());
+                }
+                currEnterprise.getWoodStorage().addWood(currInfo.getString("Species"), Double.parseDouble(currInfo.getString("Weight")));
                 DB4OUtil.storeSystem(system);
                 populateTable();
             }
@@ -635,7 +627,6 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel MapJPanel;
     private javax.swing.JButton btnApply;
     private javax.swing.JButton btnComplete;
-    private javax.swing.JButton btnUpload;
     private javax.swing.JComboBox<String> comboEndDay;
     private javax.swing.JComboBox<String> comboEndMonth;
     private javax.swing.JComboBox<String> comboEndYear;

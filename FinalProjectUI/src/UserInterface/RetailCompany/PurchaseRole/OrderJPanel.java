@@ -5,6 +5,8 @@
  */
 package UserInterface.RetailCompany.PurchaseRole;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -23,6 +25,10 @@ public class OrderJPanel extends javax.swing.JPanel {
     public OrderJPanel(JPanel UserProcessContainer) {
         initComponents();
         this.UserProcessContainer = UserProcessContainer;
+    }
+
+    public OrderJPanel(Account arg1, EcoSystem arg2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

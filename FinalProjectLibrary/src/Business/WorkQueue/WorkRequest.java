@@ -108,6 +108,10 @@ public class WorkRequest extends SerializiedObject{
     public String toString() {
         return this.getID() + "";
     }
+
+    public void setReceivers() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
