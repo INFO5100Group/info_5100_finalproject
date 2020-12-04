@@ -6,40 +6,75 @@
 package UserInterface.ForestryCompany.SalesRole;
 
 import Business.Account.Account;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
  * @author Administrator
  */
 public class SalesOrderJPanel extends javax.swing.JPanel {
-    
+
     private Account account;
     private EcoSystem system;
-    
+
     public SalesOrderJPanel() {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 6; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
         setButtonImage();
     }
-    
-    public SalesOrderJPanel(Account a, EcoSystem sys){
+
+    public SalesOrderJPanel(Account a, EcoSystem sys) {
         this();
         this.system = sys;
         this.account = a;
+        populateTable();
+    }
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.OrderJTable.getModel();
+        model.setRowCount(0);
+        for(WorkRequest wr : system.getWorkQueue()){
+            if(wr.getSender() == this.account){
+                Object row[] = new Object[6];
+                ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                try{
+                    row[1] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+                    ).getName();
+                }catch(Exception e){
+                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+                }
+                
+                row[2] = currInfo.getString("Product");
+                row[3] = currInfo.getString("TotalPrice");
+                try{
+                    row[4] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
+                    ).getName(); 
+                }catch(Exception e){}
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+            }
+        }
     }
 
     /**
@@ -98,26 +133,26 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(300, 300, 300)
-                        .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64))
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(218, 218, 218)
+                .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(167, 167, 167))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(295, 295, 295)
+                .addGap(150, 150, 150)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnDistribute, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(LogisticCompanyCombo))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){

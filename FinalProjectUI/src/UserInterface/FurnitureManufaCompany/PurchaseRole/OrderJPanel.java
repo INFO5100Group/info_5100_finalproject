@@ -5,11 +5,14 @@
  */
 package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import UserInterface.RetailCompany.PurchaseRole.*;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 /**
@@ -17,13 +20,19 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class OrderJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form OrderJPanel
      */
-    public OrderJPanel(JPanel UserProcessContainer) {
+    public OrderJPanel() {
         initComponents();
-        this.UserProcessContainer = UserProcessContainer;
+    }
+    
+    public OrderJPanel(Account arg1, EcoSystem arg2) {
+        this();
+        this.account = arg1;
+        this.system = arg2;
     }
 
     /**
@@ -93,7 +102,6 @@ public class OrderJPanel extends javax.swing.JPanel {
         HistoryOrderJTable.setShowVerticalLines(false);
         jScrollPane3.setViewportView(HistoryOrderJTable);
 
-        btnComplete.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Complete.png")); // NOI18N
         btnComplete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,13 +114,13 @@ public class OrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(556, Short.MAX_VALUE)
+                .addContainerGap(193, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(123, 123, 123)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(123, 123, 123))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(464, 464, 464))))
@@ -143,6 +151,11 @@ public class OrderJPanel extends javax.swing.JPanel {
              column.setHeaderRenderer(cellRenderer);
         }
     }
+    
+    public void populateTable(){
+
+    }
+    
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCompleteActionPerformed

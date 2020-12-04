@@ -21,13 +21,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="126" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel6" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jLabel4" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" pref="147" max="-2" attributes="0"/>
@@ -35,12 +35,6 @@
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="btnApply" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
-                              <Component id="btnUpload" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jtxSpecies" alignment="1" max="32767" attributes="0"/>
@@ -90,7 +84,7 @@
                               <Component id="jLabel7" min="-2" pref="74" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel10" min="-2" pref="74" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jtxLatitude" max="32767" attributes="0"/>
@@ -102,6 +96,11 @@
                                   <Component id="MapJPanel" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                              <Component id="btnApply" min="-2" pref="183" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -109,7 +108,7 @@
                       <Component id="jScrollPane1" min="-2" pref="1017" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
+              <EmptySpace pref="96" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -176,10 +175,7 @@
                   </Group>
               </Group>
               <EmptySpace min="79" pref="40" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnApply" min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="btnUpload" min="-2" pref="43" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnApply" min="-2" pref="43" max="-2" attributes="0"/>
               <EmptySpace pref="91" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -304,18 +300,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnApplyActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnUpload">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUploadActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnComplete">
