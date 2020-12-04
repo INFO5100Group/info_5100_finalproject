@@ -61,7 +61,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
          ImageIcon Apply=new ImageIcon("./image/Apply.png");
          btnApply.setIcon(Apply);
          ImageIcon Upload=new ImageIcon("./image/Upload.png");
-         btnUpload.setIcon(Upload);
+         //btnUpload.setIcon(Upload);
     }   
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.LicenseJTable.getModel();
