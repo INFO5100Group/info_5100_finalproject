@@ -10,8 +10,6 @@ import Business.Role.Role;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
 import UserInterface.ForestryCompany.ManagerRole.ManagerWorkJPanel;
-import UserInterface.ForestryCompany.SalesRole.SalesBargainJPanel;
-import UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel;
 import UserInterface.NavgateableJPanel;
 import javax.swing.JPanel;
 

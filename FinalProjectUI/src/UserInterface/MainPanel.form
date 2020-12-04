@@ -312,18 +312,12 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\&#x5bc6;&#x7801; (1).png"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Administrator\Desktop\&#x4e1c;&#x5317;&#x5927;&#x5b66;\INFO5100\&#x6b63;&#x8bfe;\Final Project\info_5100_finalproject\FinalProjectUI\image\&#x6211;&#x7684; (2).png"/>
             </Property>
           </Properties>
         </Component>

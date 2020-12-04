@@ -9,6 +9,7 @@ import Business.Account.Account;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Person.Person;
+import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.AccountRole.*;
@@ -302,11 +303,13 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 newAccount.setRole(new ForestAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Logging Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Sales Department"));
+                newEnterprise.setWoodStorage(new WoodStorage());
             }else if(ComboType.getSelectedIndex() == 3){
                 newAccount.setRole(new ManuAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Production Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+                newEnterprise.setWoodStorage(new WoodStorage());
             }else if(ComboType.getSelectedIndex() == 4){
                 newAccount.setRole(new RetailAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
