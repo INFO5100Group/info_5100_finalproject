@@ -97,4 +97,16 @@ public class EnterpriseDirectory extends ArrayList<Enterprise>{
         }
         return null;
     }
+    
+    /**
+     * 
+     * @param eID
+     * @return 
+     */
+    public Enterprise getEnterPriseByID(int eID){
+        return this.stream()
+                .filter(e -> e.getID() == eID)
+                .findFirst()
+                .orElse(null);
+    }
 }

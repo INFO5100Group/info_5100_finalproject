@@ -91,6 +91,9 @@ public class Person extends SerializiedObject{
     
     @Override
     public String toString() {
+        if(FirstName == null && LastName == null){
+            return "Name not set for person (" + this.getID() + ")";
+        }
         return this.FirstName + " " + this.LastName;
     }
 }

@@ -6,16 +6,21 @@ import Business.Account.Account;
 import Business.Role.Role;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import UserInterface.FurnitureAdmin.FurnitureRegistJPanel;
+import UserInterface.LogisticCompany.LogisticRole.LogisticWorkQueueJPanel;
+import UserInterface.NavgateableJPanel;
 
 public class LogisticsPersonRole extends Role {
-    
+
     public LogisticsPersonRole() {
         this.rType = RoleType.LogisticsPseron;
     }
 
     @Override
     public JPanel createWorkArea(JPanel arg0, Account arg1, EcoSystem arg2) {
-        // TODO Auto-generated method stub
-        return null;
+        NavgateableJPanel WorkArea = new NavgateableJPanel(arg0, arg1, arg2);
+        WorkArea.JPanelPos1 = new LogisticWorkQueueJPanel(arg1, arg2);
+        WorkArea.loadNavBtn();
+        return WorkArea;
     }
 }
