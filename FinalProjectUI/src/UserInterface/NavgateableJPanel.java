@@ -204,6 +204,8 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         if(JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()){
             ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }else if(JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()){
+            ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
         }
         CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
     }//GEN-LAST:event_btn2ActionPerformed

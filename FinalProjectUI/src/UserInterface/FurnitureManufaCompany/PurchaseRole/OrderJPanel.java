@@ -6,33 +6,43 @@
 package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Wood.WoodStorage;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import UserInterface.RetailCompany.PurchaseRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
  * @author Administrator
  */
 public class OrderJPanel extends javax.swing.JPanel {
+
     private Account account;
     private EcoSystem system;
+
     /**
      * Creates new form OrderJPanel
      */
     public OrderJPanel() {
         initComponents();
     }
-    
+
     public OrderJPanel(Account arg1, EcoSystem arg2) {
         this();
         this.account = arg1;
         this.system = arg2;
+        populateTable();
     }
 
     /**
@@ -114,52 +124,122 @@ public class OrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
+                .addContainerGap(179, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(123, 123, 123))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(464, 464, 464))))
+                        .addGap(460, 460, 460))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(271, 271, 271)
+                .addGap(117, 117, 117)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addGap(57, 57, 57)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    private void initialJTable(){
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));        
-        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+    private void initialJTable() {
+        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
+        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 6; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
-        for(int i=0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
     }
-    
-    public void populateTable(){
 
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.OrderJTable.getModel();
+        DefaultTableModel model2 = (DefaultTableModel) this.HistoryOrderJTable.getModel();
+        model.setRowCount(0);
+        model2.setRowCount(0);
+        for (WorkRequest wr : system.getWorkQueue()) {
+            if (wr.getReceivers().keySet().contains(account)) {
+                Object row[] = new Object[6];
+                ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                try {
+                    row[1] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+                    ).getName();
+                } catch (Exception e) {
+                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+                }
+
+                row[2] = currInfo.getString("Product");
+                row[3] = currInfo.getString("TotalPrice");
+                try {
+                    row[4] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
+                    ).getName();
+                } catch (Exception e) {
+                }
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                if (wr.isIsCompleted()) {
+                    model2.addRow(row);
+                } else {
+                    model.addRow(row);
+                }
+
+            }
+        }
     }
-    
+
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
-        // TODO add your handling code here:
+        WorkRequest wr = getSelectdwr();
+        Enterprise currE = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+        if(!wr.getStatus().equals("Delivered")){
+            JOptionPane.showMessageDialog(null, "You cannot confirm revice this object, because it is oot delivered");
+            return;
+        }
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "You confirm to revice this object ?", "Warning", dialogButton);
+        if (dialogResult == JOptionPane.YES_OPTION) {
+            wr.resolve();
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            //添加木材到仓库
+            if(currE.getWoodStorage() == null){
+                currE.setWoodStorage(new WoodStorage());
+            }
+            int requestID = currInfo.getInt("RequestID");
+            WorkRequest woodRequest = system.getWorkQueue().getRequestByID(requestID);
+            Double amount = Double.parseDouble(new JSONObject(woodRequest.getMessage()).getString("Quantity"));
+            currE.getWoodStorage().addWood(currInfo.getString("Product"), amount);
+            DB4OUtil.storeSystem(system);
+            populateTable();
+        }
     }//GEN-LAST:event_btnCompleteActionPerformed
 
+    private WorkRequest getSelectdwr() {
+        int SelectedRow;
+        WorkRequest wr = null;
+
+        if (OrderJTable.getSelectedRow() >= 0) {
+            SelectedRow = OrderJTable.getSelectedRow();
+            wr = (WorkRequest) OrderJTable.getValueAt(SelectedRow, 0);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "please select a row");
+
+        }
+        return wr;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable HistoryOrderJTable;

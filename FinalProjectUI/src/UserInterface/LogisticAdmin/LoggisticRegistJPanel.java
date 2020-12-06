@@ -6,11 +6,21 @@
 package UserInterface.LogisticAdmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.Person.Person;
+import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import System.AccountRole.LogisticsPersonRole;
+import System.AccountRole.RegulateOfficerRole;
+import System.AccountRole.RegulateScientistRole;
+import System.Configure.DB4OUtil;
 import UserInterface.RetailAdmin.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,6 +30,7 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
 
     private Account account;
     private EcoSystem system;
+    private Enterprise currEnterprise;
     
     public LoggisticRegistJPanel() {
         initComponents();
@@ -29,7 +40,25 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
     public LoggisticRegistJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;    }
+        this.system = system;    
+        this.currEnterprise = system.getEnterprises().getEnterpriseByAccout(account);
+        populateTable();
+    }
+    
+    public void populateTable(){
+        DefaultTableModel model = (DefaultTableModel)this.tblEmployee.getModel();
+        model.setRowCount(0);
+        for(Organization o : currEnterprise.getDepartments()){
+            for(Person p : o.getEmployee()){
+                Object row[] = new Object[3];
+                row[0] = system.getAccounts().getAccontByPerson(p);
+                row[1] = ((Account)row[0]).getPassword();
+                row[2] = ((Account)row[0]).getRole().rType;   
+                model.addRow(row);
+            }
+        }
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,8 +74,6 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmployee = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        ComboRole = new javax.swing.JComboBox<>();
         jtxPassword = new javax.swing.JTextField();
         btnRegist = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
@@ -80,13 +107,6 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel4.setText("UserName:");
 
-        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel5.setText("Role:");
-
-        ComboRole.setBackground(new java.awt.Color(102, 102, 102));
-        ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ComboRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,37 +125,35 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(701, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(315, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(77, 77, 77)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtxPassword)
-                                    .addComponent(jtxUserName)
-                                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(90, 90, 90))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtxPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                                    .addComponent(jtxUserName))
+                                .addGap(90, 90, 90)))
                         .addGap(321, 321, 321))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(383, 383, 383))))
+                        .addGap(391, 391, 391))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(196, 196, 196)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(140, 140, 140)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -143,15 +161,11 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
@@ -161,21 +175,58 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
          btnRegist.setIcon(regist);
     } 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
+       if(inputValidate()){
+            Person p = new Person();
+            Account a = new Account(jtxUserName.getText(), jtxPassword.getText(), p);
+            a.setRole(new LogisticsPersonRole());
+            
+            boolean addAccountSuccess = system.getAccounts().addAccount(a);
+            if(!addAccountSuccess){
+                JOptionPane.showMessageDialog(null, a.getAccountName() + " cannot add account, please change to another user name");
+                return;
+            }
+            
+            currEnterprise.getDepartments().get(0).getEmployee().addPerson(a.getPerson());
+            JOptionPane.showMessageDialog(null, a.getAccountName() + " account add success!");
+            DB4OUtil.storeSystem(system);
+            populateTable();
+        }
     }//GEN-LAST:event_btnRegistActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
+        int row = tblEmployee.getSelectedRow();
+        if(row < 0){
+            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // get selected enterprise
+        Account a = (Account) tblEmployee.getValueAt(row, 0);
+        
+        currEnterprise.getDepartments().get(0).getEmployee().removePerson(a.getPerson());
+        system.getAccounts().removeAccount(a);
+        
+        // store to database
+        DB4OUtil.storeSystem(system);
+        JOptionPane.showMessageDialog(null, "remove Account " + a + "success");
+        populateTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    public boolean inputValidate(){
+        boolean isEmpty = jtxPassword.getText().equals("")
+                || jtxUserName.getText().equals("");
+        if(isEmpty){
+            JOptionPane.showMessageDialog(null, "Please fill all text fields");
+            return false;
+        }  
+        return true;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> ComboRole;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnRegist;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jtxPassword;
     private javax.swing.JTextField jtxUserName;

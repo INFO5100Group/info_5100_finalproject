@@ -15,6 +15,7 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import static System.Configure.HttpRequestSender.executePost;
+import System.Configure.MapGenerator;
 import UserInterface.Register.RegistForEnterpriseJPanel;
 import java.awt.Color;
 import java.awt.Font;
@@ -158,6 +159,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         btnApply = new javax.swing.JButton();
         btnComplete = new javax.swing.JButton();
         MapJPanel = new javax.swing.JPanel();
+        jblMap = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         comboStartYear = new javax.swing.JComboBox<>();
@@ -230,15 +232,30 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
             }
         });
 
+        jblMap.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jblMap.setForeground(new java.awt.Color(100, 100, 100));
+        jblMap.setText("Clich here to generate a map");
+        jblMap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblMapMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout MapJPanelLayout = new javax.swing.GroupLayout(MapJPanel);
         MapJPanel.setLayout(MapJPanelLayout);
         MapJPanelLayout.setHorizontalGroup(
             MapJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(MapJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jblMap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         MapJPanelLayout.setVerticalGroup(
             MapJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 261, Short.MAX_VALUE)
+            .addGroup(MapJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jblMap, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
@@ -618,6 +635,13 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
         populatecomboDay();
     }//GEN-LAST:event_comboEndMonthPopupMenuWillBecomeInvisible
 
+    private void jblMapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblMapMouseClicked
+        if(!jtxLatitude.getText().isEmpty() && !jtxlongitude.getText().isEmpty()){
+            System.err.println("Creatring map");
+            MapGenerator.CreateMap(jtxLatitude.getText(), jtxlongitude.getText(), this.jblMap, 600,300);
+        }
+    }//GEN-LAST:event_jblMapMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable LicenseJTable;
@@ -638,6 +662,7 @@ public class ManagerWorkJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jblMap;
     private javax.swing.JTextField jtxLatitude;
     private javax.swing.JTextField jtxSpecies;
     private javax.swing.JTextField jtxWeight;

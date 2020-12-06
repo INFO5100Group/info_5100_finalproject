@@ -25,6 +25,8 @@ public class ConfigureASystem {
         Enterprise reg = addEnterprise("test reg", new RegAdminRole());
         reg.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
         reg.setState("Washington");
+        reg.setName("Washington Reglate Office");
+        
         // add employee for reg
         Person bob = new Person("bob","ellen","other");
         Account bobAccount = new Account("scientist", "123", bob, new RegulateScientistRole());
@@ -61,7 +63,7 @@ public class ConfigureASystem {
         man.getDepartments().addOrganization(new Organization("Purchasing Department"));
         man.getDepartments().addOrganization(new Organization("Production Department"));
         man.getDepartments().addOrganization(new Organization("Salse Department"));
-        man.setName("Good Fortinure");
+        man.setName("Good Furtinure");
         man.setWoodStorage(new WoodStorage());
         
         // employee
@@ -76,6 +78,7 @@ public class ConfigureASystem {
         Enterprise ret = addEnterprise("test retail", new RetailAdminRole());
         ret.getDepartments().addOrganization(new Organization("Purchasing Department"));
         ret.getDepartments().addOrganization(new Organization("Salse Department"));
+        ret.setName("Furtinure Dean");
         
         addEmployee(ret, "Gray", "Terrell", "rpur", 0, new RetailProcurementPersonRole());
         addEmployee(ret, "ron", "yap", "rsale", 1, new RetailSalesPersonRole());
@@ -84,6 +87,7 @@ public class ConfigureASystem {
 
         Enterprise log = addEnterprise("test logistic", new LogisticAdminRole());
         log.getDepartments().addOrganization(new Organization("Transportation Department"));
+        log.setName("东风快递");
         
         addEmployee(log, "ron", "devine", "ligistman", 0, new LogisticsPersonRole());
 
