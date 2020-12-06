@@ -6,6 +6,8 @@
 package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
@@ -201,6 +203,7 @@ public class OrderJPanel extends javax.swing.JPanel {
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         WorkRequest wr = getSelectdwr();
+        Enterprise currE = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
         if(!wr.getStatus().equals("Delivered")){
             JOptionPane.showMessageDialog(null, "You cannot confirm revice this object, because it is oot delivered");
             return;
@@ -209,6 +212,15 @@ public class OrderJPanel extends javax.swing.JPanel {
         int dialogResult = JOptionPane.showConfirmDialog(null, "You confirm to revice this object ?", "Warning", dialogButton);
         if (dialogResult == JOptionPane.YES_OPTION) {
             wr.resolve();
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            //添加木材到仓库
+            if(currE.getWoodStorage() == null){
+                currE.setWoodStorage(new WoodStorage());
+            }
+            int requestID = currInfo.getInt("RequestID");
+            WorkRequest woodRequest = system.getWorkQueue().getRequestByID(requestID);
+            Double amount = Double.parseDouble(new JSONObject(woodRequest.getMessage()).getString("Quantity"));
+            currE.getWoodStorage().addWood(currInfo.getString("Product"), amount);
             DB4OUtil.storeSystem(system);
             populateTable();
         }

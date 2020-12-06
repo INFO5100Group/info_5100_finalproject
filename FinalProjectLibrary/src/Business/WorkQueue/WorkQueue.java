@@ -45,4 +45,11 @@ public class WorkQueue extends ArrayList<WorkRequest>{
                     .toCollection(WorkQueue::new));
     }
     
+    public WorkRequest getRequestByID(int rID){
+        return this.stream()
+                .filter(r -> r.getID() == rID)
+                .findAny()
+                .orElse(null);
+    }
+    
 }

@@ -308,6 +308,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         WorkRequest wr = getSelectdwr();
         wr.setStatus("Delivered");
+        populateTable();
         DB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btnAcceptActionPerformed
 
