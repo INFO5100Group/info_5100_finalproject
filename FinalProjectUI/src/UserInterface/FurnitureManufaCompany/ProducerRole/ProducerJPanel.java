@@ -5,6 +5,8 @@
  */
 package UserInterface.FurnitureManufaCompany.ProducerRole;
 
+import Business.Account.Account;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -17,9 +19,9 @@ import javax.swing.table.TableColumn;
  */
 public class ProducerJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form NewJPanel
-     */
+    private Account account;
+    private EcoSystem system;
+    
     public ProducerJPanel() {
         initComponents();
         ProducerJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
@@ -37,6 +39,14 @@ public class ProducerJPanel extends javax.swing.JPanel {
          ImageIcon assgin=new ImageIcon("./image/assgin.png");
          btnAssgin.setIcon(assgin);
     }
+
+    public ProducerJPanel(Account account, EcoSystem system) {
+        this();
+        this.account = account;
+        this.system = system;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

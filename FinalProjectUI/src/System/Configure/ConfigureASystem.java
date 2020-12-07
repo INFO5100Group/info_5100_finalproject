@@ -68,7 +68,7 @@ public class ConfigureASystem {
         
         // employee
         addEmployee(man, "Annie", "Haag", "pur", 0, new ManuProcurementPersonRole());
-        addEmployee(man, "Steven", "Flores", "pro", 1, new ManuProcurementPersonRole());
+        addEmployee(man, "Steven", "Flores", "pro", 1, new ManuProducerRole());
         addEmployee(man, "Maria", "Yowell", "Designer", 1, new ManuDesignerRole());
         addEmployee(man, "rios", "smith", "msale", 2, new ManuSalesPersonRole());
         
