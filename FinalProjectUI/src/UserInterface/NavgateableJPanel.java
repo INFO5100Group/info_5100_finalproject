@@ -63,7 +63,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         }
     }
      private void setButtonImage(){
-         ImageIcon imageIcon=new ImageIcon("./image/红叉 (2)_1.png");
+         ImageIcon imageIcon=new ImageIcon("./image/hongcha.png");
          ImageIcon main=new ImageIcon("./image/我的 (2).png");
          jLabel1.setIcon(main);
          btnOut.setIcon(imageIcon);
@@ -162,15 +162,15 @@ public class NavgateableJPanel extends javax.swing.JPanel {
 
         jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
-        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, -1, 32));
+        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, -1, 32));
 
         btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOutActionPerformed(evt);
             }
         });
-        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1272, 0, 40, 40));
-        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 0, -1, -1));
+        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 0, 30, 30));
+        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 0, 30, 30));
 
         navContainer.setBackground(new java.awt.Color(255, 255, 255));
         navContainer.setLayout(new java.awt.CardLayout());
@@ -184,12 +184,12 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, 1316, Short.MAX_VALUE)))
+                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
