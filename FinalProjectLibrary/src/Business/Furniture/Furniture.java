@@ -13,7 +13,6 @@ public class Furniture extends SerializiedObject {
     private String name, type, woodType, color; // 家具名字， 类型， 木类型， 颜色
     private String Manufacturer, seller; // 家具制造商， 销售商
     private Double price, height, width, length;// 家具价格， 高度， 宽度， 长度
-    private int remian;// 家具存量
     private ImageIO image;
 
     public String getName() {
@@ -96,14 +95,6 @@ public class Furniture extends SerializiedObject {
         this.length = length;
     }
 
-    public int getRemian() {
-        return this.remian;
-    }
-
-    public void setRemian(int remian) {
-        this.remian = remian;
-    }
-
     public ImageIO getImage() {
         return this.image;
     }
@@ -111,6 +102,13 @@ public class Furniture extends SerializiedObject {
     public void setImage(ImageIO image) {
         this.image = image;
     }
+
+    @Override
+    public String toString() {
+        return name; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
     public static String[] FurtinureTypes = new String[]{
         "Chair",
@@ -235,4 +233,8 @@ public class Furniture extends SerializiedObject {
         "Portable Lamps",
         "Patio set"
     };
+
+    Object getWood() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -6,12 +6,27 @@
 package UserInterface.FurnitureManufaCompany.ProducerRole;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Furniture.Furniture;
+import Business.Furniture.FurnitureDirectory;
+import Business.Wood.WoodStorage;
+import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
@@ -21,32 +36,78 @@ public class ProducerJPanel extends javax.swing.JPanel {
 
     private Account account;
     private EcoSystem system;
-    
+    private WoodStorage woods;
+    private Enterprise currEnterprise;
+
     public ProducerJPanel() {
         initComponents();
-        ProducerJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        ProducerJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 7; i++) {
             TableColumn column = ProducerJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
         setButtonImage();
     }
-    private void setButtonImage(){
-         ImageIcon Complete=new ImageIcon("./image/Complete.png");
-         btnComplete.setIcon(Complete);
-         ImageIcon assgin=new ImageIcon("./image/assgin.png");
-         btnAssgin.setIcon(assgin);
+
+    private void setButtonImage() {
+        ImageIcon Complete = new ImageIcon("./image/Complete.png");
+        btnComplete.setIcon(Complete);
+        ImageIcon assgin = new ImageIcon("./image/assgin.png");
+        btnAssgin.setIcon(assgin);
     }
 
     public ProducerJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;
+        this.system = system;       
+        currEnterprise = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+        this.woods = currEnterprise.getWoodStorage();
+        populateTable();
     }
-    
-    
+
+    public void populateTable() {
+        populateDesignTable();
+        populateWoodTable();
+    }
+
+    public void populateDesignTable() {
+        DefaultTableModel model = (DefaultTableModel) this.ProducerJTable.getModel();
+        model.setRowCount(0);
+        WorkQueue wq = system.getWorkQueue().getRequestsByRecevier(account);
+        for (WorkRequest wr : wq) {
+            Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            Object row[] = new Object[7];
+            row[0] = wr;
+            row[1] = currInfo.get("Product");
+            row[2] = currInfo.get("Type");
+            row[3] = currInfo.get("TimberWeight");
+            row[4] = wr.getSender();
+            for (Account a : wr.getReceivers().keySet()) {
+                if (wr.getReceivers().get(a) == true) {
+                    row[5] = a.getAccountName();
+                    break;
+                }
+            }
+            row[6] = wr.getStatus();
+            model.addRow(row);
+
+        }
+    }
+
+    public void populateWoodTable() {
+        DefaultTableModel model = (DefaultTableModel) this.tblWood.getModel();
+        model.setRowCount(0);
+        for (String woodType : woods.keySet()) {
+            Object row[] = new Object[2];
+            row[0] = woodType;
+            row[1] = woods.get(woodType);
+            model.addRow(row);
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,22 +123,25 @@ public class ProducerJPanel extends javax.swing.JPanel {
         jtxNumber = new javax.swing.JTextField();
         btnAssgin = new javax.swing.JButton();
         btnComplete = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblWood = new javax.swing.JTable();
+        Picture = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         ProducerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ProductName", "FurnitureType", "CostTimberWeight", "Designer", "Producer", "Status"
+                "ID", "ProductName", "FurnitureType", "CostTimberWeight", "Designer", "Producer", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -88,12 +152,21 @@ public class ProducerJPanel extends javax.swing.JPanel {
         ProducerJTable.setRowHeight(25);
         ProducerJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
         ProducerJTable.setShowVerticalLines(false);
+        ProducerJTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ProducerJTableMousePressed(evt);
+            }
+        });
+        ProducerJTable.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ProducerJTableKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(ProducerJTable);
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel3.setText("How many:");
+        jLabel3.setText("Quantity");
 
-        btnAssgin.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\assign.png")); // NOI18N
         btnAssgin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAssgin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +174,6 @@ public class ProducerJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnComplete.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Complete.png")); // NOI18N
         btnComplete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,60 +181,172 @@ public class ProducerJPanel extends javax.swing.JPanel {
             }
         });
 
+        tblWood.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Wood Type", "Amount"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tblWood);
+
+        Picture.setText("<>");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(439, 439, 439)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 939, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(288, 288, 288)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(91, 91, 91)
-                                .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 837, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(696, 696, 696)
-                        .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(170, 170, 170)
-                        .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(214, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(265, 265, 265)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(171, 171, 171)
+                        .addComponent(Picture, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(505, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(178, 178, 178)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(130, 130, 130)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addGap(169, 169, 169)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Picture, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
+        if (inputValidate()) {
+            int selectedDesignRow = this.ProducerJTable.getSelectedRow();
+            int selectedwoodRow = this.tblWood.getSelectedRow();
+            Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+
+            if (selectedDesignRow < 0) {
+                JOptionPane.showMessageDialog(null, "please select a Design");
+                return;
+            }
+            if (selectedwoodRow < 0) {
+                JOptionPane.showMessageDialog(null, "please select a wood in storeage");
+                return;
+            }
+            String woodType = (String) tblWood.getValueAt(selectedwoodRow, 0);
+            WorkRequest wr = (WorkRequest) ProducerJTable.getValueAt(selectedDesignRow, 0);
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            Double cost = currInfo.getDouble("TimberWeight");
+            int amount = Integer.parseInt(jtxNumber.getText());
+            if (e.getWoodStorage().addWood(woodType, - amount * cost)) {
+                for(Account a: wr.getReceivers().keySet()){
+                    wr.getReceivers().put(a, Boolean.FALSE);
+                }
+                wr.getReceivers().put(account, true);
+                Furniture f = new Furniture();
+                f.setName( currInfo.getString("Product"));
+                f.setWoodType(woodType);
+                f.setType(currInfo.getString("Type"));
+                if(currEnterprise.getFurnitureStorage() == null){
+                    currEnterprise.setFurnitureStorage(new FurnitureDirectory());
+                }
+                currEnterprise.getFurnitureStorage().addFurniture(f, amount);
+                DB4OUtil.storeSystem(system);
+                JOptionPane.showMessageDialog(null, "you complate making " + amount + " " + currInfo.getString("Product"));
+                populateTable();
+            } else {
+                JOptionPane.showMessageDialog(null, "you dont have enough " + woodType + " in your storage");
+                return;
+            }
+        }
+
+
+    }//GEN-LAST:event_btnCompleteActionPerformed
 
     private void btnAssginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAssginActionPerformed
 
-    private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCompleteActionPerformed
+    private void ProducerJTableKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProducerJTableKeyPressed
 
+    }//GEN-LAST:event_ProducerJTableKeyPressed
 
+    private void ProducerJTableMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProducerJTableMousePressed
+        int selectedRow = this.ProducerJTable.getSelectedRow();
+        WorkRequest wr = (WorkRequest) ProducerJTable.getValueAt(selectedRow, 0);
+        JSONObject currInfo = new JSONObject(wr.getMessage());
+        String filename = currInfo.getString("designImg");
+        System.err.println(filename);
+        File img = new File("./image/DesignGraph/" +filename);
+        setImg(img);
+    }//GEN-LAST:event_ProducerJTableMousePressed
+
+    boolean inputValidate() {
+        if (jtxNumber.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "please input a number");
+            return false;
+        }
+        try {
+            Integer.parseInt(jtxNumber.getText());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Quantity should be integer number");
+            return false;
+        }
+        return true;
+    }
+
+    
+    private void setImg(File file) {
+        try {
+            BufferedImage myImg = ImageIO.read(file);
+            Image dImg = myImg.getScaledInstance(200,
+                    myImg.getHeight() * 200 / myImg.getWidth(),
+                    Image.SCALE_SMOOTH);
+            Picture.setIcon(new ImageIcon(dImg));
+            Picture.setText("");
+        } catch (IOException ex) {
+            Picture.setText("no image");
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Picture;
     private javax.swing.JTable ProducerJTable;
     private javax.swing.JButton btnAssgin;
     private javax.swing.JButton btnComplete;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jtxNumber;
+    private javax.swing.JTable tblWood;
     // End of variables declaration//GEN-END:variables
 }

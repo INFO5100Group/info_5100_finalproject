@@ -2,12 +2,14 @@ package System.Configure;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Role.Role;
 import Business.Wood.WoodStorage;
 import System.AccountRole.*;
 import EcoSystem.EcoSystem;
+import java.util.HashMap;
 import javax.swing.JPanel;
 
 public class ConfigureASystem {
@@ -65,6 +67,7 @@ public class ConfigureASystem {
         man.getDepartments().addOrganization(new Organization("Salse Department"));
         man.setName("Good Furtinure");
         man.setWoodStorage(new WoodStorage());
+        man.setFurnitureStorage(new FurnitureDirectory());
         
         // employee
         addEmployee(man, "Annie", "Haag", "pur", 0, new ManuProcurementPersonRole());
@@ -79,6 +82,7 @@ public class ConfigureASystem {
         ret.getDepartments().addOrganization(new Organization("Purchasing Department"));
         ret.getDepartments().addOrganization(new Organization("Salse Department"));
         ret.setName("Furtinure Dean");
+        ret.setFurnitureStorage(new FurnitureDirectory());
         
         addEmployee(ret, "Gray", "Terrell", "rpur", 0, new RetailProcurementPersonRole());
         addEmployee(ret, "ron", "yap", "rsale", 1, new RetailSalesPersonRole());

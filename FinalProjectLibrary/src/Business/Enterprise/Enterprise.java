@@ -1,17 +1,21 @@
 package Business.Enterprise;
 
 import Business.Account.Account;
+import Business.Furniture.Furniture;
+import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
 import Business.SerializiedObject;
 import Business.Organization.OrganizationDirectory;
 import Business.Person.Person;
 import Business.Wood.WoodStorage;
+import java.util.HashMap;
 
 public class Enterprise extends SerializiedObject{
     private String Name, ShortName; // 公司名字， 简短名（用于为员工创建邮箱账号）
     private String State, City, Street, ZipCode; // 公司地址信息
     private OrganizationDirectory Departments; // 公司下属部门
     private WoodStorage woodStorage; // 木的存储量， 不为伐木和制造公司则为null
+    private FurnitureDirectory furnitureStorage; // 家具存储， 不为制造公司或经销商则为null
     private Account admin; 
     
     private boolean approved;
@@ -109,6 +113,14 @@ public class Enterprise extends SerializiedObject{
         this.woodStorage = woodStorage;
     }
 
+    public FurnitureDirectory getFurnitureStorage() {
+        return furnitureStorage;
+    }
+
+    public void setFurnitureStorage(FurnitureDirectory furnitureStorage) {
+        this.furnitureStorage = furnitureStorage;
+    }
+    
     public Account getAdmin() {
         return admin;
     }
