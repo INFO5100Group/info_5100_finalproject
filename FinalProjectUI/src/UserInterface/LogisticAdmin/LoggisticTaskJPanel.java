@@ -100,6 +100,8 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         comboDeriverMan = new javax.swing.JComboBox<>();
         btnDistribute = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         tblTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

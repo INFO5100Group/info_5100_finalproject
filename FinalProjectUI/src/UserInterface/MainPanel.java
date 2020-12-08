@@ -64,7 +64,6 @@ public class MainPanel extends javax.swing.JPanel {
         btnEnterprise = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnDepartment = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1584, 897));
@@ -128,13 +127,6 @@ public class MainPanel extends javax.swing.JPanel {
 
         jLabel4.setBackground(java.awt.Color.white);
 
-        btnDepartment.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnDepartment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDepartmentActionPerformed(evt);
-            }
-        });
-
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\树11.jpg")); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -150,8 +142,7 @@ public class MainPanel extends javax.swing.JPanel {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(316, 316, 316))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -201,9 +192,7 @@ public class MainPanel extends javax.swing.JPanel {
                 .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(btnDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -249,7 +238,7 @@ public class MainPanel extends javax.swing.JPanel {
     private void setButtonImage(){
          ImageIcon imageIcon=new ImageIcon("./image/Login_1.png");
          ImageIcon enterprise=new ImageIcon("./image/enterprise.png");
-         ImageIcon department=new ImageIcon("./image/department.png");
+         //ImageIcon department=new ImageIcon("./image/department.png");
          ImageIcon customer=new ImageIcon("./image/customer.png");
          ImageIcon main=new ImageIcon("./image/我的 (2).png");
          ImageIcon main1=new ImageIcon("./image/密码 (1).png");
@@ -260,7 +249,7 @@ public class MainPanel extends javax.swing.JPanel {
          btnCustomer.setIcon(customer);
          btnEnterprise.setIcon(enterprise);
          btnLogin.setIcon(imageIcon);
-         btnDepartment.setIcon(department);
+         //btnDepartment.setIcon(department);
     }
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String un = userNameJTextField4.getText();
@@ -287,14 +276,9 @@ public class MainPanel extends javax.swing.JPanel {
         CardLayoutNavigator.goNext(container, EnterpriseRegist, "reguster enterprise ");
     }//GEN-LAST:event_btnEnterpriseActionPerformed
 
-    private void btnDepartmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepartmentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDepartmentActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCustomer;
-    private javax.swing.JButton btnDepartment;
     private javax.swing.JButton btnEnterprise;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
