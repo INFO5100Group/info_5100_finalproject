@@ -63,10 +63,108 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         }
     }
      private void setButtonImage(){
-         ImageIcon imageIcon=new ImageIcon("./image/红叉 (2)_1.png");
+         ImageIcon imageIcon=new ImageIcon("./image/hongcha.png");
          ImageIcon main=new ImageIcon("./image/我的 (2).png");
          jLabel1.setIcon(main);
          btnOut.setIcon(imageIcon);
+        if("SysAdmin".equals(account.getRole().rType.toString())                 
+          ){
+         ImageIcon bt1=new ImageIcon("./image/manageRequests.png");
+         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
+         ImageIcon lb1=new ImageIcon("./image/审核 (4).png");
+         ImageIcon lb2=new ImageIcon("./image/资讯.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         btn1.setIcon(bt1);
+         btn2.setIcon(bt2);
+         jPanel3.setVisible(false);
+         jPanel4.setVisible(false);
+         }
+        if("LogisticAdmin".equals(account.getRole().rType.toString())                     
+                 ){
+         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
+         btn1.setIcon(bt1);
+         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
+         btn1.setIcon(bt2);
+         ImageIcon lb1=new ImageIcon("./image/审核 (4).png");
+         ImageIcon lb2=new ImageIcon("./image/资讯.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         jPanel3.setVisible(false);
+         jPanel4.setVisible(false);
+         }
+         if("ForestSalesPerson".equals(account.getRole().rType.toString())||
+            "ManuSalsePerson".equals(account.getRole().rType.toString())||   
+            "RetailSalsePerson".equals(account.getRole().rType.toString())     
+                 ){
+         ImageIcon bt1=new ImageIcon("./image/confirmPrice.png");
+         btn1.setIcon(bt1);
+         ImageIcon bt2=new ImageIcon("./image/distributeOrders.png");
+         btn2.setIcon(bt2);
+         ImageIcon lb1=new ImageIcon("./image/明细.png");
+         ImageIcon lb2=new ImageIcon("./image/配送.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         jPanel3.setVisible(false);
+         jPanel4.setVisible(false);
+         }
+         if("ManuProcurementPerson".equals(account.getRole().rType.toString())||
+            "RetailProcurementPerson".equals(account.getRole().rType.toString())){
+         ImageIcon bt1=new ImageIcon("./image/confirmPrice.png");
+         btn1.setIcon(bt1);
+         ImageIcon bt2=new ImageIcon("./image/viewOrders.png");
+         btn2.setIcon(bt2);
+         ImageIcon lb1=new ImageIcon("./image/明细.png");
+         ImageIcon lb2=new ImageIcon("./image/订单.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         jPanel3.setVisible(false);
+         jPanel4.setVisible(false);
+         }
+         /*if("LogisticsPseron".equals(account.getRole().rType.toString())){
+         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
+         btn1.setIcon(bt1);
+         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
+         btn2.setIcon(bt2);
+         ImageIcon lb1=new ImageIcon("./image/审核 (4).png");
+         ImageIcon lb2=new ImageIcon("./image/资讯.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         jPanel3.setVisible(false);
+         jPanel4.setVisible(false);
+         }*/
+         if("Customer".equals(account.getRole().rType.toString())){
+         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
+         btn1.setIcon(bt1);
+         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
+         btn2.setIcon(bt2);
+         ImageIcon bt3=new ImageIcon("./image/manageInfo.png");
+         btn2.setIcon(bt3);
+         ImageIcon lb1=new ImageIcon("./image/审核 (4).png");
+         ImageIcon lb2=new ImageIcon("./image/资讯.png");
+         jLabel2.setIcon(lb1);
+         jLabel3.setIcon(lb2);
+         ImageIcon lb3=new ImageIcon("./image/资讯.png");
+         jLabel4.setIcon(lb3);
+         jPanel4.setVisible(false);
+         }
+         if(
+           "RetailAdmin".equals(account.getRole().rType.toString())||        
+           "ManuAdmin".equals(account.getRole().rType.toString())||                
+           "ForestAdmin".equals(account.getRole().rType.toString())||
+           "RegulateAdmin".equals(account.getRole().rType.toString())||
+           "RegulateScientist".equals(account.getRole().rType.toString())||
+           "ForestLoggingManager".equals(account.getRole().rType.toString())||
+           "ManuProducer".equals(account.getRole().rType.toString())||
+           "ManuDesigner".equals(account.getRole().rType.toString())||
+           "LogisticsPseron".equals(account.getRole().rType.toString())){
+            this.btn1.setVisible(false);
+            this.btn1.setEnabled(false);
+            jPanel1.setVisible(false);
+            jPanel2.setVisible(false);
+            jPanel3.setVisible(false);
+            jPanel4.setVisible(false);
+         }
     }   
     public void loadNavBtn(){
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
@@ -100,9 +198,17 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         sideBar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
+        jPanel1 = new javax.swing.JPanel();
         btn1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         btn2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         btn3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         btn4 = new javax.swing.JButton();
         topBar = new javax.swing.JPanel();
         jblUserType = new javax.swing.JLabel();
@@ -122,6 +228,8 @@ public class NavgateableJPanel extends javax.swing.JPanel {
 
         sideBar.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 229, -1));
 
+        jPanel1.setBackground(new java.awt.Color(149, 19, 19));
+
         btn1.setBackground(new java.awt.Color(102, 51, 0));
         btn1.setForeground(new java.awt.Color(102, 51, 0));
         btn1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +237,31 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 btn1ActionPerformed(evt);
             }
         });
-        sideBar.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 116, 284, 39));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        sideBar.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 290, 40));
+
+        jPanel2.setBackground(new java.awt.Color(149, 19, 19));
 
         btn2.setBackground(new java.awt.Color(102, 51, 0));
         btn2.setForeground(new java.awt.Color(102, 51, 0));
@@ -138,7 +270,29 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 btn2ActionPerformed(evt);
             }
         });
-        sideBar.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 155, 284, 39));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        sideBar.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 290, 40));
+
+        jPanel3.setBackground(new java.awt.Color(149, 19, 19));
 
         btn3.setBackground(new java.awt.Color(102, 51, 0));
         btn3.setForeground(new java.awt.Color(102, 51, 0));
@@ -147,7 +301,29 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 btn3ActionPerformed(evt);
             }
         });
-        sideBar.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 284, 39));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        sideBar.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 290, 40));
+
+        jPanel4.setBackground(new java.awt.Color(149, 19, 19));
 
         btn4.setBackground(new java.awt.Color(102, 51, 0));
         btn4.setForeground(new java.awt.Color(102, 51, 0));
@@ -156,21 +332,41 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 btn4ActionPerformed(evt);
             }
         });
-        sideBar.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 233, 284, 39));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        sideBar.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 290, 40));
 
         topBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
-        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, -1, 32));
+        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, -1, 32));
 
         btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOutActionPerformed(evt);
             }
         });
-        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1272, 0, 40, 40));
-        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 0, -1, -1));
+        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 0, 30, 30));
+        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 30, 30));
 
         navContainer.setBackground(new java.awt.Color(255, 255, 255));
         navContainer.setLayout(new java.awt.CardLayout());
@@ -184,12 +380,12 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, 1316, Short.MAX_VALUE)))
+                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
@@ -200,17 +396,6 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
     }//GEN-LAST:event_btn1ActionPerformed
-
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        if(JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()){
-            ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
-        }else if(JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()){
-            ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
-        }else if(JPanelPos2.getClass() == (new UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel()).getClass()){
-            ((UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
-        }
-        CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
-    }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         CardLayoutNavigator.goNext(navContainer, JPanelPos3, this.account.getAccountName() + "pos3");
@@ -224,14 +409,33 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         CardLayoutNavigator.logout(contianer, this);
     }//GEN-LAST:event_btnOutActionPerformed
 
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        if(JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()){
+            ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }else if(JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()){
+            ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
+        }else if(JPanelPos2.getClass() == (new UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel()).getClass()){
+            ((UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }
+        CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
+    }//GEN-LAST:event_btn2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn1;
-    public javax.swing.JButton btn2;
+    private javax.swing.JButton btn2;
     public javax.swing.JButton btn3;
     public javax.swing.JButton btn4;
     private javax.swing.JButton btnOut;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
     private javax.swing.JLabel jblUserType;

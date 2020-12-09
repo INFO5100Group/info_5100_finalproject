@@ -12,6 +12,7 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.json.JSONObject;
@@ -45,7 +46,10 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
             comboDeriverMan.addItem(currAccount + " (" + currAccount.getID() + ")");
         }
     }
-    
+     private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/distribute.png");
+         btnDistribute.setIcon(delete);
+    }    
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)this.tblTasks.getModel();
         model.setRowCount(0);
@@ -99,6 +103,8 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         tblTasks = new javax.swing.JTable();
         comboDeriverMan = new javax.swing.JComboBox<>();
         btnDistribute = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         tblTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

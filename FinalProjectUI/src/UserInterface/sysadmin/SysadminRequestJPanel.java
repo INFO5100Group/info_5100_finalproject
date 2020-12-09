@@ -30,6 +30,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
      */
     public SysadminRequestJPanel() {
         initComponents();
+        setButtonImage();
     }
 
     public SysadminRequestJPanel(Account a, EcoSystem sys) {
@@ -112,7 +113,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         });
 
         btnApprove.setBackground(new java.awt.Color(255, 255, 255));
-        btnApprove.setBorder(null);
+        btnApprove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApproveActionPerformed(evt);
