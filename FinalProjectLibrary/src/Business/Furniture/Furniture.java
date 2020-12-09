@@ -3,6 +3,7 @@ package Business.Furniture;
 import javax.imageio.ImageIO;
 
 import Business.SerializiedObject;
+import java.awt.Image;
 
 /**
  * 家具类
@@ -13,7 +14,7 @@ public class Furniture extends SerializiedObject {
     private String name, type, woodType, color; // 家具名字， 类型， 木类型， 颜色
     private String Manufacturer, seller; // 家具制造商， 销售商
     private Double price, height, width, length;// 家具价格， 高度， 宽度， 长度
-    private ImageIO image;
+    private String image;
 
     public String getName() {
         return this.name;
@@ -95,17 +96,17 @@ public class Furniture extends SerializiedObject {
         this.length = length;
     }
 
-    public ImageIO getImage() {
+    public String getImage() {
         return this.image;
     }
 
-    public void setImage(ImageIO image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
     @Override
     public String toString() {
-        return name; //To change body of generated methods, choose Tools | Templates.
+        return name; 
     }
     
     

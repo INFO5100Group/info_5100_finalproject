@@ -29,7 +29,7 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
 
     public boolean removeFurniture(Furniture f, int amount) {
         if (Indexer.keySet().contains(f.getID())) {
-            Indexer.put(f.getID(), Indexer.get(f.getID() - amount));
+            Indexer.put(f.getID(), Indexer.get(f.getID()) - amount);
             return true;
         } else {
             return false;
@@ -47,7 +47,19 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
     }
 
     public int getRemain(Furniture f) {
-        return this.Indexer.get(f);
+        return this.Indexer.get(f.getID());
+    }
+    
+    /**
+     * 
+     * @param n
+     * @return 
+     */
+    public Furniture getByName(String n){
+        return this.stream()
+                .filter(f -> f.getName().equals(n))
+                .findAny()
+                .orElse(null);
     }
 
     /**

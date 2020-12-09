@@ -8,6 +8,7 @@ package EcoSystem;
 import Business.Account.Account;
 import Business.Account.AccountDirectory;
 import Business.Enterprise.EnterpriseDirectory;
+import Business.Furniture.FurnitureDirectory;
 import Business.Person.Person;
 import Business.Role.Role;
 import Business.Role.RoleType;
@@ -22,12 +23,14 @@ public class EcoSystem {
     private AccountDirectory accounts;
     private EnterpriseDirectory enterprises;
     private WorkQueue workQueue;
+    private FurnitureDirectory furnitureMarket;
     private static EcoSystem currSystem;
     
     public EcoSystem(){
         this.accounts = new AccountDirectory();
         this.enterprises = new EnterpriseDirectory();
         this.workQueue = new WorkQueue();
+        this.furnitureMarket = new FurnitureDirectory();
     }
 
     public static EcoSystem getInstance(){
@@ -45,6 +48,14 @@ public class EcoSystem {
                 .filter(s -> s.getRole().rType == RoleType.SysAdmin)
                 .collect(Collectors
                         .toCollection(AccountDirectory::new));
+    }
+
+    public FurnitureDirectory getFurnitureMarket() {
+        return furnitureMarket;
+    }
+
+    public void setFurnitureMarket(FurnitureDirectory furnitureMarket) {
+        this.furnitureMarket = furnitureMarket;
     }
     
     public boolean createAccount(String un, String pw, Person p, Role r){
