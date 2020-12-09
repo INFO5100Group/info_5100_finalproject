@@ -21,8 +21,8 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="701" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace pref="533" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -49,7 +49,7 @@
                       <Component id="btnRegist" min="-2" pref="183" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="btnDelete" min="-2" pref="183" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="402" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="393" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -60,7 +60,7 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="134" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jtxUserName" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
@@ -75,12 +75,12 @@
                   <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                   <Component id="ComboRole" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="127" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnDelete" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
                   <Component id="btnRegist" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace pref="223" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -149,7 +149,9 @@
           </StringArray>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
         </Property>
       </Properties>
       <AuxValues>

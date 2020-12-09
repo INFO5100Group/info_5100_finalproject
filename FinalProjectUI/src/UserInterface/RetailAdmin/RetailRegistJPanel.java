@@ -88,7 +88,7 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
 
         ComboRole.setBackground(new java.awt.Color(102, 102, 102));
         ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ComboRole.setBorder(null);
+        ComboRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {

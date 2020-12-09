@@ -5,13 +5,22 @@
  */
 package UserInterface.FurnitureManufaCompany.SalesRole;
 
-import UserInterface.ForestryCompany.SalesRole.*;
+import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Role.RoleType;
+import Business.WorkQueue.WorkRequest;
+import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
@@ -19,10 +28,13 @@ import javax.swing.table.TableColumn;
  */
 public class SalesOrderJPanel extends javax.swing.JPanel {
     private JPanel UserProcessContainer;
+    
+    private Account account;
+    private EcoSystem system;
     /**
      * Creates new form SalesOrderJPanel
      */
-    public SalesOrderJPanel(JPanel UserProcessContainer) {
+    public SalesOrderJPanel() {
         initComponents();
         OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
@@ -31,10 +43,64 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
              column.setHeaderRenderer(cellRenderer);
         }
-        this.UserProcessContainer = UserProcessContainer;
         setButtonImage();
     }
 
+    public SalesOrderJPanel(Account account, EcoSystem system) {
+        this();
+        this.account = account;
+        this.system = system;
+        populateTable();
+        populateCombo();
+    }
+    
+    public void populateCombo() {
+        LogisticCompanyCombo.removeAllItems();
+        LogisticCompanyCombo.addItem("Select Logistic Company");
+        for (Enterprise e : system.getEnterprises()) {
+            if (e.getAdmin().getRole().rType == RoleType.LogisticAdmin) {
+                LogisticCompanyCombo.addItem(e.getName() + "(" + e.getID() + ")");
+            }
+        }
+    }
+
+    public int getEnterpriseID(String str) {
+        String IDstr = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
+        return Integer.parseInt(IDstr);
+    }
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.OrderJTable.getModel();
+        model.setRowCount(0);
+        for (WorkRequest wr : system.getWorkQueue()) {
+            if (wr.getSender() == this.account) {
+                Object row[] = new Object[6];
+                ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                try {
+                    row[1] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+                    ).getName();
+                } catch (Exception e) {
+                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+                }
+
+                row[2] = currInfo.getString("Product");
+                row[3] = currInfo.getString("TotalPrice");
+                try {
+                    row[4] = system.getEnterprises().getEnterpriseByAccout(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
+                    ).getName();
+                } catch (Exception e) {
+                }
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+            }
+        }
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,7 +182,28 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
-        // TODO add your handling code here:
+        int selectedRow = this.OrderJTable.getSelectedRow();
+
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "please select a row");
+            return;
+        } else if (LogisticCompanyCombo.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "please select a logistic company");
+            return;
+        } else {
+            Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
+            WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
+            try {
+                (new ArrayList<>(wr.getReceivers().keySet())).get(1);
+            } catch (java.lang.IndexOutOfBoundsException e) {
+                wr.getReceivers().put(logistic.getAdmin(), false);
+                DB4OUtil.storeSystem(system);
+                populateTable();
+                return;
+            }
+            JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+            return;
+        }
     }//GEN-LAST:event_btnDistributeActionPerformed
     private void setButtonImage(){
          ImageIcon distribute=new ImageIcon("./image/distribute.png");

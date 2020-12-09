@@ -56,11 +56,11 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
                 row[0] = wr;
                 row[1] = wr.getSender();
                 try{
-                    row[2] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+                    row[2] = system.getEnterprises().getEnterpriseByEmployeeAccount(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
                     ).getName();
                 }catch (Exception e){
-                    row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+                    row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(1);
                 }
                 
                 try{
@@ -99,8 +99,6 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         tblTasks = new javax.swing.JTable();
         comboDeriverMan = new javax.swing.JComboBox<>();
         btnDistribute = new javax.swing.JButton();
-
-        setBackground(new java.awt.Color(255, 255, 255));
 
         tblTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
