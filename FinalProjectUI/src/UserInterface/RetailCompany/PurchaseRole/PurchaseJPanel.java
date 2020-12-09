@@ -5,34 +5,89 @@
  */
 package UserInterface.RetailCompany.PurchaseRole;
 
-import UserInterface.ForestryCompany.SalesRole.*;
+import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequest;
+import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import java.awt.Color;
 import java.awt.Font;
-import javax.swing.JPanel;
+import java.util.Iterator;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
  * @author Administrator
  */
 public class PurchaseJPanel extends javax.swing.JPanel {
-    private JPanel UserProcessContainer;
-    /**
-     * Creates new form SalesWorkJPanel1
-     */
-    public PurchaseJPanel(JPanel UserProcessContainer) {
+
+    private Account account;
+    private EcoSystem system;
+
+    public PurchaseJPanel() {
         initComponents();
-        this.UserProcessContainer = UserProcessContainer;
-        BargainJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        BargainJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<7;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 6; i++) {
             TableColumn column = BargainJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
     }
 
+    public PurchaseJPanel(Account account, EcoSystem system) {
+        this();
+        this.account = account;
+        this.system = system;
+        populateTable();
+    }
+    
+    public void populateTable(){
+        DefaultTableModel model = (DefaultTableModel) this.BargainJTable.getModel();
+        model.setRowCount(0);
+        WorkQueue wq = system.getWorkQueue().getRequestsBySender(account);
+        for (WorkRequest wr : wq) {
+            if (!wr.isIsCompleted()) {
+                Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                Object row[] = new Object[7];
+                row[1] = e.getName() + "-" + account.getAccountName();
+                row[2] = currInfo.getString("ProductType");
+                row[3] = currInfo.getString("Quantity");
+                row[4] = currInfo.getString("BuyerOffer");
+                row[5] = wr.getStatus();
+                row[0] = wr;
+                model.addRow(row);
+            }
+        }
+    }
+    
+    public void populateSellersTable() {
+        int selectedRow = this.BargainJTable.getSelectedRow();
+        if (selectedRow >= 0) {
+            WorkRequest er = (WorkRequest) (BargainJTable.getValueAt(selectedRow, 0));
+            DefaultTableModel model = (DefaultTableModel) this.SellerOfferTable.getModel();
+            model.setRowCount(0);
+            JSONObject currInfo = new JSONObject(er.getMessage());
+            JSONObject sellerInfo = currInfo.getJSONObject("Seller");
+            Iterator<String> keys = sellerInfo.keys();
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                Object row[] = new Object[2];
+                row[0] = key;
+                row[1] = sellerInfo.get(key);
+                model.addRow(row);
+            }
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,34 +97,29 @@ public class PurchaseJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        barginPrice = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         BargainJTable = new javax.swing.JTable();
+        btnRequest = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        SellerOfferTable = new javax.swing.JTable();
         btnAccept = new javax.swing.JButton();
-        btnBargain = new javax.swing.JButton();
-        btnRefresh = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        barginPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                barginPriceActionPerformed(evt);
-            }
-        });
-
         BargainJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "BuyerName", "SalerName", "ProductName", "Quantity", "BuyerOffer", "SalerOffer", "Status"
+                "ID", "BuyerName", "ProductType", "Quantity", "BuyerOffer", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                true, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -80,29 +130,39 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         BargainJTable.setRowHeight(25);
         BargainJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
         BargainJTable.setShowVerticalLines(false);
+        BargainJTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BargainJTableMousePressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(BargainJTable);
 
-        btnAccept.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Accept.png")); // NOI18N
+        btnRequest.setText("Create Request");
+        btnRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRequestActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Seller Offer");
+
+        SellerOfferTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Seller", "Offer ($)"
+            }
+        ));
+        jScrollPane2.setViewportView(SellerOfferTable);
+
         btnAccept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
-            }
-        });
-
-        btnBargain.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Bargain.png")); // NOI18N
-        btnBargain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnBargain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBargainActionPerformed(evt);
-            }
-        });
-
-        btnRefresh.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\Refresh.png")); // NOI18N
-        btnRefresh.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshActionPerformed(evt);
             }
         });
 
@@ -111,62 +171,85 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(538, 538, 538)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(barginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(325, 325, 325)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(444, 444, 444)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(620, 620, 620)
+                                .addComponent(jLabel4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAccept, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
+                .addGap(86, 86, 86)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(barginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(185, 185, 185)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(279, Short.MAX_VALUE))
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel4)
+                        .addGap(72, 72, 72)
+                        .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void barginPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barginPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_barginPriceActionPerformed
+    private void btnRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestActionPerformed
+        CreateRequestJFrame crf = new CreateRequestJFrame(account, system, this);
+        crf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        crf.setVisible(true);
+    }//GEN-LAST:event_btnRequestActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        // TODO add your handling code here:
+        int SelectRequestRow = this.BargainJTable.getSelectedRow();
+        int SelectSellerRow = this.SellerOfferTable.getSelectedRow();
+
+        if(SelectRequestRow < 0){
+            JOptionPane.showMessageDialog(null, "Select a request");
+            return;
+        }else if(SelectSellerRow < 0){
+            JOptionPane.showMessageDialog(null, "Select a seller offer");
+            return;
+        }else{
+            WorkRequest wr = (WorkRequest) (BargainJTable.getValueAt(SelectRequestRow, 0));
+            String sellerName = (String) this.SellerOfferTable.getValueAt(SelectSellerRow, 0);
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            currInfo.put("SellerOffer", sellerName);
+            currInfo.put("DealPrice", SellerOfferTable.getValueAt(SelectSellerRow, 1)+"");
+            wr.setMessage(currInfo.toString());
+            wr.setStatus("Deal");
+            DB4OUtil.storeSystem(system);
+            populateTable();
+            JOptionPane.showMessageDialog(null, "you have accept " + sellerName + "'s "
+                + currInfo.get("Product")
+                + " with price of " + this.SellerOfferTable.getValueAt(SelectSellerRow, 1));
+        }
     }//GEN-LAST:event_btnAcceptActionPerformed
 
-    private void btnBargainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBargainActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBargainActionPerformed
-
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRefreshActionPerformed
+    private void BargainJTableMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BargainJTableMousePressed
+        populateSellersTable();
+    }//GEN-LAST:event_BargainJTableMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable BargainJTable;
-    private javax.swing.JTextField barginPrice;
+    private javax.swing.JTable SellerOfferTable;
     private javax.swing.JButton btnAccept;
-    private javax.swing.JButton btnBargain;
-    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnRequest;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

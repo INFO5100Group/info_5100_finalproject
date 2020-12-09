@@ -277,6 +277,7 @@ public class ProducerJPanel extends javax.swing.JPanel {
                 f.setName( currInfo.getString("Product"));
                 f.setWoodType(woodType);
                 f.setType(currInfo.getString("Type"));
+                f.setManufacturer(currEnterprise.getName());
                 if(currEnterprise.getFurnitureStorage() == null){
                     currEnterprise.setFurnitureStorage(new FurnitureDirectory());
                 }

@@ -2,6 +2,7 @@ package System.Configure;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
 import Business.Person.Person;
@@ -68,6 +69,11 @@ public class ConfigureASystem {
         man.setName("Good Furtinure");
         man.setWoodStorage(new WoodStorage());
         man.setFurnitureStorage(new FurnitureDirectory());
+        Furniture f = new Furniture();
+        f.setName("Good Table");
+        f.setType("Table");
+        f.setWoodType("red wood");
+        man.getFurnitureStorage().addFurniture(f, 100);
         
         // employee
         addEmployee(man, "Annie", "Haag", "pur", 0, new ManuProcurementPersonRole());

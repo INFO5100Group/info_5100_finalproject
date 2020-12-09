@@ -11,18 +11,18 @@ import UserInterface.NavgateableJPanel;
 
 public class ManuProcurementPersonRole extends Role {
 
-    public ManuProcurementPersonRole(){
+    public ManuProcurementPersonRole() {
         this.rType = RoleType.ManuProcurementPerson;
     }
 
     @Override
     public JPanel createWorkArea(JPanel arg0, Account arg1, EcoSystem arg2) {
         // TODO Auto-generated method stub
-            NavgateableJPanel WorkArea = new NavgateableJPanel (arg0, arg1, arg2);
-            WorkArea.JPanelPos1 = new PurchaseJPanel(arg1, arg2);
-            WorkArea.JPanelPos2 = new OrderJPanel(arg1, arg2);
-            WorkArea.loadNavBtn();
-            return WorkArea;
+        NavgateableJPanel WorkArea = new NavgateableJPanel(arg0, arg1, arg2);
+        WorkArea.JPanelPos1 = new PurchaseJPanel(arg1, arg2);
+        WorkArea.JPanelPos2 = new OrderJPanel(arg1, arg2);
+        WorkArea.loadNavBtn();
+        return WorkArea;
     }
-    
+
 }

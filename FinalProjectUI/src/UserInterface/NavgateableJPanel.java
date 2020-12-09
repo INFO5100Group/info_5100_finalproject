@@ -8,7 +8,6 @@ package UserInterface;
 import Business.Account.Account;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
-import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -64,66 +63,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         }
     }
      private void setButtonImage(){
-         ImageIcon imageIcon=new ImageIcon("./image/hongcha.png");
+         ImageIcon imageIcon=new ImageIcon("./image/红叉 (2)_1.png");
          ImageIcon main=new ImageIcon("./image/我的 (2).png");
          jLabel1.setIcon(main);
          btnOut.setIcon(imageIcon);
-        if("SysAdmin".equals(account.getRole().rType.toString())                 
-          ){
-         ImageIcon bt1=new ImageIcon("./image/manageRequests.png");
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         btn2.setIcon(bt2);
-         }
-        if("LogisticAdmin".equals(account.getRole().rType.toString())                     
-                 ){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt2); 
-         }
-         if("ForestSalesPerson".equals(account.getRole().rType.toString())||
-            "ManuSalsePerson".equals(account.getRole().rType.toString())||   
-            "RetailSalsePerson".equals(account.getRole().rType.toString())     
-                 ){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt2);  
-         }
-         if("ManuProcurementPerson".equals(account.getRole().rType.toString())||
-            "RetailProcurementPerson".equals(account.getRole().rType.toString())){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt2);  
-         }
-         if("LogisticsPseron".equals(account.getRole().rType.toString())){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt2);  
-         }
-         if("Customer".equals(account.getRole().rType.toString())){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
-         btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt2);
-         ImageIcon bt3=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt3);  
-         }
-         if(
-           "RetailAdmin".equals(account.getRole().rType.toString())||        
-           "ManuAdmin".equals(account.getRole().rType.toString())||                
-           "ForestAdmin".equals(account.getRole().rType.toString())||
-           "RegulateAdmin".equals(account.getRole().rType.toString())||
-           "RegulateScientist".equals(account.getRole().rType.toString())||
-           "ForestLoggingManager".equals(account.getRole().rType.toString())||
-           "ManuProducer".equals(account.getRole().rType.toString())||
-           "ManuDesigner".equals(account.getRole().rType.toString())){
-            this.btn1.setVisible(false);
-            this.btn1.setEnabled(false);
-         }         
     }   
     public void loadNavBtn(){
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
@@ -181,57 +124,53 @@ public class NavgateableJPanel extends javax.swing.JPanel {
 
         btn1.setBackground(new java.awt.Color(102, 51, 0));
         btn1.setForeground(new java.awt.Color(102, 51, 0));
-        btn1.setBorder(null);
         btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn1ActionPerformed(evt);
             }
         });
-        sideBar.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 40));
+        sideBar.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 116, 284, 39));
 
         btn2.setBackground(new java.awt.Color(102, 51, 0));
         btn2.setForeground(new java.awt.Color(102, 51, 0));
-        btn2.setBorder(null);
         btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn2ActionPerformed(evt);
             }
         });
-        sideBar.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 270, 39));
+        sideBar.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 155, 284, 39));
 
         btn3.setBackground(new java.awt.Color(102, 51, 0));
         btn3.setForeground(new java.awt.Color(102, 51, 0));
-        btn3.setBorder(null);
         btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn3ActionPerformed(evt);
             }
         });
-        sideBar.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 270, 39));
+        sideBar.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 284, 39));
 
         btn4.setBackground(new java.awt.Color(102, 51, 0));
         btn4.setForeground(new java.awt.Color(102, 51, 0));
-        btn4.setBorder(null);
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn4ActionPerformed(evt);
             }
         });
-        sideBar.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 270, 39));
+        sideBar.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 233, 284, 39));
 
         topBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
-        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 0, -1, 32));
+        topBar.add(jblUserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, -1, 32));
 
         btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOutActionPerformed(evt);
             }
         });
-        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 0, 30, 30));
-        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 0, 30, 30));
+        topBar.add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1272, 0, 40, 40));
+        topBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 0, -1, -1));
 
         navContainer.setBackground(new java.awt.Color(255, 255, 255));
         navContainer.setLayout(new java.awt.CardLayout());
@@ -245,12 +184,12 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, 1316, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(navContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
@@ -267,6 +206,8 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
         }else if(JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()){
             ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
+        }else if(JPanelPos2.getClass() == (new UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel()).getClass()){
+            ((UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
         }
         CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
     }//GEN-LAST:event_btn2ActionPerformed
