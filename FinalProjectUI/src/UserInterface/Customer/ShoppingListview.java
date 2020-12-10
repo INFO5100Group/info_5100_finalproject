@@ -5,8 +5,10 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
 import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
+import EcoSystem.EcoSystem;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
@@ -20,23 +22,27 @@ public class ShoppingListview extends javax.swing.JPanel {
     private JPanel contianer;
     private FurnitureDirectory displayFurniture;
     private FurnitureDirectory realFurniture;
+    private EcoSystem system;
+    private Account account;
     private int col = 4;
 
     public ShoppingListview() {
         initComponents();
     }
 
-    public ShoppingListview(FurnitureDirectory df, FurnitureDirectory theTable) {
+    public ShoppingListview(FurnitureDirectory df, EcoSystem sys, Account account) {
         this.setLayout(new GridLayout(0, col));
         this.displayFurniture = df;
-        this.realFurniture  = theTable;
+        this.realFurniture  = sys.getFurnitureMarket();
+        this.system = sys;
+        this.account = account;
         populateList();
     }
 
     private void populateList() {
         try {
             for (Furniture f : displayFurniture) {
-                FurnitureTemplate ft = new FurnitureTemplate(f, realFurniture);
+                FurnitureTemplate ft = new FurnitureTemplate(f, system, account);
                 this.add(ft);
             }
         } catch (java.lang.NullPointerException e) {

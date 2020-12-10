@@ -5,8 +5,10 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
 import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
+import EcoSystem.EcoSystem;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -24,15 +26,19 @@ public class FurnitureTemplate extends javax.swing.JPanel {
     private static DecimalFormat df2 = new DecimalFormat(".##");
     private Furniture currFurniture;
     private FurnitureDirectory realFurniture;
+    private EcoSystem system;
+    private Account account;
 
     public FurnitureTemplate() {
         initComponents();
     }
 
-    public FurnitureTemplate(Furniture f, FurnitureDirectory fd) {
+    public FurnitureTemplate(Furniture f, EcoSystem sys, Account acc) {
         this();
         currFurniture = f;
-        realFurniture = fd;
+        realFurniture = sys.getFurnitureMarket();
+        this.system = sys;
+        this.account  = acc;
         populateContnet();
     }
 
@@ -44,11 +50,13 @@ public class FurnitureTemplate extends javax.swing.JPanel {
         } catch (Exception e) {
         }
         try {
+            
             File imgFile = new File("./image/FurnitureImage/" + currFurniture.getImage());
             BufferedImage myImg = ImageIO.read(imgFile);
             Image dImg = myImg.getScaledInstance(300,
                     myImg.getHeight() * 300 / myImg.getWidth(),
                     Image.SCALE_SMOOTH);
+            
             lblImage.setIcon(new ImageIcon(dImg));
             lblImage.setText("");
         }catch (Exception e){
@@ -159,7 +167,7 @@ public class FurnitureTemplate extends javax.swing.JPanel {
 
     private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
         this.setBackground(new Color(200,200,200));
-        ItemDetailFrame idf = new ItemDetailFrame(currFurniture, realFurniture);
+        ItemDetailFrame idf = new ItemDetailFrame(currFurniture, system, account);
         idf.setVisible(true);
     }//GEN-LAST:event_formMouseReleased
 

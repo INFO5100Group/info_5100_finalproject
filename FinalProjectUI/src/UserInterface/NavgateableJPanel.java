@@ -208,6 +208,8 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
         }else if(JPanelPos2.getClass() == (new UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel()).getClass()){
             ((UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }else if(JPanelPos2.getClass() == (new UserInterface.Customer.CustomerHistoryJPanel()).getClass()){
+            ((UserInterface.Customer.CustomerHistoryJPanel) JPanelPos2).populateTable();
         }
         CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
     }//GEN-LAST:event_btn2ActionPerformed

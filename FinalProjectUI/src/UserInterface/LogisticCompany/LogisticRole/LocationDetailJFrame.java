@@ -7,6 +7,7 @@ package UserInterface.LogisticCompany.LogisticRole;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import java.util.ArrayList;
@@ -29,13 +30,27 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
 
     public void populateContent() {
         Account a = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
-        Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-        );
-        txtState.setText(e.getState() == null ? "not avaliable" : e.getState());
-        txtCity.setText(e.getCity() == null ? "not avaliable" : e.getCity());
-        txtStreet.setText(e.getStreet() == null ? "not avaliable" : e.getStreet());
-        txtZip.setText(e.getZipCode() == null ? "not avaliable" : e.getZipCode());
+        String state, city, street, zip;
+        if(a.getRole().rType == RoleType.Customer){
+            state = a.getPerson().getState();
+            city = a.getPerson().getCity();
+            street = a.getPerson().getStreet();
+            zip = a.getPerson().getZipCode();
+        }else{
+            Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(
+                    (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+            );
+            state = e.getState();
+            city = e.getCity();
+            street = e.getStreet();
+            zip = e.getZipCode();
+            
+        }
+        
+        txtState.setText(state == null ? "not avaliable" : state);
+        txtCity.setText(city == null ? "not avaliable" : city);
+        txtStreet.setText(street == null ? "not avaliable" : street);
+        txtZip.setText(zip == null ? "not avaliable" : zip);
         txtReceiver.setText(a.getPerson() + "");
     }
 

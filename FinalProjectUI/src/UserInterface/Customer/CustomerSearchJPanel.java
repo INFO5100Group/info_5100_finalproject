@@ -51,7 +51,7 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
     }
 
     public void loadListView() {
-        jSplitPane1.setBottomComponent(new JScrollPane(new ShoppingListview(displayList, totalList)));
+        jSplitPane1.setBottomComponent(new JScrollPane(new ShoppingListview(displayList, system, account)));
         populateCombo();
     }
 

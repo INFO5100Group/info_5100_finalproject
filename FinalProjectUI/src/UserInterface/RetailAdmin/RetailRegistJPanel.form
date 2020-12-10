@@ -22,22 +22,22 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="701" max="32767" attributes="0"/>
+              <EmptySpace pref="572" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="87" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel5" alignment="1" min="-2" pref="142" max="-2" attributes="0"/>
                                   <Component id="jLabel3" alignment="1" min="-2" pref="142" max="-2" attributes="0"/>
                                   <Component id="jLabel4" alignment="1" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="1" min="-2" pref="142" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtxPassword" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtxPassword" alignment="0" pref="145" max="32767" attributes="0"/>
                                   <Component id="jtxUserName" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="ComboRole" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                                  <Component id="ComboRole" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
@@ -70,12 +70,12 @@
                   <Component id="jLabel3" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jtxPassword" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                  <Component id="ComboRole" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jLabel5" pref="33" max="32767" attributes="0"/>
+                  <Component id="ComboRole" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="133" max="32767" attributes="0"/>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnDelete" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
                   <Component id="btnRegist" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
@@ -127,37 +127,6 @@
         <Property name="text" type="java.lang.String" value="UserName:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI Light" size="15" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Role:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="ComboRole">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="66" red="66" type="rgb"/>
-        </Property>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-            <BevelBorder/>
-          </Border>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JTextField" name="jtxPassword">
     </Component>
     <Component class="javax.swing.JButton" name="btnDelete">
@@ -183,6 +152,29 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Light" size="15" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Role:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="ComboRole">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

@@ -49,6 +49,18 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
     public int getRemain(Furniture f) {
         return this.Indexer.get(f.getID());
     }
+    
+    /**
+     * 
+     * @param fID
+     * @return 
+     */
+    public Furniture getByID(int fID){
+        return this.stream()
+                .filter(f -> f.getID() == fID)
+                .findAny()
+                .orElse(null);
+    }
 
     /**
      *

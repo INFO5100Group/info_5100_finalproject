@@ -5,9 +5,11 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
 import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
 import EcoSystem.EcoSystem;
+import UserInterface.CardLayoutNavigator;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -15,6 +17,7 @@ import java.io.File;
 import java.text.DecimalFormat;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 import javax.swing.SpinnerNumberModel;
 
 /**
@@ -26,17 +29,20 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
     private static DecimalFormat df2 = new DecimalFormat(".##");
     private Furniture currFurniture;
     private FurnitureDirectory realFurnitures;
+    private EcoSystem system;
+    private Account account;
     private int remain;
 
     public ItemDetailFrame() {
         initComponents();
     }
 
-    public ItemDetailFrame(Furniture f, FurnitureDirectory fd) {
+    public ItemDetailFrame(Furniture f, EcoSystem sys, Account acc) {
         this();
+        this.system = sys;
+        this.account = acc;
         currFurniture = f;
-        this.realFurnitures = fd;
-        this.remain = fd.getRemain(f);
+        this.remain = sys.getFurnitureMarket().getRemain(f);
         populateContnet();
     }
 
@@ -106,7 +112,10 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
+        container.setLayout(new java.awt.CardLayout());
+
         itemView.setBackground(new java.awt.Color(255, 255, 255));
+        itemView.setPreferredSize(new java.awt.Dimension(100, 670));
 
         txtName.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
         txtName.setText("Furniture Name");
@@ -117,6 +126,8 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtWoodType.setForeground(new java.awt.Color(150, 150, 150));
         txtWoodType.setText("Wood Type");
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
         lblImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImage.setText("Image");
 
@@ -124,7 +135,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
+            .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +199,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtBuy, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                .addComponent(txtBuy, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -261,7 +272,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                         .addGroup(itemViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(itemViewLayout.createSequentialGroup()
                         .addContainerGap()
@@ -269,22 +280,13 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
-        container.setLayout(containerLayout);
-        containerLayout.setHorizontalGroup(
-            containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(itemView, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        containerLayout.setVerticalGroup(
-            containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(itemView, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        container.add(itemView, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(container, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(container, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,6 +302,8 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
 
     private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
         jPanel1.setBackground(new Color(255, 69, 0));
+        JPanel checkout = new CheckoutJPanel(currFurniture, system, account, (Integer) jSpinner1.getValue(), container);
+        CardLayoutNavigator.goNext(container, checkout, "Checkout " + account.getAccountName());
     }//GEN-LAST:event_jPanel1MouseReleased
 
     private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked

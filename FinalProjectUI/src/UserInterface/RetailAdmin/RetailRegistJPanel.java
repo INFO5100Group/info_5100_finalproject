@@ -6,10 +6,23 @@
 package UserInterface.RetailAdmin;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.Person.Person;
 import EcoSystem.EcoSystem;
+import System.AccountRole.ForestLoggingManagerRole;
+import System.AccountRole.ForestSalesPersonRole;
+import System.AccountRole.LogisticsPersonRole;
+import System.AccountRole.RegulateOfficerRole;
+import System.AccountRole.RegulateScientistRole;
+import System.AccountRole.RetailProcurementPersonRole;
+import System.AccountRole.RetailSalesPersonRole;
+import System.Configure.DB4OUtil;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,6 +33,7 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
     private JPanel container;
     private Account account;
     private EcoSystem system;
+    private Enterprise currEnterprise;
     /**
      * Creates new form RetailRegistJPanel1
      */
@@ -32,6 +46,28 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
         this();
         this.account = account;
         this.system = system;
+        currEnterprise = system.getEnterprises().getEnterpriseByAccout(account);
+    }
+    
+    public void populateCombo(){
+        ComboRole.removeAllItems();
+        ComboRole.addItem("");// 0
+        ComboRole.addItem("Procuerment"); // 1
+        ComboRole.addItem("Sales Man"); // 2
+    }
+    
+    public void populateTable(){
+        DefaultTableModel model = (DefaultTableModel)this.tblEmployee.getModel();
+        model.setRowCount(0);
+        for(Organization o : currEnterprise.getDepartments()){
+            for(Person p : o.getEmployee()){
+                Object row[] = new Object[3];
+                row[0] = system.getAccounts().getAccontByPerson(p);
+                row[1] = ((Account)row[0]).getPassword();
+                row[2] = ((Account)row[0]).getRole().rType;   
+                model.addRow(row);
+            }
+        }
     }
 
     /**
@@ -48,11 +84,11 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmployee = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        ComboRole = new javax.swing.JComboBox<>();
         jtxPassword = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
         btnRegist = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        ComboRole = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -83,13 +119,6 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel4.setText("UserName:");
 
-        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel5.setText("Role:");
-
-        ComboRole.setBackground(new java.awt.Color(102, 102, 102));
-        ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ComboRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,26 +133,31 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
+        jLabel5.setText("Role:");
+
+        ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(701, Short.MAX_VALUE)
+                .addContainerGap(572, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(77, 77, 77)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtxPassword)
+                                    .addComponent(jtxPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
                                     .addComponent(jtxUserName)
-                                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(ComboRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(90, 90, 90))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(321, 321, 321))
@@ -146,11 +180,11 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(ComboRole))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -164,13 +198,71 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
          btnRegist.setIcon(regist);
     }  
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
+        int row = tblEmployee.getSelectedRow();
+        if(row < 0){
+            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // get selected enterprise
+        Account a = (Account) tblEmployee.getValueAt(row, 0);
+        
+        currEnterprise.removeEmployee(a.getPerson());
+        system.getAccounts().removeAccount(a);
+        
+        // store to database
+        DB4OUtil.storeSystem(system);
+        JOptionPane.showMessageDialog(null, "remove Account " + a + " success");
+        populateTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
+        if(inputValidate()){
+            if(inputValidate()){
+            Person p = new Person();
+            Account a = new Account(jtxUserName.getText(), jtxPassword.getText(), p);
+            int select = ComboRole.getSelectedIndex();
+            switch(select){
+                case 1:
+                    a.setRole(new RetailProcurementPersonRole());
+                    break;
+                    
+                case 2:
+                    a.setRole(new RetailSalesPersonRole());
+                    break;
+            }
+            
+            boolean addAccountSuccess = system.getAccounts().addAccount(a);
+            if(!addAccountSuccess){
+                JOptionPane.showMessageDialog(null, a.getAccountName() + " cannot add account, please change to another user name");
+                return;
+            }
+            
+            currEnterprise.getDepartments().get(select - 1).getEmployee().addPerson(a.getPerson());
+            JOptionPane.showMessageDialog(null, a.getAccountName() + " account add success!");
+            DB4OUtil.storeSystem(system);
+            populateTable();
+        }
+        }
     }//GEN-LAST:event_btnRegistActionPerformed
 
+    public boolean inputValidate(){
+        boolean isEmpty = jtxPassword.getText().equals("")
+                || jtxUserName.getText().equals("");
+        if(isEmpty){
+            JOptionPane.showMessageDialog(null, "Please fill all text fields");
+            return false;
+        }
+        
+        boolean isSelect = this.ComboRole.getSelectedIndex() != 0;
+        
+        if(!isSelect){
+            JOptionPane.showMessageDialog(null, "Please Select a role type");
+            return false;
+        }
+        
+        return true;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboRole;
