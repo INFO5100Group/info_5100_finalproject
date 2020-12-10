@@ -397,6 +397,19 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
     }//GEN-LAST:event_btn1ActionPerformed
 
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        if(JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()){
+            ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }else if(JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()){
+            ((UserInterface.LogisticAdmin.LoggisticTaskJPanel) JPanelPos2).populateComboo();
+        }else if(JPanelPos2.getClass() == (new UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel()).getClass()){
+            ((UserInterface.FurnitureManufaCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
+        }else if(JPanelPos2.getClass() == (new UserInterface.Customer.CustomerHistoryJPanel()).getClass()){
+            ((UserInterface.Customer.CustomerHistoryJPanel) JPanelPos2).populateTable();
+        }
+        CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
+    }//GEN-LAST:event_btn2ActionPerformed
+
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         CardLayoutNavigator.goNext(navContainer, JPanelPos3, this.account.getAccountName() + "pos3");
     }//GEN-LAST:event_btn3ActionPerformed

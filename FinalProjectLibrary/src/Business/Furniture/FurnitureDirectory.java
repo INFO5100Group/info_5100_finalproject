@@ -16,7 +16,7 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
     public FurnitureDirectory() {
         this.Indexer = new HashMap<>();
     }
-    
+
     public boolean addFurniture(Furniture f, int amount) {
         if (Indexer.keySet().contains(f.getID())) {
             Indexer.put(f.getID(), Indexer.get(f.getID() + amount));
@@ -52,10 +52,22 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
     
     /**
      * 
-     * @param n
+     * @param fID
      * @return 
      */
-    public Furniture getByName(String n){
+    public Furniture getByID(int fID){
+        return this.stream()
+                .filter(f -> f.getID() == fID)
+                .findAny()
+                .orElse(null);
+    }
+
+    /**
+     *
+     * @param n
+     * @return
+     */
+    public Furniture getByName(String n) {
         return this.stream()
                 .filter(f -> f.getName().equals(n))
                 .findAny()
@@ -111,12 +123,12 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
                 .collect(Collectors
                         .toCollection(FurnitureDirectory::new));
     }
-     
+
     /**
-     * 
+     *
      * @param min
      * @param max
-     * @return 
+     * @return
      */
     public FurnitureDirectory SearchByPrice(Double min, Double max) {
         return this.stream()
@@ -124,17 +136,41 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
                 .collect(Collectors
                         .toCollection(FurnitureDirectory::new));
     }
-    
+
     /**
-     * 
+     *
      * @param keyWord
-     * @return 
+     * @return
      */
     public FurnitureDirectory SearchByBrand(String keyWord) {
         return this.stream()
                 .filter(c -> c.getManufacturer().toLowerCase().contains(keyWord.toLowerCase()))
                 .collect(Collectors
                         .toCollection(FurnitureDirectory::new));
+    }
+
+    /**
+     * 
+     * @return a list of types contained in current directory
+     */
+    public ArrayList<String> getAllType() {
+        return this.stream()
+                .map(Furniture::getType)
+                .distinct()
+                .collect(Collectors
+                        .toCollection(ArrayList<String>::new));
+    }
+    
+    /**
+     * 
+     * @return list of wood type contained in current directory
+     */
+    public ArrayList<String> getAllWood(){
+        return this.stream()
+                .map(Furniture::getWoodType)
+                .distinct()
+                .collect(Collectors
+                        .toCollection(ArrayList<String>::new));
     }
 
 }

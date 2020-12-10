@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package UserInterface.Customer;
+
 import Business.Account.Account;
 import Business.Furniture.Furniture;
+import Business.Furniture.FurnitureDirectory;
 import EcoSystem.EcoSystem;
-import java.awt.BorderLayout;
+import com.db4o.defragment.FirstPassCommand;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -24,9 +24,11 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerSearchJPanel extends javax.swing.JPanel {
+
     private Account account;
     private EcoSystem system;
-            
+    private FurnitureDirectory displayList, totalList;
+
     public CustomerSearchJPanel() {
         initComponents();
         /*OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
@@ -42,8 +44,28 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
     public CustomerSearchJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;  
-        jSplitPane1.setBottomComponent(new JScrollPane(new ShoppingListView()));
+        this.system = system;
+        totalList = system.getFurnitureMarket();
+        displayList = totalList;
+        loadListView();
+    }
+
+    public void loadListView() {
+        jSplitPane1.setBottomComponent(new JScrollPane(new ShoppingListview(displayList, system, account)));
+        populateCombo();
+    }
+
+    public void populateCombo() {
+        comboType.removeAllItems();
+        comboType.addItem("");
+        comboWoodType.removeAllItems();
+        comboWoodType.addItem("");
+        for (String t : displayList.getAllType()) {
+            comboType.addItem(t);
+        }
+        for (String wt : displayList.getAllWood()) {
+            comboWoodType.addItem(wt);
+        }
     }
 
     /**
@@ -55,216 +77,252 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel7 = new javax.swing.JPanel();
-        jtxType = new javax.swing.JTextField();
-        jtxBrand1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        btnOrder5 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jtxHighest = new javax.swing.JTextField();
-        jtxLowest = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        bottomBar = new javax.swing.JPanel();
+        searchBar = new javax.swing.JPanel();
+        jtxSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jtxBrand = new javax.swing.JTextField();
-        jtxQuantity = new javax.swing.JTextField();
+        comboType = new javax.swing.JComboBox<>();
+        comboWoodType = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jtxMin = new javax.swing.JTextField();
+        jtxMax = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        Type = new javax.swing.JLabel();
+        Metrial = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        jSplitPane1.setDividerLocation(200);
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        javax.swing.GroupLayout bottomBarLayout = new javax.swing.GroupLayout(bottomBar);
+        bottomBar.setLayout(bottomBarLayout);
+        bottomBarLayout.setHorizontalGroup(
+            bottomBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1227, Short.MAX_VALUE)
+        );
+        bottomBarLayout.setVerticalGroup(
+            bottomBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 577, Short.MAX_VALUE)
+        );
 
-        jLabel4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel4.setText("Type:");
+        jSplitPane1.setRightComponent(bottomBar);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        searchBar.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnOrder5.setBorder(null);
-        btnOrder5.addActionListener(new java.awt.event.ActionListener() {
+        jtxSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrderActionPerformed(evt);
+                jtxSearchActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnOrder5, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(btnOrder5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
-
-        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel5.setText("Highest");
-
-        jLabel6.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel6.setText("Lowest");
-
-        jLabel7.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel7.setText("Brand:");
-
-        btnSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnSearch.setText("jButton1");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
-        jLabel8.setText("Quantity:");
+        comboType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel3.setText("Price Range:");
+        comboWoodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel9.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
-        jLabel9.setText("Main Material:");
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        jLabel1.setText("Price Range");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jtxMin.setToolTipText("Min");
+        jtxMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxMinActionPerformed(evt);
+            }
+        });
+
+        jtxMax.setToolTipText("Max");
+        jtxMax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxMaxActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        jLabel2.setText("——");
+
+        Type.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        Type.setText("Type");
+
+        Metrial.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        Metrial.setText("Material");
+
+        jLabel3.setText("Min");
+
+        jLabel4.setText("Max");
+
+        javax.swing.GroupLayout searchBarLayout = new javax.swing.GroupLayout(searchBar);
+        searchBar.setLayout(searchBarLayout);
+        searchBarLayout.setHorizontalGroup(
+            searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxSearch)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchBarLayout.createSequentialGroup()
+                        .addComponent(Type)
+                        .addGap(18, 18, 18)
+                        .addComponent(comboType, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                        .addComponent(Metrial)
+                        .addGap(18, 18, 18)
+                        .addComponent(comboWoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(99, 99, 99)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(searchBarLayout.createSequentialGroup()
+                                .addComponent(jtxMin, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(jLabel2))
+                            .addComponent(jLabel3))
                         .addGap(30, 30, 30)
-                        .addComponent(jtxBrand1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jtxBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(23, 23, 23)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jtxType, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel7Layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addGap(27, 27, 27)
-                            .addComponent(jLabel5)
-                            .addGap(29, 29, 29)
-                            .addComponent(jtxHighest, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(39, 39, 39)
-                            .addComponent(jLabel6)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jtxLowest, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(91, 91, 91)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(jtxQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxType, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jtxMax, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxHighest, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxLowest, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jtxBrand1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        searchBarLayout.setVerticalGroup(
+            searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(searchBarLayout.createSequentialGroup()
+                        .addComponent(jtxSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(2, 2, 2)
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jtxMin)
+                                .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(comboType, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(comboWoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(Type)
+                                    .addComponent(Metrial)))
+                            .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jtxMax, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)))))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setTopComponent(jPanel7);
+        jSplitPane1.setLeftComponent(searchBar);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1031, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
         );
-
-        jSplitPane1.setRightComponent(jPanel8);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+    private void jtxSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxSearchActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_jtxSearchActionPerformed
+
+    private void jtxMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxMinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxMinActionPerformed
+
+    private void jtxMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxMaxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxMaxActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        if(checkValidate()){
+            displayList = getSearchResult();
+            loadListView();
+        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnOrderActionPerformed
-    private void setButtonImage(){
-         ImageIcon search=new ImageIcon("./image/search.png");
-         btnSearch.setIcon(search);
-         ImageIcon order=new ImageIcon("./image/order.png");
-         btnOrder5.setIcon(order);
-         ImageIcon lable=new ImageIcon("./image/订 单.png");
-         jLabel1.setIcon(lable);
+    private FurnitureDirectory getSearchResult() {
+        FurnitureDirectory result = totalList;
+        if (!jtxSearch.getText().isEmpty()) {
+            result = result.SearchByName(jtxSearch.getText());
+        }
+        if (!jtxMax.getText().isEmpty() && !jtxMin.getText().isEmpty()) {
+            double searchMin = Double.parseDouble(jtxMin.getText());
+            double searchMax = Double.parseDouble(jtxMax.getText());
+            result = result.SearchByPrice(searchMin, searchMax);
+        }
+        if(comboType.getSelectedIndex() != 0){
+            String type = (String) comboType.getSelectedItem();
+            result = result.SearchByType(type);
+        }
+        if(comboWoodType.getSelectedIndex() != 0){
+            String wood = (String) comboWoodType.getSelectedItem();
+            result = result.SearchByWood(wood);
+        }
+        return result;
     }
 
+    private boolean checkValidate() {
+        if (!jtxMax.getText().isEmpty() && !jtxMin.getText().isEmpty()) {
+            try {
+                double searchMin = Double.parseDouble(jtxMin.getText());
+                double searchMax = Double.parseDouble(jtxMax.getText());
+                if (searchMin > searchMax) {
+                    javax.swing.JOptionPane.showMessageDialog(null,
+                            "Min price cannot larger than max price");
+                    return false;
+                }
+            } catch (Exception e) {
+                javax.swing.JOptionPane.showMessageDialog(null,
+                        "Wrong input format for min price and max price");
+                return false;
+            }
+        }
+        return true;
+    }
+
+//    private void setButtonImage(){
+//         ImageIcon search=new ImageIcon("./image/search.png");
+//         btnSearch.setIcon(search);
+//         ImageIcon order=new ImageIcon("./image/order.png");
+//         btnOrder.setIcon(order);
+//         ImageIcon lable=new ImageIcon("./image/订 单.png");
+//         jLabel1.setIcon(lable);
+//    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOrder;
-    private javax.swing.JButton btnOrder1;
-    private javax.swing.JButton btnOrder2;
-    private javax.swing.JButton btnOrder3;
-    private javax.swing.JButton btnOrder4;
-    private javax.swing.JButton btnOrder5;
+    private javax.swing.JLabel Metrial;
+    private javax.swing.JLabel Type;
+    private javax.swing.JPanel bottomBar;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JComboBox<String> comboType;
+    private javax.swing.JComboBox<String> comboWoodType;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -273,25 +331,11 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextField jtxBrand;
-    private javax.swing.JTextField jtxBrand1;
-    private javax.swing.JTextField jtxHighest;
-    private javax.swing.JTextField jtxLowest;
-    private javax.swing.JTextField jtxQuantity;
-    private javax.swing.JTextField jtxType;
+    private javax.swing.JTextField jtxMax;
+    private javax.swing.JTextField jtxMin;
+    private javax.swing.JTextField jtxSearch;
+    private javax.swing.JPanel searchBar;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,17 @@
  */
 package UserInterface.Customer;
 
+import Business.Account.Account;
 import Business.Furniture.Furniture;
+import Business.Furniture.FurnitureDirectory;
+import EcoSystem.EcoSystem;
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.text.DecimalFormat;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,15 +23,50 @@ import Business.Furniture.Furniture;
  */
 public class FurnitureTemplate extends javax.swing.JPanel {
 
-    /**
-     * Creates new form FurnitureTemplate
-     */
-    public FurnitureTemplate(Furniture f) {
+    private static DecimalFormat df2 = new DecimalFormat(".##");
+    private Furniture currFurniture;
+    private FurnitureDirectory realFurniture;
+    private EcoSystem system;
+    private Account account;
+
+    public FurnitureTemplate() {
         initComponents();
     }
     
     public void populateContent(){
         
+    }
+
+    public FurnitureTemplate(Furniture f, EcoSystem sys, Account acc) {
+        this();
+        currFurniture = f;
+        realFurniture = sys.getFurnitureMarket();
+        this.system = sys;
+        this.account  = acc;
+        populateContnet();
+    }
+
+    private void populateContnet() {
+        try {
+            this.txtName.setText(currFurniture.getName());
+            this.txtPrice.setText("$ " + df2.format(currFurniture.getPrice()));
+            this.txtType.setText(currFurniture.getType());
+        } catch (Exception e) {
+        }
+        try {
+            
+            File imgFile = new File("./image/FurnitureImage/" + currFurniture.getImage());
+            BufferedImage myImg = ImageIO.read(imgFile);
+            Image dImg = myImg.getScaledInstance(300,
+                    myImg.getHeight() * 300 / myImg.getWidth(),
+                    Image.SCALE_SMOOTH);
+            
+            lblImage.setIcon(new ImageIcon(dImg));
+            lblImage.setText("");
+        }catch (Exception e){
+            lblImage.setText("No Image");
+        }
+
     }
 
     /**
@@ -34,17 +79,31 @@ public class FurnitureTemplate extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        lblType = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
-        lblPrice = new javax.swing.JLabel();
+        lblImage = new javax.swing.JLabel();
+        txtType = new javax.swing.JLabel();
+        txtName = new javax.swing.JLabel();
+        txtPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(163, 60, 60));
-        setMaximumSize(new java.awt.Dimension(260, 290));
-        setMinimumSize(new java.awt.Dimension(260, 290));
-        setName(""); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        setMaximumSize(new java.awt.Dimension(240, 300));
+        setMinimumSize(new java.awt.Dimension(240, 300));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
+            }
+        });
 
-        jLabel1.setText("Image");
+        lblImage.setText("Image Here");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -52,68 +111,76 @@ public class FurnitureTemplate extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(jLabel1)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        lblType.setBackground(new java.awt.Color(0, 0, 0));
-        lblType.setForeground(new java.awt.Color(255, 255, 255));
-        lblType.setText("Type");
+        txtType.setForeground(new java.awt.Color(100, 100, 100));
+        txtType.setText("Type");
 
-        lblName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 255, 255));
-        lblName.setText("Name");
+        txtName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtName.setText("Name Example");
 
-        lblPrice.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblPrice.setForeground(new java.awt.Color(255, 255, 255));
-        lblPrice.setText("$ 00.00");
+        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtPrice.setText("$ 00.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblName)
-                            .addComponent(lblType)
-                            .addComponent(lblPrice))
-                        .addContainerGap(195, Short.MAX_VALUE))))
+                    .addComponent(txtType)
+                    .addComponent(txtName)
+                    .addComponent(txtPrice))
+                .addContainerGap(93, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblType)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPrice)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(txtType)
+                .addGap(10, 10, 10)
+                .addComponent(txtName)
+                .addGap(18, 18, 18)
+                .addComponent(txtPrice)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        this.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_formMouseEntered
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        this.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_formMouseExited
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+        this.setBackground(new Color(100,100,100));
+    }//GEN-LAST:event_formMousePressed
+
+    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
+        this.setBackground(new Color(200,200,200));
+        ItemDetailFrame idf = new ItemDetailFrame(currFurniture, system, account);
+        idf.setVisible(true);
+    }//GEN-LAST:event_formMouseReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblPrice;
-    private javax.swing.JLabel lblType;
+    private javax.swing.JLabel lblImage;
+    private javax.swing.JLabel txtName;
+    private javax.swing.JLabel txtPrice;
+    private javax.swing.JLabel txtType;
     // End of variables declaration//GEN-END:variables
 }

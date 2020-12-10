@@ -11,16 +11,19 @@ import Business.Wood.WoodStorage;
 import System.AccountRole.*;
 import EcoSystem.EcoSystem;
 import java.util.HashMap;
+import java.util.Random;
 import javax.swing.JPanel;
 
 public class ConfigureASystem {
+
     static EcoSystem system = EcoSystem.getInstance();
+
     public static EcoSystem configure() {
         EcoSystem system = EcoSystem.getInstance();
         // add initial user account here
 
         // add sysadmin
-        Person admin = new Person("adminFirstName","adminLastname","Neutral");
+        Person admin = new Person("adminFirstName", "adminLastname", "Neutral");
         Account adminAccount = new Account("sysadmin", "sysadmin", admin, new SysAdminRole());
         system.getAccounts().addAccount(adminAccount);
 
@@ -29,37 +32,37 @@ public class ConfigureASystem {
         reg.getDepartments().addOrganization(new Organization("Enviromental Regulatory Organization"));
         reg.setState("Washington");
         reg.setName("Washington Reglate Office");
-        
+
         // add employee for reg
-        Person bob = new Person("bob","ellen","other");
+        Person bob = new Person("bob", "ellen", "other");
         Account bobAccount = new Account("scientist", "123", bob, new RegulateScientistRole());
         system.getAccounts().addAccount(bobAccount);
         reg.getDepartments().get(0).getEmployee().addPerson(bob);
-        
-        Person john = new Person("john","fucker","other");
+
+        Person john = new Person("john", "fucker", "other");
         Account JohnAccount = new Account("officer", "123", john, new RegulateOfficerRole());
         system.getAccounts().addAccount(JohnAccount);
         reg.getDepartments().get(0).getEmployee().addPerson(john);
-/*------------------------------------------------------------------------------------------------------*/
-        
+        /*------------------------------------------------------------------------------------------------------*/
+
         // forest 
         Enterprise fore = addEnterprise("test forest", new ForestAdminRole());
         fore.getDepartments().addOrganization(new Organization("Logging Department"));
         fore.getDepartments().addOrganization(new Organization("Sales Department"));
         fore.setName("Logger Lovers");
         fore.setWoodStorage(new WoodStorage());
-        
+
         // add employee for fore
-        Person logmag = new Person("Peter","Grazier","other");
+        Person logmag = new Person("Peter", "Grazier", "other");
         Account logmagAccount = new Account("logmag", "123", logmag, new ForestLoggingManagerRole());
         system.getAccounts().addAccount(logmagAccount);
         fore.getDepartments().get(0).getEmployee().addPerson(logmag);
-        
-        Person fsale = new Person("Andrew","Lickliter","other");
+
+        Person fsale = new Person("Andrew", "Lickliter", "other");
         Account fsaleAccount = new Account("fsale", "123", fsale, new ForestSalesPersonRole());
         system.getAccounts().addAccount(fsaleAccount);
         fore.getDepartments().get(1).getEmployee().addPerson(fsale);
-/*------------------------------------------------------------------------------------------------------*/
+        /*------------------------------------------------------------------------------------------------------*/
 
         // manu 
         Enterprise man = addEnterprise("test manu", new ManuAdminRole());
@@ -74,34 +77,53 @@ public class ConfigureASystem {
         f.setType("Table");
         f.setWoodType("red wood");
         man.getFurnitureStorage().addFurniture(f, 100);
-        
+
         // employee
         addEmployee(man, "Annie", "Haag", "pur", 0, new ManuProcurementPersonRole());
         addEmployee(man, "Steven", "Flores", "pro", 1, new ManuProducerRole());
         addEmployee(man, "Maria", "Yowell", "Designer", 1, new ManuDesignerRole());
         addEmployee(man, "rios", "smith", "msale", 2, new ManuSalesPersonRole());
-        
-/*------------------------------------------------------------------------------------------------------*/
 
-
+        /*------------------------------------------------------------------------------------------------------*/
         Enterprise ret = addEnterprise("test retail", new RetailAdminRole());
         ret.getDepartments().addOrganization(new Organization("Purchasing Department"));
         ret.getDepartments().addOrganization(new Organization("Salse Department"));
         ret.setName("Furtinure Dean");
         ret.setFurnitureStorage(new FurnitureDirectory());
-        
+
         addEmployee(ret, "Gray", "Terrell", "rpur", 0, new RetailProcurementPersonRole());
         addEmployee(ret, "ron", "yap", "rsale", 1, new RetailSalesPersonRole());
-/*------------------------------------------------------------------------------------------------------*/
-
+        /*------------------------------------------------------------------------------------------------------*/
 
         Enterprise log = addEnterprise("test logistic", new LogisticAdminRole());
         log.getDepartments().addOrganization(new Organization("Transportation Department"));
-        log.setName("东风快递");
-        
+        log.setName("Eastrn Wind Ligistic");
+
         addEmployee(log, "ron", "devine", "ligistman", 0, new LogisticsPersonRole());
 
-        
+        /*----------------------------------------------------------------------------------*/
+        ret.getFurnitureStorage().addFurniture(addFurniture("Cable 1", "red wood", "Table"), 5);
+        system.getFurnitureMarket().addFurniture(addFurniture("Cable 1", "red wood", "Table"), 5);
+
+        ret.getFurnitureStorage().addFurniture(addFurniture("Chair 1", "red wood", "Chair"), 10);
+        system.getFurnitureMarket().addFurniture(addFurniture("Chair 1", "red wood", "Chair"), 10);
+
+        ret.getFurnitureStorage().addFurniture(addFurniture("Infant Bed", "white wood", "Bed"), 3);
+        system.getFurnitureMarket().addFurniture(addFurniture("Infant Bed", "white wood", "Bed"), 3);
+
+        ret.getFurnitureStorage().addFurniture(addFurniture("LOL Comfortable Coach", "red wood", "Coach"), 10);
+        system.getFurnitureMarket().addFurniture(addFurniture("LOL Comfortable Coach", "red wood", "Coach"), 10);
+        ret.getFurnitureStorage().addFurniture(addFurniture("Cable 1", "red wood", "Table"), 10);
+        system.getFurnitureMarket().addFurniture(addFurniture("Cable 1", "red wood", "Table"), 10);
+
+        ret.getFurnitureStorage().addFurniture(addFurniture("Chair 1", "red wood", "Chair"), 10);
+        system.getFurnitureMarket().addFurniture(addFurniture("Chair 1", "red wood", "Chair"), 10);
+
+        ret.getFurnitureStorage().addFurniture(addFurniture("Infant Bed", "white wood", "Bed"), 10);
+        system.getFurnitureMarket().addFurniture(addFurniture("Infant Bed", "white wood", "Bed"), 10);
+
+        /*-----------------------------------------------------------------------------------------------------*/
+
         // add customer
         Person cust = new Person("Joe", "Doe", "other");
         Account custAccount = new Account("cust", "123", cust, new CustomerRole());
@@ -109,24 +131,35 @@ public class ConfigureASystem {
 
         return system;
     }
-    
-    public static Enterprise addEnterprise(String Name, Role r){
+
+    public static Enterprise addEnterprise(String Name, Role r) {
         Person admin = new Person(Name, "admin", "other");
         Account account = new Account("t" + Name.split(" ")[1] + "admin", "admin", admin, r);
-        Enterprise enterprise =  new Enterprise(account);
+        Enterprise enterprise = new Enterprise(account);
         enterprise.setApproved(true);
-        enterprise.setShortName(Name.split(" ")[0] +Name.split(" ")[1]);
+        enterprise.setShortName(Name.split(" ")[0] + Name.split(" ")[1]);
         enterprise.setName(Name);
         system.getAccounts().addAccount(account);
         system.getEnterprises().addEnterprise(enterprise);
         return enterprise;
     }
-     
-    
-    public static void addEmployee(Enterprise e, String fname, String lname, String aname, int depIndex, Role r){
-        Person p = new Person(fname,lname,"other");
+
+    public static void addEmployee(Enterprise e, String fname, String lname, String aname, int depIndex, Role r) {
+        Person p = new Person(fname, lname, "other");
         Account pAccount = new Account(aname, "123", p, r);
         system.getAccounts().addAccount(pAccount);
         e.getDepartments().get(depIndex).getEmployee().addPerson(p);
+    }
+
+    public static Furniture addFurniture(String Name, String WoodType, String Type) {
+        Furniture newF = new Furniture();
+        newF.setName(Name);
+        newF.setWoodType(WoodType);
+        newF.setType(Type);
+        Random r = new Random();
+        double randomValue = 0 + (200.0 - 0) * r.nextDouble();
+        newF.setPrice(randomValue);
+        newF.setImage("1.png");
+        return newF;
     }
 }

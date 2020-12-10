@@ -17,9 +17,9 @@ public class WorkQueue extends ArrayList<WorkRequest>{
         }else if(wr.getSender() == null) {
             throw new Exception("Sender is not defined");
         }else if(wr.getReceivers().size() == 0) {
-            throw new Exception("receivers are not defined");
+            throw new Exception("Receivers are not defined");
         }else if(wr.getStatus() == null) {
-            throw new Exception("Message cannot be null");
+            throw new Exception("Status cannot be null");
         }
         return this.add(wr);
     }

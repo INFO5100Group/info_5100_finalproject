@@ -6,14 +6,23 @@
 package UserInterface.RetailCompany.SalesRole;
 
 import Business.Account.Account;
+import Business.Enterprise.Enterprise;
+import Business.Furniture.Furniture;
+import Business.Role.RoleType;
+import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
+import System.Configure.DB4OUtil;
 import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import org.json.JSONObject;
 
 /**
  *
@@ -23,6 +32,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
 
     private Account account;
     private EcoSystem system;
+    private Enterprise currEnterprise;
 
     public SalesOrderJPanel() {
         initComponents();
@@ -41,6 +51,45 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         this();
         this.account = account;
         this.system = system;
+        currEnterprise = this.system.getEnterprises().getEnterpriseByEmployeeAccount(account);
+        populateCombo();
+        populateTable();
+    }
+
+    public void populateCombo() {
+        LogisticCompanyCombo.removeAllItems();
+        LogisticCompanyCombo.addItem("Select Logistic Company");
+        for (Enterprise e : system.getEnterprises()) {
+            if (e.getAdmin().getRole().rType == RoleType.LogisticAdmin) {
+                LogisticCompanyCombo.addItem(e.getName() + "(" + e.getID() + ")");
+            }
+        }
+    }
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.OrderJTable.getModel();
+        model.setRowCount(0);
+        for (WorkRequest wr : system.getWorkQueue()) {
+            if (wr.getSender().getID() == currEnterprise.getAdmin().getID()) {
+                Object row[] = new Object[6];
+                JSONObject currInfo = new JSONObject(wr.getMessage());
+                Furniture currFurniture = system.getFurnitureMarket().getByID(currInfo.getInt("furnitureID"));
+                row[0] = wr;
+                Account a = ((Account) wr.getReceivers().keySet().toArray()[0]);
+                row[1] = a.getPerson().getFirstName() + " " + a.getPerson().getLastName();
+                row[2] = currFurniture.getName();
+                row[3] = currInfo.get("quantity");
+                try {
+                    Account b = ((Account) wr.getReceivers().keySet().toArray()[1]);
+                    row[4] = system.getEnterprises().getEnterpriseByAccout(b);
+                } catch (Exception e) {
+
+                }
+                row[5] = wr.getStatus();
+                model.addRow(row);
+
+            }
+        }
     }
 
     /**
@@ -63,17 +112,17 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
 
         OrderJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "OrderID", "CustomerName", "ProductName", "LogisticCompany", "Status"
+                "OrderID", "CustomerName", "ProductName", "Quantity", "LogisticCompany", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, true, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -87,7 +136,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         OrderJTable.setShowVerticalLines(false);
         jScrollPane2.setViewportView(OrderJTable);
 
-        btnDistribute.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\distribute.png")); // NOI18N
         btnDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDistribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,9 +176,33 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         btnDistribute.setIcon(distribute);
     }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDistributeActionPerformed
+        int selectedRow = this.OrderJTable.getSelectedRow();
 
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "please select a row");
+            return;
+        } else if (LogisticCompanyCombo.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "please select a logistic company");
+            return;
+        } else {
+            Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
+            WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
+            try {
+                (new ArrayList<>(wr.getReceivers().keySet())).get(1);
+            } catch (java.lang.IndexOutOfBoundsException e) {
+                wr.getReceivers().put(logistic.getAdmin(), false);
+                DB4OUtil.storeSystem(system);
+                populateTable();
+                return;
+            }
+            JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+            return;
+        }
+    }//GEN-LAST:event_btnDistributeActionPerformed
+    public int getEnterpriseID(String str) {
+        String IDstr = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
+        return Integer.parseInt(IDstr);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> LogisticCompanyCombo;

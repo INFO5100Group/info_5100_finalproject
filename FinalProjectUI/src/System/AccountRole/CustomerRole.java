@@ -26,8 +26,7 @@ public class CustomerRole extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, Account account, EcoSystem system) {
         NavgateableJPanel WorkArea = new NavgateableJPanel (userProcessContainer, account, system);
             WorkArea.JPanelPos1 = new CustomerSearchJPanel(account, system);
-            WorkArea.JPanelPos2 = new CustomerReceiveOrderJPanel(account, system);
-            WorkArea.JPanelPos3 = new CustomerHistoryJPanel(account, system);
+            WorkArea.JPanelPos2 = new CustomerHistoryJPanel(account, system);
             WorkArea.loadNavBtn();
             return WorkArea;
     }

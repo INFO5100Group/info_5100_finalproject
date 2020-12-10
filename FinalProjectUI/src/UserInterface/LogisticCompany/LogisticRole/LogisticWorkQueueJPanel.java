@@ -45,36 +45,41 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         populateTable();
     }
 
-    public void populateTable(){
+    public void populateTable() {
         DefaultTableModel modelFor = (DefaultTableModel) this.ForestryCompanyJTable.getModel();
         DefaultTableModel modelFur = (DefaultTableModel) this.FurnitureCompanyJTable.getModel();
         DefaultTableModel modelCust = (DefaultTableModel) this.CustomerJTable.getModel();
         modelFor.setRowCount(0);
         modelFur.setRowCount(0);
         modelCust.setRowCount(0);
-        
-        for(WorkRequest wr : system.getWorkQueue()){
-            if(wr.getReceivers().keySet().contains(account)){
+
+        for (WorkRequest wr : system.getWorkQueue()) {
+            if (wr.getReceivers().keySet().contains(account)) {
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 Object row[] = new Object[5];
                 row[0] = wr;
-                row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                        (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-                );
+                if ((new ArrayList<>(wr.getReceivers().keySet())).get(0).getRole().rType == RoleType.Customer) {
+                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0).getPerson();
+                } else {
+                    row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(
+                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
+                    );
+                }
+
                 row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
                 row[3] = currInfo.getString("Product");
                 row[4] = wr.getStatus();
-                if(wr.getSender().getRole().rType == RoleType.ForestSalesPerson){
+                if (wr.getSender().getRole().rType == RoleType.ForestSalesPerson) {
                     modelFor.addRow(row);
-                }else if(wr.getSender().getRole().rType == RoleType.ManuSalsePerson){
+                } else if (wr.getSender().getRole().rType == RoleType.ManuSalsePerson) {
                     modelFur.addRow(row);
-                }else{
+                } else {
                     modelCust.addRow(row);
                 }
             }
         }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -143,7 +148,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "OrderID", "EnterpriseName", "ReceiverName", "ProductName", "Status"
+                "OrderID", "Customer Name", "ReceiverName", "ProductName", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -274,37 +279,37 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
     }
     private void btnLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLocationActionPerformed
         WorkRequest wr = getSelectdwr();
-        if(wr != null){
+        if (wr != null) {
             LocationDetailJFrame ldf = new LocationDetailJFrame(wr, system);
             ldf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             ldf.setVisible(true);
         }
     }//GEN-LAST:event_btnLocationActionPerformed
-    
-    private WorkRequest getSelectdwr(){
+
+    private WorkRequest getSelectdwr() {
         int SelectedRow;
         WorkRequest wr = null;
-         
-        if(ForestryCompanyJTable.getSelectedRow() >= 0){
+
+        if (ForestryCompanyJTable.getSelectedRow() >= 0) {
             SelectedRow = ForestryCompanyJTable.getSelectedRow();
             wr = (WorkRequest) ForestryCompanyJTable.getValueAt(SelectedRow, 0);
 
-        }else if(FurnitureCompanyJTable.getSelectedRow() >= 0){
+        } else if (FurnitureCompanyJTable.getSelectedRow() >= 0) {
             SelectedRow = FurnitureCompanyJTable.getSelectedRow();
             wr = (WorkRequest) FurnitureCompanyJTable.getValueAt(SelectedRow, 0);
-            
-        }else if(CustomerJTable.getSelectedRow() >= 0){
+
+        } else if (CustomerJTable.getSelectedRow() >= 0) {
             SelectedRow = CustomerJTable.getSelectedRow();
             wr = (WorkRequest) CustomerJTable.getValueAt(SelectedRow, 0);
-             
-        }else{
+
+        } else {
             JOptionPane.showMessageDialog(null, "please select a row");
-            
+
         }
         return wr;
     }
-    
-    
+
+
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         WorkRequest wr = getSelectdwr();
         wr.setStatus("Delivered");
