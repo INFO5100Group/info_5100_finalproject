@@ -257,7 +257,7 @@ public class MainPanel extends javax.swing.JPanel {
          ImageIcon customer=new ImageIcon("./image/customer.png");
          ImageIcon main=new ImageIcon("./image/我的 (2).png");
          ImageIcon main1=new ImageIcon("./image/密码 (1).png");
-         ImageIcon main2=new ImageIcon("./image/树1s.jpg");
+         ImageIcon main2=new ImageIcon("./image/树11.jpg");
          jLabel1.setIcon(main2);
          jLabel7.setIcon(main1);
          jLabel4.setIcon(main);

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package UserInterface.Customer;
+
 import Business.Account.Account;
 import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
@@ -23,10 +24,11 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerSearchJPanel extends javax.swing.JPanel {
+
     private Account account;
     private EcoSystem system;
     private FurnitureDirectory displayList, totalList;
-            
+
     public CustomerSearchJPanel() {
         initComponents();
         /*OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
@@ -42,14 +44,28 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
     public CustomerSearchJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;  
+        this.system = system;
         totalList = system.getFurnitureMarket();
         displayList = totalList;
-        loadListView(displayList);
+        loadListView();
     }
-    
-    public void loadListView(FurnitureDirectory df){
-        jSplitPane1.setBottomComponent(new JScrollPane( new ShoppingListview(df, totalList)));
+
+    public void loadListView() {
+        jSplitPane1.setBottomComponent(new JScrollPane(new ShoppingListview(displayList, totalList)));
+        populateCombo();
+    }
+
+    public void populateCombo() {
+        comboType.removeAllItems();
+        comboType.addItem("");
+        comboWoodType.removeAllItems();
+        comboWoodType.addItem("");
+        for (String t : displayList.getAllType()) {
+            comboType.addItem(t);
+        }
+        for (String wt : displayList.getAllWood()) {
+            comboWoodType.addItem(wt);
+        }
     }
 
     /**
@@ -65,18 +81,23 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
         jSplitPane1 = new javax.swing.JSplitPane();
         bottomBar = new javax.swing.JPanel();
         searchBar = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jtxSearch = new javax.swing.JTextField();
+        btnSearch = new javax.swing.JButton();
+        comboType = new javax.swing.JComboBox<>();
+        comboWoodType = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jtxMin = new javax.swing.JTextField();
+        jtxMax = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        Type = new javax.swing.JLabel();
+        Metrial = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jSplitPane1.setDividerLocation(200);
+        jSplitPane1.setDividerSize(0);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         javax.swing.GroupLayout bottomBarLayout = new javax.swing.GroupLayout(bottomBar);
@@ -87,44 +108,59 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
         );
         bottomBarLayout.setVerticalGroup(
             bottomBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 598, Short.MAX_VALUE)
+            .addGap(0, 577, Short.MAX_VALUE)
         );
 
         jSplitPane1.setRightComponent(bottomBar);
 
         searchBar.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jtxSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jtxSearchActionPerformed(evt);
             }
         });
 
-        jButton1.setText("jButton1");
+        btnSearch.setText("jButton1");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboWoodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jLabel1.setText("Price Range");
 
-        jTextField2.setToolTipText("Min");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jtxMin.setToolTipText("Min");
+        jtxMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtxMinActionPerformed(evt);
             }
         });
 
-        jTextField3.setToolTipText("Max");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jtxMax.setToolTipText("Max");
+        jtxMax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jtxMaxActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jLabel2.setText("——");
+
+        Type.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        Type.setText("Type");
+
+        Metrial.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
+        Metrial.setText("Material");
+
+        jLabel3.setText("Min");
+
+        jLabel4.setText("Max");
 
         javax.swing.GroupLayout searchBarLayout = new javax.swing.GroupLayout(searchBar);
         searchBar.setLayout(searchBarLayout);
@@ -133,46 +169,58 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
             .addGroup(searchBarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1)
-                    .addGroup(searchBarLayout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(84, 84, 84)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(59, 59, 59)
+                    .addComponent(jtxSearch)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchBarLayout.createSequentialGroup()
+                        .addComponent(Type)
+                        .addGap(18, 18, 18)
+                        .addComponent(comboType, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                        .addComponent(Metrial)
+                        .addGap(18, 18, 18)
+                        .addComponent(comboWoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(99, 99, 99)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel2)
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(searchBarLayout.createSequentialGroup()
+                                .addComponent(jtxMin, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(jLabel2))
+                            .addComponent(jLabel3))
                         .addGap(30, 30, 30)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 196, Short.MAX_VALUE)))
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jtxMax, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         searchBarLayout.setVerticalGroup(
             searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(searchBarLayout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtxSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(2, 2, 2)
                         .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField2)
+                                .addComponent(jtxMin)
                                 .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1)))
+                                    .addComponent(comboType, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(comboWoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(Type)
+                                    .addComponent(Metrial)))
                             .addGroup(searchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2)))
-                        .addGap(77, 77, 77))
-                    .addGroup(searchBarLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                                .addComponent(jtxMax, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)))))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(searchBar);
@@ -185,7 +233,7 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -200,18 +248,65 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtxSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtxSearchActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtxMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxMinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtxMinActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jtxMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxMaxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-    
+    }//GEN-LAST:event_jtxMaxActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        if(checkValidate()){
+            displayList = getSearchResult();
+            loadListView();
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private FurnitureDirectory getSearchResult() {
+        FurnitureDirectory result = totalList;
+        if (!jtxSearch.getText().isEmpty()) {
+            result = result.SearchByName(jtxSearch.getText());
+        }
+        if (!jtxMax.getText().isEmpty() && !jtxMin.getText().isEmpty()) {
+            double searchMin = Double.parseDouble(jtxMin.getText());
+            double searchMax = Double.parseDouble(jtxMax.getText());
+            result = result.SearchByPrice(searchMin, searchMax);
+        }
+        if(comboType.getSelectedIndex() != 0){
+            String type = (String) comboType.getSelectedItem();
+            result = result.SearchByType(type);
+        }
+        if(comboWoodType.getSelectedIndex() != 0){
+            String wood = (String) comboWoodType.getSelectedItem();
+            result = result.SearchByWood(wood);
+        }
+        return result;
+    }
+
+    private boolean checkValidate() {
+        if (!jtxMax.getText().isEmpty() && !jtxMin.getText().isEmpty()) {
+            try {
+                double searchMin = Double.parseDouble(jtxMin.getText());
+                double searchMax = Double.parseDouble(jtxMax.getText());
+                if (searchMin > searchMax) {
+                    javax.swing.JOptionPane.showMessageDialog(null,
+                            "Min price cannot larger than max price");
+                    return false;
+                }
+            } catch (Exception e) {
+                javax.swing.JOptionPane.showMessageDialog(null,
+                        "Wrong input format for min price and max price");
+                return false;
+            }
+        }
+        return true;
+    }
+
 //    private void setButtonImage(){
 //         ImageIcon search=new ImageIcon("./image/search.png");
 //         btnSearch.setIcon(search);
@@ -222,17 +317,21 @@ public class CustomerSearchJPanel extends javax.swing.JPanel {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Metrial;
+    private javax.swing.JLabel Type;
     private javax.swing.JPanel bottomBar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JComboBox<String> comboType;
+    private javax.swing.JComboBox<String> comboWoodType;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jtxMax;
+    private javax.swing.JTextField jtxMin;
+    private javax.swing.JTextField jtxSearch;
     private javax.swing.JPanel searchBar;
     // End of variables declaration//GEN-END:variables
 }

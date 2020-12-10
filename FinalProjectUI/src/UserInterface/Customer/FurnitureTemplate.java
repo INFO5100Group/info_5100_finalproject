@@ -6,6 +6,14 @@
 package UserInterface.Customer;
 
 import Business.Furniture.Furniture;
+import Business.Furniture.FurnitureDirectory;
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.text.DecimalFormat;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,30 +21,42 @@ import Business.Furniture.Furniture;
  */
 public class FurnitureTemplate extends javax.swing.JPanel {
 
+    private static DecimalFormat df2 = new DecimalFormat(".##");
     private Furniture currFurniture;
-    
+    private FurnitureDirectory realFurniture;
+
     public FurnitureTemplate() {
         initComponents();
     }
-    
-    public FurnitureTemplate(Furniture f){
+
+    public FurnitureTemplate(Furniture f, FurnitureDirectory fd) {
         this();
         currFurniture = f;
-        //populateContnet();
+        realFurniture = fd;
+        populateContnet();
     }
 
-    private void populateContnet(){
-        try{
+    private void populateContnet() {
+        try {
             this.txtName.setText(currFurniture.getName());
-            this.txtPrice.setText("$ " + currFurniture.getPrice());
+            this.txtPrice.setText("$ " + df2.format(currFurniture.getPrice()));
             this.txtType.setText(currFurniture.getType());
-            //TODO: set image
-        }catch(Exception e){
-            
+        } catch (Exception e) {
+        }
+        try {
+            File imgFile = new File("./image/FurnitureImage/" + currFurniture.getImage());
+            BufferedImage myImg = ImageIO.read(imgFile);
+            Image dImg = myImg.getScaledInstance(300,
+                    myImg.getHeight() * 300 / myImg.getWidth(),
+                    Image.SCALE_SMOOTH);
+            lblImage.setIcon(new ImageIcon(dImg));
+            lblImage.setText("");
+        }catch (Exception e){
+            lblImage.setText("No Image");
         }
 
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,10 +72,24 @@ public class FurnitureTemplate extends javax.swing.JPanel {
         txtName = new javax.swing.JLabel();
         txtPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(163, 60, 60));
-        setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5));
         setMaximumSize(new java.awt.Dimension(240, 300));
         setMinimumSize(new java.awt.Dimension(240, 300));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
+            }
+        });
 
         lblImage.setText("Image Here");
 
@@ -64,27 +98,24 @@ public class FurnitureTemplate extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(lblImage)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(84, Short.MAX_VALUE)
-                .addComponent(lblImage)
-                .addGap(80, 80, 80))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        txtType.setForeground(new java.awt.Color(240, 240, 240));
+        txtType.setForeground(new java.awt.Color(100, 100, 100));
         txtType.setText("Type");
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtName.setForeground(new java.awt.Color(255, 255, 255));
         txtName.setText("Name Example");
 
         txtPrice.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        txtPrice.setForeground(new java.awt.Color(255, 255, 255));
         txtPrice.setText("$ 00.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -92,21 +123,17 @@ public class FurnitureTemplate extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtType)
-                            .addComponent(txtName)
-                            .addComponent(txtPrice))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(txtType)
+                    .addComponent(txtName)
+                    .addComponent(txtPrice))
+                .addContainerGap(93, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(txtType)
@@ -117,6 +144,24 @@ public class FurnitureTemplate extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        this.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_formMouseEntered
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        this.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_formMouseExited
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+        this.setBackground(new Color(100,100,100));
+    }//GEN-LAST:event_formMousePressed
+
+    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
+        this.setBackground(new Color(200,200,200));
+        ItemDetailFrame idf = new ItemDetailFrame(currFurniture, realFurniture);
+        idf.setVisible(true);
+    }//GEN-LAST:event_formMouseReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -21,21 +21,35 @@ public class ShoppingListview extends javax.swing.JPanel {
     private FurnitureDirectory displayFurniture;
     private FurnitureDirectory realFurniture;
     private int col = 4;
-    
+
     public ShoppingListview() {
         initComponents();
     }
-    
-    public ShoppingListview(FurnitureDirectory df, FurnitureDirectory theTable){
+
+    public ShoppingListview(FurnitureDirectory df, FurnitureDirectory theTable) {
         this.setLayout(new GridLayout(0, col));
+        this.displayFurniture = df;
+        this.realFurniture  = theTable;
         populateList();
     }
-    
-    private void populateList(){
-        for(int i = 0; i < 21; i++){
-            FurnitureTemplate ft = new FurnitureTemplate(new Furniture());
-            this.add(ft);
+
+    private void populateList() {
+        try {
+            for (Furniture f : displayFurniture) {
+                FurnitureTemplate ft = new FurnitureTemplate(f, realFurniture);
+                this.add(ft);
+            }
+        } catch (java.lang.NullPointerException e) {
+            javax.swing.JOptionPane.showMessageDialog(null,
+                    "Nothing Found");
         }
+        
+        for(int i = 0; i < 4; i++){
+            JPanel emotyP = new JPanel();
+            emotyP.setSize(240, 300);
+            this.add(emotyP);
+        }
+
     }
 
     /**
