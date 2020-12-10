@@ -38,12 +38,18 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
     
     public void populateTable(){
         JPanel table = new JPanel();
+        table.setLayout(new BoxLayout(table, BoxLayout.PAGE_AXIS));
         table.setBackground(new Color(255,255,255));
         for(WorkRequest wr : system.getWorkQueue()){
             if(wr.getReceivers().containsKey(account)){
                 ShoppingHistoryTemplete sht = new ShoppingHistoryTemplete(wr, system);
                 table.add(sht);
             }
+        }
+        for(int i = 0; i < 4; i++){
+            JPanel emptyP = new JPanel();
+            emptyP.setSize(830,150);
+            table.add(emptyP);
         }
         jSplitPane1.setBottomComponent(new JScrollPane(table));
     }
@@ -59,7 +65,6 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -68,23 +73,15 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("jLabel1");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(1366, Short.MAX_VALUE))
+            .addGap(0, 1176, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
-                .addContainerGap(44, Short.MAX_VALUE))
+            .addGap(0, 697, Short.MAX_VALUE)
         );
 
         jSplitPane1.setTopComponent(jPanel2);
@@ -93,9 +90,7 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1412, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +119,6 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;

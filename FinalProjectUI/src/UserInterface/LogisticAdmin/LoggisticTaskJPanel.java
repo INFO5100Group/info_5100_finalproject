@@ -8,6 +8,7 @@ package UserInterface.LogisticAdmin;
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
 import Business.Person.Person;
+import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
@@ -21,9 +22,11 @@ import org.json.JSONObject;
  * @author Bohan Feng
  */
 public class LoggisticTaskJPanel extends javax.swing.JPanel {
+
     private Account account;
     private EcoSystem system;
-    private Enterprise currEnterprise;    
+    private Enterprise currEnterprise;
+
     public LoggisticTaskJPanel() {
         initComponents();
     }
@@ -36,55 +39,62 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         populateTable();
         populateComboo();
     }
-    
-    public void populateComboo(){
+
+    public void populateComboo() {
         comboDeriverMan.removeAllItems();
         comboDeriverMan.addItem("Select a deliver man");
-        for(Person p : currEnterprise.getDepartments().get(0).getEmployee()){
+        for (Person p : currEnterprise.getDepartments().get(0).getEmployee()) {
             Account currAccount = system.getAccounts().getAccontByPerson(p);
             comboDeriverMan.addItem(currAccount + " (" + currAccount.getID() + ")");
         }
     }
-    
-    public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel)this.tblTasks.getModel();
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.tblTasks.getModel();
         model.setRowCount(0);
-        for(WorkRequest wr : system.getWorkQueue()){
-            if(wr.getReceivers().keySet().contains(account)){
+        for (WorkRequest wr : system.getWorkQueue()) {
+            if (wr.getReceivers().keySet().contains(account)) {
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 Object row[] = new Object[6];
                 row[0] = wr;
                 row[1] = wr.getSender();
-                try{
-                    row[2] = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
-                    ).getName();
-                }catch (Exception e){
-                    row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(1);
+                if ((new ArrayList<>(wr.getReceivers().keySet())).get(0).getRole().rType == RoleType.Customer) {
+                    row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(0).getPerson();
+                    try {
+                        row[3] = (new ArrayList<>(wr.getReceivers().keySet())).get(2);
+                    } catch (Exception e) {
+                    }
+
+                } else {
+                    try {
+                        row[2] = system.getEnterprises().getEnterpriseByEmployeeAccount(
+                                (new ArrayList<>(wr.getReceivers().keySet())).get(1)
+                        ).getName();
+                    } catch (Exception e) {
+                        row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(1);
+                    }
                 }
-                
-                try{
-                    row[3] = (new ArrayList<>(wr.getReceivers().keySet())).get(2);  
-                }catch(Exception e){
-                    
+
+                try {
+                    row[3] = (new ArrayList<>(wr.getReceivers().keySet())).get(2);
+                } catch (Exception e) {
+
                 }
-                try{
+                try {
                     row[4] = currInfo.get("Product");
-                }
-                catch(Exception e){
-                    
+                } catch (Exception e) {
+
                 }
                 row[5] = wr.getStatus();
                 model.addRow(row);
             }
         }
     }
-    
+
     public int getEnterpriseID(String str) {
         String IDstr = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
         return Integer.parseInt(IDstr);
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -161,17 +171,24 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         } else {
             Account delAccount = system.getAccounts().getAccountByID(getEnterpriseID("" + comboDeriverMan.getSelectedItem()));
             WorkRequest wr = (WorkRequest) tblTasks.getValueAt(selectedRow, 0);
-            try {
-                (new ArrayList<>(wr.getReceivers().keySet())).get(2);
-            } catch (java.lang.IndexOutOfBoundsException e) {
+            boolean hasDelman = false;
+            for (Account a : wr.getReceivers().keySet()) {
+                if (a.getRole().rType == RoleType.LogisticsPseron) {
+                    hasDelman = true;
+                    break;
+                }
+            }
+            if (hasDelman) {
                 wr.getReceivers().put(delAccount, false);
                 wr.setStatus("Distribute for delivery");
                 DB4OUtil.storeSystem(system);
                 populateTable();
                 return;
+            } else {
+                JOptionPane.showMessageDialog(null, "Already have a deliver person , cannot set another one");
+                return;
             }
-            JOptionPane.showMessageDialog(null, "Already have a deliver person , cannot set another one");
-            return;
+
         }
     }//GEN-LAST:event_btnDistributeActionPerformed
 
