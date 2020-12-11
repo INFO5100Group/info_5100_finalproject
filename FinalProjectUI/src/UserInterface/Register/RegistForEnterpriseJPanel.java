@@ -314,7 +314,7 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 newAccount.setRole(new RetailAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
-            }else if(ComboType.getSelectedIndex() == 4){
+            }else if(ComboType.getSelectedIndex() == 5){
                 newAccount.setRole(new LogisticAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Transportation Department"));
             }
