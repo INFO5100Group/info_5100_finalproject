@@ -32,7 +32,7 @@
                       <Component id="passwordField1" alignment="0" max="32767" attributes="0"/>
                       <Component id="userNameJTextField1" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="1230" max="32767" attributes="0"/>
+                  <EmptySpace pref="1224" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
@@ -42,7 +42,7 @@
                       <Component id="passwordField2" alignment="0" max="32767" attributes="0"/>
                       <Component id="userNameJTextField2" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="1177" max="32767" attributes="0"/>
+                  <EmptySpace pref="1171" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -125,7 +125,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="433" max="-2" attributes="0"/>
-                  <EmptySpace pref="272" max="32767" attributes="0"/>
+                  <EmptySpace pref="304" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -196,7 +196,7 @@
                   <Component id="btnCustomer" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="btnEnterprise" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace min="54" pref="144" max="32767" attributes="0"/>
+                  <EmptySpace min="54" pref="147" max="32767" attributes="0"/>
               </Group>
               <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
           </Group>

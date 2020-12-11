@@ -31,7 +31,7 @@
                   </Group>
                   <Component id="jScrollPane1" min="-2" pref="707" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="94" max="32767" attributes="0"/>
+              <EmptySpace pref="810" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,7 +45,7 @@
                   <Component id="comboDeriverMan" max="32767" attributes="0"/>
                   <Component id="btnDistribute" pref="39" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="138" max="32767" attributes="0"/>
+              <EmptySpace pref="555" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
