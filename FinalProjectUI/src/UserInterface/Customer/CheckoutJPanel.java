@@ -112,12 +112,13 @@ public class CheckoutJPanel extends javax.swing.JPanel {
         txtName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtName.setText("Furtinure Name");
 
+        txtQuantity.setFont(new java.awt.Font("宋体", 0, 17)); // NOI18N
         txtQuantity.setText("3");
 
-        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         txtPrice.setText("$ 100.00");
 
-        txtTotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtTotal.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         txtTotal.setText("$ 300.00");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -129,12 +130,12 @@ public class CheckoutJPanel extends javax.swing.JPanel {
                 .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addComponent(txtQuantity)
+                .addGap(59, 59, 59)
+                .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53)
                 .addComponent(txtPrice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -150,12 +151,15 @@ public class CheckoutJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        btnBack.setBackground(new java.awt.Color(255, 255, 255));
+        btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnBackMousePressed(evt);
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Back");
 
@@ -172,16 +176,19 @@ public class CheckoutJPanel extends javax.swing.JPanel {
             btnBackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBackLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
+        btnBuy.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuy.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         btnBuy.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnBuyMousePressed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Place Order");
 
@@ -198,7 +205,7 @@ public class CheckoutJPanel extends javax.swing.JPanel {
             btnBuyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBuyLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -234,7 +241,7 @@ public class CheckoutJPanel extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91)

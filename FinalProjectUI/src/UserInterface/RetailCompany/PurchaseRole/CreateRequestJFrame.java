@@ -52,7 +52,10 @@ public class CreateRequestJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
+        btnSubmit.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         btnSubmit.setText("Sumbit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -71,7 +74,10 @@ public class CreateRequestJFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Offer Price ($)");
 
+        btnCancel.setBackground(new java.awt.Color(255, 255, 255));
+        btnCancel.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         btnCancel.setText("Cancel");
+        btnCancel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);

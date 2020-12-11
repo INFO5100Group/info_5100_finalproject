@@ -65,11 +65,10 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtName" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jSpinner1" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jSpinner1" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="txtAlert" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -83,15 +82,16 @@
                                       <Component id="txtSeller" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtSize" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtAva" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtPrice" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSize" alignment="0" min="-2" pref="169" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="jPanel1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -110,7 +110,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txtType" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtWoodType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtWoodType" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Component id="txtPrice" min="-2" max="-2" attributes="0"/>
@@ -119,15 +119,15 @@
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtSize" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="txtSize" min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jSpinner1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="jSpinner1" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                                   <Component id="txtAlert" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="178" max="32767" attributes="0"/>
+                              <EmptySpace pref="117" max="32767" attributes="0"/>
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -151,6 +151,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="txtType">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="96" green="96" red="96" type="rgb"/>
                 </Property>
@@ -159,6 +162,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="txtWoodType">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="96" green="96" red="96" type="rgb"/>
                 </Property>
@@ -175,7 +181,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblImage" alignment="0" pref="698" max="32767" attributes="0"/>
+                      <Component id="lblImage" alignment="0" pref="687" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -210,6 +216,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="txtSize">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="30 x 30 x 30"/>
               </Properties>
             </Component>
@@ -250,6 +259,11 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="45" red="ff" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel1MousePressed"/>
@@ -259,11 +273,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtBuy" pref="256" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="txtBuy" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -280,7 +290,7 @@
                 <Component class="javax.swing.JLabel" name="txtBuy">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Yu Gothic UI Light" size="18" style="1"/>
+                      <Font name="Yu Gothic UI" size="22" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>

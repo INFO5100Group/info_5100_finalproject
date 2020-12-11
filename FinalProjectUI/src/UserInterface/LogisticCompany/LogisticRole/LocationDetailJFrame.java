@@ -11,6 +11,7 @@ import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -26,8 +27,12 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
         this.wr = wr;
         this.system = sys;
         populateContent();
+        setButtonImage();
     }
-
+    private void setButtonImage(){
+         ImageIcon bargain=new ImageIcon("./image/confirm.png");
+         jButton1.setIcon(bargain);
+    }
     public void populateContent() {
         Account a = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
         String state, city, street, zip;
@@ -97,7 +102,7 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
 
         txtReceiver.setText("<>");
 
-        jButton1.setText("Confirm Information");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -109,30 +114,29 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(97, 97, 97)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
+                    .addComponent(State4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(State2)
+                        .addComponent(State1)
+                        .addComponent(State)
+                        .addComponent(State3)))
+                .addGap(111, 111, 111)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtReceiver)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(State4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(State2)
-                                .addComponent(State1)
-                                .addComponent(State)
-                                .addComponent(State3)))
-                        .addGap(111, 111, 111)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtReceiver)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtState)
-                                        .addComponent(txtCity, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addComponent(txtStreet, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addComponent(txtZip)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jButton1)))
-                .addContainerGap(304, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtState)
+                                .addComponent(txtCity, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(txtStreet, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(txtZip))
+                .addContainerGap(471, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,9 +161,9 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(State4)
                     .addComponent(txtReceiver))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         pack();

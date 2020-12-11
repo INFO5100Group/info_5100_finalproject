@@ -48,6 +48,18 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
         if(wr.getStatus().equals("Delivered")){
             btnReceive.setVisible(true);
         }
+        if(wr.getStatus().equals("Customer placed an order")){
+           ImageIcon lb1=new ImageIcon("./image/待处理.png");
+           jLabel1.setIcon(lb1);
+        }
+        if(wr.getStatus().equals("Select Loggistic Company")){
+           ImageIcon lb2=new ImageIcon("./image/配送中.png");
+           jLabel1.setIcon(lb2); 
+        }
+        if(wr.getStatus().equals("Delivered")){
+           ImageIcon lb3=new ImageIcon("./image/待自提.png");
+           jLabel1.setIcon(lb3); 
+        }
         try {
             File imgFile = new File("./image/FurnitureImage/" + currFurniture.getImage());
             BufferedImage myImg = ImageIO.read(imgFile);
@@ -79,6 +91,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
         txtStatus = new javax.swing.JLabel();
         btnReceive = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -90,8 +103,11 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
 
         txtQty.setText("Qty : 5");
 
+        txtStatus.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
         txtStatus.setText("Customer place an Order");
 
+        btnReceive.setBackground(new java.awt.Color(255, 255, 255));
+        btnReceive.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnReceive.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnReceiveMouseClicked(evt);
@@ -101,6 +117,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Yu Gothic", 1, 17)); // NOI18N
         jLabel2.setText("Confirm receive");
 
         javax.swing.GroupLayout btnReceiveLayout = new javax.swing.GroupLayout(btnReceive);
@@ -115,7 +132,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
         btnReceiveLayout.setVerticalGroup(
             btnReceiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnReceiveLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(19, 19, 19))
         );
@@ -127,19 +144,25 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 363, Short.MAX_VALUE)
-                        .addComponent(txtStatus)
-                        .addGap(61, 61, 61))
-                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtName)
-                            .addComponent(txtQty))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtQty)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(291, 291, 291))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(295, 295, 295)
+                        .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,16 +173,20 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(txtName)
-                        .addGap(3, 3, 3)
-                        .addComponent(txtStatus)
-                        .addGap(1, 1, 1)
+                        .addGap(22, 22, 22)
                         .addComponent(txtQty)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 13, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -179,6 +206,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnReceive;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblImage;
     private javax.swing.JLabel txtName;

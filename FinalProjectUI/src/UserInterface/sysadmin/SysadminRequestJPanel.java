@@ -88,7 +88,6 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         SysadminJTable1.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
-        SysadminJTable1.setForeground(new java.awt.Color(255, 255, 255));
         SysadminJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

@@ -16,6 +16,7 @@ import com.db4o.Db4o;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -43,6 +44,8 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         this.system = sys;
         this.account = acc;
         populateTable();
+        setButtonImage();
+        setTable();
     }
 
     public void populateTable() {
@@ -110,6 +113,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
             }
         });
 
+        FurnitureCompanyJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         FurnitureCompanyJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -140,6 +144,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(FurnitureCompanyJTable);
 
+        CustomerJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         CustomerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -170,6 +175,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         });
         jScrollPane4.setViewportView(CustomerJTable);
 
+        ForestryCompanyJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         ForestryCompanyJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -217,31 +223,29 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(378, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jScrollPane3)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane2)
-                                .addComponent(jScrollPane3)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
+                        .addGap(166, 166, 166)
                         .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(222, 222, 222)
+                        .addGap(307, 307, 307)
                         .addComponent(btnLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addGap(222, 222, 222))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(33, 33, 33)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabel2)
@@ -255,7 +259,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(117, 117, 117))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void initialJTable() {
@@ -285,7 +289,29 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
             ldf.setVisible(true);
         }
     }//GEN-LAST:event_btnLocationActionPerformed
-
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/Accept.png");
+         btnAccept.setIcon(delete);
+         ImageIcon regist=new ImageIcon("./image/location.png");
+         btnLocation.setIcon(regist);
+    }
+    private void setTable(){
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setForeground(Color.white);
+        for(int i=0;i<5;i++){
+            TableColumn column = CustomerJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+        for(int i=0;i<5;i++){
+            TableColumn column = ForestryCompanyJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+        for(int i=0;i<5;i++){
+            TableColumn column = FurnitureCompanyJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+    }
     private WorkRequest getSelectdwr() {
         int SelectedRow;
         WorkRequest wr = null;

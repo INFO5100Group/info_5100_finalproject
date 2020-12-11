@@ -134,18 +134,15 @@ public class NavgateableJPanel extends javax.swing.JPanel {
          jPanel4.setVisible(false);
          }*/
          if("Customer".equals(account.getRole().rType.toString())){
-         ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
+         ImageIcon bt1=new ImageIcon("./image/browse.png");
          btn1.setIcon(bt1);
-         ImageIcon bt2=new ImageIcon("./image/manageInfo.png");
+         ImageIcon bt2=new ImageIcon("./image/viewhistory.png");
          btn2.setIcon(bt2);
-         ImageIcon bt3=new ImageIcon("./image/manageInfo.png");
-         btn2.setIcon(bt3);
-         ImageIcon lb1=new ImageIcon("./image/审核 (4).png");
-         ImageIcon lb2=new ImageIcon("./image/资讯.png");
+         ImageIcon lb1=new ImageIcon("./image/指标查询.png");
+         ImageIcon lb2=new ImageIcon("./image/历史订单.png");
          jLabel2.setIcon(lb1);
          jLabel3.setIcon(lb2);
-         ImageIcon lb3=new ImageIcon("./image/资讯.png");
-         jLabel4.setIcon(lb3);
+         jPanel3.setVisible(false);
          jPanel4.setVisible(false);
          }
          if(

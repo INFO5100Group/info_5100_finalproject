@@ -50,6 +50,7 @@ public class CreateRequestJFrame extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnSubmit.setText("Sumbit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {

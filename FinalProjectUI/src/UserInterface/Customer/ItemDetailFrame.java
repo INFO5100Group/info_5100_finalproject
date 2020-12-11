@@ -61,7 +61,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtAva.setText(remain > 0 ? "In Stock" : "Unavaliable");
         try {
             txtSize.setText(currFurniture.getHeight() + " x "
-                    + currFurniture.getLength() + " x"
+                    + currFurniture.getLength() + " x "
                     + currFurniture.getWidth());
         }catch(Exception e){
             txtSize.setText("Not Avaliable");
@@ -120,9 +120,11 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtName.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
         txtName.setText("Furniture Name");
 
+        txtType.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         txtType.setForeground(new java.awt.Color(150, 150, 150));
         txtType.setText("Type");
 
+        txtWoodType.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         txtWoodType.setForeground(new java.awt.Color(150, 150, 150));
         txtWoodType.setText("Wood Type");
 
@@ -135,7 +137,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
+            .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,6 +150,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Size:");
 
+        txtSize.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         txtSize.setText("30 x 30 x 30");
 
         txtAva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -180,6 +183,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         jLabel3.setText("Quantity");
 
         jPanel1.setBackground(new java.awt.Color(255, 69, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPanel1MousePressed(evt);
@@ -189,7 +193,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
             }
         });
 
-        txtBuy.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        txtBuy.setFont(new java.awt.Font("Yu Gothic UI", 1, 22)); // NOI18N
         txtBuy.setForeground(new java.awt.Color(255, 255, 255));
         txtBuy.setText("Buy with price of $150");
 
@@ -197,10 +201,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtBuy, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(txtBuy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,10 +222,9 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                 .addGroup(itemViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(itemViewLayout.createSequentialGroup()
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtAlert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(itemViewLayout.createSequentialGroup()
                         .addGroup(itemViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(itemViewLayout.createSequentialGroup()
@@ -236,11 +236,12 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                                 .addGap(52, 52, 52)
                                 .addComponent(txtSeller))
                             .addComponent(jLabel2)
-                            .addComponent(txtSize)
                             .addComponent(txtAva)
                             .addComponent(txtPrice)
-                            .addComponent(jLabel3))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jLabel3)
+                            .addComponent(txtSize, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 64, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         itemViewLayout.setVerticalGroup(
@@ -257,7 +258,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(itemViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtType)
-                            .addComponent(txtWoodType))
+                            .addComponent(txtWoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(47, 47, 47)
                         .addComponent(txtPrice)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -265,14 +266,14 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                         .addGap(67, 67, 67)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtSize)
-                        .addGap(42, 42, 42)
+                        .addComponent(txtSize, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(itemViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(itemViewLayout.createSequentialGroup()
                         .addContainerGap()
