@@ -69,6 +69,7 @@ public class CustomerHistoryJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jSplitPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jSplitPane1.setDividerSize(0);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));

@@ -183,7 +183,7 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
             Person newPerson = new Person(jtxName.getText(), "Admin", "Other");
             newPerson.setCity(jtxCity.getText());
             newPerson.setEmail(jtxEmail.getText());
-            //newPerson.setState(jtxState.getText());
+            newPerson.setState((String) ComboState.getSelectedItem());
             newPerson.setStreet(jtxStreet.getText());
             newPerson.setZipCode(jtxZipCode.getText());
             // create admin account

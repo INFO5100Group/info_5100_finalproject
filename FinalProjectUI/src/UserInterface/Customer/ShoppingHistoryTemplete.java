@@ -9,6 +9,7 @@ import Business.Furniture.Furniture;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -57,6 +58,10 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
            jLabel1.setIcon(lb2); 
         }
         if(wr.getStatus().equals("Delivered")){
+           ImageIcon lb3=new ImageIcon("./image/待自提.png");
+           jLabel1.setIcon(lb3); 
+        }
+        if(wr.getStatus().equals("Received")){
            ImageIcon lb3=new ImageIcon("./image/待自提.png");
            jLabel1.setIcon(lb3); 
         }
@@ -112,6 +117,12 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnReceiveMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReceiveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReceiveMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnReceiveMousePressed(evt);
             }
@@ -132,7 +143,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
         btnReceiveLayout.setVerticalGroup(
             btnReceiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnReceiveLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(19, 19, 19))
         );
@@ -148,21 +159,16 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtQty)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txtName)
+                            .addComponent(txtQty))
                         .addGap(77, 77, 77)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(291, 291, 291))
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(295, 295, 295)
-                        .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,7 +187,7 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
                 .addGap(47, 47, 47)
                 .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 13, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
@@ -202,6 +208,14 @@ public class ShoppingHistoryTemplete extends javax.swing.JPanel {
             populateContent();
         }
     }//GEN-LAST:event_btnReceiveMousePressed
+
+    private void btnReceiveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReceiveMouseEntered
+        btnReceive.setBackground(new Color(150,150,150));
+    }//GEN-LAST:event_btnReceiveMouseEntered
+
+    private void btnReceiveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReceiveMouseExited
+        btnReceive.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_btnReceiveMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

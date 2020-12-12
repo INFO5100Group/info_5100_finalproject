@@ -239,7 +239,7 @@ public class FurnitureRegistJPanel extends javax.swing.JPanel {
             }
             
             enterprise.getDepartments()
-                    .get(select == 1 ? 0 : select == 2 || select == 3 ? 1 : 3)
+                    .get(select == 1 ? 0 : select == 2 || select == 3 ? 1 : 2)
                     .getEmployee()
                     .addPerson(a.getPerson());
             JOptionPane.showMessageDialog(null, a.getAccountName() + " account add success!");
