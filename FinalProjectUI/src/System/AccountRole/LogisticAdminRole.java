@@ -32,7 +32,6 @@ public class LogisticAdminRole extends Role {
         if (currEnterprise.isApproved()) {
             NavgateableJPanel WorkArea = new NavgateableJPanel(userProcessContainer, account, system);
             WorkArea.JPanelPos1 = new LoggisticRegistJPanel(account, system);
-            WorkArea.JPanelPos2 = new LoggisticTaskJPanel(account, system);
             WorkArea.loadNavBtn();
             return WorkArea;
         } else {

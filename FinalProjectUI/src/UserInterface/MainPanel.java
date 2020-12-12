@@ -66,7 +66,8 @@ public class MainPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1584, 897));
+        setPreferredSize(new java.awt.Dimension(1680, 1000));
+        setVerifyInputWhenFocusTarget(false);
 
         userNameJTextField1.setFont(new java.awt.Font("幼圆", 1, 18)); // NOI18N
         userNameJTextField1.setBorder(null);
@@ -190,7 +191,7 @@ public class MainPanel extends javax.swing.JPanel {
                 .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
                 .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 147, Short.MAX_VALUE))
+                .addGap(54, 148, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 

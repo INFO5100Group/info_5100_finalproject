@@ -11,6 +11,7 @@ import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import System.AccountRole.LogisticManagerRole;
 import System.AccountRole.LogisticsPersonRole;
 import System.AccountRole.RegulateOfficerRole;
 import System.AccountRole.RegulateScientistRole;
@@ -34,7 +35,7 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
     private Account account;
     private EcoSystem system;
     private Enterprise currEnterprise;
-    
+
     public LoggisticRegistJPanel() {
         initComponents();
         setButtonImage();
@@ -43,26 +44,33 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
     public LoggisticRegistJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;    
+        this.system = system;
         this.currEnterprise = system.getEnterprises().getEnterpriseByAccout(account);
         populateTable();
+        populateCombo();
         setTable();
     }
-    
-    public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel)this.tblEmployee.getModel();
+
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) this.tblEmployee.getModel();
         model.setRowCount(0);
-        for(Organization o : currEnterprise.getDepartments()){
-            for(Person p : o.getEmployee()){
+        for (Organization o : currEnterprise.getDepartments()) {
+            for (Person p : o.getEmployee()) {
                 Object row[] = new Object[3];
                 row[0] = system.getAccounts().getAccontByPerson(p);
-                row[1] = ((Account)row[0]).getPassword();
-                row[2] = ((Account)row[0]).getRole().rType;   
+                row[1] = ((Account) row[0]).getPassword();
+                row[2] = ((Account) row[0]).getRole().rType;
                 model.addRow(row);
             }
         }
     }
-    
+
+    public void populateCombo() {
+        ComboRole.removeAllItems();
+        ComboRole.addItem("");// 0
+        ComboRole.addItem("Logistic Manager"); // 1
+        ComboRole.addItem("Logistic Man"); // 2
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -81,6 +89,8 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
         jtxPassword = new javax.swing.JTextField();
         btnRegist = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        ComboRole = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -128,6 +138,11 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
             }
         });
 
+        ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
+        jLabel5.setText("Role:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,11 +161,13 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ComboRole, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jtxPassword)
-                            .addComponent(jtxUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtxUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                         .addGap(480, 480, 480))))
         );
         layout.setVerticalGroup(
@@ -166,40 +183,49 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(91, 91, 91)
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnRegist, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    private void setButtonImage(){
-         ImageIcon delete=new ImageIcon("./image/delete.png");
-         btnDelete.setIcon(delete);
-         ImageIcon regist=new ImageIcon("./image/regist.png");
-         btnRegist.setIcon(regist);
+    private void setButtonImage() {
+        ImageIcon delete = new ImageIcon("./image/delete.png");
+        btnDelete.setIcon(delete);
+        ImageIcon regist = new ImageIcon("./image/regist.png");
+        btnRegist.setIcon(regist);
     }
-    private void setTable(){
+
+    private void setTable() {
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setBackground(new Color(149, 19, 19));
         cellRenderer.setForeground(Color.white);
-        for(int i=0;i<3;i++){
+        for (int i = 0; i < 3; i++) {
             TableColumn column = tblEmployee.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
     }
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-       if(inputValidate()){
+        if (inputValidate()) {
             Person p = new Person();
             Account a = new Account(jtxUserName.getText(), jtxPassword.getText(), p);
-            a.setRole(new LogisticsPersonRole());
-            
+            if(ComboRole.getSelectedIndex() == 1){
+                a.setRole(new LogisticManagerRole());
+            }else if(ComboRole.getSelectedIndex() == 2){
+                a.setRole(new LogisticsPersonRole());
+            }
+
             boolean addAccountSuccess = system.getAccounts().addAccount(a);
-            if(!addAccountSuccess){
+            if (!addAccountSuccess) {
                 JOptionPane.showMessageDialog(null, a.getAccountName() + " cannot add account, please change to another user name");
                 return;
             }
-            
+
             currEnterprise.getDepartments().get(0).getEmployee().addPerson(a.getPerson());
             JOptionPane.showMessageDialog(null, a.getAccountName() + " account add success!");
             DB4OUtil.storeSystem(system);
@@ -209,38 +235,40 @@ public class LoggisticRegistJPanel extends javax.swing.JPanel {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         int row = tblEmployee.getSelectedRow();
-        if(row < 0){
+        if (row < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         // get selected enterprise
         Account a = (Account) tblEmployee.getValueAt(row, 0);
-        
+
         currEnterprise.getDepartments().get(0).getEmployee().removePerson(a.getPerson());
         system.getAccounts().removeAccount(a);
-        
+
         // store to database
         DB4OUtil.storeSystem(system);
         JOptionPane.showMessageDialog(null, "remove Account " + a + "success");
         populateTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    public boolean inputValidate(){
+    public boolean inputValidate() {
         boolean isEmpty = jtxPassword.getText().equals("")
                 || jtxUserName.getText().equals("");
-        if(isEmpty){
+        if (isEmpty) {
             JOptionPane.showMessageDialog(null, "Please fill all text fields");
             return false;
-        }  
+        }
         return true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboRole;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnRegist;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jtxPassword;
     private javax.swing.JTextField jtxUserName;

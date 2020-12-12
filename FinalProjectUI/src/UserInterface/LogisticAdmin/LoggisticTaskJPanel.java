@@ -36,7 +36,7 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         this();
         this.account = account;
         this.system = system;
-        this.currEnterprise = system.getEnterprises().getEnterpriseByAccout(account);
+        this.currEnterprise = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
         populateTable();
         populateComboo();
     }
@@ -46,7 +46,10 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         comboDeriverMan.addItem("Select a deliver man");
         for (Person p : currEnterprise.getDepartments().get(0).getEmployee()) {
             Account currAccount = system.getAccounts().getAccontByPerson(p);
-            comboDeriverMan.addItem(currAccount + " (" + currAccount.getID() + ")");
+            if (currAccount.getRole().rType == RoleType.LogisticsPseron) {
+                comboDeriverMan.addItem(currAccount + " (" + currAccount.getID() + ")");
+            }
+
         }
     }
 
@@ -54,33 +57,25 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) this.tblTasks.getModel();
         model.setRowCount(0);
         for (WorkRequest wr : system.getWorkQueue()) {
-            if (wr.getReceivers().keySet().contains(account)) {
+            if (wr.getReceivers().keySet().contains(currEnterprise.getAdmin())) {
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 Object row[] = new Object[6];
                 row[0] = wr;
                 row[1] = wr.getSender();
-                if ((new ArrayList<>(wr.getReceivers().keySet())).get(0).getRole().rType == RoleType.Customer) {
-                    row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(0).getPerson();
-                    try {
-                        row[3] = (new ArrayList<>(wr.getReceivers().keySet())).get(2);
-                    } catch (Exception e) {
+                for (Account res : wr.getReceivers().keySet()) {
+                    if (res.getRole().rType != RoleType.LogisticAdmin) {
+                        if (res.getRole().rType == RoleType.LogisticsPseron && row[3] == null) {
+                            row[3] = res.getAccountName();
+                        }
+                        if (res.getRole().rType != RoleType.LogisticsPseron && row[2] == null) {
+                            row[2] = res.getAccountName();
+                        }
                     }
-
-                } else {
-                    try {
-                        row[2] = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                                (new ArrayList<>(wr.getReceivers().keySet())).get(1)
-                        ).getName();
-                    } catch (Exception e) {
-                        row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(1);
+                    if (row[2] != null && row[3] != null) {
+                        break;
                     }
                 }
 
-                try {
-                    row[3] = (new ArrayList<>(wr.getReceivers().keySet())).get(2);
-                } catch (Exception e) {
-
-                }
                 try {
                     row[4] = currInfo.get("Product");
                 } catch (Exception e) {
@@ -181,7 +176,7 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
                     break;
                 }
             }
-            if (hasDelman) {
+            if (!hasDelman) {
                 wr.getReceivers().put(delAccount, false);
                 wr.setStatus("Distribute for delivery");
                 DB4OUtil.storeSystem(system);

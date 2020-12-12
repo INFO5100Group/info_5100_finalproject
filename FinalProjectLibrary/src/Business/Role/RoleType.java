@@ -23,6 +23,7 @@ public enum RoleType {
     Customer,
     // logistics
     LogisticsPseron,
+    LogisticManager,
     LogisticAdmin,
     // sysAdmin
     SysAdmin;

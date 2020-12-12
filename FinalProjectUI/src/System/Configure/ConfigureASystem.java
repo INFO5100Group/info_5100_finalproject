@@ -97,9 +97,10 @@ public class ConfigureASystem {
 
         Enterprise log = addEnterprise("test logistic", new LogisticAdminRole());
         log.getDepartments().addOrganization(new Organization("Transportation Department"));
-        log.setName("Eastrn Wind Ligistic");
+        log.setName("Eastrn Wind Logistic");
 
-        addEmployee(log, "ron", "devine", "ligistman", 0, new LogisticsPersonRole());
+        addEmployee(log, "ron", "devine", "logistperson", 0, new LogisticsPersonRole());
+        addEmployee(log, "Jack", "Williams", "logistmanager", 0, new LogisticManagerRole());
 
         /*----------------------------------------------------------------------------------*/
         ret.getFurnitureStorage().addFurniture(addFurniture("Cable 1", "red wood", "Table"), 5);

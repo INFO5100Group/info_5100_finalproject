@@ -195,6 +195,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
 
         txtBuy.setFont(new java.awt.Font("Yu Gothic UI", 1, 22)); // NOI18N
         txtBuy.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtBuy.setText("Buy with price of $150");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

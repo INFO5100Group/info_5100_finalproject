@@ -3,8 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1584, 897]"/>
+      <Dimension value="[1680, 1000]"/>
     </Property>
+    <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
   </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -196,7 +197,7 @@
                   <Component id="btnCustomer" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="btnEnterprise" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace min="54" pref="147" max="32767" attributes="0"/>
+                  <EmptySpace min="54" pref="148" max="32767" attributes="0"/>
               </Group>
               <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
           </Group>
