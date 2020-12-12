@@ -275,6 +275,7 @@ public class CheckoutJPanel extends javax.swing.JPanel {
         } catch (Exception ex) {
             Logger.getLogger(CheckoutJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        realFurnitures.removeFurniture(currFurniture, quantity);
         DB4OUtil.storeSystem(system);
         JOptionPane.showMessageDialog(null, "you have place an order for " + currFurniture.getName());
         CardLayoutNavigator.goBack(contianer, this);

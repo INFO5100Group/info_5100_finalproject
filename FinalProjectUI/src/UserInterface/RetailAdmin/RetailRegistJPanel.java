@@ -51,6 +51,8 @@ public class RetailRegistJPanel extends javax.swing.JPanel {
         this.account = account;
         this.system = system;
         currEnterprise = system.getEnterprises().getEnterpriseByAccout(account);
+        populateTable();
+        populateCombo();
     }
     
     public void populateCombo(){
