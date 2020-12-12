@@ -24,7 +24,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     public MainJFrame() {
         initComponents();
-        setSize(1980, 1000);
+        setSize(1900, 900);
         setResizable(false);
         
         system = db.retrieveSystem(); 

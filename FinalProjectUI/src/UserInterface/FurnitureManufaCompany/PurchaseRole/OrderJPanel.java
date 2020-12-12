@@ -15,6 +15,7 @@ import UserInterface.RetailCompany.PurchaseRole.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -44,6 +45,7 @@ public class OrderJPanel extends javax.swing.JPanel {
         this.system = arg2;
         populateTable();
         setTable();
+        setButtonImage();
     }
     private void setTable(){
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
@@ -138,44 +140,29 @@ public class OrderJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(444, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(344, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1035, Short.MAX_VALUE)
-                            .addComponent(jScrollPane3))
-                        .addGap(121, 121, 121))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1035, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(513, 513, 513))))
+                        .addGap(392, 392, 392)))
+                .addGap(221, 221, 221))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(121, 121, 121)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(103, 103, 103)
                 .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    private void initialJTable() {
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        HistoryOrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74, 192, 255));
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-    }
 
     public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) this.OrderJTable.getModel();
@@ -214,7 +201,10 @@ public class OrderJPanel extends javax.swing.JPanel {
             }
         }
     }
-
+    private void setButtonImage(){
+         ImageIcon accept=new ImageIcon("./image/Complete.png");
+         btnComplete.setIcon(accept);
+    }
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         WorkRequest wr = getSelectdwr();
         Enterprise currE = system.getEnterprises().getEnterpriseByEmployeeAccount(account);

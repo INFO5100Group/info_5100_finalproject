@@ -104,25 +104,17 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         if ("SysAdmin".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/manageRequests.png");
             ImageIcon bt2 = new ImageIcon("./image/manageInfo.png");
+            ImageIcon bt3 = new ImageIcon("./image/manageInfo.png");
             ImageIcon lb1 = new ImageIcon("./image/审核 (4).png");
             ImageIcon lb2 = new ImageIcon("./image/资讯.png");
+            ImageIcon lb3 = new ImageIcon("./image/资讯.png");
+            jLabel4.setIcon(lb3);
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             btn1.setIcon(bt1);
             btn2.setIcon(bt2);
-            jPanel3.setVisible(false);
-            jPanel4.setVisible(false);
-        }
-        if ("LogisticAdmin".equals(account.getRole().rType.toString())) {
-            ImageIcon bt1 = new ImageIcon("./image/manageInfo.png");
-            btn1.setIcon(bt1);
-            ImageIcon bt2 = new ImageIcon("./image/manageInfo.png");
-            btn1.setIcon(bt2);
-            ImageIcon lb1 = new ImageIcon("./image/审核 (4).png");
-            ImageIcon lb2 = new ImageIcon("./image/资讯.png");
-            jLabel2.setIcon(lb1);
-            jLabel3.setIcon(lb2);
-            jPanel3.setVisible(false);
+            btn3.setIcon(bt3);            
+            //jPanel3.setVisible(false);
             jPanel4.setVisible(false);
         }
         if ("ForestSalesPerson".equals(account.getRole().rType.toString())
@@ -136,7 +128,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon lb2 = new ImageIcon("./image/配送.png");
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
-            jPanel3.setVisible(false);
+            ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
+            btn3.setIcon(bt3);
+            ImageIcon lb3 = new ImageIcon("./image/修改.png");
+            jLabel4.setIcon(lb3);
             jPanel4.setVisible(false);
         }
         if ("ManuProcurementPerson".equals(account.getRole().rType.toString())
@@ -149,7 +144,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon lb2 = new ImageIcon("./image/订单.png");
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
-            jPanel3.setVisible(false);
+            ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
+            btn3.setIcon(bt3);
+            ImageIcon lb3 = new ImageIcon("./image/修改.png");
+            jLabel4.setIcon(lb3);
             jPanel4.setVisible(false);
         }
         /*if("LogisticsPseron".equals(account.getRole().rType.toString())){
@@ -176,15 +174,30 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             jPanel3.setVisible(false);
             jPanel4.setVisible(false);
         }
-        if ("RetailAdmin".equals(account.getRole().rType.toString())
-                || "ManuAdmin".equals(account.getRole().rType.toString())
-                || "ForestAdmin".equals(account.getRole().rType.toString())
-                || "RegulateAdmin".equals(account.getRole().rType.toString())
-                || "RegulateScientist".equals(account.getRole().rType.toString())
+        if (    "RegulateScientist".equals(account.getRole().rType.toString())
                 || "ForestLoggingManager".equals(account.getRole().rType.toString())
                 || "ManuProducer".equals(account.getRole().rType.toString())
                 || "ManuDesigner".equals(account.getRole().rType.toString())
-                || "LogisticsPseron".equals(account.getRole().rType.toString())) {
+                || "LogisticsPseron".equals(account.getRole().rType.toString())
+                || "LogisticManager".equals(account.getRole().rType.toString())
+                || "RegulateOfficer".equals(account.getRole().rType.toString())) {
+            ImageIcon bt1 = new ImageIcon("./image/myWork.png");
+            btn1.setIcon(bt1);
+            ImageIcon lb1 = new ImageIcon("./image/工作台.png");
+            jLabel2.setIcon(lb1);
+            ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
+            btn2.setIcon(bt3);
+            ImageIcon lb3 = new ImageIcon("./image/修改.png");
+            jLabel3.setIcon(lb3);
+            jPanel3.setVisible(false);
+            jPanel4.setVisible(false);
+        }
+        if (    "RetailAdmin".equals(account.getRole().rType.toString())
+                || "ManuAdmin".equals(account.getRole().rType.toString())
+                || "ForestAdmin".equals(account.getRole().rType.toString())
+                || "RegulateAdmin".equals(account.getRole().rType.toString())
+                || "LogisticAdmin".equals(account.getRole().rType.toString())
+                ) {
             this.btn1.setVisible(false);
             this.btn1.setEnabled(false);
             jPanel1.setVisible(false);
@@ -396,11 +409,11 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         topBarLayout.setHorizontalGroup(
             topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topBarLayout.createSequentialGroup()
-                .addGap(560, 560, 560)
+                .addGap(946, 946, 946)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jblUserType)
-                .addGap(595, 595, 595)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
                 .addComponent(btnOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         topBarLayout.setVerticalGroup(

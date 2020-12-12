@@ -23,7 +23,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -31,7 +31,7 @@
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="33" max="32767" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                           </Group>
@@ -43,19 +43,24 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnRefresh" min="-2" pref="183" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                      <Component id="btnAddDistribute" min="-2" pref="183" max="-2" attributes="0"/>
-                      <EmptySpace pref="514" max="32767" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jtxbarginPrice" min="-2" pref="222" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnBargain" min="-2" pref="183" max="-2" attributes="0"/>
-                          <Component id="btnAccept" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnAddDistribute" min="-2" pref="183" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="btnRefresh" min="-2" pref="183" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jtxbarginPrice" min="-2" pref="222" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                              <Component id="btnBargain" min="-2" pref="183" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="btnAccept" alignment="1" min="-2" pref="183" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                      <EmptySpace min="417" pref="417" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -74,26 +79,20 @@
                   <Component id="jScrollPane1" pref="242" max="32767" attributes="0"/>
                   <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jtxbarginPrice" alignment="3" max="32767" attributes="0"/>
-                          <Component id="jLabel3" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jtxbarginPrice" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="btnBargain" alignment="1" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnBargain" min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="btnRefresh" min="-2" pref="43" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="btnAccept" min="-2" pref="43" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="btnAddDistribute" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="btnRefresh" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+              <Component id="btnAccept" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+              <Component id="btnAddDistribute" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace pref="110" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

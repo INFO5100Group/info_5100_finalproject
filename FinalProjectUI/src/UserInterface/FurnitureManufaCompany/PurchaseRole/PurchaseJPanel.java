@@ -39,14 +39,7 @@ public class PurchaseJPanel extends javax.swing.JPanel {
      */
     public PurchaseJPanel() {
         initComponents();
-        BargainJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74, 192, 255));
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = BargainJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-        setButtonImage();
+
     }
 
     public PurchaseJPanel(Account a, EcoSystem sys) {
@@ -54,6 +47,8 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         this.account = a;
         this.system = sys;
         populateTable();
+        setTable();
+        setButtonImage();
     }
 
     public void populateTable() {
@@ -98,7 +93,7 @@ public class PurchaseJPanel extends javax.swing.JPanel {
     private void setButtonImage(){
          ImageIcon accept=new ImageIcon("./image/Accept.png");
          btnAccept.setIcon(accept);
-         ImageIcon request=new ImageIcon("./image/createRequest.png.png");
+         ImageIcon request=new ImageIcon("./image/request122.png");
          btnRequest.setIcon(request);
     }
     private void setTable(){
@@ -193,6 +188,10 @@ public class PurchaseJPanel extends javax.swing.JPanel {
                 "Seller", "Offer ($)"
             }
         ));
+        SellerOfferTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        SellerOfferTable.setRowHeight(25);
+        SellerOfferTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        SellerOfferTable.setShowVerticalLines(false);
         jScrollPane2.setViewportView(SellerOfferTable);
 
         jLabel4.setText("Seller Offer");
@@ -202,25 +201,26 @@ public class PurchaseJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(142, 142, 142)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(235, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(240, 240, 240))
+                .addGap(183, 183, 183)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(173, 173, 173)
+                .addGap(148, 148, 148)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +230,7 @@ public class PurchaseJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(150, 150, 150))
+                .addGap(175, 175, 175))
         );
     }// </editor-fold>//GEN-END:initComponents
 
