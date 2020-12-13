@@ -61,12 +61,15 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 Object row[] = new Object[5];
                 row[0] = wr;
-                if ((new ArrayList<>(wr.getReceivers().keySet())).get(0).getRole().rType == RoleType.Customer) {
-                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0).getPerson();
-                } else {
-                    row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-                    );
+                
+                for(Account each : wr.getReceivers().keySet()){
+                    if(each.getRole().rType == RoleType.Customer){
+                        row[1] = each.getPerson();
+                    }
+                    if(each.getRole().rType == RoleType.ManuProcurementPerson
+                            || each.getRole().rType == RoleType.RetailProcurementPerson){
+                        row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(each).getName();
+                    }
                 }
 
                 row[2] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);

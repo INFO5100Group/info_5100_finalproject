@@ -21,7 +21,7 @@ public class WoodStorage extends HashMap<String, Double> {
      */
     public boolean addWood(String woodType, Double amount){
         if(this.containsKey(woodType)){
-            if(this.get(woodType) + amount <= 0){
+            if(this.get(woodType) + amount < 0){
                 return false;
             }else{
                 this.put(woodType, this.get(woodType) + amount);

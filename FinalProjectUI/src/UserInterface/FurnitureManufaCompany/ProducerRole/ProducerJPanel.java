@@ -60,8 +60,8 @@ public class ProducerJPanel extends javax.swing.JPanel {
     private void setButtonImage() {
         ImageIcon Complete = new ImageIcon("./image/Complete.png");
         btnComplete.setIcon(Complete);
-        ImageIcon assgin = new ImageIcon("./image/assign.png");
-        btnAssgin.setIcon(assgin);
+        //ImageIcon assgin = new ImageIcon("./image/assign.png");
+        //btnAssgin.setIcon(assgin);
     }
 
     public ProducerJPanel(Account account, EcoSystem system) {
@@ -127,7 +127,6 @@ public class ProducerJPanel extends javax.swing.JPanel {
         ProducerJTable = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         jtxNumber = new javax.swing.JTextField();
-        btnAssgin = new javax.swing.JButton();
         btnComplete = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblWood = new javax.swing.JTable();
@@ -155,10 +154,8 @@ public class ProducerJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        ProducerJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         ProducerJTable.setRowHeight(25);
         ProducerJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
-        ProducerJTable.setShowVerticalLines(false);
         ProducerJTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ProducerJTableMousePressed(evt);
@@ -173,13 +170,6 @@ public class ProducerJPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel3.setText("Quantity");
-
-        btnAssgin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAssgin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssginActionPerformed(evt);
-            }
-        });
 
         btnComplete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
@@ -208,9 +198,7 @@ public class ProducerJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblWood.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblWood.setRowHeight(25);
-        tblWood.setShowVerticalLines(false);
         jScrollPane2.setViewportView(tblWood);
 
         Picture.setText("<>");
@@ -223,10 +211,8 @@ public class ProducerJPanel extends javax.swing.JPanel {
                 .addContainerGap(161, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(265, 265, 265)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(274, 274, 274)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -252,9 +238,7 @@ public class ProducerJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtxNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAssgin, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Picture, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
@@ -305,10 +289,6 @@ public class ProducerJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnCompleteActionPerformed
 
-    private void btnAssginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAssginActionPerformed
-
     private void ProducerJTableKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProducerJTableKeyPressed
 
     }//GEN-LAST:event_ProducerJTableKeyPressed
@@ -353,7 +333,6 @@ public class ProducerJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Picture;
     private javax.swing.JTable ProducerJTable;
-    private javax.swing.JButton btnAssgin;
     private javax.swing.JButton btnComplete;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;

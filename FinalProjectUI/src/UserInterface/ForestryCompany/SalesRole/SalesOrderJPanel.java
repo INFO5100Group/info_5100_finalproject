@@ -76,22 +76,21 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 Object row[] = new Object[6];
                 ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
                 JSONObject currInfo = new JSONObject(wr.getMessage());
-                try {
-                    row[1] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-                    ).getName();
-                } catch (Exception e) {
-                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+
+                for (Account a : wr.getReceivers().keySet()) {
+                    if (a.getRole().rType == RoleType.ManuProcurementPerson) {
+                        row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(a);
+                    }
+                    if (a.getRole().rType == RoleType.LogisticAdmin) {
+                        row[4] = system.getEnterprises().getEnterpriseByAccout(a);
+                    }
+                    if (row[1] != null && row[4] != null) {
+                        break;
+                    }
                 }
 
                 row[2] = currInfo.getString("Product");
                 row[3] = currInfo.getString("TotalPrice");
-                try {
-                    row[4] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
-                    ).getName();
-                } catch (Exception e) {
-                }
                 row[5] = wr.getStatus();
                 row[0] = wr;
                 model.addRow(row);
@@ -182,13 +181,14 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         ImageIcon distribute = new ImageIcon("./image/distribute.png");
         btnDistribute.setIcon(distribute);
     }
-    private void setTable(){
+
+    private void setTable() {
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setBackground(new Color(149, 19, 19));
         cellRenderer.setForeground(Color.white);
-        for(int i=0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
     }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
@@ -203,16 +203,20 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         } else {
             Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
             WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
-            try {
-                (new ArrayList<>(wr.getReceivers().keySet())).get(1);
-            } catch (java.lang.IndexOutOfBoundsException e) {
-                wr.getReceivers().put(logistic.getAdmin(), false);
-                DB4OUtil.storeSystem(system);
-                populateTable();
-                return;
+            boolean haveLogist = false;
+
+            for (Account a : wr.getReceivers().keySet()) {
+                if (a.getRole().rType == RoleType.LogisticAdmin) {
+                    JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+                    return;
+                }
             }
-            JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+
+            wr.getReceivers().put(logistic.getAdmin(), false);
+            DB4OUtil.storeSystem(system);
+            populateTable();
             return;
+
         }
     }//GEN-LAST:event_btnDistributeActionPerformed
 

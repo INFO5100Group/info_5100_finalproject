@@ -49,15 +49,17 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         setTable();
         setButtonImage();
     }
-    private void setTable(){
+
+    private void setTable() {
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setBackground(new Color(149, 19, 19));
         cellRenderer.setForeground(Color.white);
-        for(int i=0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
     }
+
     public void populateCombo() {
         LogisticCompanyCombo.removeAllItems();
         LogisticCompanyCombo.addItem("Select Logistic Company");
@@ -74,21 +76,25 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         for (WorkRequest wr : system.getWorkQueue()) {
             if (wr.getSender().getID() == currEnterprise.getAdmin().getID()) {
                 Object row[] = new Object[6];
-                JSONObject currInfo = new JSONObject(wr.getMessage());
-                Furniture currFurniture = system.getFurnitureMarket().getByID(currInfo.getInt("furnitureID"));
-                row[0] = wr;
-                Account a = ((Account) wr.getReceivers().keySet().toArray()[0]);
-                row[1] = a.getPerson().getFirstName() + " " + a.getPerson().getLastName();
-                row[2] = currFurniture.getName();
-                row[3] = currInfo.get("quantity");
                 try {
-                    Account b = ((Account) wr.getReceivers().keySet().toArray()[1]);
-                    row[4] = system.getEnterprises().getEnterpriseByAccout(b);
-                } catch (Exception e) {
+                    JSONObject currInfo = new JSONObject(wr.getMessage());
+                    Furniture currFurniture = system.getFurnitureMarket().getByID(currInfo.getInt("furnitureID"));
+                    row[0] = wr;
+                    Account a = ((Account) wr.getReceivers().keySet().toArray()[0]);
+                    row[1] = a.getPerson().getFirstName() + " " + a.getPerson().getLastName();
+                    row[2] = currFurniture.getName();
+                    row[3] = currInfo.get("quantity");
+                    for (Account each : wr.getReceivers().keySet()) {
+                        if (each.getRole().rType == RoleType.LogisticAdmin) {
+                            row[4] = system.getEnterprises().getEnterpriseByAccout(each);
+                        }
+                    }
+                    row[5] = wr.getStatus();
+                    model.addRow(row);
 
+                } catch (Exception e) {
+                    continue;
                 }
-                row[5] = wr.getStatus();
-                model.addRow(row);
 
             }
         }
@@ -190,17 +196,30 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         } else {
             Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
             WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
-            try {
-                (new ArrayList<>(wr.getReceivers().keySet())).get(1);
-            } catch (java.lang.IndexOutOfBoundsException e) {
+
+            // check if have delivered
+            for (Account each : wr.getReceivers().keySet()) {
+                if (each.getRole().rType == RoleType.LogisticAdmin) {
+                    JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+                    return;
+                }
+            }
+            JSONObject currInfo = new JSONObject(wr.getMessage());
+            Furniture currFurniture = currEnterprise.getFurnitureStorage().getByID(currInfo.getInt("furnitureID"));
+            if(currFurniture == null){
+                Furniture marketFurniture = system.getFurnitureMarket().getByID(currInfo.getInt("furnitureID"));
+                currFurniture = currEnterprise.getFurnitureStorage().getByName(marketFurniture.getName());
+            }
+            int quantity = (int) currInfo.get("quantity");
+            if(currEnterprise.getFurnitureStorage().removeFurniture(currFurniture,quantity)){
                 wr.getReceivers().put(logistic.getAdmin(), false);
                 DB4OUtil.storeSystem(system);
+                wr.setStatus("Select Loggistic Company");
                 populateTable();
+            }else{
+                JOptionPane.showMessageDialog(null, "you do not have enough " + currFurniture.getName());
                 return;
-            }
-            //wr.setStatus("Select Loggistic Company");
-            JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
-            return;
+            } 
         }
     }//GEN-LAST:event_btnDistributeActionPerformed
     public int getEnterpriseID(String str) {

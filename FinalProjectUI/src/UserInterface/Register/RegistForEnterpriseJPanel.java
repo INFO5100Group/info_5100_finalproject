@@ -7,10 +7,12 @@ package UserInterface.Register;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
+import EcoSystem.DataValidater;
 import EcoSystem.EcoSystem;
 import System.AccountRole.*;
 import System.Configure.DB4OUtil;
@@ -47,6 +49,11 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
         ComboType.addItem("Furniture Manufacturer");// 3
         ComboType.addItem("Furniture Retailer");// 4
         ComboType.addItem("Logistice Enterprise");// 5
+        
+        ComboState.removeAllItems();
+        for(String s : DataValidater.states.keySet()){
+            ComboState.addItem(s);
+        }
     }
 
     /**
@@ -208,10 +215,12 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 newEnterprise.getDepartments().addOrganization(new Organization("Production Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
                 newEnterprise.setWoodStorage(new WoodStorage());
+                newEnterprise.setFurnitureStorage(new FurnitureDirectory());
             }else if(ComboType.getSelectedIndex() == 4){
                 newAccount.setRole(new RetailAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+                newEnterprise.setFurnitureStorage(new FurnitureDirectory());
             }else if(ComboType.getSelectedIndex() == 5){
                 newAccount.setRole(new LogisticAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Transportation Department"));
@@ -273,6 +282,11 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
         
         if(!isSelect){
             JOptionPane.showMessageDialog(null, "Please Select a Etnerprise type");
+            return false;
+        }
+        
+        if(!DataValidater.EmailPatternCorrect(jtxEmail.getText())){
+            JOptionPane.showMessageDialog(null, "Please Enter a validated email");
             return false;
         }
         

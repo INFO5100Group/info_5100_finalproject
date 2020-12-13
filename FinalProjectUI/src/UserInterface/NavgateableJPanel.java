@@ -459,12 +459,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
-        CardLayoutNavigator.logout(contianer, this);
-    }//GEN-LAST:event_btnOutActionPerformed
-
-    private void btn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseClicked
-        // TODO add your handling code here:
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        if(JPanelPos1.getClass() == (new UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel()).getClass()){
+            ((UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel) JPanelPos1).popupateTable();
+        }
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
     }//GEN-LAST:event_btn1MouseClicked
 

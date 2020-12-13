@@ -29,6 +29,9 @@ public class FurnitureDirectory extends ArrayList<Furniture> {
 
     public boolean removeFurniture(Furniture f, int amount) {
         if (Indexer.keySet().contains(f.getID())) {
+            if(Indexer.get(f.getID()) - amount < 0){
+                return false;
+            }
             Indexer.put(f.getID(), Indexer.get(f.getID()) - amount);
             return true;
         } else {
