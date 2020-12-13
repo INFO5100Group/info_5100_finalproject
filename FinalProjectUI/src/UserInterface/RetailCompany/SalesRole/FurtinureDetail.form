@@ -56,7 +56,7 @@
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="77" max="32767" attributes="0"/>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btnSave" min="-2" pref="102" max="-2" attributes="0"/>
@@ -159,6 +159,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="Name">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
@@ -168,6 +171,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Type"/>
       </Properties>
     </Component>
@@ -175,6 +181,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Wood"/>
       </Properties>
     </Component>
@@ -182,11 +191,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Color"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Name4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manufacturer"/>
       </Properties>
     </Component>
@@ -196,6 +211,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name5">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Seller"/>
       </Properties>
     </Component>
@@ -203,11 +221,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name6">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Price"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Name7">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Height"/>
       </Properties>
     </Component>
@@ -215,6 +239,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name8">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Width"/>
       </Properties>
     </Component>
@@ -222,6 +249,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Name9">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Yu Gothic UI Semibold" size="15" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Length"/>
       </Properties>
     </Component>
@@ -306,6 +336,15 @@
           <Font name="Yu Gothic UI Light" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Upload Image"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+            <CompoundBorder>
+              <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </CompoundBorder>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUploadActionPerformed"/>

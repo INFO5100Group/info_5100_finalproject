@@ -86,8 +86,9 @@ public class FurnitureTemplate extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5));
-        setMaximumSize(new java.awt.Dimension(240, 300));
-        setMinimumSize(new java.awt.Dimension(240, 300));
+        setMaximumSize(new java.awt.Dimension(260, 290));
+        setMinimumSize(new java.awt.Dimension(260, 290));
+        setName(""); // NOI18N
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 formMouseEntered(evt);
@@ -117,17 +118,18 @@ public class FurnitureTemplate extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
+        txtType.setFont(new java.awt.Font("宋体", 1, 15)); // NOI18N
         txtType.setForeground(new java.awt.Color(100, 100, 100));
         txtType.setText("Type");
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtName.setText("Name Example");
 
-        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         txtPrice.setText("$ 00.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

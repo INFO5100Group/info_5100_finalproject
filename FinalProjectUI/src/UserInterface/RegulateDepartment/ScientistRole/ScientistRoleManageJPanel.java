@@ -184,8 +184,10 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
             }
         });
         LicenseJTable.setFocusable(false);
+        LicenseJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         LicenseJTable.setRowHeight(25);
         LicenseJTable.setSelectionBackground(new java.awt.Color(153, 204, 255));
+        LicenseJTable.setShowVerticalLines(false);
         LicenseJTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LicenseJTableMouseClicked(evt);

@@ -114,13 +114,14 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon bt3 = new ImageIcon("./image/manageInfo.png");
             ImageIcon lb1 = new ImageIcon("./image/审核 (4).png");
             ImageIcon lb2 = new ImageIcon("./image/资讯.png");
-            //ImageIcon lb3 = new ImageIcon("./image/资讯.png");
-            //jLabel4.setIcon(lb3);
+            ImageIcon lb3 = new ImageIcon("./image/图表.png");
+            jLabel4.setIcon(lb3);
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             jtx1.setText("Manage Request");
-            jtx2.setText("Modify Information");
-            //jtx3.setText("View Graph");
+            //jtx2.setText("Modify Information");
+            jtx2.setText("View Graph");
+            btn3.setVisible(false);
             btn4.setVisible(false);
         }
         if ("ForestSalesPerson".equals(account.getRole().rType.toString())
@@ -135,10 +136,11 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            jtx3.setText("Modify My Personal Info");
+            //jtx3.setText("Modify My Personal Info");
             ImageIcon lb3 = new ImageIcon("./image/修改.png");
-            jLabel4.setIcon(lb3);
+            //jLabel4.setIcon(lb3);
             btn4.setVisible(false);
+            btn3.setVisible(false);
         }
         if ("ManuProcurementPerson".equals(account.getRole().rType.toString())
                 || "RetailProcurementPerson".equals(account.getRole().rType.toString())) {
@@ -151,10 +153,11 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            jtx3.setText("Modify My Personal Info");
+            //jtx3.setText("Modify My Personal Info");
             ImageIcon lb3 = new ImageIcon("./image/修改.png");
-            jLabel4.setIcon(lb3);
+            //jLabel4.setIcon(lb3);
             btn4.setVisible(false);
+            btn3.setVisible(false);
         }
         /*if("LogisticsPseron".equals(account.getRole().rType.toString())){
          ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
@@ -192,9 +195,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon lb1 = new ImageIcon("./image/工作台.png");
             jLabel2.setIcon(lb1);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            jtx2.setText("Modify My Personal Info");
-            ImageIcon lb3 = new ImageIcon("./image/修改.png");
-            jLabel3.setIcon(lb3);
+            //jtx2.setText("Modify My Personal Info");
+            //ImageIcon lb3 = new ImageIcon("./image/修改.png");
+            //jLabel3.setIcon(lb3);
+            btn2.setVisible(false);
             btn3.setVisible(false);
             btn4.setVisible(false);
         }

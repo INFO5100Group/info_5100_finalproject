@@ -36,14 +36,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
      */
     public SalesOrderJPanel() {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<6;i++){
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
-        }
-        setButtonImage();
     }
 
     public SalesOrderJPanel(Account account, EcoSystem system) {
@@ -51,7 +43,9 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         this.account = account;
         this.system = system;
         populateTable();
-        populateCombo();
+        populateCombo();      
+        setButtonImage();
+
     }
     
     public void populateCombo() {
@@ -63,7 +57,15 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             }
         }
     }
-
+    public void setTable(){
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setForeground(Color.white);
+        for (int i = 0; i < 6; i++) {
+            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
+            column.setHeaderRenderer(cellRenderer);
+        }
+    }
     public int getEnterpriseID(String str) {
         String IDstr = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
         return Integer.parseInt(IDstr);
@@ -119,6 +121,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
 
         LogisticCompanyCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        OrderJTable.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         OrderJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -139,13 +142,13 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             }
         });
         OrderJTable.setFocusable(false);
+        OrderJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         OrderJTable.setRowHeight(25);
         OrderJTable.setRowMargin(0);
         OrderJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
         OrderJTable.setShowVerticalLines(false);
         jScrollPane3.setViewportView(OrderJTable);
 
-        btnDistribute.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Desktop\\东北大学\\INFO5100\\正课\\Final Project\\info_5100_finalproject\\FinalProjectUI\\image\\distribute.png")); // NOI18N
         btnDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDistribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,26 +161,27 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(615, Short.MAX_VALUE)
+                .addContainerGap(376, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(300, 300, 300)
-                        .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 921, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64))
+                        .addGap(519, 519, 519)
+                        .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(189, 189, 189))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1061, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(163, 163, 163))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(295, 295, 295)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(110, 110, 110)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(172, 172, 172)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LogisticCompanyCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

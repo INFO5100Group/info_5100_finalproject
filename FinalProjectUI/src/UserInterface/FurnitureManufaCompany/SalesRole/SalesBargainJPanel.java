@@ -43,19 +43,6 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
      */
     public SalesBargainJPanel() {
         initComponents();
-        BargainJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        StorageJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74, 192, 255));
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = BargainJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-        for (int i = 0; i < 3; i++) {
-            TableColumn column = StorageJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-        setButtonImage();
     }
 
     public SalesBargainJPanel(Account account, EcoSystem system) {
@@ -66,17 +53,33 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
         this.furnitures = currEnterprise.getFurnitureStorage();
         populateFurnitureTbale();
         populateRequestTable(false);
+        setTable();
+        setButtonImage();
     }
 
-    private void setButtonImage() {
-        ImageIcon bargain = new ImageIcon("./image/Bargain.png");
-        btnBargain.setIcon(bargain);
-        ImageIcon accept = new ImageIcon("./image/Accept.png");
-        btnAccept.setIcon(accept);
-        ImageIcon refresh = new ImageIcon("./image/Refresh.png");
-        btnRefresh.setIcon(refresh);
+     private void setButtonImage(){
+         ImageIcon bargain=new ImageIcon("./image/Bargain.png");
+         btnBargain.setIcon(bargain);
+         ImageIcon accept=new ImageIcon("./image/Accept.png");
+         btnAccept.setIcon(accept);
+         ImageIcon refresh=new ImageIcon("./image/Refresh.png");
+         btnRefresh.setIcon(refresh);
+         ImageIcon add=new ImageIcon("./image/addDistribute.png");
+         btnAddDistribute.setIcon(add);
     }
-    
+    private void setTable(){
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setForeground(Color.white);
+        for(int i=0;i<6;i++){
+            TableColumn column = BargainJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+        for(int i=0;i<3;i++){
+            TableColumn column = StorageJTable.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+    }    
     public void populateRequestTable(boolean isSelfDeal) {
         DefaultTableModel model = (DefaultTableModel) this.BargainJTable.getModel();
         Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
@@ -153,6 +156,7 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             }
         });
 
+        BargainJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         BargainJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -178,6 +182,7 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
         BargainJTable.setShowVerticalLines(false);
         jScrollPane1.setViewportView(BargainJTable);
 
+        StorageJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         StorageJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -224,6 +229,7 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         jLabel3.setText("Your Offer");
 
         btnAddDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -246,14 +252,13 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
-                .addComponent(jLabel3)
-                .addGap(51, 51, 51)
-                .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(212, 212, 212)
+                .addGap(144, 144, 144)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(278, 278, 278)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -263,24 +268,20 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(98, 98, 98)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3))
-                                .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)))
-                        .addGap(185, 185, 185)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(279, Short.MAX_VALUE))
+                    .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(78, 78, 78)
+                .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101)
+                .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(168, 168, 168))
         );
     }// </editor-fold>//GEN-END:initComponents
 

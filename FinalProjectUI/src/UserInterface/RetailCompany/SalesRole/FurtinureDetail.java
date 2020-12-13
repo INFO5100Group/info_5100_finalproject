@@ -114,24 +114,34 @@ public class FurtinureDetail extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Name.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name.setText("Name");
 
+        Name1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name1.setText("Type");
 
+        Name2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name2.setText("Wood");
 
+        Name3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name3.setText("Color");
 
+        Name4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name4.setText("Manufacturer");
 
+        Name5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name5.setText("Seller");
 
+        Name6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name6.setText("Price");
 
+        Name7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name7.setText("Height");
 
+        Name8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name8.setText("Width");
 
+        Name9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 15)); // NOI18N
         Name9.setText("Length");
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
@@ -176,6 +186,7 @@ public class FurtinureDetail extends javax.swing.JFrame {
         btnUpload.setBackground(new java.awt.Color(255, 255, 255));
         btnUpload.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         btnUpload.setText("Upload Image");
+        btnUpload.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), null));
         btnUpload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUploadActionPerformed(evt);
@@ -215,7 +226,7 @@ public class FurtinureDetail extends javax.swing.JFrame {
                                     .addComponent(jtxWood, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(114, 114, 114)
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(77, Short.MAX_VALUE))
+                        .addContainerGap(79, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

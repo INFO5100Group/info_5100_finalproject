@@ -154,8 +154,10 @@ public class ProducerJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        ProducerJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         ProducerJTable.setRowHeight(25);
         ProducerJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        ProducerJTable.setShowVerticalLines(false);
         ProducerJTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ProducerJTableMousePressed(evt);

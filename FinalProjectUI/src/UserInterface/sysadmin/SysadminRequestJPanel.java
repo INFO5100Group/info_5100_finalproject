@@ -34,7 +34,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
      */
     public SysadminRequestJPanel() {
         initComponents();
-        setButtonImage();
+
     }
 
     public SysadminRequestJPanel(Account a, EcoSystem sys) {
@@ -43,6 +43,7 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
         this.system = sys;
         populateTable();
         setTable();
+        setButtonImage();
     }
     private void setButtonImage(){
          ImageIcon approve=new ImageIcon("./image/Approve.png");
@@ -107,6 +108,9 @@ public class SysadminRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        SysadminJTable1.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        SysadminJTable1.setRowHeight(25);
+        SysadminJTable1.setShowVerticalLines(false);
         jScrollPane3.setViewportView(SysadminJTable1);
 
         btnDisapprove.setBackground(new java.awt.Color(255, 255, 255));

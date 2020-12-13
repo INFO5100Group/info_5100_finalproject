@@ -34,14 +34,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
 
     public SalesOrderJPanel() {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74, 192, 255));
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-        setButtonImage();
     }
 
     public SalesOrderJPanel(Account a, EcoSystem sys) {
@@ -51,6 +43,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         populateTable();
         populateCombo();
         setTable();
+        setButtonImage();
     }
 
     public void populateCombo() {
@@ -62,7 +55,15 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             }
         }
     }
-
+    public void setTable(){
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setForeground(Color.white);
+        for (int i = 0; i < 6; i++) {
+            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
+            column.setHeaderRenderer(cellRenderer);
+        }
+    }
     public int getEnterpriseID(String str) {
         String IDstr = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
         return Integer.parseInt(IDstr);
@@ -137,7 +138,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
             }
         });
         OrderJTable.setFocusable(false);
-        OrderJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         OrderJTable.setRowHeight(25);
         OrderJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
         OrderJTable.setShowVerticalLines(false);
@@ -182,15 +182,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         btnDistribute.setIcon(distribute);
     }
 
-    private void setTable() {
-        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149, 19, 19));
-        cellRenderer.setForeground(Color.white);
-        for (int i = 0; i < 6; i++) {
-            TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-            column.setHeaderRenderer(cellRenderer);
-        }
-    }
     private void btnDistributeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributeActionPerformed
         int selectedRow = this.OrderJTable.getSelectedRow();
 
