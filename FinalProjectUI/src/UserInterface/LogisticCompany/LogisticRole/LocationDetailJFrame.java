@@ -82,24 +82,34 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        State.setText("State");
+        State.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        State.setText("State:");
 
+        txtState.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         txtState.setText("<>");
 
-        State1.setText("City");
+        State1.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        State1.setText("City:");
 
+        txtCity.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         txtCity.setText("<>");
 
+        txtStreet.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         txtStreet.setText("<>");
 
-        State2.setText("Street");
+        State2.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        State2.setText("Street:");
 
-        State3.setText("Zip Code");
+        State3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        State3.setText("Zip Code:");
 
+        txtZip.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         txtZip.setText("<>");
 
-        State4.setText("Receiver");
+        State4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
+        State4.setText("Receiver:");
 
+        txtReceiver.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 18)); // NOI18N
         txtReceiver.setText("<>");
 
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -114,7 +124,7 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(State4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -122,48 +132,48 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
                         .addComponent(State1)
                         .addComponent(State)
                         .addComponent(State3)))
-                .addGap(111, 111, 111)
+                .addGap(208, 208, 208)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtReceiver)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtState)
-                                .addComponent(txtCity, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(txtStreet, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(txtReceiver)
+                    .addComponent(txtState)
+                    .addComponent(txtCity)
+                    .addComponent(txtStreet)
                     .addComponent(txtZip))
-                .addContainerGap(471, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(State)
-                    .addComponent(txtState))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(State1)
-                    .addComponent(txtCity))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(State2)
-                    .addComponent(txtStreet))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(State3)
-                    .addComponent(txtZip))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(State4)
-                    .addComponent(txtReceiver))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtState)
+                        .addGap(50, 50, 50)
+                        .addComponent(txtCity)
+                        .addGap(53, 53, 53)
+                        .addComponent(txtStreet)
+                        .addGap(40, 40, 40)
+                        .addComponent(txtZip)
+                        .addGap(56, 56, 56)
+                        .addComponent(txtReceiver))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(State)
+                        .addGap(50, 50, 50)
+                        .addComponent(State1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(State2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(40, 40, 40)
+                        .addComponent(State3)
+                        .addGap(56, 56, 56)
+                        .addComponent(State4)))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();

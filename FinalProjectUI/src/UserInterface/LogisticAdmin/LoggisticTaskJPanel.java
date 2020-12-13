@@ -12,10 +12,13 @@ import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 import org.json.JSONObject;
 
 /**
@@ -39,6 +42,8 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         this.currEnterprise = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
         populateTable();
         populateComboo();
+        setButtonImage();
+         setTable();
     }
 
     public void populateComboo() {
@@ -52,7 +57,19 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
 
         }
     }
-
+    private void setTable(){
+        DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
+        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setForeground(Color.white);
+        for(int i=0;i<6;i++){
+            TableColumn column = tblTasks.getTableHeader().getColumnModel().getColumn(i);
+             column.setHeaderRenderer(cellRenderer);            
+        }
+    }
+    private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/distribute.png");
+         btnDistribute.setIcon(delete);
+    }  
     public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) this.tblTasks.getModel();
         model.setRowCount(0);
@@ -108,6 +125,7 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        tblTasks.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
         tblTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -119,11 +137,15 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
                 "ID", "Sender", "Receiver", "DeliveryMan", "Product", "Status"
             }
         ));
+        tblTasks.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        tblTasks.setRowHeight(25);
+        tblTasks.setSelectionBackground(new java.awt.Color(102, 204, 255));
+        tblTasks.setShowVerticalLines(false);
         jScrollPane1.setViewportView(tblTasks);
 
         comboDeriverMan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        btnDistribute.setText("Distribute");
+        btnDistribute.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDistribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDistributeActionPerformed(evt);
@@ -135,25 +157,27 @@ public class LoggisticTaskJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGap(313, 313, 313)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
                         .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(comboDeriverMan, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 707, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(810, Short.MAX_VALUE))
+                        .addComponent(comboDeriverMan, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(163, 163, 163))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(139, 139, 139)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(comboDeriverMan)
-                    .addComponent(btnDistribute, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
-                .addContainerGap(555, Short.MAX_VALUE))
+                .addGap(195, 195, 195)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboDeriverMan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(285, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

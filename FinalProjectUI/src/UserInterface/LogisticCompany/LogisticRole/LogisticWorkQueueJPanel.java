@@ -290,7 +290,7 @@ public class LogisticWorkQueueJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnLocationActionPerformed
     private void setButtonImage(){
-         ImageIcon delete=new ImageIcon("./image/Accept.png");
+         ImageIcon delete=new ImageIcon("./image/Complete.png");
          btnAccept.setIcon(delete);
          ImageIcon regist=new ImageIcon("./image/location.png");
          btnLocation.setIcon(regist);

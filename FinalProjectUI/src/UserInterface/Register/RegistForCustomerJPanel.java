@@ -89,56 +89,56 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel7.setText("Password:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 270, 143, 35));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 270, 143, 35));
 
         sexGroup.add(rbtnOther);
         rbtnOther.setText("Other");
-        add(rbtnOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 430, 78, -1));
+        add(rbtnOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(1630, 430, 78, -1));
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel8.setText("UserName:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 190, 143, 35));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 190, 143, 35));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel3.setText("Gender:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 430, 143, 35));
-        add(jtxUName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 190, 201, 35));
-        add(jtxState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 500, 201, 35));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 430, 143, 35));
+        add(jtxUName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 190, 201, 35));
+        add(jtxState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 500, 201, 35));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel4.setText("First And Last Name:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 178, 35));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 120, 178, 35));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel9.setText("Zip Code:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 720, 143, 35));
-        add(jtxPWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 270, 201, 35));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 720, 143, 35));
+        add(jtxPWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 270, 201, 35));
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel6.setText("City:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, 143, 35));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 570, 143, 35));
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel10.setText("Street:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 640, 143, 35));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 640, 143, 35));
 
         jtxFName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxFNameActionPerformed(evt);
             }
         });
-        add(jtxFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 120, 143, 35));
-        add(jtxCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 570, 201, 35));
-        add(jtxLName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 120, 143, 35));
+        add(jtxFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 120, 143, 35));
+        add(jtxCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 570, 201, 35));
+        add(jtxLName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 120, 143, 35));
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel11.setText("State:");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 143, 35));
-        add(jtxStreet, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 640, 201, 35));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 500, 143, 35));
+        add(jtxStreet, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 640, 201, 35));
 
         jLabel12.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel12.setText("Email:");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 350, 143, 35));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 350, 143, 35));
 
         sexGroup.add(rbtnMale);
         rbtnMale.setText("Male");
@@ -147,8 +147,8 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
                 rbtnMaleActionPerformed(evt);
             }
         });
-        add(rbtnMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 430, 76, -1));
-        add(jtxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 350, 201, 35));
+        add(rbtnMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 430, 76, -1));
+        add(jtxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 350, 201, 35));
 
         sexGroup.add(rbtnFemale);
         rbtnFemale.setText("Female");
@@ -157,8 +157,8 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
                 rbtnFemaleActionPerformed(evt);
             }
         });
-        add(rbtnFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 430, -1, -1));
-        add(jtxZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 720, 201, 35));
+        add(rbtnFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(1540, 430, -1, -1));
+        add(jtxZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 720, 201, 35));
 
         btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
@@ -166,27 +166,27 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
                 btnRegistActionPerformed(evt);
             }
         });
-        add(btnRegist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 790, 183, 43));
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 570, 36, 37));
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 620, 36, 37));
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 500, 36, 37));
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 710, 36, 37));
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 270, 36, 37));
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 350, 36, 37));
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 190, 36, 37));
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 120, 36, 37));
+        add(btnRegist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 790, 183, 43));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 570, 36, 37));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 620, 36, 37));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 500, 36, 37));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 710, 36, 37));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 270, 36, 37));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1720, 350, 36, 37));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 190, 36, 37));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1720, 120, 36, 37));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 36)); // NOI18N
         jLabel1.setText("Regist As Customer");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 30, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 30, -1, -1));
 
         btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOutActionPerformed(evt);
             }
         });
-        add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1560, 0, 30, 30));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -3, 840, 900));
+        add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1850, 0, 30, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 900));
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
          ImageIcon imageIcon=new ImageIcon("./image/regist.png");

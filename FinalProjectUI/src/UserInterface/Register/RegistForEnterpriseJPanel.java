@@ -93,50 +93,50 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ComboType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(ComboType, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 270, 201, 35));
-        add(jtxName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 120, 201, 35));
+        add(ComboType, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 280, 201, 35));
+        add(jtxName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 130, 201, 35));
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel7.setText("Admin Password:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 730, 143, 35));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 740, 143, 35));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel3.setText("Enterprise Email:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 200, 143, 35));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 210, 143, 35));
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel8.setText("Admin UserName:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 650, 143, 35));
-        add(jtxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 200, 201, 35));
-        add(jtxZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 570, 201, 35));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 660, 143, 35));
+        add(jtxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 210, 201, 35));
+        add(jtxZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 580, 201, 35));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel4.setText("Enterprise Type:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 270, 143, 35));
-        add(jtxUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 650, 201, 35));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 280, 143, 35));
+        add(jtxUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 660, 201, 35));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel9.setText("Zip Code:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 570, 143, 35));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 580, 143, 35));
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel5.setText("City:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 410, 143, 35));
-        add(jtxPWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 730, 201, 35));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 420, 143, 35));
+        add(jtxPWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 740, 201, 35));
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel6.setText("Street:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 490, 143, 35));
-        add(jtxCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 410, 201, 35));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 500, 143, 35));
+        add(jtxCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 420, 201, 35));
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel10.setText("State:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 340, 143, 35));
-        add(jtxStreet, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 490, 201, 35));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 350, 143, 35));
+        add(jtxStreet, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 500, 201, 35));
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic Light", 1, 15)); // NOI18N
         jLabel11.setText("Enterprise Name:");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 120, 143, 35));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 130, 143, 35));
 
         btnRegist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
@@ -144,30 +144,30 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 btnRegistActionPerformed(evt);
             }
         });
-        add(btnRegist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 790, 183, 43));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 120, 36, 37));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 210, 36, 37));
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 460, 36, 37));
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 380, 36, 37));
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 630, 36, 37));
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 550, 36, 37));
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 790, 36, 37));
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 710, 36, 37));
+        add(btnRegist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 810, 183, 43));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 130, 36, 37));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 220, 36, 37));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 470, 36, 37));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 390, 36, 37));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 640, 36, 37));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 560, 36, 37));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 800, 36, 37));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 720, 36, 37));
 
         jLabel18.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 36)); // NOI18N
         jLabel18.setText("Regist As Enterprise");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 20, 355, -1));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 30, 355, -1));
 
         ComboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 340, 201, 35));
+        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 350, 201, 35));
 
         btnOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOutActionPerformed(evt);
             }
         });
-        add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1550, 0, 30, 30));
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 900));
+        add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 0, 30, 30));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 900));
     }// </editor-fold>//GEN-END:initComponents
     private void setButtonImage(){
          ImageIcon imageIcon=new ImageIcon("./image/regist.png");
