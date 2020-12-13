@@ -104,7 +104,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtSize = new javax.swing.JLabel();
         txtAva = new javax.swing.JLabel();
         txtPrice = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner(new SpinnerNumberModel(0, 0, 30, 1));
+        jSpinner1 = new javax.swing.JSpinner(new SpinnerNumberModel(0, 0, remain, 0));
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         txtBuy = new javax.swing.JLabel();
@@ -161,10 +161,10 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtPrice.setText("$ 150.00");
 
         jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jSpinner1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
                 jSpinner1AncestorRemoved(evt);
