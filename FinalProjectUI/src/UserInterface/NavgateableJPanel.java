@@ -459,13 +459,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        if(JPanelPos1.getClass() == (new UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel()).getClass()){
-            ((UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel) JPanelPos1).popupateTable();
-        }
-        CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
-    }//GEN-LAST:event_btn1MouseClicked
-
+    
     private void btn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseEntered
         // TODO add your handling code here:
         btn1.setBackground(new Color(200,200,200));
@@ -476,6 +470,13 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn1.setBackground(new Color(149,19,19));
     }//GEN-LAST:event_btn1MouseExited
 
+    private void btn1MouseClicked(java.awt.event.MouseEvent evt) {                                  
+        if(JPanelPos1.getClass() == (new UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel()).getClass()){
+            ((UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel) JPanelPos1).popupateTable();
+        }
+        CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
+    }
+    
     private void btn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseClicked
         // TODO add your handling code here:
         if (JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()) {
