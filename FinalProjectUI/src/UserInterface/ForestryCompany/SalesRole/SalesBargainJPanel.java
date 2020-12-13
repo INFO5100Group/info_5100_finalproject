@@ -199,10 +199,8 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        BargainJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         BargainJTable.setRowHeight(25);
         BargainJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
-        BargainJTable.setShowVerticalLines(false);
         jScrollPane1.setViewportView(BargainJTable);
 
         StorageJTable.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
@@ -225,10 +223,8 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        StorageJTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         StorageJTable.setRowHeight(25);
         StorageJTable.setSelectionBackground(new java.awt.Color(102, 204, 255));
-        StorageJTable.setShowVerticalLines(false);
         jScrollPane3.setViewportView(StorageJTable);
 
         btnAccept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -291,9 +287,6 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
                                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -302,7 +295,11 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                                 .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(132, 132, 132)
                                 .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnAddDistribute, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(417, 417, 417))))
         );
         layout.setVerticalGroup(
@@ -318,10 +315,11 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(106, 106, 106)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnBargain, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnBargain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtxbarginPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,11 +364,19 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                 WorkRequest wr = (WorkRequest) (BargainJTable.getValueAt(selectedRow, 0));
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 JSONObject sellerInfo = (JSONObject) currInfo.get("Seller");
+                try{
+                    Integer.parseInt(jtxbarginPrice.getText());
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "please enter a number as bargin price");
+                    return;
+                }        
                 sellerInfo.put(currEnterprise + "-" + account, jtxbarginPrice.getText());
                 currInfo.put("Seller", sellerInfo);
                 wr.setMessage(currInfo.toString());
                 wr.setStatus("Forest Company bargain");
                 DB4OUtil.storeSystem(system);
+                JOptionPane.showMessageDialog(null, "you have send a bargin to wood seller with price of " + jtxbarginPrice.getText());
                 populateRequestTable(false);
             }
 

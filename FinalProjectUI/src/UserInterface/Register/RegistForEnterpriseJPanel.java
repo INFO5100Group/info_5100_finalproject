@@ -7,6 +7,7 @@ package UserInterface.Register;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Wood.WoodStorage;
@@ -214,10 +215,12 @@ public class RegistForEnterpriseJPanel extends javax.swing.JPanel {
                 newEnterprise.getDepartments().addOrganization(new Organization("Production Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
                 newEnterprise.setWoodStorage(new WoodStorage());
+                newEnterprise.setFurnitureStorage(new FurnitureDirectory());
             }else if(ComboType.getSelectedIndex() == 4){
                 newAccount.setRole(new RetailAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Purchasing Department"));
                 newEnterprise.getDepartments().addOrganization(new Organization("Salse Department"));
+                newEnterprise.setFurnitureStorage(new FurnitureDirectory());
             }else if(ComboType.getSelectedIndex() == 5){
                 newAccount.setRole(new LogisticAdminRole());
                 newEnterprise.getDepartments().addOrganization(new Organization("Transportation Department"));

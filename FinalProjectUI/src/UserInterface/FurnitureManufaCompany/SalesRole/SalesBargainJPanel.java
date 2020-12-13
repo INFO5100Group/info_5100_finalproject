@@ -319,6 +319,13 @@ public class SalesBargainJPanel extends javax.swing.JPanel {
                 WorkRequest wr = (WorkRequest) (BargainJTable.getValueAt(selectedRow, 0));
                 JSONObject currInfo = new JSONObject(wr.getMessage());
                 JSONObject sellerInfo = (JSONObject) currInfo.get("Seller");
+                try{
+                    Integer.parseInt(jtxbarginPrice.getText());
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "please enter a number as bargin price");
+                    return;
+                } 
                 sellerInfo.put(currEnterprise + "-" + account, jtxbarginPrice.getText());
                 currInfo.put("Seller", sellerInfo);
                 wr.setMessage(currInfo.toString());

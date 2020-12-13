@@ -448,7 +448,9 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-
+        if(JPanelPos1.getClass() == (new UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel()).getClass()){
+            ((UserInterface.RetailCompany.SalesRole.SalesWorkQueueJPanel) JPanelPos1).popupateTable();
+        }
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
     }//GEN-LAST:event_btn1ActionPerformed
 
