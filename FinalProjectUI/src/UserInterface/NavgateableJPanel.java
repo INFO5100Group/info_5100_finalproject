@@ -11,6 +11,8 @@ import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
+import UserInterface.Customer.ItemDetailFrame;
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -107,48 +109,47 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon bt3 = new ImageIcon("./image/manageInfo.png");
             ImageIcon lb1 = new ImageIcon("./image/审核 (4).png");
             ImageIcon lb2 = new ImageIcon("./image/资讯.png");
-            ImageIcon lb3 = new ImageIcon("./image/资讯.png");
-            jLabel4.setIcon(lb3);
+            //ImageIcon lb3 = new ImageIcon("./image/资讯.png");
+            //jLabel4.setIcon(lb3);
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
-            btn1.setIcon(bt1);
-            btn2.setIcon(bt2);
-            btn3.setIcon(bt3);            
-            //jPanel3.setVisible(false);
-            jPanel4.setVisible(false);
+            jtx1.setText("Manage Request");
+            jtx2.setText("Modify Information");
+            //jtx3.setText("View Graph");
+            btn4.setVisible(false);
         }
         if ("ForestSalesPerson".equals(account.getRole().rType.toString())
                 || "ManuSalsePerson".equals(account.getRole().rType.toString())
                 || "RetailSalsePerson".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/confirmPrice.png");
-            btn1.setIcon(bt1);
+            jtx1.setText("Confirm Price");
             ImageIcon bt2 = new ImageIcon("./image/distributeOrders.png");
-            btn2.setIcon(bt2);
+            jtx2.setText("Distribute Orders");
             ImageIcon lb1 = new ImageIcon("./image/明细.png");
             ImageIcon lb2 = new ImageIcon("./image/配送.png");
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            btn3.setIcon(bt3);
+            jtx3.setText("Modify My Personal Info");
             ImageIcon lb3 = new ImageIcon("./image/修改.png");
             jLabel4.setIcon(lb3);
-            jPanel4.setVisible(false);
+            btn4.setVisible(false);
         }
         if ("ManuProcurementPerson".equals(account.getRole().rType.toString())
                 || "RetailProcurementPerson".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/confirmPrice.png");
-            btn1.setIcon(bt1);
+            jtx1.setText("Confirm Price");
             ImageIcon bt2 = new ImageIcon("./image/viewOrders.png");
-            btn2.setIcon(bt2);
+            jtx2.setText("View My Orders");
             ImageIcon lb1 = new ImageIcon("./image/明细.png");
             ImageIcon lb2 = new ImageIcon("./image/订单.png");
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            btn3.setIcon(bt3);
+            jtx3.setText("Modify My Personal Info");
             ImageIcon lb3 = new ImageIcon("./image/修改.png");
             jLabel4.setIcon(lb3);
-            jPanel4.setVisible(false);
+            btn4.setVisible(false);
         }
         /*if("LogisticsPseron".equals(account.getRole().rType.toString())){
          ImageIcon bt1=new ImageIcon("./image/manageInfo.png");
@@ -164,15 +165,15 @@ public class NavgateableJPanel extends javax.swing.JPanel {
          }*/
         if ("Customer".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/browse.png");
-            btn1.setIcon(bt1);
+            jtx1.setText("Search Goods");
             ImageIcon bt2 = new ImageIcon("./image/viewhistory.png");
-            btn2.setIcon(bt2);
+            jtx2.setText("View History Order");
             ImageIcon lb1 = new ImageIcon("./image/指标查询.png");
             ImageIcon lb2 = new ImageIcon("./image/历史订单.png");
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
-            jPanel3.setVisible(false);
-            jPanel4.setVisible(false);
+            btn3.setVisible(false);
+            btn4.setVisible(false);
         }
         if (    "RegulateScientist".equals(account.getRole().rType.toString())
                 || "ForestLoggingManager".equals(account.getRole().rType.toString())
@@ -182,15 +183,15 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 || "LogisticManager".equals(account.getRole().rType.toString())
                 || "RegulateOfficer".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/myWork.png");
-            btn1.setIcon(bt1);
+            jtx1.setText("View My Works");
             ImageIcon lb1 = new ImageIcon("./image/工作台.png");
             jLabel2.setIcon(lb1);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
-            btn2.setIcon(bt3);
+            jtx2.setText("Modify My Personal Info");
             ImageIcon lb3 = new ImageIcon("./image/修改.png");
             jLabel3.setIcon(lb3);
-            jPanel3.setVisible(false);
-            jPanel4.setVisible(false);
+            btn3.setVisible(false);
+            btn4.setVisible(false);
         }
         if (    "RetailAdmin".equals(account.getRole().rType.toString())
                 || "ManuAdmin".equals(account.getRole().rType.toString())
@@ -200,10 +201,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 ) {
             this.btn1.setVisible(false);
             this.btn1.setEnabled(false);
-            jPanel1.setVisible(false);
-            jPanel2.setVisible(false);
-            jPanel3.setVisible(false);
-            jPanel4.setVisible(false);
+            btn1.setVisible(false);
+            btn2.setVisible(false);
+            btn3.setVisible(false);
+            btn4.setVisible(false);
         }
     }
 
@@ -239,18 +240,18 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         sideBar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
-        jPanel1 = new javax.swing.JPanel();
-        btn1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        btn2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btn2 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        jtx2 = new javax.swing.JLabel();
+        btn3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        btn3 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        jtx3 = new javax.swing.JLabel();
+        btn4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        btn4 = new javax.swing.JButton();
+        jtx4 = new javax.swing.JLabel();
+        btn1 = new javax.swing.JPanel();
+        jtx1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         topBar = new javax.swing.JPanel();
         jblUserType = new javax.swing.JLabel();
         btnOut = new javax.swing.JButton();
@@ -269,131 +270,142 @@ public class NavgateableJPanel extends javax.swing.JPanel {
 
         sideBar.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 229, -1));
 
-        jPanel1.setBackground(new java.awt.Color(149, 19, 19));
-
-        btn1.setBackground(new java.awt.Color(102, 51, 0));
-        btn1.setForeground(new java.awt.Color(102, 51, 0));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+        btn2.setBackground(new java.awt.Color(149, 19, 19));
+        btn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn2MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+        jtx2.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        jtx2.setForeground(new java.awt.Color(255, 255, 255));
 
-        sideBar.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 290, 40));
-
-        jPanel2.setBackground(new java.awt.Color(149, 19, 19));
-
-        btn2.setBackground(new java.awt.Color(102, 51, 0));
-        btn2.setForeground(new java.awt.Color(102, 51, 0));
-        btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+        javax.swing.GroupLayout btn2Layout = new javax.swing.GroupLayout(btn2);
+        btn2.setLayout(btn2Layout);
+        btn2Layout.setHorizontalGroup(
+            btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn2Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1))
+                .addComponent(jtx2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
-                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+        btn2Layout.setVerticalGroup(
+            btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addComponent(jtx2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        sideBar.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 290, 40));
+        sideBar.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 290, 40));
 
-        jPanel3.setBackground(new java.awt.Color(149, 19, 19));
-
-        btn3.setBackground(new java.awt.Color(102, 51, 0));
-        btn3.setForeground(new java.awt.Color(102, 51, 0));
-        btn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn3ActionPerformed(evt);
+        btn3.setBackground(new java.awt.Color(149, 19, 19));
+        btn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn3MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+        jtx3.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        jtx3.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout btn3Layout = new javax.swing.GroupLayout(btn3);
+        btn3.setLayout(btn3Layout);
+        btn3Layout.setHorizontalGroup(
+            btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn3Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1))
+                .addComponent(jtx3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btn3Layout.setVerticalGroup(
+            btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jtx3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        sideBar.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 290, 40));
+        sideBar.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 290, 40));
 
-        jPanel4.setBackground(new java.awt.Color(149, 19, 19));
-
-        btn4.setBackground(new java.awt.Color(102, 51, 0));
-        btn4.setForeground(new java.awt.Color(102, 51, 0));
-        btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn4ActionPerformed(evt);
+        btn4.setBackground(new java.awt.Color(149, 19, 19));
+        btn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn4MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        jtx4.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        jtx4.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout btn4Layout = new javax.swing.GroupLayout(btn4);
+        btn4.setLayout(btn4Layout);
+        btn4Layout.setHorizontalGroup(
+            btn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn4Layout.createSequentialGroup()
                 .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1))
+                .addComponent(jtx4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btn4Layout.setVerticalGroup(
+            btn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jtx4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        sideBar.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 290, 40));
+        sideBar.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 290, 40));
+
+        btn1.setBackground(new java.awt.Color(149, 19, 19));
+        btn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn1MouseExited(evt);
+            }
+        });
+
+        jtx1.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        jtx1.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout btn1Layout = new javax.swing.GroupLayout(btn1);
+        btn1.setLayout(btn1Layout);
+        btn1Layout.setHorizontalGroup(
+            btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn1Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jtx1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        btn1Layout.setVerticalGroup(
+            btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jtx1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        sideBar.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 290, 40));
 
         jblUserType.setFont(new java.awt.Font("Yu Gothic UI", 1, 15)); // NOI18N
         jblUserType.setText("<User type>");
@@ -413,7 +425,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jblUserType)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
                 .addComponent(btnOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         topBarLayout.setVerticalGroup(
@@ -447,12 +459,27 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
+        CardLayoutNavigator.logout(contianer, this);
+    }//GEN-LAST:event_btnOutActionPerformed
 
+    private void btn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseClicked
+        // TODO add your handling code here:
         CardLayoutNavigator.goNext(navContainer, JPanelPos1, this.account.getAccountName() + "pos1");
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btn1MouseClicked
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseEntered
+        // TODO add your handling code here:
+        btn1.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_btn1MouseEntered
+
+    private void btn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseExited
+        // TODO add your handling code here:
+        btn1.setBackground(new Color(149,19,19));
+    }//GEN-LAST:event_btn1MouseExited
+
+    private void btn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseClicked
+        // TODO add your handling code here:
         if (JPanelPos2.getClass() == (new UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel()).getClass()) {
             ((UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel) JPanelPos2).populateTable();
         } else if (JPanelPos2.getClass() == (new UserInterface.LogisticAdmin.LoggisticTaskJPanel()).getClass()) {
@@ -463,39 +490,67 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ((UserInterface.Customer.CustomerHistoryJPanel) JPanelPos2).populateTable();
         }
         CardLayoutNavigator.goNext(navContainer, JPanelPos2, this.account.getAccountName() + "pos2");
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btn2MouseClicked
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btn3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseClicked
+        // TODO add your handling code here:
         CardLayoutNavigator.goNext(navContainer, JPanelPos3, this.account.getAccountName() + "pos3");
-    }//GEN-LAST:event_btn3ActionPerformed
+    }//GEN-LAST:event_btn3MouseClicked
 
-    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+    private void btn4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseClicked
+        // TODO add your handling code here:
         CardLayoutNavigator.goNext(navContainer, JPanelPos4, this.account.getAccountName() + "pos4");
-    }//GEN-LAST:event_btn4ActionPerformed
+    }//GEN-LAST:event_btn4MouseClicked
 
-    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
-        CardLayoutNavigator.logout(contianer, this);
-    }//GEN-LAST:event_btnOutActionPerformed
+    private void btn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseEntered
+        // TODO add your handling code here:
+                btn2.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_btn2MouseEntered
+
+    private void btn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseExited
+        // TODO add your handling code here:
+                btn2.setBackground(new Color(149,19,19));
+    }//GEN-LAST:event_btn2MouseExited
+
+    private void btn3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseEntered
+        // TODO add your handling code here:
+                btn3.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_btn3MouseEntered
+
+    private void btn3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseExited
+        // TODO add your handling code here:
+                btn3.setBackground(new Color(149,19,19));
+    }//GEN-LAST:event_btn3MouseExited
+
+    private void btn4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseEntered
+        // TODO add your handling code here:
+                btn4.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_btn4MouseEntered
+
+    private void btn4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseExited
+        // TODO add your handling code here:
+                btn4.setBackground(new Color(149,19,19));
+    }//GEN-LAST:event_btn4MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btn1;
-    public javax.swing.JButton btn2;
-    public javax.swing.JButton btn3;
-    public javax.swing.JButton btn4;
+    private javax.swing.JPanel btn1;
+    private javax.swing.JPanel btn2;
+    private javax.swing.JPanel btn3;
+    private javax.swing.JPanel btn4;
     private javax.swing.JButton btnOut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
     private javax.swing.JLabel jblUserType;
+    private javax.swing.JLabel jtx1;
+    private javax.swing.JLabel jtx2;
+    private javax.swing.JLabel jtx3;
+    private javax.swing.JLabel jtx4;
     private javax.swing.JPanel navContainer;
     private javax.swing.JPanel sideBar;
     private javax.swing.JPanel topBar;
