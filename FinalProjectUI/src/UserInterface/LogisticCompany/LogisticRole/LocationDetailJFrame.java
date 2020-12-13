@@ -29,34 +29,48 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
         populateContent();
         setButtonImage();
     }
-    private void setButtonImage(){
-         ImageIcon bargain=new ImageIcon("./image/confirm.png");
-         jButton1.setIcon(bargain);
+
+    private void setButtonImage() {
+        ImageIcon bargain = new ImageIcon("./image/confirm.png");
+        jButton1.setIcon(bargain);
     }
+
     public void populateContent() {
-        Account a = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
-        String state, city, street, zip;
-        if(a.getRole().rType == RoleType.Customer){
-            state = a.getPerson().getState();
-            city = a.getPerson().getCity();
-            street = a.getPerson().getStreet();
-            zip = a.getPerson().getZipCode();
-        }else{
-            Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(
-                    (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-            );
-            state = e.getState();
-            city = e.getCity();
-            street = e.getStreet();
-            zip = e.getZipCode();
-            
+        String state = null, city = null, street = null, zip = null;
+        Account currAccount = null;
+        for (Account a : wr.getReceivers().keySet()) {
+            if (a.getRole().rType != RoleType.LogisticAdmin || a.getRole().rType != RoleType.LogisticsPseron) {
+                if (a.getRole().rType == RoleType.Customer) {
+                    state = a.getPerson().getState();
+                    city = a.getPerson().getCity();
+                    street = a.getPerson().getStreet();
+                    zip = a.getPerson().getZipCode();
+                    currAccount = a;
+                    break;
+
+                } else {
+                    try {
+                        Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(a);
+                        state = e.getState();
+                        city = e.getCity();
+                        street = e.getStreet();
+                        zip = e.getZipCode();
+                        currAccount = a;
+                    }catch(Exception e){
+                        break;
+                    }
+                    break;
+                }
+
+            }
+
         }
-        
+
         txtState.setText(state == null ? "not avaliable" : state);
         txtCity.setText(city == null ? "not avaliable" : city);
         txtStreet.setText(street == null ? "not avaliable" : street);
         txtZip.setText(zip == null ? "not avaliable" : zip);
-        txtReceiver.setText(a.getPerson() + "");
+        txtReceiver.setText(currAccount == null ? "not avaliable" : currAccount.getPerson() + "");
     }
 
     /**
@@ -132,16 +146,16 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
                         .addComponent(State1)
                         .addComponent(State)
                         .addComponent(State3)))
-                .addGap(208, 208, 208)
+                .addGap(157, 157, 157)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtReceiver)
                     .addComponent(txtState)
                     .addComponent(txtCity)
                     .addComponent(txtStreet)
                     .addComponent(txtZip))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(67, 67, 67))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

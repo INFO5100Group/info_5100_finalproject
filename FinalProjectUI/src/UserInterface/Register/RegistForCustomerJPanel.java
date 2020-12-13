@@ -25,19 +25,27 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
 
     JPanel container;
     EcoSystem system;
-    
+
     public RegistForCustomerJPanel(JPanel ups, EcoSystem sys) {
         initComponents();
         this.container = ups;
         this.system = sys;
         setrbtnCommand();
         setButtonImage();
+        populateCombo();
     }
-    
-    public void setrbtnCommand(){
+
+    public void setrbtnCommand() {
         rbtnFemale.setActionCommand("Female");
         rbtnMale.setActionCommand("Male");
         rbtnOther.setActionCommand("Other");
+    }
+
+    public void populateCombo() {
+        ComboState.removeAllItems();
+        for (String s : DataValidater.states.keySet()) {
+            ComboState.addItem(s);
+        }
     }
 
     /**
@@ -55,7 +63,6 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jtxUName = new javax.swing.JTextField();
-        jtxState = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jtxPWord = new javax.swing.JTextField();
@@ -83,6 +90,7 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnOut = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        ComboState = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,7 +111,6 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
         jLabel3.setText("Gender:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 430, 143, 35));
         add(jtxUName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 190, 201, 35));
-        add(jtxState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 500, 201, 35));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 15)); // NOI18N
         jLabel4.setText("First And Last Name:");
@@ -187,14 +194,17 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
         });
         add(btnOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1850, 0, 30, 30));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 900));
+
+        ComboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 500, 201, 35));
     }// </editor-fold>//GEN-END:initComponents
-    private void setButtonImage(){
-         ImageIcon imageIcon=new ImageIcon("./image/regist.png");
-         btnRegist.setIcon(imageIcon);
-         ImageIcon out=new ImageIcon("./image/hongcha.png");
-         btnOut.setIcon(out);
-         ImageIcon customer=new ImageIcon("./image/发送的消息.png");
-         jLabel2.setIcon(customer);         
+    private void setButtonImage() {
+        ImageIcon imageIcon = new ImageIcon("./image/regist.png");
+        btnRegist.setIcon(imageIcon);
+        ImageIcon out = new ImageIcon("./image/hongcha.png");
+        btnOut.setIcon(out);
+        ImageIcon customer = new ImageIcon("./image/发送的消息.png");
+        jLabel2.setIcon(customer);
     }
     private void rbtnMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnMaleActionPerformed
         // TODO add your handling code here:
@@ -209,18 +219,18 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jtxFNameActionPerformed
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        if(inputValidate()){
+        if (inputValidate()) {
             Person newPerson = new Person(jtxFName.getText(), jtxLName.getText(), sexGroup.getSelection().getActionCommand());
             newPerson.setCity(jtxCity.getText());
             newPerson.setEmail(jtxEmail.getText());
-            newPerson.setState(jtxState.getText());
+            newPerson.setState((String) ComboState.getSelectedItem());
             newPerson.setStreet(jtxStreet.getText());
             newPerson.setZipCode(jtxZipCode.getText());
             Account newAccount = new Account(jtxUName.getText(), jtxPWord.getText(), newPerson, new CustomerRole());
             boolean addAccountSuccess = system.getAccounts().addAccount(newAccount);
-            if(!addAccountSuccess){
+            if (!addAccountSuccess) {
                 JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " cannot add account, pleanse change to another user name");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, newAccount.getAccountName() + " Account created");
                 DB4OUtil.storeSystem(system);
                 CardLayoutNavigator.goBack(container, this);
@@ -232,38 +242,38 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
         CardLayoutNavigator.logout(container, this);
     }//GEN-LAST:event_btnOutActionPerformed
 
-    private boolean inputValidate(){
-        boolean isEmpty = this.jtxFName.getText().equals("") ||
-                          this.jtxLName.getText().equals("") ||
-                          this.jtxUName.getText().equals("") ||
-                          this.jtxPWord.getText().equals("") ||
-                          this.jtxState.getText().equals("") ||
-                          this.jtxCity.getText().equals("") ||
-                          this.jtxStreet.getText().equals("") ||
-                          this.jtxZipCode.getText().equals("") ||
-                          this.jtxEmail.getText().equals("");
-        if(isEmpty){
+    private boolean inputValidate() {
+        boolean isEmpty = this.jtxFName.getText().equals("")
+                || this.jtxLName.getText().equals("")
+                || this.jtxUName.getText().equals("")
+                || this.jtxPWord.getText().equals("")
+                || this.jtxCity.getText().equals("")
+                || this.jtxStreet.getText().equals("")
+                || this.jtxZipCode.getText().equals("")
+                || this.jtxEmail.getText().equals("");
+        if (isEmpty) {
             JOptionPane.showMessageDialog(null, "Please fill all text fields");
             return false;
         }
-        
-        boolean isSelect = sexGroup.getSelection()!=(null);
-        if(!isSelect){
+
+        boolean isSelect = sexGroup.getSelection() != (null);
+        if (!isSelect) {
             JOptionPane.showMessageDialog(null, "Please Select a Gender");
             return false;
         }
-        
+
         boolean emailCorrect = DataValidater.EmailPatternCorrect(jtxEmail.getText());
-        
-        if(!emailCorrect){
+
+        if (!emailCorrect) {
             JOptionPane.showMessageDialog(null, "Please Enter a validated email");
             return false;
         }
-        
+
         return true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboState;
     private javax.swing.JButton btnOut;
     private javax.swing.JButton btnRegist;
     private javax.swing.JLabel jLabel1;
@@ -290,7 +300,6 @@ public class RegistForCustomerJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField jtxFName;
     private javax.swing.JTextField jtxLName;
     private javax.swing.JTextField jtxPWord;
-    private javax.swing.JTextField jtxState;
     private javax.swing.JTextField jtxStreet;
     private javax.swing.JTextField jtxUName;
     private javax.swing.JTextField jtxZipCode;

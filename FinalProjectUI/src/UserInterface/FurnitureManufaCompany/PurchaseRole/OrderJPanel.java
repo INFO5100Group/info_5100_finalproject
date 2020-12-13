@@ -7,6 +7,7 @@ package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
+import Business.Role.RoleType;
 import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
@@ -184,11 +185,12 @@ public class OrderJPanel extends javax.swing.JPanel {
 
                 row[2] = currInfo.getString("Product");
                 row[3] = currInfo.getString("TotalPrice");
-                try {
-                    row[4] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
-                    ).getName();
-                } catch (Exception e) {
+                
+                for(Account a : wr.getReceivers().keySet()){
+                    if(a.getRole().rType == RoleType.LogisticAdmin){
+                        row[4] = system.getEnterprises().getEnterpriseByAccout(a);
+                        break;
+                    }
                 }
                 row[5] = wr.getStatus();
                 row[0] = wr;

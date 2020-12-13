@@ -12,6 +12,7 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import UserInterface.CardLayoutNavigator;
+import java.awt.Component;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -22,6 +23,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import org.json.JSONObject;
 
 /**
@@ -279,6 +281,10 @@ public class CheckoutJPanel extends javax.swing.JPanel {
         realFurnitures.removeFurniture(currFurniture, quantity);
         DB4OUtil.storeSystem(system);
         JOptionPane.showMessageDialog(null, "you have place an order for " + currFurniture.getName());
+        Component component = (Component) evt.getSource();
+        ItemDetailFrame frame = (ItemDetailFrame) SwingUtilities.getRoot(component);
+        
+        frame.populateContnet();
         CardLayoutNavigator.goBack(contianer, this);
     }//GEN-LAST:event_btnBuyMousePressed
 

@@ -43,7 +43,12 @@ public class NavgateableJPanel extends javax.swing.JPanel {
 
     public void checkUser() {
         RoleType currR = account.getRole().rType;
-        this.jblUserType.setText(currR + " " + account.getPerson());
+        if(account.getPerson().toString().contains("(")){
+            this.jblUserType.setText(currR + "");
+        }else{
+           this.jblUserType.setText(currR + " " + account.getPerson()); 
+        }
+        
 
         if (currR == RoleType.SysAdmin) {
             // populate jtree for sysadmin

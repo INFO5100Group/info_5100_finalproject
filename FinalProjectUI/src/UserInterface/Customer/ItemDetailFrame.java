@@ -47,27 +47,28 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
     }
 
     public void populateContnet() {
+        this.remain = system.getFurnitureMarket().getRemain(currFurniture);
         txtName.setText(currFurniture.getName());
         txtType.setText(currFurniture.getType());
         txtWoodType.setText(currFurniture.getWoodType());
-        jSpinner1.setValue(1);
-        try{
+        jSpinner1.setValue(remain == 0 ? 0 : 1);
+        try {
             txtSeller.setText(currFurniture.getSeller());
             txtManu.setText(currFurniture.getManufacturer());
-        }catch(Exception e){
-            
+        } catch (Exception e) {
+
         }
-        
+
         txtAva.setText(remain > 0 ? "In Stock" : "Unavaliable");
         try {
             txtSize.setText(currFurniture.getHeight() + " x "
                     + currFurniture.getLength() + " x "
                     + currFurniture.getWidth());
-        }catch(Exception e){
+        } catch (Exception e) {
             txtSize.setText("Not Avaliable");
         }
         txtPrice.setText("$" + df2.format(currFurniture.getPrice()));
-        txtBuy.setText("Buy with price of $ " + df2.format( currFurniture.getPrice() * (Integer) jSpinner1.getValue()));
+        txtBuy.setText("Buy with price of $ " + df2.format(currFurniture.getPrice() * (Integer) jSpinner1.getValue()));
         try {
             File imgFile = new File("./image/FurnitureImage/" + currFurniture.getImage());
             BufferedImage myImg = ImageIO.read(imgFile);
@@ -76,7 +77,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
                     Image.SCALE_SMOOTH);
             lblImage.setIcon(new ImageIcon(dImg));
             lblImage.setText("");
-        }catch (Exception e){
+        } catch (Exception e) {
             lblImage.setText("No Image");
         }
     }
@@ -321,15 +322,21 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner1AncestorRemoved
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
-        if((Integer)jSpinner1.getValue() <= 0){
-            jSpinner1.setValue(1);
-        }else if((Integer)jSpinner1.getValue() > remain){
-            jSpinner1.setValue(remain);
-            txtAlert.setText("There is only " + remain + " items in stock");
+        if (remain > 0) {
+            if ((Integer) jSpinner1.getValue() < 0) {
+                jSpinner1.setValue(0);
+            } else if ((Integer) jSpinner1.getValue() > remain) {
+                jSpinner1.setValue(remain);
+                txtAlert.setText("There is only " + remain + " items in stock");
+            } else {
+                txtAlert.setText("");
+                txtBuy.setText("Buy with price of $ " + df2.format(currFurniture.getPrice() * (Integer) jSpinner1.getValue()));
+            }
         }else{
-            txtAlert.setText("");
-            txtBuy.setText("Buy with price of $ " + df2.format( currFurniture.getPrice() * (Integer) jSpinner1.getValue()));
+            jSpinner1.setValue(0);
         }
+
+
     }//GEN-LAST:event_jSpinner1StateChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
