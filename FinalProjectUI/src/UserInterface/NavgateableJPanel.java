@@ -460,6 +460,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     
+    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
+        CardLayoutNavigator.logout(contianer, this);
+    }//GEN-LAST:event_btnOutActionPerformed
+    
     private void btn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseEntered
         // TODO add your handling code here:
         btn1.setBackground(new Color(200,200,200));
