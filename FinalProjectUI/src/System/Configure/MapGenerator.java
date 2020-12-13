@@ -19,7 +19,7 @@ import javax.swing.JLabel;
  */
 public class MapGenerator {
 
-    public static void CreateMap(String latitude, String longitude, JLabel holder, int width, int height) {
+    public static void CreateMap(String latitude, String longitude, JLabel holder, int width, int height, int zoom) {
         String destinationFile = "./image/map/map("+latitude+"-"+longitude+")"+width +"x"+ height +".jpg";
         try {
 
@@ -27,7 +27,9 @@ public class MapGenerator {
                     + latitude
                     + ","
                     + longitude
-                    + "&zoom=8&size="+width +"x"+ height +"&scale=2&maptype=roadmap&key=AIzaSyCt03t92M6HcTAHZIbXWhA_YGtSgOI_fZg";
+                    + "&zoom="
+                    + zoom 
+                    + "&size="+width +"x"+ height +"&scale=2&maptype=roadmap&key=AIzaSyCt03t92M6HcTAHZIbXWhA_YGtSgOI_fZg";
 
             // read the map image from Google
             // then save it to a local file: image.jpg

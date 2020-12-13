@@ -89,7 +89,7 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
             
             JSONObject currInfo = new JSONObject(wr.getMessage());
             // create a map in label
-            MapGenerator.CreateMap(currInfo.getString("Latitude"), currInfo.getString("longitude"), jlbMap, 600,350);
+            MapGenerator.CreateMap(currInfo.getString("Latitude"), currInfo.getString("longitude"), jlbMap, 600,500, currInfo.getInt("zoom"));
             txtOtherCommnet.setText("");
             if(currInfo.isNull("Commnet")){
                 JSONObject com = new JSONObject(); 
@@ -206,6 +206,8 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
         txtOtherCommnet.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jScrollPane3.setViewportView(txtOtherCommnet);
 
+        jlbMap.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -228,7 +230,7 @@ public class ScientistRoleManageJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
