@@ -3,8 +3,6 @@ package Business.Account;
 import Business.SerializiedObject;
 import Business.Person.Person;
 import Business.Role.Role;
-import Business.Role.RoleType;
-import EcoSystem.EcoSystem;
 
 public class Account extends SerializiedObject {
 
