@@ -119,7 +119,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             jtx1.setText("Manage Request");
-            jtx2.setText("Modify Information");
+            jtx2.setText("Modify Inform");
             //jtx3.setText("View Graph");
             btn4.setVisible(false);
         }
@@ -296,10 +296,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn2Layout.setHorizontalGroup(
             btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn2Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jtx2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jtx2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn2Layout.setVerticalGroup(
             btn2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,10 +330,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn3Layout.setHorizontalGroup(
             btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn3Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jtx3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jtx3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn3Layout.setVerticalGroup(
             btn3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -364,10 +364,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn4Layout.setHorizontalGroup(
             btn4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn4Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jtx4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtx4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3))
         );
         btn4Layout.setVerticalGroup(
@@ -399,10 +399,10 @@ public class NavgateableJPanel extends javax.swing.JPanel {
         btn1Layout.setHorizontalGroup(
             btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn1Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jtx1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jtx1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn1Layout.setVerticalGroup(
             btn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
