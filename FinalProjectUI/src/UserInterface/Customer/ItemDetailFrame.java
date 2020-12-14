@@ -33,16 +33,13 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
     private Account account;
     private int remain;
 
-    public ItemDetailFrame() {
-        initComponents();
-    }
-
     public ItemDetailFrame(Furniture f, EcoSystem sys, Account acc) {
-        this();
+
         this.system = sys;
         this.account = acc;
         currFurniture = f;
         this.remain = sys.getFurnitureMarket().getRemain(f);
+        initComponents();
         populateContnet();
     }
 
@@ -104,7 +101,7 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
         txtSize = new javax.swing.JLabel();
         txtAva = new javax.swing.JLabel();
         txtPrice = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner(new SpinnerNumberModel(0, 0, remain, 0));
+        jSpinner1 = new javax.swing.JSpinner(new SpinnerNumberModel(0, 0, remain, 1));
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         txtBuy = new javax.swing.JLabel();
@@ -322,10 +319,11 @@ public final class ItemDetailFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner1AncestorRemoved
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
+        
         if (remain > 0) {
-            if ((Integer) jSpinner1.getValue() < 0) {
-                jSpinner1.setValue(0);
-            } else if ((Integer) jSpinner1.getValue() > remain) {
+            if ((Integer) jSpinner1.getValue() < 1) {
+                jSpinner1.setValue(1);
+            } else if ((Integer) jSpinner1.getValue() >= remain) {
                 jSpinner1.setValue(remain);
                 txtAlert.setText("There is only " + remain + " items in stock");
             } else {
