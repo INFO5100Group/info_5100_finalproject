@@ -16,6 +16,7 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -45,6 +46,7 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
      */
     public EnterpriseDataJPanel() {
         initComponents();
+        setButtonImage();
     }
 
     public EnterpriseDataJPanel(Account account, EcoSystem system) {
@@ -88,7 +90,14 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
 
         return dataset;
     }
-
+     private void setButtonImage(){
+         ImageIcon delete=new ImageIcon("./image/viewPie.png");
+         jButton1.setIcon(delete);
+         ImageIcon modify=new ImageIcon("./image/TotalOrders.png");
+         jButton2.setIcon(modify);
+         ImageIcon modify1=new ImageIcon("./image/totalSales.png");
+         jButton3.setIcon(modify1);
+    }  
     private JFreeChart createPieChart(PieDataset dataset) {
         JFreeChart chart = ChartFactory.createPieChart(
                 "Enterprise Types", // chart title 
@@ -295,11 +304,11 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(ChartContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
     }// </editor-fold>//GEN-END:initComponents
