@@ -14,33 +14,37 @@ import javax.swing.table.TableColumn;
  * @author Administrator
  */
 public class CustomerReceiveOrderJPanel extends javax.swing.JPanel {
+
     private JPanel container;
     private Account account;
     private EcoSystem system;
+
     /**
      * Creates new form CustomerReceiveOrderJPanel
      */
     public CustomerReceiveOrderJPanel() {
         initComponents();
-        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light" , Font.BOLD , 15));
+        OrderJTable.getTableHeader().setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(74,192,255));
-        for(int i=0;i<8;i++){
+        cellRenderer.setBackground(new Color(74, 192, 255));
+        for (int i = 0; i < 8; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);
+            column.setHeaderRenderer(cellRenderer);
         }
         setButtonImage();
     }
 
-    public CustomerReceiveOrderJPanel( Account account, EcoSystem system) {
+    public CustomerReceiveOrderJPanel(Account account, EcoSystem system) {
         this();
         this.account = account;
-        this.system = system;  
+        this.system = system;
     }
-    private void setButtonImage(){
-         ImageIcon Receive=new ImageIcon("./image/receive.png");
-         btnReceive.setIcon(Receive);
+
+    private void setButtonImage() {
+        ImageIcon Receive = new ImageIcon("./image/receive.png");
+        btnReceive.setIcon(Receive);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

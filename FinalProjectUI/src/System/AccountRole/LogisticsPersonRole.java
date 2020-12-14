@@ -6,7 +6,6 @@ import Business.Account.Account;
 import Business.Role.Role;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
-import UserInterface.FurnitureAdmin.FurnitureRegistJPanel;
 import UserInterface.LogisticCompany.LogisticRole.LogisticWorkQueueJPanel;
 import UserInterface.NavgateableJPanel;
 

@@ -5,7 +5,6 @@ import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import UserInterface.Register.*;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 

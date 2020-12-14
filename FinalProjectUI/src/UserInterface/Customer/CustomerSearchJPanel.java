@@ -1,18 +1,10 @@
 package UserInterface.Customer;
 
 import Business.Account.Account;
-import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
 import EcoSystem.EcoSystem;
-import com.db4o.defragment.FirstPassCommand;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableColumn;
 
 /**
  *

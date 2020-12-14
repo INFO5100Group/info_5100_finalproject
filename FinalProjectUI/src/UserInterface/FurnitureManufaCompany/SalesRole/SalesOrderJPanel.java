@@ -7,7 +7,6 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -40,7 +39,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         populateTable();
         populateCombo();      
         setButtonImage();
-
+        setTable();
     }
     
     public void populateCombo() {
@@ -74,22 +73,15 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
                 Object row[] = new Object[6];
                 ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
                 JSONObject currInfo = new JSONObject(wr.getMessage());
-                try {
-                    row[1] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-                    ).getName();
-                } catch (Exception e) {
-                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
+                 for (Account a : wr.getReceivers().keySet()) {
+                    if (a.getRole().rType == RoleType.LogisticAdmin) {
+                        row[4] = system.getEnterprises().getEnterpriseByAccout(a);
+                        break;
+                    }
                 }
-
+                row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
                 row[2] = currInfo.getString("Product");
                 row[3] = currInfo.getString("TotalPrice");
-                try {
-                    row[4] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(1)
-                    ).getName();
-                } catch (Exception e) {
-                }
                 row[5] = wr.getStatus();
                 row[0] = wr;
                 model.addRow(row);
@@ -192,16 +184,18 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         } else {
             Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
             WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
-            try {
-                (new ArrayList<>(wr.getReceivers().keySet())).get(1);
-            } catch (java.lang.IndexOutOfBoundsException e) {
-                wr.getReceivers().put(logistic.getAdmin(), false);
+            
+            for (Account a : wr.getReceivers().keySet()) {
+                if (a.getRole().rType == RoleType.LogisticAdmin) {
+                    JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
+                    return;
+                }
+            }
+            wr.getReceivers().put(logistic.getAdmin(), false);
                 DB4OUtil.storeSystem(system);
                 populateTable();
                 return;
-            }
-            JOptionPane.showMessageDialog(null, "Already have a logistic company, cannot set another one");
-            return;
+            
         }
     }//GEN-LAST:event_btnDistributeActionPerformed
     private void setButtonImage(){

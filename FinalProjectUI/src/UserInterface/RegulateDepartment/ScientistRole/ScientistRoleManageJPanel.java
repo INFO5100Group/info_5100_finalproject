@@ -8,14 +8,11 @@ import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import System.Configure.MapGenerator;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**

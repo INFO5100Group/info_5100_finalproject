@@ -11,7 +11,6 @@ import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import UserInterface.ImgFilter;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -31,7 +30,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -86,15 +84,17 @@ public class DesignJPanel extends javax.swing.JPanel {
         populateTypes(searchType(jtxFurnitureType.getText()));
         populateTable();
     }
-    private void setTable(){
+
+    private void setTable() {
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setBackground(new Color(149, 19, 19));
         cellRenderer.setForeground(Color.white);
-        for(int i=0;i<7;i++){
+        for (int i = 0; i < 7; i++) {
             TableColumn column = DesignerJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
     }
+
     public void populateTypes(ArrayList<String> arr) {
         listFurnitureTypes.removeAll();
         DefaultListModel model = new DefaultListModel();
@@ -321,7 +321,7 @@ public class DesignJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void emptyAll(){
+    private void emptyAll() {
         this.Picture.setIcon(null);
         this.jtxName.setText("");
         jtxFurnitureType.setText("");
@@ -329,7 +329,7 @@ public class DesignJPanel extends javax.swing.JPanel {
         filename = null;
         lblFilename.setText("");
     }
-    
+
     private void btnUploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadActionPerformed
         createChooserWindow((JFrame) SwingUtilities.getWindowAncestor(this));
     }//GEN-LAST:event_btnUploadActionPerformed
@@ -379,8 +379,8 @@ public class DesignJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Cost Timber Weight should be numeric");
             return false;
         }
-        
-        if(filename == null){
+
+        if (filename == null) {
             JOptionPane.showMessageDialog(null, "Please upload the design image");
             return false;
         }
@@ -400,16 +400,18 @@ public class DesignJPanel extends javax.swing.JPanel {
                 String filepath = file.getAbsolutePath();
                 filename = file.getName();
                 setImg(file);
+
                 Path temp = Files.move(Paths.get(filepath),
-                        Paths.get("./image/DesignGraph/" +filename));
+                        Paths.get("./image/DesignGraph/" + filename));
                 lblFilename.setText(filename);
+
                 if (temp != null) {
                     System.out.println("File renamed and moved successfully");
                 } else {
                     System.out.println("Failed to move the file");
                 }
             } catch (IOException ex) {
-                Logger.getLogger(DesignJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                // Logger.getLogger(DesignJPanel.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
             Picture.setText("");
@@ -425,8 +427,8 @@ public class DesignJPanel extends javax.swing.JPanel {
     private void setImg(File file) {
         try {
             BufferedImage myImg = ImageIO.read(file);
-            Image dImg = myImg.getScaledInstance(200,
-                    myImg.getHeight() * 200 / myImg.getWidth(),
+            Image dImg = myImg.getScaledInstance(400,
+                    myImg.getHeight() * 400 / myImg.getWidth(),
                     Image.SCALE_SMOOTH);
             Picture.setIcon(new ImageIcon(dImg));
             Picture.setText("");

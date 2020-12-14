@@ -7,13 +7,10 @@ import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
-import UserInterface.RetailCompany.PurchaseRole.*;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
@@ -43,19 +40,21 @@ public class OrderJPanel extends javax.swing.JPanel {
         setTable();
         setButtonImage();
     }
-    private void setTable(){
+
+    private void setTable() {
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer();
-        cellRenderer.setBackground(new Color(149,19,19));
+        cellRenderer.setBackground(new Color(149, 19, 19));
         cellRenderer.setForeground(Color.white);
-        for(int i=0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             TableColumn column = HistoryOrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
-        for(int i=0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             TableColumn column = OrderJTable.getTableHeader().getColumnModel().getColumn(i);
-             column.setHeaderRenderer(cellRenderer);            
+            column.setHeaderRenderer(cellRenderer);
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -170,19 +169,12 @@ public class OrderJPanel extends javax.swing.JPanel {
                 Object row[] = new Object[6];
                 ArrayList<Account> list = new ArrayList<>(wr.getReceivers().keySet());
                 JSONObject currInfo = new JSONObject(wr.getMessage());
-                try {
-                    row[1] = system.getEnterprises().getEnterpriseByAccout(
-                            (new ArrayList<>(wr.getReceivers().keySet())).get(0)
-                    ).getName();
-                } catch (Exception e) {
-                    row[1] = (new ArrayList<>(wr.getReceivers().keySet())).get(0);
-                }
-
+                row[1] = system.getEnterprises().getEnterpriseByEmployeeAccount(wr.getSender()).getName();
                 row[2] = currInfo.getString("Product");
                 row[3] = currInfo.getString("TotalPrice");
-                
-                for(Account a : wr.getReceivers().keySet()){
-                    if(a.getRole().rType == RoleType.LogisticAdmin){
+
+                for (Account a : wr.getReceivers().keySet()) {
+                    if (a.getRole().rType == RoleType.LogisticAdmin) {
                         row[4] = system.getEnterprises().getEnterpriseByAccout(a);
                         break;
                     }
@@ -198,14 +190,15 @@ public class OrderJPanel extends javax.swing.JPanel {
             }
         }
     }
-    private void setButtonImage(){
-         ImageIcon accept=new ImageIcon("./image/Complete.png");
-         btnComplete.setIcon(accept);
+
+    private void setButtonImage() {
+        ImageIcon accept = new ImageIcon("./image/Complete.png");
+        btnComplete.setIcon(accept);
     }
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         WorkRequest wr = getSelectdwr();
         Enterprise currE = system.getEnterprises().getEnterpriseByEmployeeAccount(account);
-        if(!wr.getStatus().equals("Delivered")){
+        if (!wr.getStatus().equals("Delivered")) {
             JOptionPane.showMessageDialog(null, "You cannot confirm revice this object, because it is oot delivered");
             return;
         }
@@ -215,7 +208,7 @@ public class OrderJPanel extends javax.swing.JPanel {
             wr.resolve();
             JSONObject currInfo = new JSONObject(wr.getMessage());
             //添加木材到仓库
-            if(currE.getWoodStorage() == null){
+            if (currE.getWoodStorage() == null) {
                 currE.setWoodStorage(new WoodStorage());
             }
             int requestID = currInfo.getInt("RequestID");

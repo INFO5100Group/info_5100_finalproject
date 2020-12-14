@@ -15,7 +15,6 @@ import UserInterface.CardLayoutNavigator;
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
@@ -94,7 +93,7 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
          ImageIcon delete=new ImageIcon("./image/viewPie.png");
          jButton1.setIcon(delete);
          ImageIcon modify=new ImageIcon("./image/TotalOrders.png");
-         jButton2.setIcon(modify);
+         //jButton2.setIcon(modify);
          ImageIcon modify1=new ImageIcon("./image/totalSales.png");
          jButton3.setIcon(modify1);
     }  
@@ -243,7 +242,6 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         ChartContainer = new javax.swing.JPanel();
 
@@ -256,16 +254,6 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jButton2.setText("View Order Number");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -285,19 +273,17 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(312, 312, 312)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(299, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ChartContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 1096, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(205, 205, 205))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ChartContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 1096, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(205, 205, 205))
+                        .addGap(365, 365, 365)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(353, 353, 353))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,7 +293,6 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
@@ -317,10 +302,6 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
         CardLayoutNavigator.goNext(ChartContainer, createPieChartPanel(), "piechart");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        CardLayoutNavigator.goNext(ChartContainer, createLogistBarChartPanel(), "logistbarchart");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         CardLayoutNavigator.goNext(ChartContainer, createSalesBarChartPanel(), "salesbarchart");
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -329,7 +310,6 @@ public class EnterpriseDataJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ChartContainer;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }

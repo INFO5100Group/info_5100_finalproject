@@ -7,7 +7,6 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;

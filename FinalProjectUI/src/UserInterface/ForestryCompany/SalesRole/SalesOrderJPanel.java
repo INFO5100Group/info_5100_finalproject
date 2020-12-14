@@ -7,12 +7,9 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
@@ -29,6 +26,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
 
     public SalesOrderJPanel() {
         initComponents();
+        setTable();
     }
 
     public SalesOrderJPanel(Account a, EcoSystem sys) {
@@ -37,7 +35,7 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         this.account = a;
         populateTable();
         populateCombo();
-        setTable();
+        
         setButtonImage();
     }
 
@@ -189,7 +187,6 @@ public class SalesOrderJPanel extends javax.swing.JPanel {
         } else {
             Enterprise logistic = system.getEnterprises().getEnterPriseByID(getEnterpriseID(LogisticCompanyCombo.getSelectedItem() + ""));
             WorkRequest wr = (WorkRequest) OrderJTable.getValueAt(selectedRow, 0);
-            boolean haveLogist = false;
 
             for (Account a : wr.getReceivers().keySet()) {
                 if (a.getRole().rType == RoleType.LogisticAdmin) {

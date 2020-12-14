@@ -10,7 +10,6 @@ import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -318,8 +317,8 @@ public class ProducerJPanel extends javax.swing.JPanel {
     private void setImg(File file) {
         try {
             BufferedImage myImg = ImageIO.read(file);
-            Image dImg = myImg.getScaledInstance(200,
-                    myImg.getHeight() * 200 / myImg.getWidth(),
+            Image dImg = myImg.getScaledInstance(400,
+                    myImg.getHeight() * 400 / myImg.getWidth(),
                     Image.SCALE_SMOOTH);
             Picture.setIcon(new ImageIcon(dImg));
             Picture.setText("");

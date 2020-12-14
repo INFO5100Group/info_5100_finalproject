@@ -1,6 +1,5 @@
 package UserInterface.RetailCompany.PurchaseRole;
 
-import UserInterface.FurnitureManufaCompany.PurchaseRole.*;
 import Business.Account.Account;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;

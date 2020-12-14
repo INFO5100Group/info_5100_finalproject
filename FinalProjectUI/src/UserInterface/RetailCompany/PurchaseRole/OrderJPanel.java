@@ -2,18 +2,14 @@ package UserInterface.RetailCompany.PurchaseRole;
 
 import Business.Account.Account;
 import Business.Enterprise.Enterprise;
-import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
-import Business.Wood.WoodStorage;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;

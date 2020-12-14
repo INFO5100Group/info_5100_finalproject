@@ -4,12 +4,9 @@ import Business.Account.Account;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import java.awt.Color;
-import java.awt.Font;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableColumn;
 
 /**
  *

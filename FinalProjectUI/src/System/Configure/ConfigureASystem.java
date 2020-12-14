@@ -97,10 +97,10 @@ public class ConfigureASystem {
         reg1.setName(State + " Reglate Office");
 
         // add Employee
-        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "Scientist" + accountCount++, 0, new RegulateScientistRole());
-        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "Scientist" + accountCount++, 0, new RegulateScientistRole());
+        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "scientist" + accountCount++, 0, new RegulateScientistRole());
+        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "scientist" + accountCount++, 0, new RegulateScientistRole());
 
-        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "Scientist" + accountCount++, 0, new RegulateOfficerRole());
+        addEmployee(reg1, NameGenerator.getFirstName(), NameGenerator.getLastName(), "officer" + accountCount++, 0, new RegulateOfficerRole());
 
     }
 
@@ -110,9 +110,10 @@ public class ConfigureASystem {
         fore.getDepartments().addOrganization(new Organization("Sales Department"));
         fore.setName(Name);
         fore.setWoodStorage(new WoodStorage());
-        fore.getWoodStorage().addWood("Oak", (50 + (500) * (new Random()).nextDouble()));
-        fore.getWoodStorage().addWood("Maple", (50 + (500) * (new Random()).nextDouble()));
-        fore.getWoodStorage().addWood("Beech", (50 + (500) * (new Random()).nextDouble()));
+        // add woods
+        fore.getWoodStorage().addWood("Oak", ((new Random()).nextInt(10000) / 100.0) + 50);
+        fore.getWoodStorage().addWood("Maple",((new Random()).nextInt(10000) / 100.0) + 50);
+        fore.getWoodStorage().addWood("Beech", ((new Random()).nextInt(10000) / 100.0) + 50);
 
         // add employee for fore
         addEmployee(fore, NameGenerator.getFirstName(), NameGenerator.getLastName(), "foremag" + accountCount++, 0, new ForestLoggingManagerRole());
@@ -130,9 +131,9 @@ public class ConfigureASystem {
         man.setWoodStorage(new WoodStorage());
         man.setFurnitureStorage(new FurnitureDirectory());
         // add woods
-        man.getWoodStorage().addWood("Oak", (50 + (500) * (new Random()).nextDouble()));
-        man.getWoodStorage().addWood("Maple", (50 + (500) * (new Random()).nextDouble()));
-        man.getWoodStorage().addWood("Beech", (50 + (500) * (new Random()).nextDouble()));
+        man.getWoodStorage().addWood("Oak", ((new Random()).nextInt(10000) / 100.0) + 50);
+        man.getWoodStorage().addWood("Maple",((new Random()).nextInt(10000) / 100.0) + 50);
+        man.getWoodStorage().addWood("Beech", ((new Random()).nextInt(10000) / 100.0) + 50);
 
         // add furniture
         man.getFurnitureStorage().addFurniture(CreateFurniture(NameGenerator.getAdj() + " Chair", "Oak", "Chair"), (new Random().nextInt(50)));
@@ -192,9 +193,9 @@ public class ConfigureASystem {
         newF.setWoodType(WoodType);
         newF.setType(Type);
         Random r = new Random();
-        double randomValue = 0 + (200.0 - 0) * r.nextDouble();
+        double randomValue = (r.nextInt(20000) / 100.0) + 50;
         newF.setPrice(randomValue);
-        newF.setImage(Type + (((int) randomValue % 2) + 1) + ".png");
+        newF.setImage(Type + (((int) randomValue % 2) + 1) + ".jpg");
         return newF;
     }
 }

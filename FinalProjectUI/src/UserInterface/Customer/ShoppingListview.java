@@ -5,7 +5,6 @@ import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
 import EcoSystem.EcoSystem;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
 /**

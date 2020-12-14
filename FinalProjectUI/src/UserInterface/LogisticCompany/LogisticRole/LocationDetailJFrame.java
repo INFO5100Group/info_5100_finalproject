@@ -5,7 +5,6 @@ import Business.Enterprise.Enterprise;
 import Business.Role.RoleType;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
@@ -43,17 +42,15 @@ public class LocationDetailJFrame extends javax.swing.JFrame {
                     currAccount = a;
                     break;
 
-                } else {
-                    try {
-                        Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(a);
-                        state = e.getState();
-                        city = e.getCity();
-                        street = e.getStreet();
-                        zip = e.getZipCode();
-                        currAccount = a;
-                    }catch(Exception e){
-                        break;
-                    }
+                } else if (a.getRole().rType == RoleType.ManuProcurementPerson
+                        || a.getRole().rType == RoleType.RetailProcurementPerson) {
+                    Enterprise e = system.getEnterprises().getEnterpriseByEmployeeAccount(a);
+                    state = e.getState();
+                    city = e.getCity();
+                    street = e.getStreet();
+                    zip = e.getZipCode();
+                    currAccount = a;
+
                     break;
                 }
 

@@ -1,4 +1,3 @@
-/*
 package UserInterface.FurnitureManufaCompany.PurchaseRole;
 
 import Business.Account.Account;
@@ -7,15 +6,11 @@ import Business.WorkQueue.WorkQueue;
 import Business.WorkQueue.WorkRequest;
 import EcoSystem.EcoSystem;
 import System.Configure.DB4OUtil;
-import UserInterface.RetailCompany.PurchaseRole.*;
-import UserInterface.ForestryCompany.SalesRole.*;
 import java.awt.Color;
-import java.awt.Font;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;

@@ -4,11 +4,9 @@ import Business.Account.Account;
 import Business.Role.Role;
 import Business.Role.RoleType;
 import EcoSystem.EcoSystem;
-import UserInterface.ForestryAdmin.ForestryRegistJPanel;
 import UserInterface.ForestryCompany.SalesRole.SalesBargainJPanel;
 import UserInterface.ForestryCompany.SalesRole.SalesOrderJPanel;
 import UserInterface.NavgateableJPanel;
-import java.awt.Robot;
 import javax.swing.JPanel;
 
 /**

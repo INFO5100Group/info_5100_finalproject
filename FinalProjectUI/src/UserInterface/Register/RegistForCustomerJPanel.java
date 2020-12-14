@@ -7,7 +7,6 @@ import EcoSystem.EcoSystem;
 import System.AccountRole.CustomerRole;
 import System.Configure.DB4OUtil;
 import UserInterface.CardLayoutNavigator;
-import UserInterface.FurnitureManufaCompany.ProducerRole.*;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
