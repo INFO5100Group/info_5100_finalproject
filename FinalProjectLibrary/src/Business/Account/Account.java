@@ -1,18 +1,20 @@
 package Business.Account;
 
-
 import Business.SerializiedObject;
 import Business.Person.Person;
 import Business.Role.Role;
+import Business.Role.RoleType;
+import EcoSystem.EcoSystem;
 
-public class Account extends SerializiedObject{
+public class Account extends SerializiedObject {
+
     private String accountName;
     private String password;
 
     private Person person;
     private Role role;
 
-    public Account(){
+    public Account() {
         super();
     }
 
@@ -23,7 +25,7 @@ public class Account extends SerializiedObject{
         this.person = p;
     }
 
-    public Account(String un, String pw, Person p, Role r){
+    public Account(String un, String pw, Person p, Role r) {
         this(un, pw, p);
         this.role = r;
     }
@@ -41,7 +43,7 @@ public class Account extends SerializiedObject{
     }
 
     public void setPassword(String password) {
-        this.password = password;    
+        this.password = password;
     }
 
     public Person getPerson() {
@@ -49,7 +51,7 @@ public class Account extends SerializiedObject{
     }
 
     public void setPerson(Person person) throws Exception {
-            this.person = person;
+        this.person = person;
     }
 
     public Role getRole() {
@@ -64,5 +66,9 @@ public class Account extends SerializiedObject{
     public String toString() {
         return this.accountName;
     }
- 
+
+    public String getAccountInfo() {
+        return accountName + "," + password + "," + role.rType;
+    }
+
 }

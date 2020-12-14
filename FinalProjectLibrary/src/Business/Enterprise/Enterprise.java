@@ -1,14 +1,12 @@
 package Business.Enterprise;
 
+import Business.SerializiedObject;
 import Business.Account.Account;
-import Business.Furniture.Furniture;
 import Business.Furniture.FurnitureDirectory;
 import Business.Organization.Organization;
-import Business.SerializiedObject;
 import Business.Organization.OrganizationDirectory;
 import Business.Person.Person;
 import Business.Wood.WoodStorage;
-import java.util.HashMap;
 
 public class Enterprise extends SerializiedObject{
     private String Name, ShortName; // 公司名字， 简短名（用于为员工创建邮箱账号）

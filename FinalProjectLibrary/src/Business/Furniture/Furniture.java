@@ -1,9 +1,6 @@
 package Business.Furniture;
 
-import javax.imageio.ImageIO;
-
 import Business.SerializiedObject;
-import java.awt.Image;
 
 /**
  * 家具类

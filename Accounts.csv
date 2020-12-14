@@ -1,0 +1,52 @@
+Idaho Reglate Office
+regadmin1,admin,RegulateAdmin
+Scientist1,123,RegulateScientist
+Scientist2,123,RegulateScientist
+Scientist3,123,RegulateOfficer
+Washington Reglate Office
+regadmin2,admin,RegulateAdmin
+Scientist4,123,RegulateScientist
+Scientist5,123,RegulateScientist
+Scientist6,123,RegulateOfficer
+Mississppi Reglate Office
+regadmin3,admin,RegulateAdmin
+Scientist7,123,RegulateScientist
+Scientist8,123,RegulateScientist
+Scientist9,123,RegulateOfficer
+Logger Lover
+foreadmin1,admin,ForestAdmin
+foremag10,123,ForestLoggingManager
+foresale11,123,ForestSalesPerson
+Z Tree
+foreadmin2,admin,ForestAdmin
+foremag12,123,ForestLoggingManager
+foresale13,123,ForestSalesPerson
+Happy Furniture
+manuadmin1,admin,ManuAdmin
+manupur14,123,ManuProcurementPerson
+manupro15,123,ManuProducer
+manudes16,123,ManuDesigner
+manusale17,123,ManuSalsePerson
+Ambitious Home Maker
+manuadmin2,admin,ManuAdmin
+manupur18,123,ManuProcurementPerson
+manupro19,123,ManuProducer
+manudes20,123,ManuDesigner
+manusale21,123,ManuSalsePerson
+Lazy Furniture
+retailadmin1,admin,RetailAdmin
+retpur22,123,RetailProcurementPerson
+retsale23,123,RetailSalsePerson
+Jolly Seaker
+retailadmin2,admin,RetailAdmin
+retpur24,123,RetailProcurementPerson
+retsale25,123,RetailSalsePerson
+East Wind Express
+logistadmin1,admin,LogisticAdmin
+logperson26,123,LogisticsPseron
+logmanager27,123,LogisticManager
+Destination to You
+logistadmin2,admin,LogisticAdmin
+logperson28,123,LogisticsPseron
+logmanager29,123,LogisticManager
+cust,123,Customer
