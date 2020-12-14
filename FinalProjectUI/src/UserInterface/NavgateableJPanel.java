@@ -119,8 +119,8 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             jLabel2.setIcon(lb1);
             jLabel3.setIcon(lb2);
             jtx1.setText("Manage Request");
-            jtx2.setText("Modify Inform");
-            //jtx3.setText("View Graph");
+            jtx2.setText("Modify Info");
+            jtx3.setText("View Graph");
             btn4.setVisible(false);
         }
         if ("ForestSalesPerson".equals(account.getRole().rType.toString())
@@ -146,7 +146,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon bt1 = new ImageIcon("./image/confirmPrice.png");
             jtx1.setText("Confirm Price");
             ImageIcon bt2 = new ImageIcon("./image/viewOrders.png");
-            jtx2.setText("View My Orders");
+            jtx2.setText("View Orders");
             ImageIcon lb1 = new ImageIcon("./image/明细.png");
             ImageIcon lb2 = new ImageIcon("./image/订单.png");
             jLabel2.setIcon(lb1);
@@ -174,7 +174,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
             ImageIcon bt1 = new ImageIcon("./image/browse.png");
             jtx1.setText("Search Goods");
             ImageIcon bt2 = new ImageIcon("./image/viewhistory.png");
-            jtx2.setText("View History Order");
+            jtx2.setText("View History");
             ImageIcon lb1 = new ImageIcon("./image/指标查询.png");
             ImageIcon lb2 = new ImageIcon("./image/历史订单.png");
             jLabel2.setIcon(lb1);
@@ -190,7 +190,7 @@ public class NavgateableJPanel extends javax.swing.JPanel {
                 || "LogisticManager".equals(account.getRole().rType.toString())
                 || "RegulateOfficer".equals(account.getRole().rType.toString())) {
             ImageIcon bt1 = new ImageIcon("./image/myWork.png");
-            jtx1.setText("View My Works");
+            jtx1.setText("View Works");
             ImageIcon lb1 = new ImageIcon("./image/工作台.png");
             jLabel2.setIcon(lb1);
             ImageIcon bt3 = new ImageIcon("./image/modifyInFO.png");
