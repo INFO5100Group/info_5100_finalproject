@@ -27,6 +27,7 @@ public class SysAdminRole extends Role{
         NavgateableJPanel sysWorkArea = new NavgateableJPanel (userProcessContainer, account, system);
         sysWorkArea.JPanelPos1 = new SysadminRequestJPanel(account, system);
         sysWorkArea.JPanelPos2 = new SysadminManageJPanel(account, system);
+        sysWorkArea.JPanelPos3 = new EnterpriseDataJPanel(account, system);
         sysWorkArea.loadNavBtn();
         return sysWorkArea;
     }

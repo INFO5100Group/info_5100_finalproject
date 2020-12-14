@@ -4,3 +4,6 @@
 /FinalProjectUI/dist/
 /FinalProjectLibrary/dist/
 /FinalProjectLibrary/build/
+
+# ignore DB4O file
+*.db4o
